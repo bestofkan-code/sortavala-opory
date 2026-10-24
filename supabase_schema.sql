@@ -22,3 +22,47 @@ create table if not exists draws (
 alter table draws enable row level security;
 drop policy if exists "open" on draws;
 create policy "open" on draws for all to anon using (true) with check (true);
+
+-- Двор, адрес и автор изменения
+alter table poles add column if not exists yd boolean default false;
+alter table poles add column if not exists ad text;
+alter table poles add column if not exists ed text;
+
+-- История изменений: каждая правка опоры записывается автоматически
+create table if not exists history (
+  id bigserial primary key,
+  ts timestamptz not null default now(),
+  uid text not null,
+  op text not null,          -- I добавлена, U изменена, D удалена
+  old jsonb,
+  new jsonb,
+  ed text                    -- кто внёс изменение
+);
+create index if not exists history_ts_idx on history (ts desc);
+create index if not exists history_uid_idx on history (uid, ts desc);
+alter table history enable row level security;
+drop policy if exists "read" on history;
+create policy "read" on history for select to anon using (true);
+
+create or replace function log_pole_change() returns trigger
+language plpgsql security definer set search_path = public as $$
+declare o jsonb; n jsonb;
+begin
+  if tg_op = 'DELETE' then
+    insert into history(uid, op, old, new, ed) values (old.uid, 'D', to_jsonb(old), null, old.ed);
+    return old;
+  end if;
+  n := to_jsonb(new) - 'ed';
+  if tg_op = 'UPDATE' then
+    o := to_jsonb(old) - 'ed';
+    if o = n then return new; end if;
+    insert into history(uid, op, old, new, ed) values (new.uid, 'U', to_jsonb(old), to_jsonb(new), new.ed);
+  else
+    insert into history(uid, op, old, new, ed) values (new.uid, 'I', null, to_jsonb(new), new.ed);
+  end if;
+  return new;
+end $$;
+
+drop trigger if exists poles_history on poles;
+create trigger poles_history after insert or update or delete on poles
+for each row execute function log_pole_change();
