@@ -32,7 +32,7 @@ const mig=p=>{const g=gf(p),m=mig0(p);return g||m},mig0=p=>{const f=((D.fx&&D.fx
 const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls,T}))}catch(e){}};
 $('md').value=$('rt').value=new Date().toISOString().slice(0,10);
 const map=L.map('m',{maxZoom:20,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
-const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank">Leaflet</a>');const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
 L.control.layers({'Карта OSM':osm,'Спутник Esri':sat}).addTo(map);
 const lg=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map),mk=new Map();
