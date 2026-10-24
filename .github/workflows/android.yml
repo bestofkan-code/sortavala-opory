@@ -1,0 +1,72 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'redaktor.html'
+      - '.github/workflows/android.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Bundle offline copy of the map
+        run: cp redaktor.html android/app/src/main/assets/redaktor.html
+
+      - name: Restore signing key from secrets
+        env:
+          KS_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KS_B64" ]; then
+            echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/opory.jks"
+            echo "ANDROID_KEYSTORE_FILE=$RUNNER_TEMP/opory.jks" >> "$GITHUB_ENV"
+            echo "Signing with the project key"
+          else
+            echo "::warning::Secret ANDROID_KEYSTORE_B64 is not set; APK is signed with a temporary debug key"
+          fi
+
+      - name: Build APK
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: gradle :app:assembleRelease --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: |
+          mkdir -p out
+          cp android/app/build/outputs/apk/release/app-release.apk out/sortavala-opory.apk
+          ls -la out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sortavala-opory-apk
+          path: out/sortavala-opory.apk
+
+      - name: Publish as "android-latest" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete android-latest --yes --cleanup-tag || true
+          gh release create android-latest out/sortavala-opory.apk \
+            --title "Android-приложение, сборка ${{ github.run_number }}" \
+            --notes "Приложение «Опоры Сортавала» для Android 8 и новее. Скачайте sortavala-opory.apk на телефон и установите. Обновление ставится поверх, данные сохраняются." \
+            --latest

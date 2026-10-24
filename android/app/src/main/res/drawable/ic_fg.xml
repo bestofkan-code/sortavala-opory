@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Street-light pole with a lamp, on a 108dp adaptive-icon canvas (safe zone 66dp in the middle) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- light cone -->
+    <path android:fillColor="#FDE68A" android:fillAlpha="0.55"
+        android:pathData="M62,44 L52,80 L84,80 L72,44 Z" />
+    <!-- pole -->
+    <path android:fillColor="#FFFFFF" android:pathData="M42,30 L46,30 L46,82 L42,82 Z" />
+    <!-- arm -->
+    <path android:fillColor="#FFFFFF" android:pathData="M44,30 Q44,26 48,26 L67,26 L67,30 L48,30 Q46,30 46,32 Z" />
+    <!-- lamp head -->
+    <path android:fillColor="#FFFFFF" android:pathData="M60,30 L74,30 L72,38 L62,38 Z" />
+    <path android:fillColor="#FDE68A" android:pathData="M62,38 L72,38 L71,42 L63,42 Z" />
+    <!-- base -->
+    <path android:fillColor="#FFFFFF" android:pathData="M36,82 L52,82 L52,86 L36,86 Z" />
+</vector>
