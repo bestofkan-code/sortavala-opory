@@ -73,3 +73,12 @@ alter table poles add column if not exists sv int default 0;
 
 -- Частичное обновление опор: меняются только переданные поля, отметки работ объединяются
 -- (полный текст функции pole_patch см. в миграции pole_patch_partial_updates)
+
+-- Доступ: читать могут все (просмотр), менять — только вошедшие в редактор
+drop policy if exists "open" on poles;
+create policy "read" on poles for select to anon, authenticated using (true);
+create policy "write" on poles for all to authenticated using (true) with check (true);
+drop policy if exists "open" on draws;
+create policy "read" on draws for select to anon, authenticated using (true);
+create policy "write" on draws for all to authenticated using (true) with check (true);
+revoke execute on function public.log_pole_change() from anon, authenticated, public;
