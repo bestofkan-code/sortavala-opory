@@ -97,3 +97,14 @@ create policy "read" on spans for select to anon, authenticated using (true);
 create policy "write" on spans for all to authenticated using (true) with check (true);
 create trigger spans_history after insert or update or delete on spans
 for each row execute function log_pole_change();
+
+-- Трансформаторные подстанции: положение значка и работы (бронекабель, шкаф управления)
+create table if not exists tps (
+  uid text primary key, id text, lat double precision, lon double precision,
+  w jsonb default '{}'::jsonb, cab numeric, note text, ed text
+);
+alter table tps enable row level security;
+create policy "read" on tps for select to anon, authenticated using (true);
+create policy "write" on tps for all to authenticated using (true) with check (true);
+create trigger tps_history after insert or update or delete on tps
+for each row execute function log_pole_change();
