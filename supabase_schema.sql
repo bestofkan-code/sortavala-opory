@@ -82,3 +82,18 @@ drop policy if exists "open" on draws;
 create policy "read" on draws for select to anon, authenticated using (true);
 create policy "write" on draws for all to authenticated using (true) with check (true);
 revoke execute on function public.log_pole_change() from anon, authenticated, public;
+
+-- Длина СИП по пролётам между опорами
+create table if not exists spans (
+  uid text primary key,   -- пара опор uidA|uidB
+  id text,                -- подпись пролёта
+  len numeric,            -- длина СИП, м
+  sd date,                -- дата протяжки
+  note text,
+  ed text
+);
+alter table spans enable row level security;
+create policy "read" on spans for select to anon, authenticated using (true);
+create policy "write" on spans for all to authenticated using (true) with check (true);
+create trigger spans_history after insert or update or delete on spans
+for each row execute function log_pole_change();
