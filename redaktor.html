@@ -27,7 +27,8 @@ const YC=new Set(),YA=new Map();
 const GF=/(^|[^а-яёa-z])гф([^а-яёa-z]|$)/i,gf=p=>{if(!p.note||!GF.test(p.note)||p.f=='G'||(p.w&&p.w[10]))return false;p.f='G';if(/^\s*гф\.?\s*$/i.test(p.note))p.note='';return true};
 const mig=p=>{const g=gf(p),m=mig0(p);return g||m},mig0=p=>{const f=((D.fx&&D.fx[p.uid])||[]).find(f=>String(p.tp)==f[0]&&+p.n==f[1]);if(f){p.tp=f[2];p.n=f[3];p.id=f[4];return true}if(p.tp!=null)return false;const a=/^p\d+$/.test(p.uid)?D.p[+p.uid.slice(1)]:0;if(a){p.tp=a[6];p.n=a[7];if(/^Л\d+-\d+$/.test(p.id))p.id=a[5];return true}p.tp='';p.n='';return false};P.forEach(mig);
 const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls,T}))}catch(e){}};
-$('md').value=$('rt').value=new Date().toISOString().slice(0,10);
+function LD(d){d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+$('md').value=$('rt').value=LD();$('mw').innerHTML=WK.map(([k,n])=>'<option value="'+k+'"'+(k==4?' selected':'')+'>'+n+'</option>').join('');
 const map=L.map('m',{maxZoom:20,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
 map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank">Leaflet</a>');const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
@@ -120,7 +121,7 @@ XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([['№','ТП','№ в �
 const Z=P.filter(p=>!p.x);XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([['Вид работ','Выполнено','Не выполнено'],...WK.map(([k,nm])=>{const d=Z.filter(p=>wdone(p,k)).length;return[nm,d,Z.length-d]})]),'Сводка по работам');
 const dd={};P.forEach(p=>WK.forEach(([k])=>{const v=wd(p,k);if(/^\d{4}-/.test(v)){const r=dd[v]||(dd[v]=WK.map(()=>0));r[k-1]++}}));
 XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([['Дата',...WK.map(w=>w[1])],...Object.keys(dd).sort().map(d=>[d,...dd[d]])]),'Работы по дням');
-XLSX.writeFile(wb,'Опоры_Сортавала_'+new Date().toISOString().slice(0,10)+'.xlsx')}
+XLSX.writeFile(wb,'Опоры_Сортавала_'+LD()+'.xlsx')}
 function shift(dx,dy,rot){const cl=P.reduce((a,p)=>a+p.lat,0)/P.length,co=P.reduce((a,p)=>a+p.lon,0)/P.length,r=rot*Math.PI/180,c=Math.cos(r),s=Math.sin(r);
 const f=(la,lo)=>{const x=(lo-co)*K1,y=(la-cl)*K2;return[cl+(x*s+y*c+dy)/K2,co+(x*c-y*s+dx)/K1]};
 P.forEach(p=>{[p.lat,p.lon]=f(p.lat,p.lon)});save();redraw();P.forEach(mark)}
@@ -146,7 +147,7 @@ e=>{$('gi').textContent='Ошибка геолокации: '+e.message+'. Ра�
 $('gn').onclick=()=>{if(!pos)return alert('Сначала нажмите «Где я»');const[q]=near();if(!q)return;const m=mk.get(q);map.setView([q.lat,q.lon],Math.max(map.getZoom(),19));if(m&&lg.hasLayer(m))L.popup(PO()).setLatLng(m.getLatLng()).setContent(popup(q)).openOn(map);else alert('Ближайшая опора '+q.id+' скрыта фильтром')};
 $('ga').onclick=()=>{if(!pos)return alert('Сначала нажмите «Где я»');if(confirm('Добавить новую опору в вашей текущей точке (точность ±'+Math.round(acc.getRadius())+' м)?'))addAt(pos[0],pos[1])};
 $('wf').innerHTML=WK.map(([k,n])=>`<label class="wfc"><input type=checkbox data-f=${k}> ${n}</label>`).join('');
-const wch=()=>{P.forEach(upd);stats();numLabels()};$('wf').onchange=$('wm').onchange=$('wl').onchange=$('wdf').onchange=$('wdt').onchange=wch;$('wdy').onclick=()=>{$('wdf').value=$('wdt').value=new Date().toISOString().slice(0,10);wch()};$('wx').onclick=()=>{document.querySelectorAll('#wf input').forEach(x=>x.checked=false);$('wdf').value=$('wdt').value='';wch()};
+const wch=()=>{P.forEach(upd);stats();numLabels()};$('wf').onchange=$('wm').onchange=$('wl').onchange=$('wdf').onchange=$('wdt').onchange=wch;$('wdy').onclick=()=>{$('wdf').value=$('wdt').value=LD();wch()};$('wx').onclick=()=>{document.querySelectorAll('#wf input').forEach(x=>x.checked=false);$('wdf').value=$('wdt').value='';wch()};
 
 if(map.setBearing){$('rb').oninput=()=>map.setBearing(+$('rb').value);$('rn').onclick=()=>map.setBearing(0);map.on('rotate',()=>{$('rb').value=(Math.round(map.getBearing())%360+360)%360})}else $('rot').parentNode&&($('rot').style.display='none');
 const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -320,7 +321,7 @@ $('cn').onclick=async()=>{const u=$('cu').value.trim().replace(/\/$/,''),k=$('ck
 $('cs').onclick=()=>sync();
 $('cl').onclick=()=>{if(!CF)return ss('сначала подключите базу');const l=location.href.split('#')[0]+'#cfg='+btoa(JSON.stringify(CF));navigator.clipboard&&navigator.clipboard.writeText(l);prompt('Ссылка скопирована. Откройте её на другом устройстве:',l)};
 setInterval(sync,20000);if(CF)sync();
-$('ex').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({P,L:Ls,T})],{type:'application/json'}));a.download='opory_data_'+new Date().toISOString().slice(0,10)+'.json';a.click()};
+$('ex').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({P,L:Ls,T})],{type:'application/json'}));a.download='opory_data_'+LD()+'.json';a.click()};
 $('im').onchange=e=>{const r=new FileReader();r.onload=()=>{try{const s=JSON.parse(r.result);if(!s.P)throw 0;P=s.P;Ls=s.L||Ls;T=s.T||T;P.forEach((p,i)=>{if(!p.uid)p.uid='p'+i;mark(p)});save();redraw();stats();map.fitBounds(L.latLngBounds(P.map(p=>[p.lat,p.lon])).pad(.05))}catch(x){alert('Не удалось прочитать файл')}};r.readAsText(e.target.files[0]);e.target.value=''};
 var WHO='',LAST=new Map(),US=[],RS=[],GRP=null,REPLAY=false,HL=[],HU='',HAUTO=false;
 try{WHO=localStorage.getItem(KEY+'_who')||''}catch(e){}
@@ -466,7 +467,7 @@ const hit=L.polyline([a,b],{color:'#000',opacity:0,weight:16,bubblingMouseEvents
 hit.on('click',e=>{if(dt||SELA||mode=='add')return;SPCLK=Date.now();PSEL=Date.now();spPopup(k,e.latlng)});
 if(has)L.marker([(a[0]+b[0])/2,(a[1]+b[1])/2],{interactive:false,icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="spl">'+(+r.len).toLocaleString('ru-RU')+' м</div>'})}).addTo(ll)}
 function spPopup(k,ll0){const z=SPANS.get(k)||{name:k,d:0},r=SP.get(k)||{},d=document.createElement('div');d.className='pp';
-const today=$('md')?$('md').value:new Date().toISOString().slice(0,10);
+const today=$('md')?$('md').value:LD();
 d.innerHTML='<div><b>Пролёт '+esc(z.name)+'</b></div><div><small>по карте ≈ '+Math.round(z.d)+' м</small></div>'+(RO?
  '<div style="margin-top:4px">'+(r.len!=null&&r.len!==''?'Длина СИП: <b>'+(+r.len).toLocaleString('ru-RU')+' м</b>'+(r.sd?' · '+r.sd:''):'Длина СИП не внесена')+'</div>'+(r.note?'<div>'+esc(r.note)+'</div>':''):
  '<div class="r" style="margin-top:6px">Длина СИП, м <input type="text" inputmode="decimal" autocomplete="off" data-sl value="'+(r.len!=null?r.len:'')+'" style="width:90px"></div>'
@@ -505,7 +506,7 @@ const drag=!RO&&mode=='edit',m=L.marker(c,{icon:L.divIcon({html,className:'',ico
 m.on('click',e=>{TPCLK=Date.now();PSEL=Date.now();if(dt||SELA)return;tpPopup(t,m.getLatLng())});
 m.on('dragend',()=>{const n=m.getLatLng(),d=Math.round(map.distance(c,n));if(d<1||!confirm('Перенести '+tpn(t)+' на '+d+' м?')){m.setLatLng(c);return}tpPut(t,{lat:n.lat,lon:n.lng});toast(tpn(t)+' перенесена')})})}
 function tpPut(t,ch){const r=Object.assign({uid:'tp:'+t,id:t,w:{}},TPD.get(t)||{},ch);if(r.lat==null){const c=tpDef(t);if(c){r.lat=c[0];r.lon=c[1]}}TPD.set(t,r);TQ[t]=r;tpSave();tpDraw();stats();tpSend()}
-function tpPopup(t,at){const r=TPD.get(t)||{},w=r.w||{},a=P.filter(p=>p.tp==t&&!p.x),dn=a.filter(p=>p.done).length,d=document.createElement('div');d.className='pp';const today=$('md')?$('md').value:new Date().toISOString().slice(0,10);
+function tpPopup(t,at){const r=TPD.get(t)||{},w=r.w||{},a=P.filter(p=>p.tp==t&&!p.x),dn=a.filter(p=>p.done).length,d=document.createElement('div');d.className='pp';const today=$('md')?$('md').value:LD();
 d.innerHTML='<div><b>'+esc(tpn(t))+'</b> <small>опор '+a.length+', установлено '+dn+'</small></div>'+(RO?
  '<div class="wl">'+TW.map(([k,n])=>'<span>'+(w[k]?'✅':'⬜')+' '+n+'</span><span>'+(w[k]||'')+'</span>').join('')+'</div>'+(r.cab!=null?'<div>Бронекабель: <b>'+(+r.cab).toLocaleString('ru-RU')+' м</b></div>':'')+(r.note?'<div>'+esc(r.note)+'</div>':''):
  '<div class="wl">'+TW.map(([k,n])=>'<label><input type=checkbox data-tw='+k+(w[k]?' checked':'')+'> '+n+'</label><input type=date data-twd='+k+' value="'+(w[k]||'')+'">').join('')+'</div>'
