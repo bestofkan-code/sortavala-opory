@@ -1,0 +1,68 @@
+name: Резервная копия базы
+
+on:
+  schedule:
+    - cron: '17 20 * * *'   # каждый день в 23:17 по Москве
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/backup.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Выгрузить таблицы
+        env:
+          SB_URL: https://rznsydqapcffgnvynfdg.supabase.co
+          SB_KEY: sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.request
+          url, key = os.environ['SB_URL'], os.environ['SB_KEY']
+          os.makedirs('out', exist_ok=True)
+          for table, order in [('poles', 'uid'), ('draws', 'id'), ('history', 'id')]:
+              rows, off = [], 0
+              while True:
+                  req = urllib.request.Request(
+                      f'{url}/rest/v1/{table}?select=*&order={order}&limit=1000&offset={off}',
+                      headers={'apikey': key})
+                  page = json.load(urllib.request.urlopen(req, timeout=60))
+                  rows += page
+                  if len(page) < 1000:
+                      break
+                  off += 1000
+              if table == 'poles' and not rows:
+                  raise SystemExit('poles is empty, refusing to overwrite the backup')
+              with open(f'out/{table}.json', 'w', encoding='utf-8') as f:
+                  json.dump(rows, f, ensure_ascii=False, indent=1)
+              print(table, len(rows))
+          EOF
+
+      - name: Сохранить в ветку backup
+        run: |
+          git config user.name "backup-bot"
+          git config user.email "backup-bot@users.noreply.github.com"
+          git fetch origin backup || true
+          if git rev-parse --verify origin/backup >/dev/null 2>&1; then
+            git switch -c backup origin/backup
+          else
+            git switch --orphan backup
+            git rm -rf --quiet . || true
+          fi
+          mkdir -p data
+          cp out/*.json data/
+          git add data
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+          else
+            git commit -m "Резервная копия $(date -u -d '+3 hours' '+%Y-%m-%d %H:%M') МСК"
+            git push origin backup
+          fi

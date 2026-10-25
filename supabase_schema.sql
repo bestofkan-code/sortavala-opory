@@ -70,3 +70,6 @@ for each row execute function log_pole_change();
 -- Кронштейн (0 нет, 1 однорожковый, 2 двухрожковый) и число установленных светильников
 alter table poles add column if not exists kr int default 0;
 alter table poles add column if not exists sv int default 0;
+
+-- Частичное обновление опор: меняются только переданные поля, отметки работ объединяются
+-- (полный текст функции pole_patch см. в миграции pole_patch_partial_updates)
