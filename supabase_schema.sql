@@ -66,3 +66,7 @@ end $$;
 drop trigger if exists poles_history on poles;
 create trigger poles_history after insert or update or delete on poles
 for each row execute function log_pole_change();
+
+-- Кронштейн (0 нет, 1 однорожковый, 2 двухрожковый) и число установленных светильников
+alter table poles add column if not exists kr int default 0;
+alter table poles add column if not exists sv int default 0;
