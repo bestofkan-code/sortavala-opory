@@ -31,7 +31,15 @@ $('md').value=$('rt').value=new Date().toISOString().slice(0,10);
 const map=L.map('m',{maxZoom:20,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
 map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank">Leaflet</a>');const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
-L.control.layers({'Карта OSM':osm,'Спутник Esri':sat}).addTo(map);
+/* Yandex tiles are in EPSG:3395; re-cut them onto the map's EPSG:3857 grid */
+const YX=L.GridLayer.extend({createTile(c,done){const t=document.createElement('canvas');t.width=t.height=256;const g=t.getContext('2d'),N=256*Math.pow(2,c.z),E=0.0818191908426,
+lat=py=>Math.atan(Math.sinh(Math.PI*(1-2*py/N))),y95=f=>{const s=Math.sin(f);return(0.5-Math.log(Math.tan(Math.PI/4+f/2)*Math.pow((1-E*s)/(1+E*s),E/2))/(2*Math.PI))*N},
+Y=y95(lat(c.y*256)),ty=Math.floor(Y/256),off=Y-ty*256,u=this.options.u;let n=0,err=0;const fin=()=>{if(++n==2)done(err==2?new Error('нет плитки'):null,t)};
+[0,1].forEach(i=>{const im=new Image();im.crossOrigin='anonymous';im.onload=()=>{g.drawImage(im,0,i*256-off);fin()};im.onerror=()=>{err++;fin()};im.src=u.replace('{x}',c.x).replace('{y}',ty+i).replace('{z}',c.z)});return t}});
+const yam=new YX({u:'https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&scale=1&lang=ru_RU',maxZoom:20,maxNativeZoom:19,attribution:'© Яндекс'}),
+yas=new YX({u:'https://core-sat.maps.yandex.net/tiles?l=sat&x={x}&y={y}&z={z}&scale=1&lang=ru_RU',maxZoom:20,maxNativeZoom:19,attribution:'© Яндекс'});
+
+L.control.layers({'Карта OSM':osm,'Яндекс карта':yam,'Яндекс спутник':yas,'Спутник Esri':sat}).addTo(map);
 const lg=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map),mk=new Map();
 const KRN={0:'нет',1:'однорожковый',2:'двухрожковый'};
 function armN(p){return Math.min(2,Math.max(+p.kr||0,+p.sv||0))}
