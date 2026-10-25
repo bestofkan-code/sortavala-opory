@@ -24,7 +24,7 @@ const isG=p=>p.f=='G'||wdone(p,10);function setW(p,k,on,d){if(k==10&&on)p.f='G';
 const wsel=()=>[...document.querySelectorAll('#wf input:checked')].map(x=>+x.dataset.f);
 function wmatch(p){const s=wsel(),f=$('wdf').value,e=$('wdt').value;if(!s.length&&!f&&!e)return true;const ks=s.length?s:WK.map(w=>w[0]),want=$('wm').value=='1',inr=v=>/^\d{4}-/.test(v)&&(!f||v>=f)&&(!e||v<=e),r=ks.map(k=>{const v=wd(p,k);return(f||e)?(want?inr(v):!inr(v)):(!!v)==want});return($('wl').value=='all'&&s.length)?r.every(Boolean):r.some(Boolean)}
 const YC=new Set(),YA=new Map();
-const GF=/(^|[^а-яёa-z])гф([^а-яёa-z]|$)/i,gf=p=>{if(!p.note||!GF.test(p.note)||(p.w&&p.w[10]))return false;p.w=p.w||{};p.w[10]=p.w[2]||p.w[3]||p.w[1]||'2026-10-14';p.f='G';delete p.w[2];if(/^\s*гф\.?\s*$/i.test(p.note))p.note='';return true};
+const GF=/(^|[^а-яёa-z])гф([^а-яёa-z]|$)/i,gf=p=>{if(!p.note||!GF.test(p.note)||p.f=='G'||(p.w&&p.w[10]))return false;p.f='G';if(/^\s*гф\.?\s*$/i.test(p.note))p.note='';return true};
 const mig=p=>{const g=gf(p),m=mig0(p);return g||m},mig0=p=>{const f=((D.fx&&D.fx[p.uid])||[]).find(f=>String(p.tp)==f[0]&&+p.n==f[1]);if(f){p.tp=f[2];p.n=f[3];p.id=f[4];return true}if(p.tp!=null)return false;const a=/^p\d+$/.test(p.uid)?D.p[+p.uid.slice(1)]:0;if(a){p.tp=a[6];p.n=a[7];if(/^Л\d+-\d+$/.test(p.id))p.id=a[5];return true}p.tp='';p.n='';return false};P.forEach(mig);
 const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls,T}))}catch(e){}};
 $('md').value=$('rt').value=new Date().toISOString().slice(0,10);
