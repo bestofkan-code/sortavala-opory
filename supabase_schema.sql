@@ -108,3 +108,6 @@ create policy "read" on tps for select to anon, authenticated using (true);
 create policy "write" on tps for all to authenticated using (true) with check (true);
 create trigger tps_history after insert or update or delete on tps
 for each row execute function log_pole_change();
+
+-- Высота опоры, м (8 или 9)
+alter table poles add column if not exists h int default 8;
