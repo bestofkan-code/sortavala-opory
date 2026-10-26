@@ -10,7 +10,7 @@ details.sec{margin:12px 0 0}details.sec>summary{cursor:pointer;font-weight:600;f
 <script>document.body.classList.add('dk')</script><div id="s"><b style="font-size:15px">Замечания технадзора · исп. схемы 22.10.2026</b><div style="font-size:12px;margin:2px 0 4px"><a href="redaktor.html" style="color:#9db4ff">← основная карта</a></div><div class="vw">Режим просмотра. Данные обновляются автоматически, редактирование недоступно.</div>
 <h3>Найти опору</h3><div class="r"><select id="qt" title="ТП"><option value="">любая ТП</option></select><input id="qn" placeholder="№ опоры" inputmode="numeric" autocomplete="off"><button id="qb">Найти</button></div><small id="qs">Можно ввести сразу «21-15» или «Шуно 12».</small><details class="sec" id="tnsec" open><summary>Замечания технадзора <span id="tncnt"></span></summary>
 <div id="tnsum" style="font-size:12px;margin:4px 0"></div>
-<div class="r" style="flex-wrap:wrap;gap:4px"><select id="tnk" style="width:100%;min-width:0"><option value="">все виды</option></select><select id="tns"><option value="">любой статус</option><option value="open">не устранено</option><option value="work">в работе</option><option value="done">устранено</option></select><label style="font-size:12px"><input type="checkbox" id="tnonly" checked> только опоры с замечаниями</label></div>
+<div class="r" style="flex-wrap:wrap;gap:4px"><select id="tnk" style="width:100%;min-width:0"><option value="">все виды</option></select><select id="tns"><option value="">любой статус</option><option value="open">не устранено</option><option value="work">в работе</option><option value="done">устранено</option><option value="chk">⚠ требуют уточнения</option></select><label style="font-size:12px"><input type="checkbox" id="tnonly" checked> на карте только опоры с замечаниями</label></div>
 <div id="tnl" style="max-height:42vh;overflow:auto;margin-top:6px"></div>
 <div class="r" style="margin-top:6px"><button id="tnx">Отчёт Excel</button></div></details>
 <h3>Ход работ</h3><div id="bar"><i></i></div><div id="st"></div><small>Заземление: <span style="background:#d9f04a;border:1px solid #8fbc1a;padding:0 6px;border-radius:8px">жёлто-зелёная подсветка</span> <span style="background:#fecaca;border:1px solid #dc2626;padding:0 6px;border-radius:8px">исключена из проекта</span> <span style="background:#800020;color:#fff;padding:0 6px;border-radius:2px">гравит. фундамент выполнен</span> <span style="border:2px solid #800020;padding:0 6px;border-radius:2px">гравит. фундамент по проекту</span> <span style="background:#fee2e2;border:1px solid #dc2626;padding:0 6px;border-radius:8px">совм. подвеска</span> <span style="border:2px solid #a21caf;padding:0 6px;border-radius:8px">во дворе</span> <span style="background:#bbf7d0;border:1px solid #15803d;padding:0 6px;border-radius:8px">новая</span></small>
@@ -558,7 +558,13 @@ function tnSave(){try{localStorage.setItem(KEY+'_tn',JSON.stringify(TNST));local
 function tnS(r){return (TNST[r.n]&&TNST[r.n].st)||'open'}
 function tnPole(u){return P.find(p=>p.uid==u)}
 function tnPos(r){const ps=r.uids.map(tnPole).filter(Boolean);if(!ps.length)return[r.lat,r.lon];return[ps.reduce((a,p)=>a+p.lat,0)/ps.length,ps.reduce((a,p)=>a+p.lon,0)/ps.length]}
-function tnVis(r){const k=$('tnk').value,st=$('tns').value;return(!k||r.k==k)&&(!st||tnS(r)==st)}
+function tnOwn(r){const k=$('tnk').value,st=$('tns').value;return(!k||r.k==k)&&(!st||(st=='chk'?!!r.chk:tnS(r)==st))}
+function tnWork(r){return r.uids.some(u=>{const p=tnPole(u);return p&&VIS0(p)})}
+function tnVis(r){return tnOwn(r)&&tnWork(r)}
+var VIS0=vis,TNU=new Set(),TNT=null;vis=function(p){return VIS0(p)&&(!$('tnonly').checked||TNU.has(p.uid))};
+function tnU(){TNU=new Set();TNR.filter(tnVis).forEach(r=>r.uids.forEach(u=>TNU.add(u)))}
+var ST0=stats;stats=function(){ST0.apply(this,arguments);clearTimeout(TNT);TNT=setTimeout(()=>{const a=[...TNU].sort().join();tnU();if([...TNU].sort().join()!=a&&$('tnonly').checked){P.forEach(upd);numLabels()}tnAll()},120)};
+function tnFilt(){const a=[];if(FTS.size)a.push(tpLbl());if(wsel().length)a.push('работы: '+wsel().map(k=>(WK.find(w=>w[0]==k)||[0,k])[1]).join(', ')+($('wm').value=='1'?'':' (не выполнены)'));if($('wdf').value||$('wdt').value)a.push('даты '+($('wdf').value||'…')+' – '+($('wdt').value||'…'));if($('fh').value)a.push($('fh').value+' м');if(!$('fd').checked||!$('fr').checked)a.push(!$('fd').checked?'без готовых':'только готовые');return a}
 function tnDraw(){TNL.clearLayers();const groups=new Map();
 TNR.filter(tnVis).forEach(r=>{if(r.k=='К3'){const ps=r.uids.map(tnPole).filter(Boolean);const c=tnS(r)=='done'?'#4ade80':TNK[r.k][0];
  L.polyline(ps.map(p=>[p.lat,p.lon]),{color:c,weight:7,opacity:.55,dashArray:'2 8',lineCap:'round'}).on('click',e=>{SPCLK=Date.now();tnPop([r],e.latlng)}).addTo(TNL)}
@@ -567,9 +573,8 @@ groups.forEach((rs,key)=>{const pos=tnPos(rs[0]),all=rs.every(r=>tnS(r)=='done')
  if(rs[0].k!='К3')L.circleMarker(pos,{radius:17,color:all?'#4ade80':any?'#fbbf24':'#ef4444',weight:3,fill:false,dashArray:all?null:'5 4',interactive:false}).addTo(TNL);
  const html='<div class="tnm">'+rs.map(r=>'<span class="tnb" style="background:'+(tnS(r)=='done'?'#16a34a':TNK[r.k][0])+'">'+esc(r.k)+'</span>').join('')+'</div>';
  L.marker(pos,{icon:L.divIcon({className:'',iconSize:[0,0],iconAnchor:[0,rs[0].k=='К3'?0:-26],html}),zIndexOffset:900}).on('click',()=>{SPCLK=Date.now();tnPop(rs,pos)}).addTo(TNL)});
-tnOnly()}
-function tnOnly(){const on=$('tnonly').checked,U=new Set();TNR.filter(tnVis).forEach(r=>r.uids.forEach(u=>U.add(u)));
-P.forEach(p=>{const m=mk.get(p);if(!m)return;const el=m.getElement&&m.getElement();if(el)el.style.opacity=on&&!U.has(p.uid)?'.15':''})}
+}
+function tnOnly(){tnU();P.forEach(upd);numLabels();stats()}
 function tnPop(rs,ll0){const d=document.createElement('div');d.className='pp';
 d.innerHTML=rs.map(r=>{const t=TNST[r.n]||{};return '<div style="border-bottom:1px solid #2c3346;padding:4px 0"><div><span class="tnb" style="background:'+TNK[r.k][0]+'">'+esc(r.k)+'</span><b>№'+r.n+' · '+esc(r.title)+'</b></div>'
 +'<div><small>Опоры: '+r.ids.map(esc).join(' — ')+' · в схеме: «'+esc(r.src)+'»</small></div>'
@@ -585,14 +590,15 @@ if(!RO){d.querySelectorAll('[data-tns]').forEach(sel=>sel.onchange=()=>{PSEL=Dat
 d.querySelector('[data-tnsv]').onclick=()=>{if(!AUTH())return alert('Войдите, чтобы менять статус замечаний.');rs.forEach(r=>{const row={n:r.n,st:d.querySelector('[data-tns="'+r.n+'"]').value,dt:d.querySelector('[data-tnd="'+r.n+'"]').value||null,note:d.querySelector('[data-tnn="'+r.n+'"]').value.trim()||null,ed:WHO||null};TNST[r.n]={...TNST[r.n],...row};TNQ[r.n]=row});tnSave();map.closePopup();tnAll();tnSend();toast('Статус замечаний сохранён')};
 const b=d.querySelector('[data-tnp]');if(b)b.onclick=()=>{const p=tnPole(rs[0].uids[0]);map.closePopup();if(p)qgo(p)}}
 L.popup(PO()).setLatLng(ll0).setContent(d).openOn(map)}
-function tnList(){const V=TNR.filter(tnVis),c={open:0,work:0,done:0};TNR.forEach(r=>c[tnS(r)]++);
+function tnList(){const V=TNR.filter(tnVis),B=TNR.filter(tnWork),c={open:0,work:0,done:0};B.forEach(r=>c[tnS(r)]++);const F=tnFilt();
 $('tncnt').innerHTML='<small>'+c.done+'/'+TNR.length+'</small>';
-$('tnsum').innerHTML='<span class="tnst-open">не устранено '+c.open+'</span> · <span class="tnst-work">в работе '+c.work+'</span> · <span class="tnst-done">устранено '+c.done+'</span>'+(TNR.some(r=>r.chk)?' · <span style="color:#fbbf24">⚠ уточнить '+TNR.filter(r=>r.chk).length+'</span>':'');
+$('tnsum').innerHTML=(F.length?'<div style="color:#9db4ff">С учётом фильтров работ ('+esc(F.join('; '))+'): '+B.length+' из '+TNR.length+' <a href="#" id="tnfx" style="color:#9db4ff">сбросить</a></div>':'')+'<span class="tnst-open">не устранено '+c.open+'</span> · <span class="tnst-work">в работе '+c.work+'</span> · <span class="tnst-done">устранено '+c.done+'</span>'+(B.some(r=>r.chk)?' · <span style="color:#fbbf24">⚠ уточнить '+B.filter(r=>r.chk).length+'</span>':'')+(V.length!=B.length?'<div>Показано: '+V.length+'</div>':'');
+const fx=$('tnfx');if(fx)fx.onclick=e=>{e.preventDefault();document.querySelectorAll('#wf input').forEach(x=>x.checked=false);$('wdf').value=$('wdt').value='';$('fh').value='';$('fd').checked=$('fr').checked=true;if(FTS.size){FTS.clear();ftChange(false);try{tps()}catch(e){}}P.forEach(upd);stats();numLabels()};
 const byK=new Map();Object.keys(TNK).forEach(k=>{if(V.some(r=>r.k==k))byK.set(k,[])});V.forEach(r=>{if(!byK.has(r.k))byK.set(r.k,[]);byK.get(r.k).push(r)});
 $('tnl').innerHTML=[...byK].map(([k,rs])=>'<div class="tng"><span class="tnb" style="background:'+TNK[k][0]+'">'+esc(k)+'</span>'+esc(TNK[k][1])+' — '+rs.length+'<br><small style="font-weight:400">'+esc(rs[0].fix)+'</small></div>'+rs.map(r=>'<div class="tnr" data-tn="'+r.n+'"><div class="h"><b>№'+r.n+' · '+r.ids.map(esc).join(' — ')+'</b><span class="tnst-'+tnS(r)+'">'+TNSTN[tnS(r)]+'</span></div><small>'+esc(r.map)+'</small>'+(r.chk?'<small style="color:#fbbf24">⚠ '+esc(r.chk)+'</small>':'')+'</div>').join('')).join('')||'<small>Нет замечаний по фильтру.</small>'}
-function tnAll(){tnDraw();tnList()}
-$('tnk').innerHTML+=Object.keys(TNK).map(k=>'<option value="'+k+'">'+k+' · '+TNK[k][1]+' ('+TNR.filter(r=>r.k==k).length+')</option>').join('');
-$('tnk').onchange=$('tns').onchange=tnAll;$('tnonly').onchange=tnOnly;
+function tnAll(){tnOpts();tnDraw();tnList()}
+function tnOpts(){const v=$('tnk').value,B=TNR.filter(r=>tnWork(r)&&(!$('tns').value||($('tns').value=='chk'?!!r.chk:tnS(r)==$('tns').value)));$('tnk').innerHTML='<option value="">все виды ('+B.length+')</option>'+Object.keys(TNK).map(k=>'<option value="'+k+'">'+k+' · '+TNK[k][1]+' ('+B.filter(r=>r.k==k).length+')</option>').join('');$('tnk').value=v}
+$('tnk').onchange=$('tns').onchange=()=>{tnOnly();tnAll()};$('tnonly').onchange=tnOnly;
 $('tnl').onclick=e=>{const b=e.target.closest('[data-tn]');if(!b)return;const r=TNR.find(x=>x.n==+b.dataset.tn),pos=tnPos(r);map.setView(pos,Math.max(map.getZoom(),19));setTimeout(()=>tnPop(TNR.filter(x=>x.k!='К3'&&r.k!='К3'?x.uids[0]==r.uids[0]&&tnVis(x):x.n==r.n),pos),350)};
 $('tnx').onclick=()=>{const rows=[['№','Код','Замечание','Вид работ','Опоры','Текст в схеме','Способ устранения','Сопоставление с картой','Уточнить','Статус','Дата','Примечание','Кто']];
 TNR.forEach(r=>{const t=TNST[r.n]||{};rows.push([r.n,r.k,r.title,r.work,r.ids.join(' — '),r.src,r.fix,r.map,r.chk||'',TNSTN[tnS(r)],t.dt||'',t.note||'',t.ed||''])});
@@ -602,7 +608,7 @@ const w2=XLSX.utils.aoa_to_sheet(sm);w2['!cols']=[{wch:9},{wch:40},{wch:70},{wch
 async function tnSend(){if(!CF||RO)return;const ks=Object.keys(TNQ);if(!ks.length)return;try{await authFresh()}catch(e){}
 try{const r=await fetch(CF.u+'/rest/v1/tn_remarks?on_conflict=n',{method:'POST',headers:{...H(),Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(ks.map(k=>({...TNQ[k],updated_at:new Date().toISOString()})))});if(!r.ok)throw new Error(await r.text());ks.forEach(k=>delete TNQ[k]);tnSave()}catch(e){tnSave();ss('Статусы замечаний не отправлены: '+(e instanceof TypeError?'нет связи':e.message||e)+', отправлю позже')}}
 async function tnPull(){if(!CF)return;try{const r=await fetch(CF.u+'/rest/v1/tn_remarks?select=*',{headers:H()}),j=await r.json();if(!Array.isArray(j))return;const m={};j.forEach(x=>m[x.n]=x);Object.keys(TNQ).forEach(k=>m[k]={...m[k],...TNQ[k]});if(JSON.stringify(m)!=JSON.stringify(TNST)){TNST=m;tnSave();if(!document.querySelector('.leaflet-popup [data-tns]'))tnAll()}}catch(e){}}
-map.on('zoomend',tnOnly);setTimeout(()=>{tnAll();tnSend();tnPull()},1200);setInterval(()=>{tnSend();tnPull()},20000);
+setTimeout(()=>{tnOnly();tnAll();tnSend();tnPull()},1200);setInterval(()=>{tnSend();tnPull()},20000);
 
 map.fitBounds(L.latLngBounds(P.map(p=>[p.lat,p.lon])).pad(.05));
 </script></body></html>
