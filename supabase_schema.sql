@@ -111,3 +111,14 @@ for each row execute function log_pole_change();
 
 -- Высота опоры, м (8 или 9)
 alter table poles add column if not exists h int default 8;
+
+-- Замечания технадзора (zamechaniya.html): статус устранения по номеру замечания
+create table if not exists public.tn_remarks(
+ n int primary key,
+ st text not null default 'open' check (st in ('open','work','done')),
+ note text, dt date, ed text,
+ updated_at timestamptz not null default now());
+alter table public.tn_remarks enable row level security;
+create policy tn_read on public.tn_remarks for select to anon, authenticated using (true);
+create policy tn_ins on public.tn_remarks for insert to authenticated with check (true);
+create policy tn_upd on public.tn_remarks for update to authenticated using (true) with check (true);
