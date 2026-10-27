@@ -578,7 +578,7 @@ function tnOnly(){tnU();P.forEach(upd);numLabels();stats()}
 function tnPop(rs,ll0){const d=document.createElement('div');d.className='pp';
 d.innerHTML=rs.map(r=>{const t=TNST[r.n]||{};return '<div style="border-bottom:1px solid #2c3346;padding:4px 0"><div><span class="tnb" style="background:'+TNK[r.k][0]+'">'+esc(r.k)+'</span><b>№'+r.n+' · '+esc(r.title)+'</b></div>'
 +'<div><small>Опоры: '+r.ids.map(esc).join(' — ')+' · в схеме: «'+esc(r.src)+'»</small></div>'
-+'<div style="margin-top:3px"><b>Как устранить:</b> '+esc(r.fix)+'</div>'
+
 +'<div style="margin-top:3px"><small>Карта: '+esc(r.map)+'</small></div>'
 +(r.chk?'<div style="color:#fbbf24;font-size:12px">⚠ '+esc(r.chk)+'</div>':'')
 +(RO?'<div>Статус: <b class="tnst-'+tnS(r)+'">'+TNSTN[tnS(r)]+'</b>'+(t.note?' · '+esc(t.note):'')+'</div>':
