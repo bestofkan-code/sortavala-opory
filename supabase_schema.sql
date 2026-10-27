@@ -122,3 +122,9 @@ alter table public.tn_remarks enable row level security;
 create policy tn_read on public.tn_remarks for select to anon, authenticated using (true);
 create policy tn_ins on public.tn_remarks for insert to authenticated with check (true);
 create policy tn_upd on public.tn_remarks for update to authenticated using (true) with check (true);
+
+-- Фото до/после по замечаниям технадзора: bucket tn-photos (public read) + таблица tn_photos
+-- insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('tn-photos','tn-photos',true,8388608,array['image/jpeg','image/png','image/webp']);
+-- policies on storage.objects for authenticated: insert/select/delete where bucket_id='tn-photos'
+create table if not exists public.tn_photos(id uuid primary key default gen_random_uuid(), n int not null,
+ kind text not null check (kind in ('before','after')), path text not null, ed text, created_at timestamptz not null default now());
