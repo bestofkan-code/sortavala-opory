@@ -128,3 +128,7 @@ create policy tn_upd on public.tn_remarks for update to authenticated using (tru
 -- policies on storage.objects for authenticated: insert/select/delete where bucket_id='tn-photos'
 create table if not exists public.tn_photos(id uuid primary key default gen_random_uuid(), n int not null,
  kind text not null check (kind in ('before','after')), path text not null, ed text, created_at timestamptz not null default now());
+
+-- Фото до/после по работам опоры (сейчас: подрезка крон, k=9): bucket pole-photos (public read) + таблица pole_photos
+create table if not exists public.pole_photos(id uuid primary key default gen_random_uuid(), uid text not null, k int not null,
+ kind text not null check (kind in ('before','after')), path text not null, ed text, created_at timestamptz not null default now());
