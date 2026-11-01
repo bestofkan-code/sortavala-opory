@@ -132,3 +132,6 @@ create table if not exists public.tn_photos(id uuid primary key default gen_rand
 -- Фото до/после по работам опоры (сейчас: подрезка крон, k=9): bucket pole-photos (public read) + таблица pole_photos
 create table if not exists public.pole_photos(id uuid primary key default gen_random_uuid(), uid text not null, k int not null,
  kind text not null check (kind in ('before','after')), path text not null, ed text, created_at timestamptz not null default now());
+
+-- Угол двухрожкового кронштейна: 90 или 180 градусов (null — не указан); pole_patch дополнен полем ka
+alter table public.poles add column if not exists ka int check (ka in (90,180));
