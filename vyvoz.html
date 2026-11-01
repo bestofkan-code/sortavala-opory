@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Вывоз отходов — опоры Сортавала</title>
+<title>Вывоз грунта — опоры Сортавала</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap">
 <style>
@@ -57,11 +57,9 @@ a{color:#9db4ff}
 <div id="m"></div>
 <div id="s">
  <div id="ph"></div>
- <h1>Вывоз отходов у опор</h1>
- <div class="mu">Грунт из котлованов, ветки после подрезки крон, демонтированные заборы и старые опоры. Данные берутся с карты опор и обновляются автоматически.</div>
+ <h1>Вывоз грунта из котлованов</h1>
+ <div class="mu">Точки забуренных котлованов у опор. Данные берутся с карты опор и обновляются автоматически.</div>
  <div class="np">
- <h3>Что вывозить</h3>
- <div class="r chips" id="ty"></div>
  <h3>Где и когда</h3>
  <div class="r">ТП: <select id="tp" style="flex:1;min-width:0"><option value="">все ТП</option></select></div>
  <div class="r">Работы с <input type="date" id="df"> по <input type="date" id="dt"> <button id="dx">Сброс</button></div>
@@ -78,7 +76,7 @@ a{color:#9db4ff}
 <script>
 const CF={u:'https://rznsydqapcffgnvynfdg.supabase.co',k:'sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc'},KEY='sortavala_opory_v1',$=i=>document.getElementById(i);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const TY=[['g','Грунт из котлованов','#c08457',[1,11]],['v','Ветки (подрезка крон)','#4ade80',[9]],['z','Забор (демонтаж)','#fbbf24',[7]],['o','Старая опора','#f97316',[8]],['t','По примечанию: вывоз/уборка','#94a3b8',[]]];
+const TY=[['g','Котлован','#c08457',[1,11]]];
 const DONE=13;
 let P=[],SEL=new Set(TY.map(t=>t[0])),ADR={},SESS=null,PTS=[];
 try{ADR=JSON.parse(localStorage.getItem(KEY+'_adr')||'{}')||{}}catch(e){}
@@ -92,29 +90,30 @@ function H(){const h={apikey:CF.k,'Content-Type':'application/json'};if(SESS&&SE
 const wd=(p,k)=>k==4?(p.done?(p.date||''):''):((p.w||{})[k]||'');
 const tpn=t=>/^\d+$/.test(String(t))?'ТП-'+t:String(t||'');
 const rd=v=>v&&/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):'';
-function kinds(p){const o=[];TY.forEach(([c,n,col,ks])=>{if(c=='t'){if(/вывоз|уборк|отход/i.test((p.note||'')+' '+(p.wc||'')))o.push(c);return}const d=ks.map(k=>wd(p,k)).filter(Boolean);if(d.length)o.push(c)});return o}
-function wdate(p){const ds=[1,11,9,7,8].map(k=>wd(p,k)).filter(v=>/^\d{4}-/.test(v)).sort();return ds.length?ds[ds.length-1]:''}
+function kinds(p){return (wd(p,1)||wd(p,11))?['g']:[]}
+function wdate(p){const ds=[1,11].map(k=>wd(p,k)).filter(v=>/^\d{4}-/.test(v)).sort();return ds.length?ds[ds.length-1]:''}
+function nt(p){return [p.note,p.wc].filter(Boolean).join('/').split('/').map(x=>x.trim()).filter(x=>x&&x!='.'&&!/^(90|180|190)\s*(градус\S*)?$/i.test(x)).join(' · ')}
 function adr(p){if(p.ad&&p.ad.trim())return p.ad.trim();return ADR[p.lat.toFixed(5)+','+p.lon.toFixed(5)]||''}
 async function load(){try{const r=await fetch(CF.u+'/rest/v1/poles?select=uid,id,lat,lon,tp,n,t,w,note,wc,ad,x,done,date&limit=5000',{headers:{apikey:CF.k}}),j=await r.json();if(!Array.isArray(j))throw new Error(JSON.stringify(j));P=j.filter(p=>!p.x);
  const tps=[...new Set(P.map(p=>String(p.tp||'')).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru',{numeric:true})),cur=$('tp').value;$('tp').innerHTML='<option value="">все ТП</option>'+tps.map(t=>'<option value="'+esc(t)+'">'+esc(tpn(t))+'</option>').join('');$('tp').value=cur;render()}catch(e){$('sum').textContent='Не удалось загрузить данные: '+(e.message||e)}}
 function order(L2){if(L2.length<3)return L2;const left=L2.slice(),out=[];let c=left.reduce((a,p)=>p.lat<a.lat?p:a,left[0]);while(left.length){left.splice(left.indexOf(c),1);out.push(c);let b=null,bd=1e18;for(const q of left){const d=(q.lat-c.lat)**2+((q.lon-c.lon)*.47)**2;if(d<bd){bd=d;b=q}}c=b}return out}
 const nav=p=>`<span class="nv"><a href="https://yandex.ru/maps/?rtext=~${p.lat},${p.lon}&rtt=auto" target="_blank" rel="noopener">Яндекс маршрут</a><a href="yandexnavi://build_route_on_map?lat_to=${p.lat}&lon_to=${p.lon}">Навигатор</a><a href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}" target="_blank" rel="noopener">Google</a></span>`;
-function desc(p){return kinds(p).map(c=>{const t=TY.find(x=>x[0]==c);const d=t[3].map(k=>wd(p,k)).filter(Boolean).sort().pop();return '<span class="tg" style="background:'+t[2]+'">'+t[1].split(' (')[0]+(d?' '+rd(d).slice(0,5):'')+'</span>'}).join('')}
+function desc(p){return [[1,'Котлован'],[11,'Котлован под заземление']].filter(([k])=>wd(p,k)).map(([k,n])=>'<span class="tg" style="background:#c08457">'+n+' '+rd(wd(p,k)).slice(0,5)+'</span>').join('')}
 function render(){const tp=$('tp').value,f=$('df').value,t=$('dt').value,sd=$('sd').checked;
  let L2=P.filter(p=>{const k=kinds(p).filter(c=>SEL.has(c));if(!k.length)return false;if(tp&&String(p.tp)!=tp)return false;const d=wdate(p);if((f||t)&&!(d&&(!f||d>=f)&&(!t||d<=t)))return false;if(!sd&&wd(p,DONE))return false;return true});
  L2=order(L2);PTS=L2;lay.clearLayers();
  const cnt={};TY.forEach(x=>cnt[x[0]]=0);L2.forEach(p=>kinds(p).forEach(c=>{if(SEL.has(c))cnt[c]++}));const dn=L2.filter(p=>wd(p,DONE)).length;
- $('sum').innerHTML='<b>'+(L2.length-dn)+'</b> точек к вывозу'+(dn?' · вывезено '+dn:'')+'<br><small class="mu">'+TY.filter(x=>SEL.has(x[0])&&cnt[x[0]]).map(x=>x[1].split(' (')[0]+': '+cnt[x[0]]).join(' · ')+'</small>';
- $('ph').innerHTML='<b>Вывоз отходов у опор освещения, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+((f||t)?' · работы '+(rd(f)||'…')+' – '+(rd(t)||'…'):'')+' · '+L2.length+' точек · на '+new Date().toLocaleDateString('ru-RU');
+ $('sum').innerHTML='<b>'+(L2.length-dn)+'</b> котлованов к вывозу грунта'+(dn?' · вывезено '+dn:'');
+ $('ph').innerHTML='<b>Вывоз грунта из котлованов, опоры освещения, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+((f||t)?' · работы '+(rd(f)||'…')+' – '+(rd(t)||'…'):'')+' · '+L2.length+' точек · на '+new Date().toLocaleDateString('ru-RU');
  const B=[];L2.forEach((p,i)=>{const ks=kinds(p).filter(c=>SEL.has(c)),col=(TY.find(x=>x[0]==ks[0])||TY[0])[2],dnp=!!wd(p,DONE);B.push([p.lat,p.lon]);
   L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="lbl'+(dnp?' dn':'')+'" style="background:'+col+'">'+(i+1)+'</div>'})}).bindPopup(()=>pop(p,i)).addTo(lay)});
- $('li').innerHTML=L2.map((p,i)=>{const a=adr(p);return '<div class="it'+(wd(p,DONE)?' done':'')+'" data-i="'+i+'"><div class="h"><span class="no">'+(i+1)+'</span><b>'+esc(p.id)+'</b>'+(a?'<span class="mu">'+esc(a)+'</span>':'')+'</div>'+desc(p)+((p.note||p.wc)?'<small>'+esc([p.note,p.wc].filter(Boolean).join(' · '))+'</small>':'')+(wd(p,DONE)?'<small style="color:#4ade80">вывезено '+rd(wd(p,DONE))+'</small>':'')+'<small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small>'+nav(p)+'</div>'}).join('')||'<div class="mu">Нет точек по выбранным условиям.</div>';
+ $('li').innerHTML=L2.map((p,i)=>{const a=adr(p);return '<div class="it'+(wd(p,DONE)?' done':'')+'" data-i="'+i+'"><div class="h"><span class="no">'+(i+1)+'</span><b>'+esc(p.id)+'</b>'+(a?'<span class="mu">'+esc(a)+'</span>':'')+'</div>'+desc(p)+(nt(p)?'<small>'+esc(nt(p))+'</small>':'')+(wd(p,DONE)?'<small style="color:#4ade80">вывезено '+rd(wd(p,DONE))+'</small>':'')+'<small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small>'+nav(p)+'</div>'}).join('')||'<div class="mu">Нет точек по выбранным условиям.</div>';
  $('li').querySelectorAll('.it').forEach(el=>el.onclick=e=>{if(e.target.closest('a'))return;const p=PTS[+el.dataset.i];map.setView([p.lat,p.lon],18);lay.eachLayer(m=>{const ll=m.getLatLng();if(ll.lat==p.lat&&ll.lng==p.lon)m.openPopup()})});
  if(B.length&&!render.fit){map.fitBounds(B,{padding:[30,30]});render.fit=1}
  const ch=[];for(let i=0;i<L2.length;i+=8)ch.push(L2.slice(i,i+8));
  $('rt').innerHTML=ch.length?'<span class="mu" style="width:100%">Маршрут в Яндекс Картах по порядку точек:</span>'+ch.map((c,j)=>'<a href="https://yandex.ru/maps/?rtext='+c.map(p=>p.lat+','+p.lon).join('~')+'&rtt=auto" target="_blank" rel="noopener">точки '+(j*8+1)+'–'+(j*8+c.length)+'</a>').join(' · '):'';
  authBar();adrFill()}
-function pop(p,i){const d=document.createElement('div');const a=adr(p);d.innerHTML='<b>'+(i+1)+'. '+esc(p.id)+'</b>'+(a?'<br>'+esc(a):'')+'<br>'+desc(p)+((p.note||p.wc)?'<br><small>'+esc([p.note,p.wc].filter(Boolean).join(' · '))+'</small>':'')+'<br><small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small><br>'+nav(p)+(SESS?'<br><button data-dn style="margin-top:6px">'+(wd(p,DONE)?'Снять отметку «вывезено»':'Отметить: вывезено')+'</button>':'');
+function pop(p,i){const d=document.createElement('div');const a=adr(p);d.innerHTML='<b>'+(i+1)+'. '+esc(p.id)+'</b>'+(a?'<br>'+esc(a):'')+'<br>'+desc(p)+(nt(p)?'<br><small>'+esc(nt(p))+'</small>':'')+'<br><small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small><br>'+nav(p)+(SESS?'<br><button data-dn style="margin-top:6px">'+(wd(p,DONE)?'Снять отметку «вывезено»':'Отметить: вывезено')+'</button>':'');
  const b=d.querySelector('[data-dn]');if(b)b.onclick=()=>markDone([p],!wd(p,DONE));return d}
 function authBar(){$('au').innerHTML=SESS?'<span class="mu">Вы вошли как '+esc(SESS.name||'')+'.</span> <button id="bd">Отметить все показанные: вывезено</button>':'<span class="mu">Чтобы отмечать вывоз, войдите в <a href="redaktor.html">редакторе</a> на этом устройстве.</span>';const b=$('bd');if(b)b.onclick=()=>{const L2=PTS.filter(p=>!wd(p,DONE));if(!L2.length)return alert('Все показанные точки уже отмечены.');if(confirm('Отметить вывезенными '+L2.length+' точек сегодняшней датой?'))markDone(L2,true)}}
 const LD=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
@@ -123,18 +122,16 @@ async function markDone(L2,on){try{await fresh();const d=LD(),items=L2.map(p=>on
  for(let i=0;i<items.length;i+=150){const r=await fetch(CF.u+'/rest/v1/rpc/pole_patch',{method:'POST',headers:H(),body:JSON.stringify({items:items.slice(i,i+150),editor:SESS.name||null})});if(!r.ok)throw new Error(await r.text())}
  L2.forEach(p=>{p.w=p.w||{};if(on)p.w[DONE]=d;else delete p.w[DONE]});map.closePopup();render()}catch(e){alert('Не сохранено: '+(e.message||e))}}
 let AQ=Promise.resolve(),AT=0;function adrFill(){const need=PTS.filter(p=>!adr(p)).slice(0,60);need.forEach(p=>{AQ=AQ.then(async()=>{const k=p.lat.toFixed(5)+','+p.lon.toFixed(5);if(ADR[k]!=null)return;const w=1100-(Date.now()-AT);if(w>0)await new Promise(r=>setTimeout(r,w));AT=Date.now();try{const r=await fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=18&addressdetails=1&accept-language=ru&lat='+p.lat+'&lon='+p.lon),j=await r.json(),a=j.address||{},st=(a.road||a.pedestrian||a.footway||'').replace(/^улица\s+(.+)$/i,'$1 ул.').replace(/\s*улица$/i,' ул.'),t=st?st+(a.house_number?', '+a.house_number:''):'';ADR[k]=t;try{localStorage.setItem(KEY+'_adr',JSON.stringify(ADR))}catch(e){}const el=document.querySelector('.it[data-i="'+PTS.indexOf(p)+'"] .h');if(el&&t&&!el.querySelector('.mu'))el.insertAdjacentHTML('beforeend','<span class="mu">'+esc(t)+'</span>')}catch(e){ADR[k]=''}})})}
-$('ty').innerHTML=TY.map(([c,n,col])=>'<label><input type="checkbox" value="'+c+'" checked><i style="background:'+col+'"></i>'+n+'</label>').join('');
-$('ty').onchange=()=>{SEL=new Set([...document.querySelectorAll('#ty input:checked')].map(x=>x.value));render()};
 ['tp','df','dt','sd'].forEach(i=>$(i).onchange=render);$('dx').onclick=()=>{$('df').value=$('dt').value='';render()};
 $('pr').onclick=()=>{map.invalidateSize();setTimeout(()=>window.print(),400)};
 function per(){const f=$('df').value,t=$('dt').value;return (f||t)?' '+(rd(f)||'…')+'–'+(rd(t)||'…'):' '+new Date().toLocaleDateString('ru-RU')}
-$('xl').onclick=()=>{const rows=[['№','Опора','ТП','Адрес','Что вывозить','Дата работ','Примечание','Широта','Долгота','Вывезено','Яндекс Карты']];PTS.forEach((p,i)=>rows.push([i+1,p.id,tpn(p.tp),adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(x=>x[0]==c)[1]).join(', '),rd(wdate(p)),[p.note,p.wc].filter(Boolean).join(' · '),+p.lat.toFixed(6),+p.lon.toFixed(6),rd(wd(p,DONE)),'https://yandex.ru/maps/?pt='+p.lon+','+p.lat+'&z=18']));const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:4},{wch:16},{wch:8},{wch:26},{wch:34},{wch:11},{wch:30},{wch:11},{wch:11},{wch:11},{wch:48}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Вывоз');XLSX.writeFile(wb,'Вывоз отходов'+per()+'.xlsx')};
-$('km').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;');const k='<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Вывоз отходов'+x(per())+'</name>'+PTS.map((p,i)=>'<Placemark><name>'+(i+1)+'. '+x(p.id)+'</name><description>'+x([adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(y=>y[0]==c)[1]).join(', '),p.note,p.wc].filter(Boolean).join(' · '))+'</description><Point><coordinates>'+p.lon+','+p.lat+',0</coordinates></Point></Placemark>').join('')+'</Document></kml>';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([k],{type:'application/vnd.google-earth.kml+xml'}));a.download='Вывоз отходов'+per()+'.kml';a.click()};
-$('gx').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;'),nm=(p,i)=>(i+1)+'. '+p.id,ds=p=>[adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(y=>y[0]==c)[1]).join(', '),p.note,p.wc].filter(Boolean).join(' · ');
- const g='<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Карта опор Сортавала" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>Вывоз отходов'+x(per())+'</name><time>'+new Date().toISOString()+'</time></metadata>'
+$('xl').onclick=()=>{const rows=[['№','Опора','ТП','Адрес','Котлован','Дата работ','Примечание','Широта','Долгота','Вывезено','Яндекс Карты']];PTS.forEach((p,i)=>rows.push([i+1,p.id,tpn(p.tp),adr(p),[[1,'котлован'],[11,'котлован под заземление']].filter(([k])=>wd(p,k)).map(([k,n])=>n).join(', '),rd(wdate(p)),nt(p),+p.lat.toFixed(6),+p.lon.toFixed(6),rd(wd(p,DONE)),'https://yandex.ru/maps/?pt='+p.lon+','+p.lat+'&z=18']));const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:4},{wch:16},{wch:8},{wch:26},{wch:34},{wch:11},{wch:30},{wch:11},{wch:11},{wch:11},{wch:48}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Вывоз');XLSX.writeFile(wb,'Вывоз грунта'+per()+'.xlsx')};
+$('km').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;');const k='<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Вывоз грунта'+x(per())+'</name>'+PTS.map((p,i)=>'<Placemark><name>'+(i+1)+'. '+x(p.id)+'</name><description>'+x([adr(p),[[1,'котлован'],[11,'котлован под заземление']].filter(([k])=>wd(p,k)).map(([k,n])=>n).join(', '),nt(p)].filter(Boolean).join(' · '))+'</description><Point><coordinates>'+p.lon+','+p.lat+',0</coordinates></Point></Placemark>').join('')+'</Document></kml>';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([k],{type:'application/vnd.google-earth.kml+xml'}));a.download='Вывоз грунта'+per()+'.kml';a.click()};
+$('gx').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;'),nm=(p,i)=>(i+1)+'. '+p.id,ds=p=>[adr(p),[[1,'котлован'],[11,'котлован под заземление']].filter(([k])=>wd(p,k)).map(([k,n])=>n).join(', '),nt(p)].filter(Boolean).join(' · ');
+ const g='<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Карта опор Сортавала" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>Вывоз грунта'+x(per())+'</name><time>'+new Date().toISOString()+'</time></metadata>'
  +PTS.map((p,i)=>'<wpt lat="'+p.lat+'" lon="'+p.lon+'"><name>'+x(nm(p,i))+'</name><desc>'+x(ds(p))+'</desc><sym>Flag</sym></wpt>').join('')
  +'<rte><name>Объезд по порядку точек</name>'+PTS.map((p,i)=>'<rtept lat="'+p.lat+'" lon="'+p.lon+'"><name>'+x(nm(p,i))+'</name></rtept>').join('')+'</rte></gpx>';
- const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([g],{type:'application/gpx+xml'}));a.download='Вывоз отходов'+per()+'.gpx';a.click()};
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([g],{type:'application/gpx+xml'}));a.download='Вывоз грунта'+per()+'.gpx';a.click()};
 load();setInterval(()=>{if(!document.querySelector('.leaflet-popup'))load()},60000);
 </script>
 </body>
