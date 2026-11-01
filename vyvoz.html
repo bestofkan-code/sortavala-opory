@@ -68,7 +68,7 @@ a{color:#9db4ff}
  <div class="r"><label><input type="checkbox" id="sd"> показывать уже вывезенные</label></div>
  </div>
  <div class="sum" id="sum">Загрузка…</div>
- <div class="r np"><button class="pr" id="pr">Печать / PDF</button><button id="xl">Excel</button><button id="km">KML для навигатора</button></div>
+ <div class="r np"><button class="pr" id="pr">Печать / PDF</button><button id="xl">Excel</button><button id="gx">GPX</button><button id="km">KML</button></div>
  <div class="r np" id="rt"></div>
  <div class="r np" id="au"></div>
  <div id="li"></div>
@@ -130,6 +130,11 @@ $('pr').onclick=()=>{map.invalidateSize();setTimeout(()=>window.print(),400)};
 function per(){const f=$('df').value,t=$('dt').value;return (f||t)?' '+(rd(f)||'…')+'–'+(rd(t)||'…'):' '+new Date().toLocaleDateString('ru-RU')}
 $('xl').onclick=()=>{const rows=[['№','Опора','ТП','Адрес','Что вывозить','Дата работ','Примечание','Широта','Долгота','Вывезено','Яндекс Карты']];PTS.forEach((p,i)=>rows.push([i+1,p.id,tpn(p.tp),adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(x=>x[0]==c)[1]).join(', '),rd(wdate(p)),[p.note,p.wc].filter(Boolean).join(' · '),+p.lat.toFixed(6),+p.lon.toFixed(6),rd(wd(p,DONE)),'https://yandex.ru/maps/?pt='+p.lon+','+p.lat+'&z=18']));const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:4},{wch:16},{wch:8},{wch:26},{wch:34},{wch:11},{wch:30},{wch:11},{wch:11},{wch:11},{wch:48}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Вывоз');XLSX.writeFile(wb,'Вывоз отходов'+per()+'.xlsx')};
 $('km').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;');const k='<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Вывоз отходов'+x(per())+'</name>'+PTS.map((p,i)=>'<Placemark><name>'+(i+1)+'. '+x(p.id)+'</name><description>'+x([adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(y=>y[0]==c)[1]).join(', '),p.note,p.wc].filter(Boolean).join(' · '))+'</description><Point><coordinates>'+p.lon+','+p.lat+',0</coordinates></Point></Placemark>').join('')+'</Document></kml>';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([k],{type:'application/vnd.google-earth.kml+xml'}));a.download='Вывоз отходов'+per()+'.kml';a.click()};
+$('gx').onclick=()=>{const x=s=>esc(s).replace(/'/g,'&#39;'),nm=(p,i)=>(i+1)+'. '+p.id,ds=p=>[adr(p),kinds(p).filter(c=>SEL.has(c)).map(c=>TY.find(y=>y[0]==c)[1]).join(', '),p.note,p.wc].filter(Boolean).join(' · ');
+ const g='<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Карта опор Сортавала" xmlns="http://www.topografix.com/GPX/1/1"><metadata><name>Вывоз отходов'+x(per())+'</name><time>'+new Date().toISOString()+'</time></metadata>'
+ +PTS.map((p,i)=>'<wpt lat="'+p.lat+'" lon="'+p.lon+'"><name>'+x(nm(p,i))+'</name><desc>'+x(ds(p))+'</desc><sym>Flag</sym></wpt>').join('')
+ +'<rte><name>Объезд по порядку точек</name>'+PTS.map((p,i)=>'<rtept lat="'+p.lat+'" lon="'+p.lon+'"><name>'+x(nm(p,i))+'</name></rtept>').join('')+'</rte></gpx>';
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([g],{type:'application/gpx+xml'}));a.download='Вывоз отходов'+per()+'.gpx';a.click()};
 load();setInterval(()=>{if(!document.querySelector('.leaflet-popup'))load()},60000);
 </script>
 </body>
