@@ -120,6 +120,9 @@ function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(
   E.forEach(([a,b])=>{if(par.has(a)&&par.has(b)){const ra=f(a),rb=f(b);if(ra!==rb){par.set(ra,rb);old.set(rb,old.get(rb)||old.get(ra))}}});
   const C2=[],NN=N.filter(p=>!p._sp);NN.forEach(p=>P.forEach(q=>{if(q===p||q.x||q.tp!=p.tp||!par.has(q))return;if(NN.includes(q)&&q.uid<p.uid)return;const d=dmt(p,q);if(d<90)C2.push([d,p,q])}));
   C2.sort((x,y)=>x[0]-y[0]).forEach(([d,p,q])=>{const rp=f(p),rq=f(q);if(rp===rq||(old.get(rp)&&old.get(rq)))return;add(p,q,'n');par.set(rp,rq);old.set(rq,old.get(rq)||old.get(rp))})}
+ {const kk=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,nbr=()=>{const m=new Map();E.forEach(([a,b])=>{[[a,b],[b,a]].forEach(([x,y])=>{if(!m.has(x))m.set(x,[]);m.get(x).push(y)})});return m},rm=(a,b)=>{const q=kk(a,b),e=E.get(q);if(e){if(e[2]=='d')SK.add(q);E.delete(q)}};
+  nbr().forEach((L2,c)=>{if(c.x&&L2.length==2&&E.has(kk(L2[0],L2[1]))){rm(c,L2[0]);rm(c,L2[1])}});
+  let ch=true;while(ch){ch=false;const m=nbr();for(const[,[a,b]]of[...E]){const c=(m.get(a)||[]).find(c=>c!==b&&E.has(kk(c,b)));if(!c)continue;const ab=dmt(a,b),ac=dmt(a,c),cb=dmt(c,b);if(ab>ac&&ab>cb&&(ac+cb)/ab<1.15){rm(a,b);ch=true;break}}}}
  N.forEach(p=>delete p._sp);const BASE=new Set(E.keys());((typeof LE!='undefined'&&LE)||new Map()).forEach((r,key)=>{const[ua,ub]=key.split('|'),a=U.get(ua),b=U.get(ub);if(!a||!b)return;if(r.op=='del'){if(E.has(key)){E.delete(key);SK.add(key)}return}if(!E.has(key))E.set(key,[a,b,'u']);const e=E.get(key);e.pts=(r.pts&&r.pts.length)?r.pts:null;if(e.pts||e[2]=='u')SK.add(key)});
  return{E:[...E.values()],SK,BASE}}
 function rlinks(){const n=NETC||netEdges();return n.E.filter(([a,b])=>a.js&&b.js&&!a.x&&!b.x).map(e=>[e[0],e[1],e.pts||null])}
