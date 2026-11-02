@@ -117,16 +117,27 @@ m.on('dragstart',()=>{m._o=m.getLatLng()});m.on('dragend',()=>{const c=m.getLatL
 const GE=(()=>{const s=new Set(),r=[];D.l.forEach(g=>{const a='p'+g[0][0],b='p'+g[1][0];if(a!=b){const k=a<b?a+'|'+b:b+'|'+a;if(!s.has(k)){s.add(k);r.push([a,b])}}});return r})(),HAS=new Set(GE.flat());
 const dmt=(a,b)=>Math.hypot((a.lat-b.lat)*110950,(a.lon-b.lon)*K1);
 function nearest(p,f,mx){let q=null,b=mx;P.forEach(o=>{if(f(o)){const d=dmt(p,o);if(d<b){b=d;q=o}}});return q}
-function rlinks(){const out=[],seen=new Set(),by={},add=(a,b)=>{const k=a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid;if(!seen.has(k)){seen.add(k);out.push([a,b])}};
-P.filter(p=>p.js&&p.tp).forEach(p=>(by[p.tp]=by[p.tp]||[]).push(p));
-for(const t in by){const A=by[t],ids=new Map(A.map(p=>[p.uid,p])),lk=new Set();
-GE.forEach(([a,b])=>{const x=ids.get(a),y=ids.get(b);if(x&&y){add(x,y);lk.add(x);lk.add(y)}});
-A.forEach(p=>A.forEach(q=>{if(p!==q&&+q.n==+p.n+1&&dmt(p,q)<90){add(p,q);lk.add(p);lk.add(q)}}));
-A.forEach(p=>{if(!lk.has(p)){const q=nearest(p,o=>o!==p&&o.js&&o.tp==p.tp,100);if(q)add(p,q)}})}
-return out}
+/* ---- сеть линий: чертёж + новые опоры, вставленные в пролёты; совм. подвеска идёт только по этой сети ---- */
+var NETC=null;
+function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(),k=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,
+ add=(a,b,src)=>{if(a&&b&&a!==b&&!E.has(k(a,b)))E.set(k(a,b),[a,b,src])},deg=new Map(),dg=p=>{let n=0;E.forEach(([a,b])=>{if(a===p||b===p)n++});return n};
+ const del=new Map();GE.forEach(([a,b])=>{const x=U.get(a),y=U.get(b);if(x&&y)add(x,y,'d');else if(x||y){const m=x?b:a,q=x||y;if(!del.has(m))del.set(m,[]);del.get(m).push(q)}});
+ del.forEach(L2=>{if(L2.length==2&&L2[0].tp==L2[1].tp&&dmt(L2[0],L2[1])<120)add(L2[0],L2[1],'b')});
+ const N=P.filter(p=>p.tp&&!HAS.has(p.uid)&&!p.x),xy=p=>[p.lon*K1,p.lat*110950];
+ {const TPP=new Map();P.forEach(q=>{if(q.tp&&!q.x){if(!TPP.has(q.tp))TPP.set(q.tp,[]);TPP.get(q.tp).push(q)}});
+  let ch=true,it=0;while(ch&&it++<8){ch=false;for(const[key,e]of[...E]){if(!E.has(key))continue;const[a,b,src]=e;const A=xy(a),B=xy(b),dx=B[0]-A[0],dy=B[1]-A[1],L=dx*dx+dy*dy;if(!L)continue;let best=null,bt=2;
+   for(const c of(TPP.get(a.tp)||[]).concat(a.tp!=b.tp?(TPP.get(b.tp)||[]):[])){if(c===a||c===b)continue;const Q=xy(c),t=((Q[0]-A[0])*dx+(Q[1]-A[1])*dy)/L;if(t<.05||t>.95)continue;const d=Math.hypot(Q[0]-A[0]-t*dx,Q[1]-A[1]-t*dy),lim=HAS.has(c.uid)?8:12;if(d<lim&&t<bt){bt=t;best=c}}
+   if(best){E.delete(key);if(src=='d')SK.add(key);const s2=src=='d'||src=='s'?'s':'n';add(a,best,s2);add(best,b,s2);best._sp=1;ch=true}}}}
+ {const par=new Map(),old=new Map(),f=x=>{while(par.get(x)!==x){par.set(x,par.get(par.get(x)));x=par.get(x)}return x};
+  P.forEach(p=>{if(!p.x&&p.tp){par.set(p,p);old.set(p,!N.includes(p)||!!p._sp)}});
+  E.forEach(([a,b])=>{if(par.has(a)&&par.has(b)){const ra=f(a),rb=f(b);if(ra!==rb){par.set(ra,rb);old.set(rb,old.get(rb)||old.get(ra))}}});
+  const C2=[],NN=N.filter(p=>!p._sp);NN.forEach(p=>P.forEach(q=>{if(q===p||q.x||q.tp!=p.tp||!par.has(q))return;if(NN.includes(q)&&q.uid<p.uid)return;const d=dmt(p,q);if(d<90)C2.push([d,p,q])}));
+  C2.sort((x,y)=>x[0]-y[0]).forEach(([d,p,q])=>{const rp=f(p),rq=f(q);if(rp===rq||(old.get(rp)&&old.get(rq)))return;add(p,q,'n');par.set(rp,rq);old.set(rq,old.get(rq)||old.get(rp))})}
+ N.forEach(p=>delete p._sp);return{E:[...E.values()],SK}}
+function rlinks(){const n=NETC||netEdges();return n.E.filter(([a,b])=>a.js&&b.js&&!a.x&&!b.x).map(([a,b])=>[a,b])}
 function lines(){ll.clearLayers();const U=new Map(P.map(p=>[p.uid,p])),pt=e=>{const p=U.get('p'+e[0]);return p?[p.lat+e[1],p.lon+e[2]]:null};
-SPANS.clear();D.l.forEach(s=>{const a=pt(s[0]),b=pt(s[1]);if(a&&b)spanLine('p'+s[0][0],'p'+s[1][0],a,b,s[2]?'4 5':null)});
-P.filter(p=>!/^p\d+$/.test(p.uid)&&p.tp&&!HAS.has(p.uid)).forEach(p=>{const q=nearest(p,o=>o!==p&&o.tp==p.tp,120);if(q)spanLine(p.uid,q.uid,[p.lat,p.lon],[q.lat,q.lon],'4 5')});
+NETC=netEdges();SPANS.clear();D.l.forEach(s=>{const ua='p'+s[0][0],ub='p'+s[1][0];if(NETC.SK.has(ua<ub?ua+'|'+ub:ub+'|'+ua))return;const a=pt(s[0]),b=pt(s[1]);if(a&&b)spanLine(ua,ub,a,b,s[2]?'4 5':null)});
+NETC.E.filter(e=>e[2]!='d').forEach(([a,b,c])=>spanLine(a.uid,b.uid,[a.lat,a.lon],[b.lat,b.lon],c=='s'?null:'4 5'));
 rlinks().forEach(([a,b])=>L.polyline([[a.lat,a.lon],[b.lat,b.lon]],{color:'#dc2626',weight:4,opacity:.9,interactive:false}).addTo(ll));
 tpDraw()}
 function tps(){if($('qt')){const q=$('qt').value,b=[...new Set(P.map(p=>String(p.tp||'')).filter(Boolean))].sort((x,y)=>x.localeCompare(y,'ru',{numeric:true}));$('qt').innerHTML='<option value="">любая ТП</option>'+b.map(x=>'<option value="'+esc(x)+'">'+esc(tpn(x))+'</option>').join('');$('qt').value=q}const a=[...new Set(P.map(p=>String(p.tp||'')).filter(Boolean))].sort((x,y)=>x.localeCompare(y,'ru',{numeric:true}));[...FTS].forEach(x=>{if(!a.includes(x))FTS.delete(x)});const cnt={};P.forEach(p=>{if(!p.x)cnt[p.tp]=(cnt[p.tp]||0)+1});$('ftl').innerHTML='<div class="fa"><button type="button" data-fa="all">все</button><button type="button" data-fa="none">сбросить</button></div>'+a.map(x=>'<label><input type="checkbox" value="'+esc(x)+'"'+(FTS.has(x)?' checked':'')+'> '+esc(tpn(x))+' <small>'+(cnt[x]||0)+'</small></label>').join('');$('fts').textContent=tpLbl()||'все';$('fts').title=tpLbl()||'все ТП'}
@@ -248,8 +259,8 @@ await Promise.all(Array.from({length:6},async()=>{while(q<jobs.length){const [a,
 if(!ok)throw new Error('не удалось загрузить подложку (проверьте интернет)');
 g.fillStyle='rgba(255,255,255,.18)';g.fillRect(mx,my,mw,mh);
 const SH=o.only||P,SHS=new Set(SH),lw=.3*u,U=new Map(SH.map(p=>[p.uid,p])),UA=new Map(P.map(p=>[p.uid,p])),pt=e=>{const p=U.get('p'+e[0]);return p?C(p.lat+e[1],p.lon+e[2]):null},ptA=e=>{const p=UA.get('p'+e[0]);return p?C(p.lat+e[1],p.lon+e[2]):null};
-g.lineCap='round';g.strokeStyle='#1d4ed8';g.lineWidth=lw*1.5;D.l.forEach(sg=>{const a=pt(sg[0]),b=pt(sg[1]);if(a&&b){g.setLineDash(sg[2]?[lw*4,lw*3]:[]);g.beginPath();g.moveTo(...a);g.lineTo(...b);g.stroke()}});
-g.setLineDash([lw*4,lw*3]);SH.filter(p=>!/^p\d+$/.test(p.uid)&&p.tp&&!HAS.has(p.uid)).forEach(p=>{const t=nearest(p,x=>x!==p&&x.tp==p.tp&&SHS.has(x),120);if(t){g.beginPath();g.moveTo(...C(p.lat,p.lon));g.lineTo(...C(t.lat,t.lon));g.stroke()}});g.setLineDash([]);
+const NT=netEdges();g.lineCap='round';g.strokeStyle='#1d4ed8';g.lineWidth=lw*1.5;D.l.forEach(sg=>{const ua='p'+sg[0][0],ub='p'+sg[1][0];if(NT.SK.has(ua<ub?ua+'|'+ub:ub+'|'+ua))return;const a=pt(sg[0]),b=pt(sg[1]);if(a&&b){g.setLineDash(sg[2]?[lw*4,lw*3]:[]);g.beginPath();g.moveTo(...a);g.lineTo(...b);g.stroke()}});
+g.setLineDash([lw*4,lw*3]);NT.E.filter(e=>e[2]!='d'&&SHS.has(e[0])&&SHS.has(e[1])).forEach(([a,b,c])=>{g.setLineDash(c=='s'?[]:[lw*4,lw*3]);g.beginPath();g.moveTo(...C(a.lat,a.lon));g.lineTo(...C(b.lat,b.lon));g.stroke()});g.setLineDash([]);
 g.strokeStyle='#dc2626';g.lineWidth=lw*4;rlinks().filter(([a,b])=>SHS.has(a)&&SHS.has(b)).forEach(([a,b])=>{g.beginPath();g.moveTo(...C(a.lat,a.lon));g.lineTo(...C(b.lat,b.lon));g.stroke()});
 const r=.95*u;SH.forEach(p=>dpole(g,...C(p.lat,p.lon),p,r));
 g.font=`bold ${2.6*u}px ${F}`;g.textAlign='center';g.textBaseline='middle';D.t.forEach(zz=>{const q=tpPos(zz[0]),c=q?C(q[0],q[1]):ptA(zz.slice(1));if(!c)return;const t='⚡ '+tpn(zz[0]),w=g.measureText(t).width+2.4*u,st=tpState(zz[0]);g.fillStyle='#1f2937';g.strokeStyle=st==2?'#16a34a':st==1?'#f59e0b':'#9ca3af';g.lineWidth=.45*u;g.fillRect(c[0]-w/2,c[1]-1.9*u,w,3.8*u);g.strokeRect(c[0]-w/2,c[1]-1.9*u,w,3.8*u);g.fillStyle='#fff';g.fillText(t,c[0],c[1]+.1*u)});
