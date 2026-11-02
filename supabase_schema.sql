@@ -135,3 +135,7 @@ create table if not exists public.pole_photos(id uuid primary key default gen_ra
 
 -- Угол двухрожкового кронштейна: 90 или 180 градусов (null — не указан); pole_patch дополнен полем ka
 alter table public.poles add column if not exists ka int check (ka in (90,180));
+
+-- Ручная правка линий (пролётов) между опорами: uid = 'uidA|uidB' (по алфавиту)
+-- op: del — линия удалена, add — добавлена вручную, path — изменён путь (pts: [[lat,lon],...] точки изгиба)
+create table if not exists public.line_edits(uid text primary key, op text not null check (op in ('del','add','path')), pts jsonb, ed text, updated_at timestamptz not null default now());
