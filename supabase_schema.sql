@@ -144,3 +144,7 @@ create table if not exists public.line_edits(uid text primary key, op text not n
 -- Линия бронекабеля рисуется от значка ТП к такой опоре; изгибы пути хранятся в line_edits с uid 'p…|tp:<ТП>'.
 alter table public.poles add column if not exists vk boolean not null default false;
 -- pole_patch: добавлена строка  vk = case when s ? 'vk' then coalesce((s->>'vk')::boolean,false) else vk end
+
+-- Исключённая из контракта опора, по которой всё равно тянем СИП (опора существует).
+alter table public.poles add column if not exists sx boolean not null default false;
+-- pole_patch: добавлена строка  sx = case when s ? 'sx' then coalesce((s->>'sx')::boolean,false) else sx end
