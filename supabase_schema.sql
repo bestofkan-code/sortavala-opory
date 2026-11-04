@@ -139,3 +139,8 @@ alter table public.poles add column if not exists ka int check (ka in (90,180));
 -- Ручная правка линий (пролётов) между опорами: uid = 'uidA|uidB' (по алфавиту)
 -- op: del — линия удалена, add — добавлена вручную, path — изменён путь (pts: [[lat,lon],...] точки изгиба)
 create table if not exists public.line_edits(uid text primary key, op text not null check (op in ('del','add','path')), pts jsonb, ed text, updated_at timestamptz not null default now());
+
+-- Опора ввода КЛ от ТП (анкерная с инспекционным люком под бронекабель).
+-- Линия бронекабеля рисуется от значка ТП к такой опоре; изгибы пути хранятся в line_edits с uid 'p…|tp:<ТП>'.
+alter table public.poles add column if not exists vk boolean not null default false;
+-- pole_patch: добавлена строка  vk = case when s ? 'vk' then coalesce((s->>'vk')::boolean,false) else vk end
