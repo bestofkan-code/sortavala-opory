@@ -132,6 +132,7 @@ d.innerHTML='<div><b>Бронекабель '+esc(z.name)+'</b></div><div>по �
 d.querySelector('[data-cp]').onclick=()=>{map.closePopup();L.popup(PO()).setLatLng([z.p.lat,z.p.lon]).setContent(popup(z.p)).openOn(map)};
 if(!RO)d.querySelector('[data-ce]').onclick=()=>{map.closePopup();leEdit(k)};
 L.popup(PO()).setLatLng(at).setContent(d).openOn(map)}
+const RMX=60;
 function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(),k=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,
  add=(a,b,src)=>{if(a&&b&&a!==b&&!E.has(k(a,b)))E.set(k(a,b),[a,b,src])},deg=new Map(),dg=p=>{let n=0;E.forEach(([a,b])=>{if(a===p||b===p)n++});return n};
  const del=new Map();GE.forEach(([a,b])=>{const x=U.get(a),y=U.get(b);if(x&&y)add(x,y,'d');else if(x||y){const m=x?b:a,q=x||y;if(!del.has(m))del.set(m,[]);del.get(m).push(q)}});
@@ -149,13 +150,23 @@ function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(
  {const kk=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,nbr=()=>{const m=new Map();E.forEach(([a,b])=>{[[a,b],[b,a]].forEach(([x,y])=>{if(!m.has(x))m.set(x,[]);m.get(x).push(y)})});return m},rm=(a,b)=>{const q=kk(a,b),e=E.get(q);if(e){if(e[2]=='d')SK.add(q);E.delete(q)}};
   nbr().forEach((L2,c)=>{if(c.x&&L2.length==2&&E.has(kk(L2[0],L2[1]))){rm(c,L2[0]);rm(c,L2[1])}});
   let ch=true;while(ch){ch=false;const m=nbr();for(const[,[a,b]]of[...E]){const c=(m.get(a)||[]).find(c=>c!==b&&E.has(kk(c,b)));if(!c)continue;const ab=dmt(a,b),ac=dmt(a,c),cb=dmt(c,b);if(ab>ac&&ab>cb&&(ac+cb)/ab<1.15){rm(a,b);ch=true;break}}}}
+ {/* реальная ВЛ: СИП не идёт через исключённые опоры; части сети одной ТП сшиваются пролётами до RMX м между реальными опорами (в т.ч. на гравит. фундаменте) */
+  const kk=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,adj=new Map();E.forEach(([a,b])=>{[[a,b],[b,a]].forEach(([x,y])=>{if(!adj.has(x))adj.set(x,[]);adj.get(x).push(y)})});
+  const bri=new Set(),seen=new Set();P.forEach(c=>{if(!c.x||seen.has(c)||!adj.has(c))return;const st=[c],nb=[];seen.add(c);while(st.length){const q=st.pop();(adj.get(q)||[]).forEach(r=>{if(r.x){if(!seen.has(r)){seen.add(r);st.push(r)}}else if(!nb.includes(r))nb.push(r)})}for(let i=0;i<nb.length;i++)for(let j=i+1;j<nb.length;j++)bri.add(kk(nb[i],nb[j]))});
+  for(const[key,e]of[...E])if(e[0].x||e[1].x){if(e[2]=='d')SK.add(key);E.delete(key)}
+  const xy=p=>[p.lon*K1,p.lat*110950],cr=(A,B,C,D)=>{const d=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);return d(C,D,A)*d(C,D,B)<0&&d(A,B,C)*d(A,B,D)<0},crosses=(a,b)=>{const A=xy(a),B=xy(b);for(const[c,d]of E.values()){if(c===a||c===b||d===a||d===b)continue;if(cr(A,B,xy(c),xy(d)))return true}return false};
+  const par=new Map(),f=x=>{while(par.get(x)!==x){par.set(x,par.get(par.get(x)));x=par.get(x)}return x},L2=P.filter(p=>!p.x&&p.tp);L2.forEach(p=>par.set(p,p));E.forEach(([a,b])=>{if(par.has(a)&&par.has(b))par.set(f(a),f(b))});
+  const dg=new Map();E.forEach(([a,b])=>{dg.set(a,(dg.get(a)||0)+1);dg.set(b,(dg.get(b)||0)+1)});
+  const TPG=new Map();L2.forEach(p=>{const t=String(p.tp);if(!TPG.has(t))TPG.set(t,[]);TPG.get(t).push(p)});const C3=[];
+  TPG.forEach(A=>{for(let i=0;i<A.length;i++)for(let j=i+1;j<A.length;j++){const a=A[i],b=A[j];if(f(a)===f(b))continue;const d=dmt(a,b);if(d>RMX)continue;C3.push([bri.has(kk(a,b))?d*.6:d,a,b])}});
+  C3.sort((x,y)=>x[0]-y[0]).forEach(([w,a,b])=>{if(f(a)===f(b)||(dg.get(a)||0)>=4||(dg.get(b)||0)>=4||crosses(a,b))return;add(a,b,'r');par.set(f(a),f(b));dg.set(a,(dg.get(a)||0)+1);dg.set(b,(dg.get(b)||0)+1)})}
  N.forEach(p=>delete p._sp);const BASE=new Set(E.keys());((typeof LE!='undefined'&&LE)||new Map()).forEach((r,key)=>{const[ua,ub]=key.split('|'),a=U.get(ua),b=U.get(ub);if(!a||!b)return;if(r.op=='del'){if(E.has(key)){E.delete(key);SK.add(key)}return}if(!E.has(key))E.set(key,[a,b,'u']);const e=E.get(key);e.pts=(r.pts&&r.pts.length)?r.pts:null;if(e.pts||e[2]=='u')SK.add(key)});
  return{E:[...E.values()],SK,BASE}}
 function rlinks(){const n=NETC||netEdges();return n.E.filter(([a,b])=>a.js&&b.js&&!a.x&&!b.x).map(e=>[e[0],e[1],e.pts||null])}
 function epath(a,b,pts){return [[a.lat,a.lon],...(pts||[]),[b.lat,b.lon]]}
 function lines(){ll.clearLayers();const U=new Map(P.map(p=>[p.uid,p])),pt=e=>{const p=U.get('p'+e[0]);return p?[p.lat+e[1],p.lon+e[2]]:null};
 NETC=netEdges();SPANS.clear();CABS.clear();cabPaths().forEach(z=>CABS.set(z.k,z));if(!FJ){const DRK=new Set(),STB=[];DLC.forEach(s=>{const ua='p'+s[0][0],ub='p'+s[1][0];if(ua==ub){STB.push(s);return}if(NETC.SK.has(ua<ub?ua+'|'+ub:ub+'|'+ua))return;const a=pt(s[0]),b=pt(s[1]);if(a&&b){DRK.add(DLK(s[0]));DRK.add(DLK(s[1]));spanLine(ua,ub,a,b,s[2]?'4 5':null)}});STB.forEach(s=>{if(![s[0],s[1]].some(e=>DLO(e)&&DRK.has(DLK(e))))return;const a=pt(s[0]),b=pt(s[1]);if(a&&b)L.polyline([a,b],{color:'#2563eb',weight:2,opacity:.7,interactive:false}).addTo(ll)});
-NETC.E.filter(e=>e[2]!='d'||e.pts).forEach(e=>{const[a,b,c]=e;spanLine(a.uid,b.uid,[a.lat,a.lon],[b.lat,b.lon],c=='n'?'4 5':null,e.pts)});
+NETC.E.filter(e=>e[2]!='d'||e.pts).forEach(e=>{const[a,b,c]=e;spanLine(a.uid,b.uid,[a.lat,a.lon],[b.lat,b.lon],c=='n'||c=='r'?'4 5':null,e.pts)});
 CABS.forEach(z=>{L.polyline(z.path,{color:'#c026d3',weight:4,opacity:.95,dashArray:'12 6',interactive:false}).addTo(ll);const h=L.polyline(z.path,{color:'#000',opacity:0,weight:16,bubblingMouseEvents:true}).addTo(ll);h.on('click',e=>{if(dt||SELA||mode=='add')return;SPCLK=Date.now();PSEL=Date.now();cabPopup(z.k,e.latlng)});if(z.d>25)L.marker(z.path[Math.floor(z.path.length/2)].map((v,i)=>z.path.length%2?v:(v+z.path[z.path.length/2-1][i])/2),{interactive:false,icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="spl" style="background:#c026d3;color:#fff">'+Math.round(z.d)+' м</div>'})}).addTo(ll)})}
 rlinks().forEach(([a,b,pts])=>L.polyline(epath(a,b,pts),{color:'#dc2626',weight:4,opacity:.9,interactive:false}).addTo(ll));
 tpDraw();fjUI()}
@@ -282,7 +293,7 @@ if(!ok)throw new Error('не удалось загрузить подложку 
 g.fillStyle='rgba(255,255,255,.18)';g.fillRect(mx,my,mw,mh);
 const SH=o.only||P,SHS=new Set(SH),lw=.3*u,U=new Map(SH.map(p=>[p.uid,p])),UA=new Map(P.map(p=>[p.uid,p])),pt=e=>{const p=U.get('p'+e[0]);return p?C(p.lat+e[1],p.lon+e[2]):null},ptA=e=>{const p=UA.get('p'+e[0]);return p?C(p.lat+e[1],p.lon+e[2]):null};
 const NT=netEdges();g.lineCap='round';g.strokeStyle='#1d4ed8';g.lineWidth=lw*1.5;cabPaths().forEach(z=>{g.save();g.strokeStyle='#c026d3';g.lineWidth=lw*1.7;g.setLineDash([lw*4,lw*2]);g.beginPath();g.moveTo(...C(z.path[0][0],z.path[0][1]));z.path.slice(1).forEach(c=>g.lineTo(...C(c[0],c[1])));g.stroke();g.restore()});DLC.forEach(sg=>{const ua='p'+sg[0][0],ub='p'+sg[1][0];if(NT.SK.has(ua<ub?ua+'|'+ub:ub+'|'+ua))return;const a=pt(sg[0]),b=pt(sg[1]);if(a&&b){g.setLineDash(sg[2]?[lw*4,lw*3]:[]);g.beginPath();g.moveTo(...a);g.lineTo(...b);g.stroke()}});
-g.setLineDash([lw*4,lw*3]);NT.E.filter(e=>(e[2]!='d'||e.pts)&&SHS.has(e[0])&&SHS.has(e[1])).forEach(e=>{const[a,b,c]=e;g.setLineDash(c=='n'?[lw*4,lw*3]:[]);g.beginPath();epath(a,b,e.pts).forEach((q,i)=>i?g.lineTo(...C(q[0],q[1])):g.moveTo(...C(q[0],q[1])));g.stroke()});g.setLineDash([]);
+g.setLineDash([lw*4,lw*3]);NT.E.filter(e=>(e[2]!='d'||e.pts)&&SHS.has(e[0])&&SHS.has(e[1])).forEach(e=>{const[a,b,c]=e;g.setLineDash(c=='n'||c=='r'?[lw*4,lw*3]:[]);g.beginPath();epath(a,b,e.pts).forEach((q,i)=>i?g.lineTo(...C(q[0],q[1])):g.moveTo(...C(q[0],q[1])));g.stroke()});g.setLineDash([]);
 g.strokeStyle='#dc2626';g.lineWidth=lw*4;rlinks().filter(([a,b])=>SHS.has(a)&&SHS.has(b)).forEach(([a,b,pts])=>{g.beginPath();epath(a,b,pts).forEach((q,i)=>i?g.lineTo(...C(q[0],q[1])):g.moveTo(...C(q[0],q[1])));g.stroke()});
 const r=.95*u;SH.forEach(p=>dpole(g,...C(p.lat,p.lon),p,r));
 g.font=`bold ${2.6*u}px ${F}`;g.textAlign='center';g.textBaseline='middle';D.t.forEach(zz=>{const q=tpPos(zz[0]),c=q?C(q[0],q[1]):ptA(zz.slice(1));if(!c)return;const t='⚡ '+tpn(zz[0]),w=g.measureText(t).width+2.4*u,st=tpState(zz[0]);g.fillStyle='#1f2937';g.strokeStyle=st==2?'#16a34a':st==1?'#f59e0b':'#9ca3af';g.lineWidth=.45*u;g.fillRect(c[0]-w/2,c[1]-1.9*u,w,3.8*u);g.strokeRect(c[0]-w/2,c[1]-1.9*u,w,3.8*u);g.fillStyle='#fff';g.fillText(t,c[0],c[1]+.1*u)});
