@@ -148,3 +148,6 @@ alter table public.poles add column if not exists vk boolean not null default fa
 -- Исключённая из контракта опора, по которой всё равно тянем СИП (опора существует).
 alter table public.poles add column if not exists sx boolean not null default false;
 -- pole_patch: добавлена строка  sx = case when s ? 'sx' then coalesce((s->>'sx')::boolean,false) else sx end
+
+-- Предлагаемая (серая) опора: нанесена для оценки, в контракт не входит.
+alter table public.poles add column if not exists pp boolean not null default false;
