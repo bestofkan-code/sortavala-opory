@@ -30,7 +30,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791712202925513w",
@@ -63,7 +65,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917122433420qqi",
@@ -96,7 +100,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917122674164h1i",
@@ -129,7 +135,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917123001321iq7",
@@ -162,7 +170,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791712349299kg4a",
@@ -195,7 +205,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791712839854lvjd",
@@ -228,7 +240,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791713756962l8hv",
@@ -261,7 +275,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791714277232tqeh",
@@ -294,7 +310,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791716025543egb7",
@@ -328,7 +346,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791717141151u7ar",
@@ -361,7 +381,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917172606015ts5",
@@ -393,7 +415,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791717390192065j",
@@ -425,7 +449,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791717415453xth7",
@@ -457,7 +483,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917174301528ca1",
@@ -489,7 +517,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791719333234j4wq",
@@ -521,7 +551,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917194403868h8v",
@@ -554,7 +586,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917194802394lmj",
@@ -586,7 +620,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791719515162kn09",
@@ -618,7 +654,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791719550273vnv1",
@@ -650,7 +688,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791721443323nv2s",
@@ -682,7 +722,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17917214448700ika",
@@ -714,7 +756,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791881378317jysp",
@@ -746,7 +790,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791881869888ea7c",
@@ -756,8 +802,8 @@
   "t": "A",
   "g": false,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180/вывоз",
   "tp": "57",
   "n": 24,
@@ -772,13 +818,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791882178252lc6v",
@@ -788,8 +836,8 @@
   "t": "A",
   "g": false,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "Вывоз",
   "tp": "57",
   "n": 25,
@@ -804,13 +852,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (отмена правок по письму Россети)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791886571457chb2",
@@ -841,8 +891,10 @@
   "sv": 0,
   "h": 8,
   "ka": 90,
-  "vk": true,
-  "sx": false
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791900313923oi7j",
@@ -874,7 +926,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791961915554u4fw",
@@ -906,7 +960,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791962361093gy8o",
@@ -938,7 +994,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791962827938jxl2",
@@ -970,7 +1028,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791962891949aqmp",
@@ -980,8 +1040,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 42,
@@ -996,13 +1056,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1791964227577kwid",
@@ -1012,8 +1074,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 43,
@@ -1028,19 +1090,21 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792043809637kb6p",
   "id": "ТП57-27",
-  "lat": 61.7050804112608,
-  "lon": 30.7000299054239,
+  "lat": 61.7051690277064,
+  "lon": 30.6999139558725,
   "t": "S",
   "g": false,
   "line": "8",
@@ -1060,19 +1124,21 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792043813489vjqy",
   "id": "ТП57-28",
-  "lat": 61.7049294140904,
-  "lon": 30.7003057081571,
+  "lat": 61.7050217419215,
+  "lon": 30.7000899651727,
   "t": "A",
   "g": false,
   "line": "8",
@@ -1092,13 +1158,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792043841512jnyp",
@@ -1126,7 +1194,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792049195497cep9",
@@ -1158,7 +1228,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17924160365608vwm",
@@ -1191,7 +1263,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792416685940m9iz",
@@ -1223,7 +1297,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n179249144448530em",
@@ -1255,7 +1331,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792580374656ho0y",
@@ -1288,7 +1366,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n179267208782920ow",
@@ -1321,7 +1401,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792672088889g5fy",
@@ -1353,7 +1435,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17927456599451cnp",
@@ -1385,7 +1469,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792750383880hr7a",
@@ -1417,7 +1503,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792750385651n6l1",
@@ -1449,7 +1537,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1792756521288k7hc",
@@ -1481,7 +1571,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17930074744044ffj",
@@ -1513,7 +1605,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793084213370mre8",
@@ -1545,7 +1639,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793106305520plsc",
@@ -1573,7 +1669,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17931941342284c3s",
@@ -1605,7 +1703,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793194136826bdva",
@@ -1637,7 +1737,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793194137720qumd",
@@ -1669,7 +1771,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793194150252nnu7",
@@ -1701,7 +1805,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17931941523372k99",
@@ -1733,7 +1839,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793209453460yimh",
@@ -1765,7 +1873,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17932892344656dv5",
@@ -1797,7 +1907,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793293183802im3x",
@@ -1829,13 +1941,15 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17933451563416fqd",
   "id": "ТП98-50",
-  "lat": 61.7108502775062,
-  "lon": 30.7021858730841,
+  "lat": 61.71084918402,
+  "lon": 30.7021384537766,
   "t": "S",
   "g": false,
   "line": "4",
@@ -1855,13 +1969,15 @@
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Claude (отмена правок по письму Россети)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17933525067110kgi",
@@ -1893,7 +2009,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793440798689r0dm",
@@ -1925,7 +2043,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n179344261542181ln",
@@ -1935,8 +2055,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 45,
@@ -1951,13 +2071,15 @@
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793443723512pz89",
@@ -1989,7 +2111,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793445601553kk48",
@@ -2017,7 +2141,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17934558490127a95",
@@ -2050,7 +2176,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793516971199q31x",
@@ -2078,7 +2206,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793520001858hl6b",
@@ -2106,7 +2236,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793520003420wt7d",
@@ -2134,7 +2266,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793520004261o21q",
@@ -2162,7 +2296,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n179352001125178u2",
@@ -2190,7 +2326,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793522107477bi8a",
@@ -2206,19 +2344,25 @@
   "tp": "60",
   "n": 66,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": "",
   "f": "",
   "js": true,
   "yd": false,
   "ad": "",
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793524928959bqxk",
@@ -2234,19 +2378,25 @@
   "tp": "60",
   "n": 67,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": "",
   "f": "",
   "js": true,
   "yd": false,
   "ad": "",
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793536389620gtur",
@@ -2274,7 +2424,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n17935369474204vp6",
@@ -2302,7 +2454,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793537029483bvac",
@@ -2330,7 +2484,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n179353707005998j8",
@@ -2358,7 +2514,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793537104950umcc",
@@ -2386,7 +2544,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "n1793537120556gh89",
@@ -2414,7 +2574,1543 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793876428445r32g",
+  "id": "ТП60-71",
+  "lat": 61.7088359017088,
+  "lon": 30.7009083884713,
+  "t": "S",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 71,
+  "x": false,
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
+  "wc": "",
+  "f": "",
+  "js": true,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793894154026opap",
+  "id": "ТП60-72",
+  "lat": 61.7087389521419,
+  "lon": 30.7006030739831,
+  "t": "S",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 72,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403573lkgw",
+  "id": "ТП57-30",
+  "lat": 61.7039242,
+  "lon": 30.7083485,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 30,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": true,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n179389940357463ql",
+  "id": "ТП57-31",
+  "lat": 61.7039995,
+  "lon": 30.708778,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 31,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403575agou",
+  "id": "ТП57-32",
+  "lat": 61.7041833,
+  "lon": 30.7086482,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 32,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403576cfyx",
+  "id": "ТП57-33",
+  "lat": 61.7044918,
+  "lon": 30.7086482,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 33,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994035770a92",
+  "id": "ТП57-34",
+  "lat": 61.7048444,
+  "lon": 30.7086482,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 34,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994035781wkx",
+  "id": "ТП57-35",
+  "lat": 61.7048444,
+  "lon": 30.7094792,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 35,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994035790qun",
+  "id": "ТП57-36",
+  "lat": 61.7043156,
+  "lon": 30.7081684,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 36,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403580sch5",
+  "id": "ТП57-37",
+  "lat": 61.7045036,
+  "lon": 30.7074365,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 37,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403581zx56",
+  "id": "ТП57-38",
+  "lat": 61.7046664,
+  "lon": 30.7066787,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 38,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403582gatq",
+  "id": "ТП57-39",
+  "lat": 61.7048057,
+  "lon": 30.706102,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 39,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403583bk55",
+  "id": "ТП57-40",
+  "lat": 61.7051998,
+  "lon": 30.7061974,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 40,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403584vkm2",
+  "id": "ТП57-41",
+  "lat": 61.7054995,
+  "lon": 30.7061974,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 41,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403585f5z8",
+  "id": "ТП57-42",
+  "lat": 61.7055399,
+  "lon": 30.7059531,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 42,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994035860kr0",
+  "id": "ТП57-43",
+  "lat": 61.7054995,
+  "lon": 30.7068438,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 43,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994035871c7e",
+  "id": "ТП57-44",
+  "lat": 61.7057958,
+  "lon": 30.7069374,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 44,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403588hmdr",
+  "id": "ТП57-45",
+  "lat": 61.7059828,
+  "lon": 30.7073291,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 45,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403589fxid",
+  "id": "ТП57-46",
+  "lat": 61.7054122,
+  "lon": 30.7063802,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 46,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n179389940359082i8",
+  "id": "ТП57-47",
+  "lat": 61.7036555,
+  "lon": 30.7078701,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 47,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (импорт ТП57 2 этап)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403591d5c0",
+  "id": "ТП57-48",
+  "lat": 61.7034862,
+  "lon": 30.7078078,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 48,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403615ifdz",
+  "id": "ТП57-49",
+  "lat": 61.7034739,
+  "lon": 30.7069956,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 49,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-72)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403616db04",
+  "id": "ТП57-50",
+  "lat": 61.7034034,
+  "lon": 30.7063303,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 50,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-73)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403617qtr9",
+  "id": "ТП57-51",
+  "lat": 61.7033399,
+  "lon": 30.7055645,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 51,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-74)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403618w5ak",
+  "id": "ТП57-52",
+  "lat": 61.7035456,
+  "lon": 30.7051335,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 52,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-75)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403619eqdu",
+  "id": "ТП57-53",
+  "lat": 61.7036079,
+  "lon": 30.7045005,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 53,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403620s0ba",
+  "id": "ТП57-54",
+  "lat": 61.7037511,
+  "lon": 30.7038255,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 54,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-77)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n179389940362150dg",
+  "id": "ТП57-55",
+  "lat": 61.7039292,
+  "lon": 30.7030833,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 55,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-78)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403622dv9t",
+  "id": "ТП57-56",
+  "lat": 61.7041149,
+  "lon": 30.7023488,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 56,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-79)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403623wmpn",
+  "id": "ТП57-57",
+  "lat": 61.7042130062567,
+  "lon": 30.7016556287159,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 57,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403624gpuz",
+  "id": "ТП57-58",
+  "lat": 61.7043792069186,
+  "lon": 30.7012298267231,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 58,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994036251mpd",
+  "id": "ТП57-59",
+  "lat": 61.7046729,
+  "lon": 30.7006808,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9); рядом ТП57-29 (искл.) в 4 м",
+  "tp": "57",
+  "n": 59,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-82)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403626da15",
+  "id": "ТП57-60",
+  "lat": 61.7048697030745,
+  "lon": 30.7003327667658,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9); рядом ТП57-28 в 10 м",
+  "tp": "57",
+  "n": 60,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403629zkfg",
+  "id": "ТП57-63",
+  "lat": 61.7038477,
+  "lon": 30.7046229,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 63,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-86)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403630cnhb",
+  "id": "ТП57-64",
+  "lat": 61.7040875,
+  "lon": 30.7047452,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 64,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-87)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n17938994036317l6a",
+  "id": "ТП57-65",
+  "lat": 61.7043291,
+  "lon": 30.7049707,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 65,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-88)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403632we2r",
+  "id": "ТП57-66",
+  "lat": 61.7046146,
+  "lon": 30.7052156,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 66,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-89)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403633sejc",
+  "id": "ТП57-67",
+  "lat": 61.7048876,
+  "lon": 30.7053644,
+  "t": "A",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 67,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403635p46k",
+  "id": "ТП57-69",
+  "lat": 61.7049182139589,
+  "lon": 30.7031927601003,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9); рядом ТП57-26 в 8 м",
+  "tp": "57",
+  "n": 69,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403637x3xo",
+  "id": "ТП57-70",
+  "lat": 61.7043705610128,
+  "lon": 30.704271590614,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 70,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-94)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899403658skfs",
+  "id": "ТП57-71",
+  "lat": 61.7045908104924,
+  "lon": 30.703810378659,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9)",
+  "tp": "57",
+  "n": 71,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (перенумерация по порядку, было ТП57-115)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793899938947j8oz",
+  "id": "ТП57-72",
+  "lat": 61.7047970301023,
+  "lon": 30.7033485174179,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "57",
+  "n": 72,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 2,
+  "sv": 0,
+  "h": 8,
+  "ka": 180,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468367t6zp",
+  "id": "ТП97-38",
+  "lat": 61.7152662,
+  "lon": 30.6898291,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 38,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n17939014683689xkk",
+  "id": "ТП97-39",
+  "lat": 61.7155943,
+  "lon": 30.6899609,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 39,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468369lnsc",
+  "id": "ТП97-40",
+  "lat": 61.7159159,
+  "lon": 30.6901463,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 40,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468370diqz",
+  "id": "ТП97-41",
+  "lat": 61.7162101,
+  "lon": 30.6903884,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 41,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n179390146837100ee",
+  "id": "ТП97-42",
+  "lat": 61.7163672,
+  "lon": 30.6909843,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 42,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468372sr8u",
+  "id": "ТП97-43",
+  "lat": 61.7166966,
+  "lon": 30.6911967,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 43,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468373d9j9",
+  "id": "ТП97-44",
+  "lat": 61.7170224,
+  "lon": 30.6913461,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 44,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468374wqp7",
+  "id": "ТП97-45",
+  "lat": 61.7172852,
+  "lon": 30.6917254,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 45,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
+ },
+ {
+  "uid": "n1793901468375mm2v",
+  "id": "ТП97-46",
+  "lat": 61.7176169,
+  "lon": 30.691796,
+  "t": "S",
+  "g": false,
+  "line": "",
+  "done": false,
+  "date": null,
+  "note": "Предлагаемая опора (серая): участок ТП97-15 — Шуно Дорожная-49 по Фабричному пер., шаг ~37 м",
+  "tp": "97",
+  "n": 46,
+  "x": false,
+  "w": {},
+  "wc": "",
+  "f": null,
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Claude (предлагаемые опоры)",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p0",
@@ -2442,7 +4138,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p1",
@@ -2470,7 +4168,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p10",
@@ -2502,7 +4202,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p100",
@@ -2535,7 +4237,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p101",
@@ -2568,7 +4272,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p102",
@@ -2601,7 +4307,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p103",
@@ -2629,7 +4337,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p104",
@@ -2662,7 +4372,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p105",
@@ -2695,7 +4407,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p106",
@@ -2728,7 +4442,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p107",
@@ -2761,7 +4477,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p108",
@@ -2794,7 +4512,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p11",
@@ -2822,7 +4542,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p110",
@@ -2855,7 +4577,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p112",
@@ -2890,7 +4614,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p113",
@@ -2923,7 +4649,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p114",
@@ -2957,7 +4685,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p115",
@@ -2990,7 +4720,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p116",
@@ -3024,7 +4756,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p117",
@@ -3057,7 +4791,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p118",
@@ -3090,7 +4826,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p119",
@@ -3123,7 +4861,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p12",
@@ -3155,7 +4895,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p120",
@@ -3188,7 +4930,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p121",
@@ -3221,7 +4965,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p122",
@@ -3253,7 +4999,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p123",
@@ -3285,7 +5033,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p124",
@@ -3317,7 +5067,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p125",
@@ -3349,7 +5101,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p126",
@@ -3377,7 +5131,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p127",
@@ -3409,7 +5165,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p128",
@@ -3441,7 +5199,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p129",
@@ -3473,7 +5233,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p13",
@@ -3505,7 +5267,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p130",
@@ -3537,7 +5301,9 @@
   "h": 8,
   "ka": 180,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p131",
@@ -3569,7 +5335,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p132",
@@ -3601,7 +5369,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p133",
@@ -3633,7 +5403,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p134",
@@ -3651,7 +5423,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": "",
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -3661,13 +5433,15 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p135",
   "id": "ТП98-6",
-  "lat": 61.7110251436156,
-  "lon": 30.7018182975685,
+  "lat": 61.7109781566461,
+  "lon": 30.7017135236152,
   "t": "A",
   "g": true,
   "line": "4",
@@ -3687,13 +5461,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p136",
@@ -3711,7 +5487,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -3724,7 +5501,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p137",
@@ -3752,7 +5531,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p138",
@@ -3770,7 +5551,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -3783,7 +5565,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p139",
@@ -3801,7 +5585,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -3814,7 +5599,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p14",
@@ -3846,7 +5633,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p140",
@@ -3874,7 +5663,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p141",
@@ -3902,7 +5693,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p142",
@@ -3934,7 +5727,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p143",
@@ -3952,7 +5747,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": "",
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -3962,7 +5757,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p144",
@@ -3980,7 +5777,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -3990,7 +5787,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p145",
@@ -4023,7 +5822,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p146",
@@ -4041,7 +5842,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -4051,7 +5852,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p147",
@@ -4061,15 +5864,16 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "",
   "tp": "98",
   "n": 13,
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -4082,7 +5886,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p148",
@@ -4114,7 +5920,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p149",
@@ -4147,7 +5955,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p15",
@@ -4175,7 +5985,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p150",
@@ -4207,7 +6019,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p151",
@@ -4225,17 +6039,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p152",
@@ -4267,7 +6083,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p153",
@@ -4299,7 +6117,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p154",
@@ -4331,7 +6151,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p155",
@@ -4349,23 +6171,25 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p156",
   "id": "ТП98-25",
-  "lat": 61.712045,
-  "lon": 30.704872,
+  "lat": 61.7119786319539,
+  "lon": 30.704820078397,
   "t": "S",
   "g": false,
   "line": "4",
@@ -4377,17 +6201,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p157",
@@ -4405,17 +6231,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p158",
@@ -4433,17 +6261,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p159",
@@ -4461,17 +6291,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p16",
@@ -4503,7 +6335,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p160",
@@ -4521,17 +6355,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p161",
@@ -4559,7 +6395,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p162",
@@ -4591,7 +6429,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p163",
@@ -4601,8 +6441,8 @@
   "t": "S",
   "g": true,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "98",
   "n": 24,
@@ -4617,13 +6457,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p164",
@@ -4633,8 +6475,8 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "98",
   "n": 32,
@@ -4649,13 +6491,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p165",
@@ -4665,8 +6509,8 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "98",
   "n": 33,
@@ -4681,13 +6525,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p166",
@@ -4697,8 +6543,8 @@
   "t": "S",
   "g": true,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "98",
   "n": 37,
@@ -4713,13 +6559,15 @@
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p167",
@@ -4729,8 +6577,8 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "98",
   "n": 34,
@@ -4745,13 +6593,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p168",
@@ -4761,8 +6611,8 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "98",
   "n": 35,
@@ -4777,13 +6627,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p169",
@@ -4815,7 +6667,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p17",
@@ -4847,7 +6701,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p171",
@@ -4875,7 +6731,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p172",
@@ -4903,7 +6761,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p173",
@@ -4931,7 +6791,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p174",
@@ -4959,7 +6821,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p175",
@@ -4987,7 +6851,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p177",
@@ -5015,7 +6881,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p178",
@@ -5033,17 +6901,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p179",
@@ -5061,17 +6931,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p18",
@@ -5103,7 +6975,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p180",
@@ -5131,7 +7005,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p181",
@@ -5159,7 +7035,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p182",
@@ -5187,7 +7065,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p183",
@@ -5219,7 +7099,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p184",
@@ -5251,7 +7133,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p185",
@@ -5279,7 +7163,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p186",
@@ -5311,7 +7197,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p187",
@@ -5339,7 +7227,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p188",
@@ -5371,7 +7261,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p189",
@@ -5399,7 +7291,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p19",
@@ -5431,7 +7325,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p190",
@@ -5463,7 +7359,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p191",
@@ -5496,7 +7394,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p192",
@@ -5528,7 +7428,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p193",
@@ -5560,7 +7462,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p194",
@@ -5593,7 +7497,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p195",
@@ -5625,7 +7531,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p196",
@@ -5658,7 +7566,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p197",
@@ -5690,7 +7600,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p198",
@@ -5722,7 +7634,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p199",
@@ -5754,7 +7668,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p2",
@@ -5782,7 +7698,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p20",
@@ -5800,7 +7718,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -5813,7 +7732,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p200",
@@ -5828,20 +7749,22 @@
   "note": "",
   "tp": "76",
   "n": 28,
-  "x": false,
+  "x": true,
   "w": {},
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p201",
@@ -5873,7 +7796,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p202",
@@ -5905,7 +7830,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p203",
@@ -5937,7 +7864,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p204",
@@ -5969,7 +7898,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p205",
@@ -6001,7 +7932,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p206",
@@ -6033,7 +7966,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p207",
@@ -6065,7 +8000,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p208",
@@ -6097,7 +8034,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p209",
@@ -6130,7 +8069,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p21",
@@ -6162,7 +8103,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p210",
@@ -6194,7 +8137,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p211",
@@ -6224,7 +8169,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p212",
@@ -6256,7 +8203,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p213",
@@ -6288,7 +8237,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p214",
@@ -6321,7 +8272,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p215",
@@ -6353,7 +8306,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p216",
@@ -6371,7 +8326,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -6381,7 +8336,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p217",
@@ -6413,7 +8370,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p218",
@@ -6431,7 +8390,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -6441,7 +8400,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p219",
@@ -6459,7 +8420,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -6469,7 +8430,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p22",
@@ -6501,7 +8464,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p220",
@@ -6519,7 +8484,7 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
@@ -6529,7 +8494,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p221",
@@ -6547,17 +8514,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p222",
@@ -6585,7 +8554,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p223",
@@ -6613,7 +8584,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p224",
@@ -6641,7 +8614,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p225",
@@ -6669,7 +8644,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p226",
@@ -6697,7 +8674,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p227",
@@ -6725,7 +8704,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p228",
@@ -6753,7 +8734,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p229",
@@ -6765,23 +8748,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 50,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p23",
@@ -6799,7 +8784,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -6812,7 +8798,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p230",
@@ -6824,23 +8812,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 49,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p231",
@@ -6852,23 +8842,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 48,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p232",
@@ -6880,23 +8872,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 47,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p233",
@@ -6908,23 +8902,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 46,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p234",
@@ -6936,23 +8932,25 @@
   "line": "6",
   "done": false,
   "date": null,
-  "note": "",
+  "note": "Предлагаемая (серая), была исключена: участок Шуно Дорожная-44 — ТП97-15",
   "tp": "Шуно Дорожная",
   "n": 45,
-  "x": true,
+  "x": false,
   "w": {},
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": null,
+  "ed": "Claude (исключённые → предлагаемые, по указанию)",
   "kr": 0,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": true,
+  "sp": null
  },
  {
   "uid": "p235",
@@ -6984,7 +8982,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p236",
@@ -7016,7 +9016,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p237",
@@ -7048,7 +9050,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p238",
@@ -7080,7 +9084,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p239",
@@ -7113,7 +9119,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p24",
@@ -7145,7 +9153,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p240",
@@ -7178,7 +9188,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p241",
@@ -7210,7 +9222,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p242",
@@ -7242,7 +9256,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p243",
@@ -7274,7 +9290,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p244",
@@ -7306,7 +9324,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p245",
@@ -7334,7 +9354,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p246",
@@ -7362,7 +9384,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p247",
@@ -7390,7 +9414,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p248",
@@ -7422,7 +9448,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p249",
@@ -7455,7 +9483,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p25",
@@ -7465,8 +9495,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "",
   "tp": "60",
   "n": 31,
@@ -7474,20 +9504,23 @@
   "w": {
    "1": "2026-10-14",
    "2": "2026-10-14",
-   "3": "2026-10-14"
+   "3": "2026-10-14",
+   "9": "2026-11-05"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (отмена правок по письму Россети)",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p250",
@@ -7515,7 +9548,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p251",
@@ -7543,7 +9578,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p252",
@@ -7571,7 +9608,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": true
+  "sx": true,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p253",
@@ -7603,7 +9642,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p254",
@@ -7637,7 +9678,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p255",
@@ -7671,7 +9714,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p256",
@@ -7704,7 +9749,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p257",
@@ -7732,7 +9779,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p258",
@@ -7764,7 +9813,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p259",
@@ -7796,7 +9847,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p26",
@@ -7824,7 +9877,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p260",
@@ -7856,7 +9911,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p261",
@@ -7888,7 +9945,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p262",
@@ -7920,7 +9979,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p263",
@@ -7952,7 +10013,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p264",
@@ -7984,7 +10047,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p265",
@@ -8017,7 +10082,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p266",
@@ -8049,7 +10116,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p267",
@@ -8081,7 +10150,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p268",
@@ -8109,7 +10180,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p269",
@@ -8141,7 +10214,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p27",
@@ -8173,7 +10248,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p270",
@@ -8205,7 +10282,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p271",
@@ -8237,7 +10316,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p272",
@@ -8269,7 +10350,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p273",
@@ -8301,7 +10384,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p274",
@@ -8333,7 +10418,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p275",
@@ -8361,7 +10448,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p276",
@@ -8389,7 +10478,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p277",
@@ -8417,7 +10508,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p278",
@@ -8445,7 +10538,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p279",
@@ -8477,7 +10572,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p28",
@@ -8505,7 +10602,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p281",
@@ -8533,7 +10632,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p282",
@@ -8561,7 +10662,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p283",
@@ -8579,17 +10682,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p284",
@@ -8617,7 +10722,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p285",
@@ -8645,7 +10752,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p286",
@@ -8673,7 +10782,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p287",
@@ -8701,7 +10812,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p288",
@@ -8729,7 +10842,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p289",
@@ -8757,7 +10872,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p29",
@@ -8789,7 +10906,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p290",
@@ -8817,7 +10936,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p291",
@@ -8845,7 +10966,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p292",
@@ -8873,7 +10996,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p293",
@@ -8901,7 +11026,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p294",
@@ -8929,7 +11056,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p295",
@@ -8962,7 +11091,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p296",
@@ -8990,7 +11121,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p297",
@@ -9023,7 +11156,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p298",
@@ -9056,7 +11191,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p299",
@@ -9089,7 +11226,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p3",
@@ -9117,7 +11256,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p30",
@@ -9149,7 +11290,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p300",
@@ -9182,7 +11325,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p301",
@@ -9210,7 +11355,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p302",
@@ -9243,7 +11390,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p303",
@@ -9261,17 +11410,19 @@
   "x": false,
   "w": {},
   "wc": null,
-  "f": null,
+  "f": "G",
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p304",
@@ -9305,7 +11456,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p305",
@@ -9338,7 +11491,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p306",
@@ -9366,7 +11521,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p307",
@@ -9394,7 +11551,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p308",
@@ -9422,7 +11581,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p309",
@@ -9456,7 +11617,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p31",
@@ -9488,7 +11651,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p310",
@@ -9521,7 +11686,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p311",
@@ -9549,7 +11716,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p312",
@@ -9582,7 +11751,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p313",
@@ -9615,7 +11786,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p314",
@@ -9648,7 +11821,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p315",
@@ -9681,7 +11856,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p316",
@@ -9709,7 +11886,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p317",
@@ -9742,7 +11921,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p318",
@@ -9775,7 +11956,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p319",
@@ -9808,7 +11991,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p32",
@@ -9840,7 +12025,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p321",
@@ -9873,7 +12060,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p322",
@@ -9906,7 +12095,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p323",
@@ -9939,7 +12130,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p324",
@@ -9972,7 +12165,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p325",
@@ -10000,7 +12195,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p326",
@@ -10028,7 +12225,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p327",
@@ -10056,7 +12255,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p328",
@@ -10084,7 +12285,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p329",
@@ -10116,7 +12319,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p33",
@@ -10144,7 +12349,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p330",
@@ -10172,7 +12379,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p331",
@@ -10182,8 +12391,8 @@
   "t": "S",
   "g": false,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "Вывоз",
   "tp": "57",
   "n": 16,
@@ -10198,13 +12407,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p332",
@@ -10232,7 +12443,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p333",
@@ -10248,19 +12461,25 @@
   "tp": "57",
   "n": 15,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p334",
@@ -10288,7 +12507,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p335",
@@ -10298,8 +12519,8 @@
   "t": "S",
   "g": false,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "57",
   "n": 14,
@@ -10314,13 +12535,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p336",
@@ -10348,7 +12571,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p337",
@@ -10380,7 +12605,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p338",
@@ -10408,7 +12635,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p339",
@@ -10436,7 +12665,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p34",
@@ -10464,7 +12695,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p340",
@@ -10496,7 +12729,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p341",
@@ -10528,7 +12763,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p342",
@@ -10560,7 +12797,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p343",
@@ -10593,7 +12832,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p344",
@@ -10625,7 +12866,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p345",
@@ -10657,7 +12900,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p346",
@@ -10690,7 +12935,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p347",
@@ -10700,8 +12947,8 @@
   "t": "A",
   "g": false,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180/вывоз",
   "tp": "57",
   "n": 4,
@@ -10716,13 +12963,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p348",
@@ -10754,7 +13003,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p349",
@@ -10787,7 +13038,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p35",
@@ -10819,7 +13072,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p350",
@@ -10829,8 +13084,8 @@
   "t": "A",
   "g": true,
   "line": "8",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "Вывоз",
   "tp": "57",
   "n": 1,
@@ -10845,13 +13100,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (отмена правок по письму Россети)",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p351",
@@ -10873,13 +13130,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p352",
@@ -10889,8 +13148,8 @@
   "t": "A",
   "g": true,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "119",
   "n": 14,
@@ -10905,13 +13164,15 @@
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p353",
@@ -10939,7 +13200,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p354",
@@ -10961,13 +13224,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p355",
@@ -10999,7 +13264,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p356",
@@ -11027,7 +13294,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p357",
@@ -11037,8 +13306,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 16,
@@ -11053,13 +13322,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p358",
@@ -11069,8 +13340,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "119",
   "n": 11,
@@ -11085,13 +13356,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p359",
@@ -11119,7 +13392,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p36",
@@ -11147,7 +13422,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p360",
@@ -11175,7 +13452,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p361",
@@ -11207,7 +13486,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p362",
@@ -11235,7 +13516,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p363",
@@ -11245,8 +13528,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 12,
@@ -11261,13 +13544,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p364",
@@ -11299,7 +13584,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p365",
@@ -11309,8 +13596,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 9,
@@ -11325,13 +13612,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p366",
@@ -11359,7 +13648,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p367",
@@ -11391,7 +13682,9 @@
   "h": 8,
   "ka": 180,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p368",
@@ -11423,7 +13716,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p369",
@@ -11455,7 +13750,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p37",
@@ -11473,7 +13770,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -11486,7 +13784,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p370",
@@ -11514,7 +13814,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p371",
@@ -11542,7 +13844,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p372",
@@ -11574,7 +13878,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p373",
@@ -11602,7 +13908,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p374",
@@ -11630,7 +13938,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p375",
@@ -11662,7 +13972,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p376",
@@ -11690,7 +14002,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p377",
@@ -11718,7 +14032,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p378",
@@ -11728,8 +14044,8 @@
   "t": "S",
   "g": false,
   "line": "9",
-  "done": true,
-  "date": "2026-11-04",
+  "done": false,
+  "date": null,
   "note": "90, Очень много коммуникаций, очень рядом дорога",
   "tp": "119",
   "n": 30,
@@ -11740,13 +14056,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Леонид",
+  "ed": "Женя",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p379",
@@ -11756,8 +14074,8 @@
   "t": "A",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "119",
   "n": 33,
@@ -11773,13 +14091,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (вывезено по GPX 02.11)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p38",
@@ -11811,7 +14131,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p380",
@@ -11821,8 +14143,8 @@
   "t": "S",
   "g": false,
   "line": "9",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "",
   "tp": "119",
   "n": 34,
@@ -11837,13 +14159,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Женя",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p381",
@@ -11875,7 +14199,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p382",
@@ -11903,7 +14229,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p383",
@@ -11931,7 +14259,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p384",
@@ -11959,7 +14289,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p385",
@@ -11987,7 +14319,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p386",
@@ -12015,7 +14349,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p387",
@@ -12043,7 +14379,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p388",
@@ -12076,7 +14414,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p389",
@@ -12108,7 +14448,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p39",
@@ -12140,7 +14482,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p390",
@@ -12173,7 +14517,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p391",
@@ -12183,8 +14529,8 @@
   "t": "A",
   "g": true,
   "line": "10",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "",
   "tp": "21",
   "n": 59,
@@ -12200,13 +14546,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (угол по схеме дорог)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p392",
@@ -12239,7 +14587,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p393",
@@ -12272,7 +14622,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p394",
@@ -12300,7 +14652,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p395",
@@ -12328,7 +14682,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p396",
@@ -12361,7 +14717,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p397",
@@ -12394,7 +14752,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p398",
@@ -12427,7 +14787,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p399",
@@ -12460,7 +14822,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p4",
@@ -12488,7 +14852,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p40",
@@ -12520,7 +14886,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p400",
@@ -12530,8 +14898,8 @@
   "t": "A",
   "g": false,
   "line": "10",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "21",
   "n": 57,
@@ -12547,13 +14915,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (вывезено по GPX 02.11)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p401",
@@ -12586,7 +14956,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p402",
@@ -12614,7 +14986,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p403",
@@ -12647,7 +15021,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p404",
@@ -12657,8 +15033,8 @@
   "t": "A",
   "g": false,
   "line": "10",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "90",
   "tp": "21",
   "n": 56,
@@ -12674,13 +15050,15 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (вывезено по GPX 02.11)",
+  "ed": "Леонид",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p405",
@@ -12713,7 +15091,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p406",
@@ -12746,7 +15126,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p407",
@@ -12779,7 +15161,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p408",
@@ -12812,7 +15196,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p409",
@@ -12845,7 +15231,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p41",
@@ -12878,7 +15266,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p410",
@@ -12912,7 +15302,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p411",
@@ -12946,7 +15338,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p412",
@@ -12979,7 +15373,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p413",
@@ -13012,7 +15408,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p414",
@@ -13045,7 +15443,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p415",
@@ -13078,7 +15478,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p416",
@@ -13112,7 +15514,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p417",
@@ -13145,7 +15549,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p418",
@@ -13178,7 +15584,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p419",
@@ -13211,7 +15619,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p42",
@@ -13243,7 +15653,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p420",
@@ -13271,7 +15683,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p421",
@@ -13299,7 +15713,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p422",
@@ -13332,7 +15748,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p423",
@@ -13365,7 +15783,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p424",
@@ -13398,7 +15818,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p425",
@@ -13431,7 +15853,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p426",
@@ -13464,7 +15888,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p427",
@@ -13498,7 +15924,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p428",
@@ -13531,7 +15959,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p43",
@@ -13564,7 +15994,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p430",
@@ -13592,7 +16024,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p431",
@@ -13620,7 +16054,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p432",
@@ -13648,7 +16084,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p433",
@@ -13681,7 +16119,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p434",
@@ -13715,7 +16155,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p435",
@@ -13749,7 +16191,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p436",
@@ -13782,7 +16226,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p437",
@@ -13810,7 +16256,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p438",
@@ -13844,7 +16292,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p439",
@@ -13878,7 +16328,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p44",
@@ -13910,7 +16362,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p440",
@@ -13943,7 +16397,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p441",
@@ -13977,7 +16433,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p442",
@@ -14010,7 +16468,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p443",
@@ -14043,7 +16503,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p444",
@@ -14076,7 +16538,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p445",
@@ -14109,7 +16573,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p446",
@@ -14143,7 +16609,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p447",
@@ -14176,7 +16644,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p448",
@@ -14209,7 +16679,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p449",
@@ -14242,13 +16714,15 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p45",
   "id": "ТП60-21",
-  "lat": 61.7091852638163,
-  "lon": 30.7002915055537,
+  "lat": 61.7091837536938,
+  "lon": 30.7004376568048,
   "t": "S",
   "g": true,
   "line": "1",
@@ -14258,19 +16732,25 @@
   "tp": "60",
   "n": 21,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p450",
@@ -14303,7 +16783,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p451",
@@ -14336,7 +16818,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p452",
@@ -14369,7 +16853,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p453",
@@ -14402,7 +16888,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p454",
@@ -14435,7 +16923,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p455",
@@ -14463,7 +16953,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p457",
@@ -14497,7 +16989,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p458",
@@ -14530,7 +17024,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p459",
@@ -14562,7 +17058,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p46",
@@ -14578,19 +17076,25 @@
   "tp": "60",
   "n": 20,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (совм. подвеска между опорами с подвеской)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p460",
@@ -14622,7 +17126,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p461",
@@ -14654,7 +17160,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p462",
@@ -14688,7 +17196,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p463",
@@ -14721,7 +17231,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p464",
@@ -14754,7 +17266,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p465",
@@ -14787,7 +17301,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p466",
@@ -14817,7 +17333,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p467",
@@ -14851,7 +17369,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p468",
@@ -14885,7 +17405,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p469",
@@ -14919,7 +17441,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p47",
@@ -14951,7 +17475,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p470",
@@ -14984,7 +17510,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p471",
@@ -15016,7 +17544,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p472",
@@ -15048,7 +17578,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p473",
@@ -15081,7 +17613,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p474",
@@ -15114,7 +17648,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p475",
@@ -15146,7 +17682,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p476",
@@ -15178,7 +17716,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p477",
@@ -15206,7 +17746,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p478",
@@ -15234,7 +17776,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p479",
@@ -15267,13 +17811,15 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p48",
   "id": "ТП60-59",
-  "lat": 61.7086973445985,
-  "lon": 30.700638612254,
+  "lat": 61.7085935435694,
+  "lon": 30.7004106177757,
   "t": "S",
   "g": false,
   "line": "1",
@@ -15283,19 +17829,25 @@
   "tp": "60",
   "n": 59,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (кронштейн по соседним опорам)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p480",
@@ -15328,7 +17880,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p481",
@@ -15361,7 +17915,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p482",
@@ -15393,7 +17949,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p483",
@@ -15425,7 +17983,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p484",
@@ -15457,7 +18017,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p485",
@@ -15489,7 +18051,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p486",
@@ -15521,7 +18085,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p487",
@@ -15553,7 +18119,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p488",
@@ -15585,7 +18153,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p489",
@@ -15617,7 +18187,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p49",
@@ -15633,19 +18205,25 @@
   "tp": "60",
   "n": 60,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p490",
@@ -15677,7 +18255,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p491",
@@ -15709,7 +18289,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p492",
@@ -15741,7 +18323,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p493",
@@ -15773,7 +18357,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p494",
@@ -15805,7 +18391,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p495",
@@ -15833,7 +18421,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p496",
@@ -15865,7 +18455,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p497",
@@ -15897,7 +18489,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p498",
@@ -15929,7 +18523,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p499",
@@ -15961,7 +18557,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p5",
@@ -15993,7 +18591,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p50",
@@ -16025,7 +18625,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p500",
@@ -16053,7 +18655,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p501",
@@ -16085,7 +18689,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p502",
@@ -16117,7 +18723,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p503",
@@ -16145,7 +18753,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p504",
@@ -16178,7 +18788,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p505",
@@ -16206,7 +18818,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p506",
@@ -16238,7 +18852,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p507",
@@ -16270,7 +18886,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p508",
@@ -16302,7 +18920,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p509",
@@ -16334,14 +18954,16 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p51",
   "id": "ТП60-61",
   "lat": 61.7082454556215,
   "lon": 30.7014079567311,
-  "t": "S",
+  "t": "A",
   "g": true,
   "line": "1",
   "done": false,
@@ -16350,19 +18972,25 @@
   "tp": "60",
   "n": 61,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p510",
@@ -16394,7 +19022,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p511",
@@ -16426,7 +19056,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p512",
@@ -16458,7 +19090,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p513",
@@ -16490,7 +19124,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p514",
@@ -16523,7 +19159,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p515",
@@ -16555,7 +19193,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p516",
@@ -16583,7 +19223,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p517",
@@ -16615,7 +19257,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p518",
@@ -16647,7 +19291,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p519",
@@ -16679,7 +19325,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p52",
@@ -16695,19 +19343,25 @@
   "tp": "60",
   "n": 19,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p520",
@@ -16739,7 +19393,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p521",
@@ -16771,7 +19427,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p522",
@@ -16803,7 +19461,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p523",
@@ -16836,7 +19496,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p524",
@@ -16868,7 +19530,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p525",
@@ -16900,7 +19564,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p526",
@@ -16933,7 +19599,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p527",
@@ -16965,7 +19633,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p528",
@@ -16997,7 +19667,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p529",
@@ -17029,7 +19701,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p53",
@@ -17057,7 +19731,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p530",
@@ -17089,7 +19765,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p531",
@@ -17121,7 +19799,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p532",
@@ -17153,7 +19833,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p533",
@@ -17181,7 +19863,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p534",
@@ -17213,7 +19897,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p535",
@@ -17245,7 +19931,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p536",
@@ -17277,7 +19965,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p537",
@@ -17309,7 +19999,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p538",
@@ -17341,7 +20033,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p539",
@@ -17373,7 +20067,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p54",
@@ -17389,19 +20085,25 @@
   "tp": "60",
   "n": 18,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p540",
@@ -17433,7 +20135,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p541",
@@ -17465,7 +20169,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p542",
@@ -17497,7 +20203,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p543",
@@ -17529,7 +20237,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p544",
@@ -17561,7 +20271,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p545",
@@ -17593,7 +20305,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p546",
@@ -17625,7 +20339,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p547",
@@ -17657,7 +20373,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p548",
@@ -17689,7 +20407,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p549",
@@ -17721,7 +20441,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p55",
@@ -17753,7 +20475,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p550",
@@ -17785,7 +20509,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p551",
@@ -17817,7 +20543,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p552",
@@ -17849,7 +20577,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p553",
@@ -17881,7 +20611,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p554",
@@ -17913,7 +20645,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p555",
@@ -17945,7 +20679,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p556",
@@ -17978,7 +20714,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p557",
@@ -18010,7 +20748,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p558",
@@ -18043,7 +20783,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p559",
@@ -18075,7 +20817,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p56",
@@ -18085,25 +20829,31 @@
   "t": "A",
   "g": true,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-05",
   "note": "180",
   "tp": "60",
   "n": 13,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p560",
@@ -18135,7 +20885,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p561",
@@ -18167,7 +20919,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p562",
@@ -18199,7 +20953,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p563",
@@ -18231,7 +20987,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p564",
@@ -18263,7 +21021,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p565",
@@ -18295,7 +21055,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p566",
@@ -18327,7 +21089,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p567",
@@ -18355,7 +21119,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p568",
@@ -18383,7 +21149,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p569",
@@ -18411,7 +21179,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p57",
@@ -18429,7 +21199,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -18442,7 +21213,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p570",
@@ -18470,7 +21243,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p571",
@@ -18498,7 +21273,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p572",
@@ -18531,7 +21308,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p573",
@@ -18563,7 +21342,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p574",
@@ -18596,7 +21377,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p575",
@@ -18628,7 +21411,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p576",
@@ -18661,7 +21446,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p577",
@@ -18693,7 +21480,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p578",
@@ -18725,7 +21514,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p579",
@@ -18757,7 +21548,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p58",
@@ -18775,7 +21568,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": null,
   "f": null,
@@ -18788,7 +21582,9 @@
   "h": 8,
   "ka": 180,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p580",
@@ -18820,7 +21616,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p581",
@@ -18852,7 +21650,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p582",
@@ -18884,7 +21684,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p583",
@@ -18912,7 +21714,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p584",
@@ -18944,7 +21748,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p585",
@@ -18976,7 +21782,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p586",
@@ -19008,7 +21816,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p587",
@@ -19040,7 +21850,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p588",
@@ -19072,7 +21884,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p589",
@@ -19105,7 +21919,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p59",
@@ -19123,7 +21939,8 @@
   "x": false,
   "w": {
    "1": "2026-11-04",
-   "2": "2026-11-04"
+   "2": "2026-11-04",
+   "3": "2026-11-04"
   },
   "wc": "",
   "f": "",
@@ -19136,7 +21953,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p590",
@@ -19169,7 +21988,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p591",
@@ -19202,7 +22023,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p592",
@@ -19236,7 +22059,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p593",
@@ -19252,19 +22077,25 @@
   "tp": "КТП 163",
   "n": 14,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-05",
+   "2": "2026-11-05",
+   "3": "2026-11-05"
+  },
   "wc": "90градуслв",
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (по примечаниям 90/180)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p594",
@@ -19292,7 +22123,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p595",
@@ -19325,7 +22158,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p596",
@@ -19358,7 +22193,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p597",
@@ -19390,7 +22227,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p598",
@@ -19423,7 +22262,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p599",
@@ -19456,7 +22297,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p6",
@@ -19488,7 +22331,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p60",
@@ -19516,7 +22361,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p600",
@@ -19544,7 +22391,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p601",
@@ -19572,7 +22421,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p602",
@@ -19605,7 +22456,9 @@
   "h": 8,
   "ka": 90,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p61",
@@ -19633,7 +22486,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p62",
@@ -19661,7 +22516,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p63",
@@ -19689,7 +22546,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p64",
@@ -19722,7 +22581,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p65",
@@ -19755,7 +22616,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p66",
@@ -19788,7 +22651,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p67",
@@ -19821,7 +22686,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p68",
@@ -19854,7 +22721,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p69",
@@ -19887,7 +22756,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p7",
@@ -19919,7 +22790,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p70",
@@ -19952,7 +22825,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p71",
@@ -19985,7 +22860,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p72",
@@ -20018,7 +22895,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p73",
@@ -20051,7 +22930,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p74",
@@ -20084,7 +22965,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p75",
@@ -20118,7 +23001,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p76",
@@ -20151,7 +23036,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p77",
@@ -20179,7 +23066,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p78",
@@ -20212,7 +23101,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p79",
@@ -20245,7 +23136,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p8",
@@ -20277,7 +23170,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p80",
@@ -20310,7 +23205,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p81",
@@ -20344,7 +23241,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p82",
@@ -20378,7 +23277,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p83",
@@ -20411,7 +23312,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p84",
@@ -20444,7 +23347,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p85",
@@ -20477,7 +23382,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p86",
@@ -20510,7 +23417,9 @@
   "h": 8,
   "ka": 90,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p87",
@@ -20543,7 +23452,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p88",
@@ -20576,7 +23487,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p89",
@@ -20609,7 +23522,9 @@
   "h": 8,
   "ka": null,
   "vk": true,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p9",
@@ -20641,7 +23556,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p90",
@@ -20674,7 +23591,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p91",
@@ -20707,7 +23626,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p92",
@@ -20740,7 +23661,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p93",
@@ -20773,7 +23696,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p94",
@@ -20806,7 +23731,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p95",
@@ -20839,7 +23766,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p96",
@@ -20872,7 +23801,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p97",
@@ -20904,7 +23835,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p98",
@@ -20937,7 +23870,9 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  },
  {
   "uid": "p99",
@@ -20970,6 +23905,8 @@
   "h": 8,
   "ka": null,
   "vk": false,
-  "sx": false
+  "sx": false,
+  "pp": false,
+  "sp": null
  }
 ]
