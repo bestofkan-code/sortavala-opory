@@ -151,3 +151,10 @@ alter table public.poles add column if not exists sx boolean not null default fa
 
 -- Предлагаемая (серая) опора: нанесена для оценки, в контракт не входит.
 alter table public.poles add column if not exists pp boolean not null default false;
+
+-- Режим «Совместная подвеска»: обследование опоры (null — не обследована).
+-- Ключи: tg — оголённый провод, ts — СИП, n — количество совместных кабелей, m — счётчик (true/false),
+-- b — ящик абонентский, cu / ca — подключение абонента подземное / воздухом, nm — можно подключить без муфты,
+-- o — уходит на опору, которой нет на схеме, on — куда уходит, c — комментарий, d — дата, e — кто обследовал.
+alter table public.poles add column if not exists sp jsonb;
+-- pole_patch: добавлена строка  sp = case when s ? 'sp' then nullif(s->'sp','null'::jsonb) else sp end
