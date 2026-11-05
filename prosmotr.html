@@ -121,9 +121,10 @@ function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(
  add=(a,b,src)=>{if(a&&b&&a!==b&&!E.has(k(a,b)))E.set(k(a,b),[a,b,src])},deg=new Map(),dg=p=>{let n=0;E.forEach(([a,b])=>{if(a===p||b===p)n++});return n};
  const del=new Map();GE.forEach(([a,b])=>{const x=U.get(a),y=U.get(b);if(x&&y)add(x,y,'d');else if(x||y){const m=x?b:a,q=x||y;if(!del.has(m))del.set(m,[]);del.get(m).push(q)}});
  del.forEach(L2=>{if(L2.length==2&&L2[0].tp==L2[1].tp&&dmt(L2[0],L2[1])<120)add(L2[0],L2[1],'b')});
+ ((typeof LE!='undefined'&&LE)||new Map()).forEach((r,key)=>{if(r.op!='add')return;const[ua,ub]=key.split('|'),a=U.get(ua),b=U.get(ub);if(a&&b)add(a,b,'u')});
  const N=P.filter(p=>p.tp&&!HAS.has(p.uid)&&!p.x),xy=p=>[p.lon*K1,p.lat*110950];
  {const TPP=new Map();P.forEach(q=>{if(q.tp&&!dead(q)){if(!TPP.has(q.tp))TPP.set(q.tp,[]);TPP.get(q.tp).push(q)}});
-  let ch=true,it=0;while(ch&&it++<8){ch=false;for(const[key,e]of[...E]){if(!E.has(key))continue;const[a,b,src]=e;const A=xy(a),B=xy(b),dx=B[0]-A[0],dy=B[1]-A[1],L=dx*dx+dy*dy;if(!L)continue;let best=null,bt=2;
+  let ch=true,it=0;while(ch&&it++<8){ch=false;for(const[key,e]of[...E]){if(!E.has(key))continue;const[a,b,src]=e;if(src=='u')continue;const A=xy(a),B=xy(b),dx=B[0]-A[0],dy=B[1]-A[1],L=dx*dx+dy*dy;if(!L)continue;let best=null,bt=2;
    for(const c of(TPP.get(a.tp)||[]).concat(a.tp!=b.tp?(TPP.get(b.tp)||[]):[])){if(c===a||c===b)continue;const Q=xy(c),t=((Q[0]-A[0])*dx+(Q[1]-A[1])*dy)/L;if(t<.05||t>.95)continue;const d=Math.hypot(Q[0]-A[0]-t*dx,Q[1]-A[1]-t*dy),lim=HAS.has(c.uid)?8:12;if(d<lim&&t<bt){bt=t;best=c}}
    if(best){E.delete(key);if(src=='d')SK.add(key);const s2=src=='d'||src=='s'?'s':'n';add(a,best,s2);add(best,b,s2);best._sp=1;ch=true}}}}
  {const par=new Map(),old=new Map(),f=x=>{while(par.get(x)!==x){par.set(x,par.get(par.get(x)));x=par.get(x)}return x};
@@ -131,7 +132,7 @@ function netEdges(){const U=new Map(P.map(p=>[p.uid,p])),E=new Map(),SK=new Set(
   E.forEach(([a,b])=>{if(par.has(a)&&par.has(b)){const ra=f(a),rb=f(b);if(ra!==rb){par.set(ra,rb);old.set(rb,old.get(rb)||old.get(ra))}}});
   const C2=[],NN=N.filter(p=>!p._sp);NN.forEach(p=>P.forEach(q=>{if(q===p||q.x||q.tp!=p.tp||!par.has(q))return;if(NN.includes(q)&&q.uid<p.uid)return;const d=dmt(p,q);if(d<90)C2.push([d,p,q])}));
   C2.sort((x,y)=>x[0]-y[0]).forEach(([d,p,q])=>{const rp=f(p),rq=f(q);if(rp===rq||(old.get(rp)&&old.get(rq)))return;add(p,q,'n');par.set(rp,rq);old.set(rq,old.get(rq)||old.get(rp))})}
- {const kk=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,nbr=()=>{const m=new Map();E.forEach(([a,b])=>{[[a,b],[b,a]].forEach(([x,y])=>{if(!m.has(x))m.set(x,[]);m.get(x).push(y)})});return m},rm=(a,b)=>{const q=kk(a,b),e=E.get(q);if(e){if(e[2]=='d')SK.add(q);E.delete(q)}};
+ {const kk=(a,b)=>a.uid<b.uid?a.uid+'|'+b.uid:b.uid+'|'+a.uid,nbr=()=>{const m=new Map();E.forEach(([a,b])=>{[[a,b],[b,a]].forEach(([x,y])=>{if(!m.has(x))m.set(x,[]);m.get(x).push(y)})});return m},rm=(a,b)=>{const q=kk(a,b),e=E.get(q);if(e&&e[2]!='u'){if(e[2]=='d')SK.add(q);E.delete(q)}};
   nbr().forEach((L2,c)=>{if(dead(c)&&L2.length==2&&E.has(kk(L2[0],L2[1]))){rm(c,L2[0]);rm(c,L2[1])}});
   let ch=true;while(ch){ch=false;const m=nbr();for(const[,[a,b]]of[...E]){const c=(m.get(a)||[]).find(c=>c!==b&&E.has(kk(c,b)));if(!c)continue;const ab=dmt(a,b),ac=dmt(a,c),cb=dmt(c,b);if(ab>ac&&ab>cb&&(ac+cb)/ab<1.15){rm(a,b);ch=true;break}}}}
  {/* реальная ВЛ: СИП не идёт через исключённые опоры; части сети одной ТП сшиваются пролётами до RMX м между реальными опорами (в т.ч. на гравит. фундаменте) */
