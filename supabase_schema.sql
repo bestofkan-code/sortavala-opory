@@ -158,3 +158,9 @@ alter table public.poles add column if not exists pp boolean not null default fa
 -- o — уходит на опору, которой нет на схеме, on — куда уходит, c — комментарий, d — дата, e — кто обследовал.
 alter table public.poles add column if not exists sp jsonb;
 -- pole_patch: добавлена строка  sp = case when s ? 'sp' then nullif(s->'sp','null'::jsonb) else sp end
+
+-- Бригада монтажников (montazh.html): учётная запись с app_metadata.role = 'crew'.
+-- public.is_crew(), public.crew_name(); триггеры crew_guard на poles и tps оставляют бригаде только
+-- работы 5/6/9/12 и wc на опорах, w.1 (бронекабель) и cab на ТП; запрещают добавлять/удалять опоры и ТП.
+-- line_edits, draws, tn_remarks, tn_photos — для бригады только чтение (restrictive-политики crew_no_*);
+-- фото: бригада удаляет только свои (crew_own_del на pole_photos и storage.objects).
