@@ -164,3 +164,6 @@ alter table public.poles add column if not exists sp jsonb;
 -- работы 5/6/12/14 и wc на опорах (14 — подрезка крон бригадой, отдельно от нашей 9), w.1 (бронекабель) и cab на ТП; запрещают добавлять/удалять опоры и ТП.
 -- line_edits, draws, tn_remarks, tn_photos — для бригады только чтение (restrictive-политики crew_no_*);
 -- фото: бригада удаляет только свои (crew_own_del на pole_photos и storage.objects).
+
+-- Задания бригаде (монтажная карта): crew_tasks(id, name, works int[], uids text[], d1, d2, note, done, ed, updated_at).
+-- Читают все; пишут авторизованные, кроме бригады (политика ct_write: not public.is_crew()).

@@ -22,7 +22,8 @@ R("#skn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style></hea
   "</style></head><body>")
 R('<b style="font-size:15px">Опоры освещения, Сортавала</b>',
   '<b style="font-size:15px">Монтажная карта: СИП, кронштейны, светильники, бронекабель</b><div class="crb">Карта бригады монтажников. Показаны опоры, по которым идёт СИП. Нажмите на опору — отметьте выполненные работы. На линию СИП — впишите длину пролёта. На значок ТП — бронекабель. Все отметки сразу видны на основной карте.</div>')
-R('<h3>Ход работ</h3>','<h3>Ход работ бригады</h3><div id="crw"></div>')
+R('<h3>Ход работ</h3>','<h3>Задания</h3><div id="ctk"><small>Загрузка…</small></div><h3>Ход работ бригады</h3><div id="crw"></div>')
+R('const RO=/*RO*/false;var TKV=false;','const RO=/*RO*/false;var TKV=true;')
 R('<div class="ed"><h3>Режим</h3>','<div class="ed crk"><h3>Режим</h3>')
 R('data-m="view">Просмотр</button>','data-m="view">Карточки опор</button>')
 R('data-m="mark">Отметить установку</button>','data-m="mark">Быстрая отметка</button>')
@@ -40,7 +41,7 @@ R("$('wf').innerHTML=WK.map(([k,n])=>","$('wf').innerHTML=WK.filter(([k])=>CWF.i
 R("if(mode=='mark'){const k=+$('mw').value;setW(p,k,!wdone(p,k),$('md').value);upd(p);save();stats();mark(p)}",
   "if(mode=='mark'){const k=+$('mw').value;if(!CW.includes(k))return;crewW(p,k,!wdone(p,k),$('md').value||LD());upd(p);save();stats();mark(p);toast(p.id+': '+(WSN[k]||'')+(wdone(p,k)?' ✓':' — отметка снята'))}")
 R("function popup0(p){if(RO)return roPopup(p);","function popup0(p){if(RO)return roPopup(p);return crewCard(p);")
-R("function stats(){try{paInfo()}catch(e){}","function stats(){try{crewStats()}catch(e){}try{paInfo()}catch(e){}")
+R("function stats(){try{tkDraw();tkList()}catch(e){}","function stats(){try{crewStats()}catch(e){}try{tkDraw();tkList()}catch(e){}")
 # пролёт СИП: без правки линий, с отметкой «СИП» на обеих опорах
 R("+'<div class=\"r\" style=\"margin-top:6px;border-top:1px solid #2c3346;padding-top:6px\"><button data-lp>Изменить путь</button><button data-ld style=\"color:#f87171\">Удалить линию</button>'+(LE.has(k)?'<button data-lr>Как было</button>':'')+'</div>');",
   "+'<label style=\"display:block;margin-top:6px;font-size:12px\"><input type=checkbox data-s5 checked> отметить «СИП» на обеих опорах пролёта</label>');")

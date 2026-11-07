@@ -3,13 +3,14 @@ var CWF=[4].concat(CW),CRN=null;
 /* на монтажной карте не показываем: исключённые опоры (кроме тех, по которым идёт СИП — Шуно Дорожная-2…7)
    и опоры на гравитационном фундаменте, через которые не проходит линия СИП */
 function crNetUpd(){if(!NETC)return;const s=new Set();NETC.E.forEach(e=>{s.add(e[0].uid);s.add(e[1].uid)});const ch=!CRN||CRN.size!=s.size||[...s].some(u=>!CRN.has(u));CRN=s;if(ch&&typeof mk!='undefined'&&mk.size)setTimeout(()=>{P.forEach(upd);numLabels();stats()},0)}
-function crHide(p){if(p.x&&!p.sx)return true;return isG(p)&&!!CRN&&!CRN.has(p.uid)}
+function crHide(p){if(p.x&&!p.sx)return true;if(typeof TKONLY!='undefined'&&TKONLY&&!tkOf(p).length)return true;return isG(p)&&!!CRN&&!CRN.has(p.uid)}
 function crewW(p,k,on,d){p.w=p.w||{};if(on)p.w[k]=d||LD();else delete p.w[k]}
 function krTxt(p){const k=+p.kr||0;return k==2?'2-рожк.'+(+p.ka?' '+p.ka+'°':''):k==1?'1-рожк.':'—'}
 function wkN(k){return(WK.find(w=>w[0]==k)||[0,''])[1]}
 function crewCard(p){const d=document.createElement('div');d.className='pp';const cz=p.vk&&!p.x?CABS.get(spKey(p.uid,'tp:'+p.tp)):null;
 d.innerHTML=`<div><b>${esc(p.id)}</b> <small>${p.t=='A'?'анкерная':'стандартная'} · ${+p.h||8} м</small></div>
 <div class="cri">${p.x?(p.sx?'<b style="color:#60a5fa">старая опора — СИП идёт по ней</b>':'<b style="color:#f87171">исключена, не монтируется</b>'):p.done?'<b style="color:#4ade80">опора установлена</b>':'<b style="color:#fbbf24">опора ещё не установлена</b>'} · кронштейн <b>${krTxt(p)}</b>${+p.sv?' · светильников <b>'+p.sv+'</b>':''}${p.js?' · <b style="color:#f87171">совм. подвеска</b>':''}${p.pp?' · <b style="color:#9ca3af">предлагаемая</b>':''}</div>
+${typeof tkOf=='function'&&tkOf(p).length?'<div class="cri" style="color:#22d3ee">Задание: '+tkOf(p).map(t=>'<b>«'+esc(t.name||'')+'»</b> — '+esc(tkWN(t))+(t.d2?', до '+fdm(t.d2):'')).join('; ')+'</div>':''}
 ${cz?`<div class="cri" style="color:#e879f9">Ввод КЛ: бронекабель от ${esc(tpn(p.tp))} ≈ ${Math.round(cz.d)} м — ${cabDone(p.tp)?'проложен':'ещё не проложен'} <button data-cab>${esc(tpn(p.tp))} ›</button></div>`:''}
 <div class="wh"><span data-wn></span><span>нажмите — отметить, на дату — изменить</span></div><div class="wg" data-wg></div>
 <label class="wde" data-wde hidden><span data-wdn></span><input type=date data-wdi></label><div class="phb" data-phb hidden></div>
