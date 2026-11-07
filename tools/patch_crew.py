@@ -1,4 +1,4 @@
-# Собирает montazh.html (карта бригады монтажников) из redaktor.html.
+# Собирает montazh.html — «монтажную карту» (карта бригады монтажников) из redaktor.html.
 # Бригада видит всю карту, но отмечает только: подрезку крон (своя работа 14), кронштейн (12), СИП (5), светильник (6),
 # длину СИП по пролётам и бронекабель на ТП. Ограничения дублируются на сервере (роль crew в Supabase).
 import sys,os
@@ -7,7 +7,7 @@ JS=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'crew.js'),encod
 def R(a,b,n=1):
     global s
     assert s.count(a)==n,(a[:90],s.count(a));s=s.replace(a,b)
-R("<title>Карта опор — Сортавала</title>","<title>Монтаж — карта бригады, Сортавала</title>")
+R("<title>Карта опор — Сортавала</title>","<title>Монтажная карта — Сортавала</title>")
 R("KEY='sortavala_opory_v1'","KEY='sortavala_opory_crew_v1'")
 R("<script>document.body.classList.add('dk')</script>","<script>document.body.classList.add('dk','crew')</script>")
 R("#skn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style></head><body>",
@@ -21,7 +21,7 @@ R("#skn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style></hea
   "body.crew #modes [data-m]:not([data-m=view]):not([data-m=mark]){display:none}"
   "</style></head><body>")
 R('<b style="font-size:15px">Опоры освещения, Сортавала</b>',
-  '<b style="font-size:15px">Монтаж: СИП, кронштейны, светильники, бронекабель</b><div class="crb">Карта бригады монтажников. Нажмите на опору — отметьте выполненные работы. На линию СИП — впишите длину пролёта. На значок ТП — бронекабель. Все отметки сразу видны на основной карте.</div>')
+  '<b style="font-size:15px">Монтажная карта: СИП, кронштейны, светильники, бронекабель</b><div class="crb">Карта бригады монтажников. Показаны опоры, по которым идёт СИП. Нажмите на опору — отметьте выполненные работы. На линию СИП — впишите длину пролёта. На значок ТП — бронекабель. Все отметки сразу видны на основной карте.</div>')
 R('<h3>Ход работ</h3>','<h3>Ход работ бригады</h3><div id="crw"></div>')
 R('<div class="ed"><h3>Режим</h3>','<div class="ed crk"><h3>Режим</h3>')
 R('data-m="view">Просмотр</button>','data-m="view">Карточки опор</button>')
@@ -32,7 +32,7 @@ R('<div class="r">Новая опора: <select id="nh">','<div class="r crh">�
 R('<div class="ed"><h3>Отмена действий</h3>','<div class="ed crk"><h3>Отмена действий</h3>')
 # вход
 R("var USERS=[['Иль','il'],['Никита','nikita'],['Леонид','leonid'],['Женя','zhenya']]","var USERS=[['Начальник участка','montazh']]")
-R("<b style=\"font-size:16px\">Вход в редактор карты опор</b>","<b style=\"font-size:16px\">Вход в карту монтажа</b>")
+R("<b style=\"font-size:16px\">Вход в редактор карты опор</b>","<b style=\"font-size:16px\">Вход в монтажную карту</b>")
 # виды работ
 R("$('mw').innerHTML=WK.map(([k,n])=>'<option value=\"'+k+'\"'+(k==4?' selected':'')+'>'+n+'</option>').join('');",
   "var CW=[14,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value=\"'+k+'\"'+(k==5?' selected':'')+'>'+n+'</option>').join('');")
@@ -60,6 +60,10 @@ R("d.querySelector('[data-tn]').onchange=e=>tpPut(t,{note:e.target.value.trim()}
 R("14:'Подрезка (бриг.)'","14:'Подрезка крон'")
 R("var PRK=9,PRT='Фотоотчёт: подрезка крон деревьев';","var PRK=14,PRT='Фотоотчёт: подрезка крон деревьев (бригада монтажников)';")
 R('Опоры с отмеченной подрезкой крон по выбранным ТП и датам фильтра; на каждой — фото до и после.','Опоры, где бригада отметила подрезку крон, по выбранным ТП и датам фильтра; на каждой — фото до и после.')
+# скрываем лишние опоры: исключённые (кроме «СИП по ней») и гравитационные вне линии СИП
+R("function vis(p){return tpOk(p)&&","function vis(p){return tpOk(p)&&!crHide(p)&&")
+R("NETC=netEdges();","NETC=netEdges();crNetUpd();")
+R('<div class="r"><label><input type="checkbox" id="wxx"> скрыть исключённые опоры</label></div><div class="r"><label><input type="checkbox" id="wxg"> скрыть опоры с гравитационным фундаментом</label></div>','<div class="r crh"><label><input type="checkbox" id="wxx"> скрыть исключённые опоры</label></div><div class="r crh"><label><input type="checkbox" id="wxg"> скрыть опоры с гравитационным фундаментом</label></div>')
 # логика бригады
 R("$('fjb').onclick=",JS+"\n$('fjb').onclick=")
 open(dst,'w',encoding='utf-8').write(s);print('ok crew ->',dst)

@@ -1,5 +1,9 @@
 /* ---- карта бригады монтажников: только СИП, подрезка крон (своя работа 14), кронштейны, светильники, бронекабель ---- */
-var CWF=[4].concat(CW);
+var CWF=[4].concat(CW),CRN=null;
+/* на монтажной карте не показываем: исключённые опоры (кроме тех, по которым идёт СИП — Шуно Дорожная-2…7)
+   и опоры на гравитационном фундаменте, через которые не проходит линия СИП */
+function crNetUpd(){if(!NETC)return;const s=new Set();NETC.E.forEach(e=>{s.add(e[0].uid);s.add(e[1].uid)});const ch=!CRN||CRN.size!=s.size||[...s].some(u=>!CRN.has(u));CRN=s;if(ch&&typeof mk!='undefined'&&mk.size)setTimeout(()=>{P.forEach(upd);numLabels();stats()},0)}
+function crHide(p){if(p.x&&!p.sx)return true;return isG(p)&&!!CRN&&!CRN.has(p.uid)}
 function crewW(p,k,on,d){p.w=p.w||{};if(on)p.w[k]=d||LD();else delete p.w[k]}
 function krTxt(p){const k=+p.kr||0;return k==2?'2-рожк.'+(+p.ka?' '+p.ka+'°':''):k==1?'1-рожк.':'—'}
 function wkN(k){return(WK.find(w=>w[0]==k)||[0,''])[1]}
@@ -25,7 +29,7 @@ d.querySelector('[data-cwc]').onchange=e=>{PSEL=Date.now();p.wc=e.target.value.t
 d.querySelector('[data-h]').onclick=()=>hpole(p);
 const cb=d.querySelector('[data-cab]');if(cb)cb.onclick=()=>{const c=tpPos(p.tp);if(c){map.closePopup();tpPopup(String(p.tp),L.latLng(c))}};
 return d}
-function crewStats(){const e=$('crw');if(!e)return;const A=P.filter(p=>tpOk(p)&&(!p.x||p.sx)),Q=A.filter(p=>!p.x),td=LD(),c=(L2,k)=>L2.filter(p=>wdone(p,k)).length,tdy=k=>A.filter(p=>String(wd(p,k)).slice(0,10)==td).length,st=Q.filter(p=>p.done).length;
+function crewStats(){const e=$('crw');if(!e)return;const A=P.filter(p=>tpOk(p)&&!crHide(p)),Q=A.filter(p=>!p.x),td=LD(),c=(L2,k)=>L2.filter(p=>wdone(p,k)).length,tdy=k=>A.filter(p=>String(wd(p,k)).slice(0,10)==td).length,st=Q.filter(p=>p.done).length;
 const tps=[...new Set(A.map(p=>String(p.tp||'—')))].sort((a,b)=>a.localeCompare(b,'ru',{numeric:true}));let spL=0,spN=0;SP.forEach(r=>{if(r.len!=null&&r.len!==''){spL+=+r.len;spN++}});
 const cabT=[...new Set([...CABS.values()].map(z=>z.tp))].filter(t=>!FTS.size||FTS.has(t)),cabD=cabT.filter(cabDone).length;
 const bar=(a,b,col)=>`<div class="crb2"><i style="width:${b?Math.min(100,Math.round(a/b*100)):0}%;background:${col}"></i></div>`;
@@ -35,7 +39,7 @@ e.innerHTML=row('Опор установлено — можно работать
 +row('Кронштейн установлен',c(Q,12),Q.length,'#60a5fa',12)+row('Светильник установлен',c(Q,6),Q.length,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')
 +'<table class="crt"><tr><th>ТП</th><th>опор стоит</th><th>СИП</th><th>кроншт.</th><th>светил.</th><th>брон.</th></tr>'+tps.map(t=>{const a=A.filter(p=>String(p.tp||'—')==t),q=a.filter(p=>!p.x);return `<tr><td>${esc(tpn(t))}</td><td>${q.filter(p=>p.done).length}/${q.length}</td><td>${c(a,5)}</td><td>${c(q,12)}</td><td>${c(q,6)}</td><td>${cabT.includes(t)?(cabDone(t)?'✓':'—'):''}</td></tr>`}).join('')+'</table>'
 +'<div class="r" style="margin-top:6px"><button id="crx">Отчёт бригады (Excel)</button></div>';$('crx').onclick=crewXl}
-function crewXl(){const fd=v=>/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),A=P.filter(p=>tpOk(p)&&(!p.x||p.sx)).sort((a,b)=>String(a.tp).localeCompare(String(b.tp),'ru',{numeric:true})||(+a.n||0)-(+b.n||0)),wb=XLSX.utils.book_new(),sh=(rows,nm,w)=>{const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=w.map(x=>({wch:x}));XLSX.utils.book_append_sheet(wb,ws,nm)};
+function crewXl(){const fd=v=>/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),A=P.filter(p=>tpOk(p)&&!crHide(p)).sort((a,b)=>String(a.tp).localeCompare(String(b.tp),'ru',{numeric:true})||(+a.n||0)-(+b.n||0)),wb=XLSX.utils.book_new(),sh=(rows,nm,w)=>{const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=w.map(x=>({wch:x}));XLSX.utils.book_append_sheet(wb,ws,nm)};
 sh([['Опора','ТП','№','Тип','Опора стоит','Кронштейн (тип)','Подрезка крон','Кронштейн установлен','СИП протянут','Светильник установлен','Комментарий'],...A.map(p=>[p.id,tpn(p.tp),p.n||'',p.t=='A'?'анкерная':'стандартная',p.x?'старая (СИП по ней)':p.done?fd(p.date||'да'):'нет',krTxt(p),fd(wd(p,14)),fd(wd(p,12)),fd(wd(p,5)),fd(wd(p,6)),p.wc||''])],'По опорам',[16,10,5,12,14,12,12,12,12,12,30]);
 const S=[...SP.values()].filter(r=>r.len!=null&&r.len!=='').sort((a,b)=>String(a.sd||'').localeCompare(String(b.sd||''))||String(a.id||'').localeCompare(String(b.id||''),'ru',{numeric:true}));
 sh([['Пролёт','Длина СИП, м','Дата протяжки','Примечание','Кто внёс'],...S.map(r=>[r.id||r.uid,+r.len,fd(r.sd||''),r.note||'',r.ed||'']),['Итого',Math.round(S.reduce((a,r)=>a+(+r.len||0),0)*10)/10]],'СИП по пролётам',[34,12,14,30,16]);
