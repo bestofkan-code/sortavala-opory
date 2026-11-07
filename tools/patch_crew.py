@@ -1,5 +1,5 @@
 # Собирает montazh.html (карта бригады монтажников) из redaktor.html.
-# Бригада видит всю карту, но отмечает только: подрезку крон (9), кронштейн (12), СИП (5), светильник (6),
+# Бригада видит всю карту, но отмечает только: подрезку крон (своя работа 14), кронштейн (12), СИП (5), светильник (6),
 # длину СИП по пролётам и бронекабель на ТП. Ограничения дублируются на сервере (роль crew в Supabase).
 import sys,os
 src,dst=sys.argv[1],sys.argv[2];s=open(src,encoding='utf-8').read()
@@ -35,7 +35,7 @@ R("var USERS=[['Иль','il'],['Никита','nikita'],['Леонид','leonid'
 R("<b style=\"font-size:16px\">Вход в редактор карты опор</b>","<b style=\"font-size:16px\">Вход в карту монтажа</b>")
 # виды работ
 R("$('mw').innerHTML=WK.map(([k,n])=>'<option value=\"'+k+'\"'+(k==4?' selected':'')+'>'+n+'</option>').join('');",
-  "var CW=[9,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value=\"'+k+'\"'+(k==5?' selected':'')+'>'+n+'</option>').join('');")
+  "var CW=[14,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value=\"'+k+'\"'+(k==5?' selected':'')+'>'+n+'</option>').join('');")
 R("$('wf').innerHTML=WK.map(([k,n])=>","$('wf').innerHTML=WK.filter(([k])=>CWF.includes(k)).map(([k,n])=>")
 R("if(mode=='mark'){const k=+$('mw').value;setW(p,k,!wdone(p,k),$('md').value);upd(p);save();stats();mark(p)}",
   "if(mode=='mark'){const k=+$('mw').value;if(!CW.includes(k))return;crewW(p,k,!wdone(p,k),$('md').value||LD());upd(p);save();stats();mark(p);toast(p.id+': '+(WSN[k]||'')+(wdone(p,k)?' ✓':' — отметка снята'))}")
@@ -56,6 +56,10 @@ R("'<div class=\"wl\">'+TW.map(([k,n])=>'<label><input type=checkbox data-tw='",
 R("+'<input type=\"text\" data-tn placeholder=\"Примечание по ТП\" value=\"'+esc(r.note||'')+'\">'","+(r.note?'<div class=\"cri\">Примечание: '+esc(r.note)+'</div>':'')")
 R("+'<small>Переместить значок ТП: режим «Правка/перенос», затем перетащите.</small>')","+'<small>Отметьте, когда бронекабель от ТП до опоры ввода проложен, и впишите фактическую длину.</small>')")
 R("d.querySelector('[data-tn]').onchange=e=>tpPut(t,{note:e.target.value.trim()})}","}")
+# подрезка крон бригады — своя работа 14 со своим счётчиком и фотоотчётом
+R("14:'Подрезка (бриг.)'","14:'Подрезка крон'")
+R("var PRK=9,PRT='Фотоотчёт: подрезка крон деревьев';","var PRK=14,PRT='Фотоотчёт: подрезка крон деревьев (бригада монтажников)';")
+R('Опоры с отмеченной подрезкой крон по выбранным ТП и датам фильтра; на каждой — фото до и после.','Опоры, где бригада отметила подрезку крон, по выбранным ТП и датам фильтра; на каждой — фото до и после.')
 # логика бригады
 R("$('fjb').onclick=",JS+"\n$('fjb').onclick=")
 open(dst,'w',encoding='utf-8').write(s);print('ok crew ->',dst)

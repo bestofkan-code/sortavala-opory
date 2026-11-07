@@ -161,6 +161,6 @@ alter table public.poles add column if not exists sp jsonb;
 
 -- Бригада монтажников (montazh.html): учётная запись с app_metadata.role = 'crew'.
 -- public.is_crew(), public.crew_name(); триггеры crew_guard на poles и tps оставляют бригаде только
--- работы 5/6/9/12 и wc на опорах, w.1 (бронекабель) и cab на ТП; запрещают добавлять/удалять опоры и ТП.
+-- работы 5/6/12/14 и wc на опорах (14 — подрезка крон бригадой, отдельно от нашей 9), w.1 (бронекабель) и cab на ТП; запрещают добавлять/удалять опоры и ТП.
 -- line_edits, draws, tn_remarks, tn_photos — для бригады только чтение (restrictive-политики crew_no_*);
 -- фото: бригада удаляет только свои (crew_own_del на pole_photos и storage.objects).

@@ -1,4 +1,4 @@
-/* ---- карта бригады монтажников: только СИП, подрезка крон, кронштейны, светильники, бронекабель ---- */
+/* ---- карта бригады монтажников: только СИП, подрезка крон (своя работа 14), кронштейны, светильники, бронекабель ---- */
 var CWF=[4].concat(CW);
 function crewW(p,k,on,d){p.w=p.w||{};if(on)p.w[k]=d||LD();else delete p.w[k]}
 function krTxt(p){const k=+p.kr||0;return k==2?'2-рожк.'+(+p.ka?' '+p.ka+'°':''):k==1?'1-рожк.':'—'}
@@ -14,11 +14,11 @@ ${p.note?'<div class="cri">Примечание: '+esc(p.note)+'</div>':''}
 <div class="brow"><button data-h>История опоры</button></div>`;
 const ch=()=>{upd(p);save();stats();mark(p)};let EK=0,PHO=false;const phb=d.querySelector('[data-phb]');
 const ed=k=>{EK=k;const r=d.querySelector('[data-wde]');if(!k){r.hidden=true;return}const v=wd(p,k);d.querySelector('[data-wdn]').textContent='Дата: '+(WSN[k]||'');d.querySelector('[data-wdi]').value=/^\d{4}-/.test(v)?v:'';r.hidden=false};
-const rw=()=>{const g=d.querySelector('[data-wg]');g.innerHTML=CW.map(k=>{const n=wkN(k),on=wdone(p,k),v=wd(p,k),dd=/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7):(on?'✓':'');return `<div class="wt${on?' on':''}"><button class="wn" data-w=${k} title="${esc(n)}"><i>✓</i>${WSN[k]||esc(n)}</button>${k==9?`<button class="wph" data-wph title="Фото до и после">${ppIco}${ppN(p.uid,9)||''}</button>`:''}${on?`<button class="wdt" data-wd=${k} title="Изменить дату">${dd}</button>`:''}</div>`}).join('');
+const rw=()=>{const g=d.querySelector('[data-wg]');g.innerHTML=CW.map(k=>{const n=wkN(k),on=wdone(p,k),v=wd(p,k),dd=/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7):(on?'✓':'');return `<div class="wt${on?' on':''}"><button class="wn" data-w=${k} title="${esc(n)}"><i>✓</i>${WSN[k]||esc(n)}</button>${k==14?`<button class="wph" data-wph title="Фото до и после">${ppIco}${ppN(p.uid,14)||''}</button>`:''}${on?`<button class="wdt" data-wd=${k} title="Изменить дату">${dd}</button>`:''}</div>`}).join('');
  d.querySelector('[data-wn]').textContent='РАБОТЫ БРИГАДЫ · '+CW.filter(k=>wdone(p,k)).length+'/'+CW.length;
- g.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{PSEL=Date.now();const k=+b.dataset.w;crewW(p,k,!wdone(p,k),$('md').value||LD());if(k==9&&wdone(p,9)){PHO=true;if(!ppL(p.uid,9,'after').length)toast('Подрезка крон: добавьте фото «до» и «после»')}if(k==9)setTimeout(()=>phb._r(),0);if(EK==k)ed(0);setTimeout(()=>{rw();ch()},0)});
+ g.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{PSEL=Date.now();const k=+b.dataset.w;crewW(p,k,!wdone(p,k),$('md').value||LD());if(k==14&&wdone(p,14)){PHO=true;if(!ppL(p.uid,14,'after').length)toast('Подрезка крон: добавьте фото «до» и «после»')}if(k==14)setTimeout(()=>phb._r(),0);if(EK==k)ed(0);setTimeout(()=>{rw();ch()},0)});
  g.querySelectorAll('[data-wd]').forEach(b=>b.onclick=()=>ed(+b.dataset.wd));const wp=g.querySelector('[data-wph]');if(wp)wp.onclick=()=>{PHO=!PHO;phb._r()}};
-ppBlock(phb,p,9,()=>PHO);
+ppBlock(phb,p,14,()=>PHO);
 d.querySelector('[data-wdi]').onchange=e=>{PSEL=Date.now();if(!EK||!e.target.value)return;crewW(p,EK,true,e.target.value);rw();ch()};
 rw();
 d.querySelector('[data-cwc]').onchange=e=>{PSEL=Date.now();p.wc=e.target.value.trim();ch()};
@@ -32,11 +32,11 @@ const bar=(a,b,col)=>`<div class="crb2"><i style="width:${b?Math.min(100,Math.ro
 const row=(n,a,b,col,k)=>`<div class="crr"><span>${n}</span>${k&&tdy(k)?'<small>сегодня +'+tdy(k)+'</small>':''}<b>${a}${b!=null?' / '+b:''}</b></div>${b!=null?bar(a,b,col):''}`;
 e.innerHTML=row('Опор установлено — можно работать',st,Q.length,'#22c55e')+row('СИП протянут (опор)',c(A,5),A.length,'#f97316',5)
 +`<div class="crr"><span>СИП по пролётам (длина внесена)</span><b>${spN} пр. · ${Math.round(spL).toLocaleString('ru-RU')} м</b></div>`
-+row('Кронштейн установлен',c(Q,12),Q.length,'#60a5fa',12)+row('Светильник установлен',c(Q,6),Q.length,'#facc15',6)+row('Подрезка крон (опор)',c(A,9),null,'',9)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')
++row('Кронштейн установлен',c(Q,12),Q.length,'#60a5fa',12)+row('Светильник установлен',c(Q,6),Q.length,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')
 +'<table class="crt"><tr><th>ТП</th><th>опор стоит</th><th>СИП</th><th>кроншт.</th><th>светил.</th><th>брон.</th></tr>'+tps.map(t=>{const a=A.filter(p=>String(p.tp||'—')==t),q=a.filter(p=>!p.x);return `<tr><td>${esc(tpn(t))}</td><td>${q.filter(p=>p.done).length}/${q.length}</td><td>${c(a,5)}</td><td>${c(q,12)}</td><td>${c(q,6)}</td><td>${cabT.includes(t)?(cabDone(t)?'✓':'—'):''}</td></tr>`}).join('')+'</table>'
 +'<div class="r" style="margin-top:6px"><button id="crx">Отчёт бригады (Excel)</button></div>';$('crx').onclick=crewXl}
 function crewXl(){const fd=v=>/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),A=P.filter(p=>tpOk(p)&&(!p.x||p.sx)).sort((a,b)=>String(a.tp).localeCompare(String(b.tp),'ru',{numeric:true})||(+a.n||0)-(+b.n||0)),wb=XLSX.utils.book_new(),sh=(rows,nm,w)=>{const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=w.map(x=>({wch:x}));XLSX.utils.book_append_sheet(wb,ws,nm)};
-sh([['Опора','ТП','№','Тип','Опора стоит','Кронштейн (тип)','Подрезка крон','Кронштейн установлен','СИП протянут','Светильник установлен','Комментарий'],...A.map(p=>[p.id,tpn(p.tp),p.n||'',p.t=='A'?'анкерная':'стандартная',p.x?'старая (СИП по ней)':p.done?fd(p.date||'да'):'нет',krTxt(p),fd(wd(p,9)),fd(wd(p,12)),fd(wd(p,5)),fd(wd(p,6)),p.wc||''])],'По опорам',[16,10,5,12,14,12,12,12,12,12,30]);
+sh([['Опора','ТП','№','Тип','Опора стоит','Кронштейн (тип)','Подрезка крон','Кронштейн установлен','СИП протянут','Светильник установлен','Комментарий'],...A.map(p=>[p.id,tpn(p.tp),p.n||'',p.t=='A'?'анкерная':'стандартная',p.x?'старая (СИП по ней)':p.done?fd(p.date||'да'):'нет',krTxt(p),fd(wd(p,14)),fd(wd(p,12)),fd(wd(p,5)),fd(wd(p,6)),p.wc||''])],'По опорам',[16,10,5,12,14,12,12,12,12,12,30]);
 const S=[...SP.values()].filter(r=>r.len!=null&&r.len!=='').sort((a,b)=>String(a.sd||'').localeCompare(String(b.sd||''))||String(a.id||'').localeCompare(String(b.id||''),'ru',{numeric:true}));
 sh([['Пролёт','Длина СИП, м','Дата протяжки','Примечание','Кто внёс'],...S.map(r=>[r.id||r.uid,+r.len,fd(r.sd||''),r.note||'',r.ed||'']),['Итого',Math.round(S.reduce((a,r)=>a+(+r.len||0),0)*10)/10]],'СИП по пролётам',[34,12,14,30,16]);
 const C=[...CABS.values()].sort((a,b)=>a.tp.localeCompare(b.tp,'ru',{numeric:true}));
