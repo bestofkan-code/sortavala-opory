@@ -15,6 +15,8 @@ python3 tools/patch_crew.py redaktor.html montazh.html     # «монтажна�
 
 Таблица «Контракт и выполнение» в шапке: `python3 tools/patch_main_contract.py redaktor.html` (уже применено) — опоры по типам (397/183/5/7), закладные (402/190), кронштейны (353/50/189), светильники (831): контракт / на карте / сделано / осталось. На монтажной карте скрыта.
 
+СИП-карта (кнопка под таблицей «Контракт и выполнение»): `python3 tools/patch_main_sip.py redaktor.html` (уже применено; код в `tools/sip.js`) — магистраль и ответвления, длины пролётов, роль опоры на линии, расчёт арматуры и Excel.
+
 Фильтр «Опоры» (стандартные/анкерные, 8/9 м): `python3 tools/patch_main_ptype.py redaktor.html` (уже применено).
 
 Задания бригаде: `python3 tools/patch_main_tasks.py redaktor.html` (уже применено; код в `tools/tasks.js`).
