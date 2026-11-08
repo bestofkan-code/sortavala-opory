@@ -30,7 +30,8 @@ R('Красным — расхождение карты с контрактом.
   '<small style="display:block;margin:2px 0 4px"><span style="color:#3b82f6;font-weight:700">Синяя</span> — магистраль от опоры ввода до самой дальней опоры, '
   '<span style="color:#f97316;font-weight:700">оранжевая</span> — ответвления, <span style="color:#9ca3af;font-weight:700">серый пунктир</span> — отрезки только к опорам на гравитационном фундаменте (следующий этап). '
   'Кольцо <span style="color:#f87171;font-weight:700">красное</span> — СИП крепится анкерно (ввод, конец линии, анкерная или угловая опора), '
-  '<span style="color:#e879f9;font-weight:700">фиолетовое</span> — ответвление. Длины пролётов видны при приближении. Нажмите на опору или пролёт — подробности.</small>'
+  '<span style="color:#e879f9;font-weight:700">фиолетовое</span> — ответвление. <span style="color:#f87171;font-weight:700">Красный пунктир</span> — пролёт между сетями разных ТП или кольцо, <span style="color:#e879f9;font-weight:700">малиновая</span> — линия без связи с вводом от ТП: требуют решения. Длины пролётов видны при приближении. Нажмите на опору или пролёт — подробности.</small>'
+  '<div class="r">Барабаны СИП: <select id="sipdr"><option value="500">по 500 м</option><option value="1000">по 1000 м</option><option value="2000">по 2000 м</option></select></div>'
   '<div id="sips"></div><div class="r"><button id="sipx">Расчёт арматуры (Excel)</button></div>'
   '<small style="display:block;opacity:.75">Расчёт приблизительный: длины — по прямой между опорами по нарисованным линиям; нормы указаны в таблице и меняются в Excel.</small></div>')
 
@@ -60,7 +61,8 @@ R('#ktn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style>',
   '#sipt th,#siptp th{font-weight:600;font-size:11px;opacity:.85}#sipt td small{display:block;font-size:10px;opacity:.7;line-height:1.15}'
   '#sipd{margin-top:4px}#sipd>summary{cursor:pointer;font-size:12px}'
   '.sipl{transform:translate(-50%,-50%);width:max-content;background:#fff;color:#1e3a8a;font:700 10.5px/1.25 system-ui,sans-serif;padding:0 4px;border-radius:6px;border:1px solid #1d4ed8;box-shadow:0 1px 2px rgba(0,0,0,.25);pointer-events:none;white-space:nowrap}'
-  '.sipl.n{color:#4b5563;border-color:#9ca3af}'
+  '.sipl.n{color:#4b5563;border-color:#9ca3af}.sipl.w{color:#b91c1c;border-color:#dc2626}'
+  '.sipw{margin:6px 0;padding:6px 8px;border:1px solid #dc2626;border-radius:8px;background:rgba(220,38,38,.1);font-size:12px;line-height:1.35}.sipw a{display:block;margin-top:4px;color:inherit;text-decoration:underline dotted}.sipw small{display:block;opacity:.75;margin-top:4px}'
   '</style>')
 
 # 7) код режима
