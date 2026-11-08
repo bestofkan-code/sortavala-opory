@@ -318,7 +318,7 @@ $('spf').onchange=e=>{SQF=e.target.value;P.forEach(upd);numLabels();sqStats()};$
 /* ---- СИП-карта: как пойдёт СИП по опорам, длины пролётов, ответвления, отрезки и раскрой, расчёт арматуры ---- */
 var SIPL=L.layerGroup(),SIPLB=L.layerGroup(),SIPRG=L.layerGroup(),SIPC=null,SIPT=0,SIPDO=false;
 /* нормы (на что умножаем) и количества по РД (уч. 1 + уч. 2) для сверки */
-var SIPN={sipK:1.02,tail:1.5,an:1,sus:1,slL:3,slP:1,ss:4,inl:5,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
+var SIPN={sipK:1.02,tail:1.5,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
 var SIPRD={sip:16998,an:197,br:197,sus:577,sliw:2314,tape:1244,skr:1244,vvg:1224};
 var SIPR={root:'ввод от ТП',end:'концевая',anchor:'анкерная',corner:'угловая (поворот ≥45°)',branch:'ответвительная',mid:'промежуточная'};
 var SIPK={t:'магистраль',b:'ответвление',n:'к опорам на гравитационном фундаменте — следующий этап',x:'между сетями разных ТП — нужен разрыв, уточнить',c:'замыкает кольцо — для радиальной сети лишний, уточнить',u:'не связан с вводом от ТП — уточнить'};
@@ -397,7 +397,7 @@ function sipRows(o){const n=SIPN,pr=o.lum*n.slL+o.bond*n.slP+o.brs*n.ss+o.inl*n.
  ['Зажим прокалывающий SLIW 50 — светильники','шт','светильников',o.lum,n.slL,'по 3 на светильник: фаза, N и PE на PEN','sliw'],
  ['Зажим прокалывающий SLIW 50 — опора к PEN','шт','опор контракта на линии',o.bond,n.slP,'по 1 на опору',''],
  ['Зажим прокалывающий СИП–СИП (ответвление до 25 мм²)','шт','ответвлений СИП',o.brs,n.ss,'по 4 на ответвление: 4 жилы. SLIW 50 не подходит — у него ответвление 1,5–10 мм²',''],
- ['Зажим прокалывающий Al/Cu — ввод кабеля от ТП','шт','вводов от ТП',o.inl,n.inl,'по 5 на ввод: три фазы, N и PE на PEN',''],
+ ['Муфта переходная бронекабель — СИП (ввод от ТП)','шт','вводов от ТП',o.inl,n.inl,'по 1 на ввод: кабель от ТП соединяется с СИП в муфте на опоре ввода; N и PE кабеля — на PEN (нулевую несущую) СИП',''],
  ['Колпачок изолирующий','шт','концов отрезков СИП',o.ends,n.cap,'по 4 на конец: 4 жилы',''],
  ['Гильза соединительная изолированная (стык по длине)','шт','стыков при барабанах по '+SIPDR+' м',o.cut.joints,4,'по 4 на стык: 4 жилы; стык — в шлейфе на анкерной опоре',''],
  ['Ремешок (стяжка) для СИП','шт','креплений и проколов',2*o.sus+o.anc+pr,1,'2 у подвески, 1 у анкерного зажима, 1 у каждого прокола',''],
@@ -442,7 +442,7 @@ function sipPop(p){const d=document.createElement('div');d.className='pp';const 
  else{const it=[],sl=n.lum*SIPN.slL+n.bond*SIPN.slP;
   if(n.anc)it.push('анкерных зажимов и кронштейнов SO253 — по '+n.anc);if(n.sus)it.push('поддерживающий зажим — 1');
   if(sl)it.push('SLIW 50 — '+sl+(n.lum?' ('+n.lum+' светильн. × 3'+(n.bond?' + 1 опора к PEN':'')+')':''));
-  if(n.brs)it.push('прокалывающих СИП–СИП — '+n.brs*SIPN.ss+' ('+n.brs+' ответвл.)');if(n.inl)it.push('прокалывающих Al/Cu на ввод кабеля — '+SIPN.inl);if(n.ends)it.push('колпачков — '+n.ends*SIPN.cap);
+  if(n.brs)it.push('прокалывающих СИП–СИП — '+n.brs*SIPN.ss+' ('+n.brs+' ответвл.)');if(n.inl)it.push('муфта переходная бронекабель — СИП — '+SIPN.inl);if(n.ends)it.push('колпачков — '+n.ends*SIPN.cap);
   h+=`<div style="margin:3px 0"><b>${SIPR[n.role]}</b>${n.turn!=null&&n.role!='end'?' · поворот линии '+n.turn+'°':''}${n.role=='corner'?' — поддерживающий зажим такой угол не держит, крепление анкерное':''}</div>`;
   if(n.nofeed)h+='<div style="color:#e879f9">Не связана с вводом от ТП — уточнить, откуда питание.</div>';
   h+='<div><small>Пролёты:</small> '+n.nb.map(b=>esc(b.o.id)+' — '+Math.round(b.len)+' м'+(b.kind=='x'?' <small>(между сетями ТП)</small>':b.kind=='c'?' <small>(кольцо)</small>':'')).join('; ')+'</div>';
@@ -482,7 +482,7 @@ function sipXl(){const C=SIPC||sipCalc(),o=sipSum(C),R=sipRows(o),wb=XLSX.utils.
  const sp=C.ED.filter(x=>tpOk(x.a)||tpOk(x.b)).map(x=>[tpn(String(x.a.tp||'')),x.a.id,x.b.id,f1(x.len),SIPK[x.kind]]).sort((a,b)=>ru(a[0],b[0])||ru(a[1],b[1]));
  const w2=XLSX.utils.aoa_to_sheet([['ТП','Опора','Опора','Длина пролёта, м','Участок'],...sp]);w2['!cols']=[{wch:16},{wch:18},{wch:18},{wch:16},{wch:50}];XLSX.utils.book_append_sheet(wb,w2,'Пролёты');
  const nd=[...C.ND.values()].filter(n=>tpOk(n.p)).sort((a,b)=>ru(a.p.id,b.p.id)).map(n=>[n.p.id,tpn(String(n.p.tp||'')),(n.p.t=='A'?'анкерная':'стандартная')+' '+(+n.p.h==9?9:8)+' м',SIPR[n.role],n.deg,n.turn==null?'':n.turn,n.anc,n.sus,n.lum,n.lum*SIPN.slL+n.bond*SIPN.slP,n.brs*SIPN.ss,n.inl*SIPN.inl,n.ends*SIPN.cap,isG(n.p)?'гравит. фундамент':n.p.x?'исключена':n.nofeed?'не связана с вводом от ТП':'']);
- const w3=XLSX.utils.aoa_to_sheet([['Опора','ТП','Тип опоры','Роль на линии СИП','Пролётов','Поворот линии, °','Анкерных зажимов','Поддерживающих зажимов','Светильников','SLIW 50','Проколов СИП–СИП','Проколов на ввод','Колпачков','Примечание'],...nd]);
+ const w3=XLSX.utils.aoa_to_sheet([['Опора','ТП','Тип опоры','Роль на линии СИП','Пролётов','Поворот линии, °','Анкерных зажимов','Поддерживающих зажимов','Светильников','SLIW 50','Проколов СИП–СИП','Муфт на вводе','Колпачков','Примечание'],...nd]);
  w3['!cols']=[{wch:18},{wch:14},{wch:18},{wch:22},{wch:9},{wch:10},{wch:10},{wch:12},{wch:11},{wch:9},{wch:12},{wch:10},{wch:10},{wch:22}];XLSX.utils.book_append_sheet(wb,w3,'Опоры на линии');
  const tps=[...o.tp.entries()].sort((a,b)=>ru(a[0],b[0]));
  const w4=XLSX.utils.aoa_to_sheet([['ТП','Пролётов','Длина, м','Ответвления, м','СИП с запасом 1,02, м','Отрезков СИП','Ответвлений','Опор на линии','Анкерных креплений','Поддерживающих зажимов'],...tps.map(([t,r])=>[tpn(t),r.sp,f1(r.len),f1(r.br),Math.ceil(r.len*SIPN.sipK),r.pcs,r.brs,r.nd,r.anc,r.sus])]);
