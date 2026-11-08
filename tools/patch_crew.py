@@ -62,7 +62,7 @@ R("14:'Подрезка (бриг.)'","14:'Подрезка крон'")
 R("var PRK=9,PRT='Фотоотчёт: подрезка крон деревьев';","var PRK=14,PRT='Фотоотчёт: подрезка крон деревьев (бригада монтажников)';")
 R('Опоры с отмеченной подрезкой крон по выбранным ТП и датам фильтра; на каждой — фото до и после.','Опоры, где бригада отметила подрезку крон, по выбранным ТП и датам фильтра; на каждой — фото до и после.')
 # скрываем лишние опоры: исключённые (кроме «СИП по ней») и гравитационные вне линии СИП
-R("function vis(p){return tpOk(p)&&","function vis(p){return tpOk(p)&&!crHide(p)&&")
+R("function visB(p){return tpOk(p)&&","function visB(p){return tpOk(p)&&!crHide(p)&&")
 R("NETC=netEdges();","NETC=netEdges();crNetUpd();")
 R('<div class="r"><label><input type="checkbox" id="wxx"> скрыть исключённые опоры</label></div><div class="r"><label><input type="checkbox" id="wxg"> скрыть опоры с гравитационным фундаментом</label></div>','<div class="r crh"><label><input type="checkbox" id="wxx"> скрыть исключённые опоры</label></div><div class="r crh"><label><input type="checkbox" id="wxg"> скрыть опоры с гравитационным фундаментом</label></div>')
 # логика бригады
