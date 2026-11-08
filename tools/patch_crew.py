@@ -10,14 +10,14 @@ def R(a,b,n=1):
 R("<title>Карта опор — Сортавала</title>","<title>Монтажная карта — Сортавала</title>")
 R("KEY='sortavala_opory_v1'","KEY='sortavala_opory_crew_v1'")
 R("<script>document.body.classList.add('dk')</script>","<script>document.body.classList.add('dk','crew')</script>")
-R("#skn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style></head><body>",
-  "#skn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}"
+R("#ktn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}</style></head><body>",
+  "#ktn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}"
   ".cri{font-size:12px;margin:3px 0;line-height:1.35}.cri button{padding:1px 6px;margin:0 0 0 4px}"
   "#crw .crr{display:flex;align-items:baseline;gap:6px;font-size:13px;margin-top:7px}#crw .crr span{flex:1}#crw .crr small{color:#4ade80}#crw .crr b{white-space:nowrap}"
   "#crw .crb2{height:7px;background:#262c3d;border-radius:4px;overflow:hidden;margin:3px 0 0}#crw .crb2 i{display:block;height:100%}"
   "#crw .crt{width:100%;border-collapse:collapse;font-size:12px;margin-top:9px}#crw .crt th,#crw .crt td{padding:3px 4px;text-align:right;border-bottom:1px solid rgba(127,127,127,.22)}#crw .crt th:first-child,#crw .crt td:first-child{text-align:left}"
   ".crb{font-size:12px;margin:5px 0;padding:6px 8px;border:1px solid #c026d3;border-radius:8px;background:rgba(192,38,211,.12);line-height:1.35}"
-  "body.crew #skd,body.crew #bar,body.crew #st,body.crew .ed:not(.crk),body.crew #lmh,body.crew #spp,body.crew .crh{display:none!important}"
+  "body.crew #skd,body.crew #ktd,body.crew #bar,body.crew #st,body.crew .ed:not(.crk),body.crew #lmh,body.crew #spp,body.crew .crh{display:none!important}"
   "body.crew #modes [data-m]:not([data-m=view]):not([data-m=mark]){display:none}"
   "</style></head><body>")
 R('<b style="font-size:15px">Опоры освещения, Сортавала</b>',
