@@ -167,3 +167,12 @@ alter table public.poles add column if not exists sp jsonb;
 
 -- Задания бригаде (монтажная карта): crew_tasks(id, name, works int[], uids text[], d1, d2, note, done, ed, updated_at).
 -- Читают все; пишут авторизованные, кроме бригады (политика ct_write: not public.is_crew()).
+
+-- Участки работ (uchastki.html): опоры участка, даты/время, что нужно (освободить места у опор — пресс-служба,
+-- отключение ВЛ 0,4 кВ — Россети, автовышка на проезжей части — ГИБДД), отметки об отправке писем (sent).
+create table if not exists public.work_zones(id text primary key, name text not null, uids text[] not null default '{}', works int[] not null default '{}',
+ d1 date, d2 date, t1 text, t2 text, lift boolean not null default false, road boolean not null default false, outage boolean not null default false,
+ park boolean not null default true, note text, sent jsonb not null default '{}'::jsonb, done boolean not null default false, ed text, updated_at timestamptz not null default now());
+alter table public.work_zones enable row level security;
+create policy wz_read on public.work_zones for select to anon, authenticated using (true);
+create policy wz_write on public.work_zones for all to authenticated using (not public.is_crew()) with check (not public.is_crew());
