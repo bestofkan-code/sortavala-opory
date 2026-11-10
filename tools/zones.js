@@ -57,6 +57,8 @@ async function znPut(r){r.ed=WHO||null;r.updated_at=new Date().toISOString();ZN.
 async function znDel(id){ZN.delete(id);znSave();znDraw();znList();if(ZNSRV!==true)return;try{await authFresh()}catch(e){}try{await fetch(CF.u+'/rest/v1/work_zones?id=eq.'+encodeURIComponent(id),{method:'DELETE',headers:H()})}catch(e){}}
 /* ---- выделение и форма ---- */
 function znInfo(){const e=$('zni');if(!e)return;if(ZNA){e.textContent='Нажимайте по карте углы участка. Точек: '+ZNPTS.length+(ZNPTS.length>2?'. Нажмите «Готово».':'');return}e.textContent='Выбрано опор: '+ZNS.size+(ZNE&&ZN.get(ZNE)?' · правка участка «'+(ZN.get(ZNE).name||'')+'»':'')}
+function znWind(x,y,pts){let w=0;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const[xi,yi]=pts[j],[xj,yj]=pts[i];if(yi<=y){if(yj>y&&(xj-xi)*(y-yi)-(x-xi)*(yj-yi)>0)w++}else if(yj<=y&&(xj-xi)*(y-yi)-(x-xi)*(yj-yi)<0)w--}return w!=0}
+function znApply(){if(ZNPTS.length<3)return null;const pts=ZNPTS.map(a=>lm(a[0],a[1]));let n=0;P.forEach(p=>{if(!p.lat||!p.lon||(p.x&&!p.sx))return;const q=lm(p.lat,p.lon);if(znWind(q[0],q[1],pts)&&!ZNS.has(p.uid)){ZNS.add(p.uid);n++}});return n}
 function znTog(p){if(ZNS.has(p.uid))ZNS.delete(p.uid);else ZNS.add(p.uid);znDraw();znInfo()}
 function znPt(ll){ZNPTS.push([ll.lat,ll.lng]);znDraw();znInfo()}
 function znBtns(){$('zna').hidden=ZNA;$('znok').hidden=$('znun').hidden=!ZNA;map.getContainer().style.cursor=ZNA?'crosshair':''}
@@ -182,10 +184,10 @@ async function znMake(z,kinds,base,st){const L2=znPoles(z);if(!L2.length)return 
 if(!RO&&$('zna')){
  $('zna').onclick=()=>{map.closePopup();ZNA=true;ZNPTS=[];znBtns();znDraw();znInfo()};
  $('znun').onclick=()=>{ZNPTS.pop();znDraw();znInfo()};
- $('znok').onclick=()=>{if(ZNPTS.length>2){const pts=ZNPTS.map(a=>lm(a[0],a[1]));let n=0;P.forEach(p=>{if(!vis(p)||(p.x&&!p.sx))return;const q=lm(p.lat,p.lon);if(inpoly(q[0],q[1],pts)&&!ZNS.has(p.uid)){ZNS.add(p.uid);n++}});toast('Добавлено опор: '+n)}ZNA=false;ZNPTS=[];znBtns();znDraw();znInfo()};
+ $('znok').onclick=()=>{const n=znApply();if(n!=null)toast('Добавлено опор: '+n+' · выбрано всего: '+ZNS.size);ZNA=false;ZNPTS=[];znBtns();znDraw();znInfo()};
  $('znc').onclick=()=>{ZNS.clear();ZNE=null;ZNA=false;ZNPTS=[];znBtns();znForm(null);znDraw();znInfo()};
  $('znx').onclick=()=>$('znc').onclick();
- $('zns').onclick=async()=>{const name=$('znn').value.trim(),works=[...document.querySelectorAll('#znw input:checked')].map(c=>+c.dataset.k);if(!ZNS.size)return alert('Выберите опоры: нажимайте на опоры или обведите участок.');if(!name)return alert('Впишите название участка, например «ул. Победы, ТП90».');if(!$('zn1').value)return alert('Укажите дату начала работ.');
+ $('zns').onclick=async()=>{if(ZNA){const n=znApply();ZNA=false;ZNPTS=[];znBtns();znDraw();znInfo();if(n!=null)toast('Контур применён: добавлено опор '+n)}const name=$('znn').value.trim(),works=[...document.querySelectorAll('#znw input:checked')].map(c=>+c.dataset.k);if(!ZNS.size)return alert('Выберите опоры: нажимайте на опоры или обведите участок.');if(!name)return alert('Впишите название участка, например «ул. Победы, ТП90».');if(!$('zn1').value)return alert('Укажите дату начала работ.');
   const old=ZNE&&ZN.get(ZNE),r={id:old?old.id:'zn'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),name,works,uids:[...ZNS],d1:$('zn1').value||null,d2:$('zn2').value||$('zn1').value||null,t1:$('znt1').value||null,t2:$('znt2').value||null,
    park:$('znpk').checked,lift:$('znlf').checked,road:$('znrd').checked,outage:$('znof').checked,note:$('znt').value.trim(),sent:old?old.sent||{}:{},done:old?!!old.done:false};
   await znPut(r);toast('Участок «'+name+'» сохранён');ZNS.clear();ZNE=null;znForm(null);znDraw();znInfo()};
