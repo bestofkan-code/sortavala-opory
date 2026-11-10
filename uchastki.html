@@ -743,7 +743,7 @@ function znDocUI(id){const z=ZN.get(id),e=$('zdl_'+id);if(!z||!e)return;if(e.inn
 async function znMake(z,kinds,base,st){const L2=znPoles(z);if(!L2.length)return st('На участке нет опор на карте.');if(!kinds.length)return st('Отметьте, какие документы нужны.');
  try{st('Определяю улицы…');const streets=await znStreets(L2);if(!window.JSZip)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
   const dir=('Участок '+(z.name||'')+(z.d1?' '+znPerS(z):'')).replace(/[\\/:*?"<>|]+/g,' ').replace(/\s+/g,' ').trim(),Z=new JSZip(),F=Z.folder(dir);
-  for(const k of kinds){if(k=='scheme'){st('Готовлю схему…');F.file(ZNF.scheme,await znPdf(z,L2,streets,base,st))}else{st('Готовлю: '+ZNF[k]+'…');F.file(ZNF[k],await zDocx(znLetter(k,z,L2,streets)))}}
+  for(const k of kinds){if(k=='scheme'){st('Готовлю схему…');F.file(dir+'.pdf',await znPdf(z,L2,streets,base,st))}else{st('Готовлю: '+ZNF[k]+'…');F.file(ZNF[k],await zDocx(znLetter(k,z,L2,streets)))}}
   st('Упаковываю…');const blob=await Z.generateAsync({type:'blob'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=dir+'.zip';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},4000);
   st('Готово: '+dir+'.zip — '+kinds.length+' файл(ов) в папке «'+dir+'».')}catch(e){console.error(e);st('Ошибка: '+(e.message||e))}}
 /* ---- кнопки ---- */
