@@ -36,3 +36,5 @@ alter table public.work_zones enable row level security;
 create policy wz_read on public.work_zones for select to anon, authenticated using (true);
 create policy wz_write on public.work_zones for all to authenticated using (not public.is_crew()) with check (not public.is_crew());
 ```
+
+- `patch_main_brackets.py` — блок «Проверка кронштейнов» под «Контракт и выполнение»: по ТП 1-рожк./90°/180° (установлено из всего), тип не указан, «можно ставить», замечания по опорам (нажать — карта покажет опору), выгрузка «Таблица проверки (Excel)».
