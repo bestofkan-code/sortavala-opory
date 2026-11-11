@@ -25,10 +25,9 @@ def R(old, new, cnt=1):
 R('<button id="kcx">Таблица проверки (Excel)</button></div></details>',
   '<button id="kcx">Таблица проверки (Excel)</button></div></details>'
   '<details id="fdd"><summary><b>Проверка котлованов, закладных, бетона</b><span id="fds"></span></summary>'
-  '<small id="fdn">Цифры — сделано / всего. «→закл.» — котлован забурен, закладной ещё нет. '
-  '«→бет.» — закладная стоит, ещё не забетонирована. «⚠» — опор с замечаниями. '
+  '<small id="fdn">Сколько сделано из опор этой ТП, зелёным — всё сделано. «⚠» — опор с замечаниями. '
   'Опоры на гравитационном фундаменте и исключённые не считаются. Нажмите на опору в списке — карта покажет её.</small>'
-  '<table id="fdt"></table><div id="fdl"></div>'
+  '<table id="fdt"></table><div id="fdw"></div><div id="fdl"></div>'
   '<div class="r"><button id="fdx">Таблица проверки (Excel)</button></div></details>', 1)
 
 # 2) стили — как у «Проверки кронштейнов»
@@ -43,7 +42,7 @@ R('.kcg button{padding:2px 6px;font-size:11.5px;border-radius:9px}',
   '#fdt th{font-weight:600;font-size:11px;opacity:.85}#fdt th:first-child,#fdt td:first-child{text-align:left;white-space:normal}'
   '#fdt td small{opacity:.6;font-size:10.5px}#fdt td.z{opacity:.4}#fdt tr.kt td{font-weight:700}'
   '#fdd .bad{color:#dc2626;font-weight:700}.dk #fdd .bad{color:#f87171}#fdd .ok{color:#15803d}.dk #fdd .ok{color:#4ade80}'
-  '#fdn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}', 1)
+  '#fdn{display:block;opacity:.75;margin:2px 0 3px;line-height:1.3}#fdw{font-size:12px;margin:4px 0}#fdw small{opacity:.75}#fdw>div{margin:2px 0}', 1)
 
 # 3) пересчёт вместе с остальными
 R('try{kcUI()}catch(e){}', 'try{kcUI()}catch(e){}try{fdUI()}catch(e){}', 1)
@@ -78,10 +77,12 @@ function fdData(){const C=P.filter(p=>!p.x&&!isG(p)),G=new Map();
  const T=[...G.keys()].sort(kcRu).map(k=>({k,a:G.get(k),s:st(G.get(k))}));
  return{C,T,S:st(C),I}}
 function fdUI(){const t=$('fdt');if(!t)return;const D=fdData(),I=D.I;
- const c=(d,n,tt)=>n?`<td title="${tt} ${d} из ${n}">${d}<small>/${n}</small></td>`:'<td class="z">—</td>';
- const row=(nm,o,cls)=>`<tr${cls?' class="'+cls+'"':''}><td>${nm}</td>${c(o.k,o.n,'котлованов забурено')}${c(o.z,o.n,'закладных установлено')}${c(o.b,o.n,'забетонировано')}<td title="котлован забурен, закладной нет">${o.cz||'—'}</td><td title="закладная стоит, бетона нет">${o.cb||'—'}</td><td class="${o.iss?'bad':'ok'}">${o.iss||'✓'}</td></tr>`;
- let h='<tr><th>ТП</th><th title="котлованов забурено / всего">котл.</th><th title="закладных установлено / всего">закл.</th><th title="забетонировано / всего">бет.</th><th title="котлован забурен, закладной ещё нет — можно ставить закладную">→закл.</th><th title="закладная стоит — можно бетонировать">→бет.</th><th title="опор с замечаниями">⚠</th></tr>';
+ const c=(d,n,tt,w)=>`<td title="${tt} ${d} из ${n}${w?', '+w:''}"${d<n?'':' class="ok"'}>${d}</td>`;
+ const row=(nm,o,cls)=>`<tr${cls?' class="'+cls+'"':''}><td>${nm}</td><td>${o.n}</td>${c(o.k,o.n,'котлованов забурено')}${c(o.z,o.n,'закладных установлено',o.cz?'можно ставить ещё '+o.cz:'')}${c(o.b,o.n,'забетонировано',o.cb?'можно бетонировать ещё '+o.cb:'')}<td class="${o.iss?'bad':'ok'}">${o.iss||'✓'}</td></tr>`;
+ let h='<tr><th>ТП</th><th title="опор этапа на карте">опор</th><th title="котлованов забурено">котл.</th><th title="закладных установлено">закл.</th><th title="забетонировано">бет.</th><th title="опор с замечаниями">⚠</th></tr>';
  D.T.forEach(r=>h+=row(esc(tpn(r.k)),r.s));h+=row('Всего',D.S,'kt');t.innerHTML=h;
+ const wl=f=>D.T.filter(r=>r.s[f]).map(r=>esc(tpn(r.k))+' — '+r.s[f]).join(', ');
+ $('fdw').innerHTML=(D.S.cz?'<div><b>Можно ставить закладную: '+D.S.cz+'</b> <small>('+wl('cz')+')</small></div>':'')+(D.S.cb?'<div><b>Можно бетонировать: '+D.S.cb+'</b> <small>('+wl('cb')+')</small></div>':'');
  let l='';FDG.forEach(([g,nm])=>{const a=I.filter(x=>x.c==g).sort((x,y)=>kcRu(x.p.id,y.p.id));if(!a.length)return;
   l+=`<div class="kcg"><b>${nm} — ${a.length}</b><div>${a.map(x=>`<button data-fd="${esc(x.p.uid)}" title="${esc(x.m)}">${esc(x.p.id)}</button>`).join('')}</div></div>`});
  $('fdl').innerHTML=l||'<small class="ok">Замечаний нет</small>';
