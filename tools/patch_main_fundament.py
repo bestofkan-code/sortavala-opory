@@ -26,7 +26,7 @@ R('<button id="kcx">Таблица проверки (Excel)</button></div></deta
   '<button id="kcx">Таблица проверки (Excel)</button></div></details>'
   '<details id="fdd"><summary><b>Проверка котлованов, закладных, бетона</b><span id="fds"></span></summary>'
   '<small id="fdn">Сколько сделано из опор этой ТП, зелёным — всё сделано. «⚠» — опор с замечаниями. '
-  'Опоры на гравитационном фундаменте и исключённые не считаются. Нажмите на опору в списке — карта покажет её.</small>'
+  'Опоры на гравитационном фундаменте и исключённые не считаются. Нажмите на опору в списках ниже — карта покажет её.</small>'
   '<table id="fdt"></table><div id="fdw"></div><div id="fdl"></div>'
   '<div class="r"><button id="fdx">Таблица проверки (Excel)</button></div></details>', 1)
 
@@ -81,14 +81,14 @@ function fdUI(){const t=$('fdt');if(!t)return;const D=fdData(),I=D.I;
  const row=(nm,o,cls)=>`<tr${cls?' class="'+cls+'"':''}><td>${nm}</td><td>${o.n}</td>${c(o.k,o.n,'котлованов забурено')}${c(o.z,o.n,'закладных установлено',o.cz?'можно ставить ещё '+o.cz:'')}${c(o.b,o.n,'забетонировано',o.cb?'можно бетонировать ещё '+o.cb:'')}<td class="${o.iss?'bad':'ok'}">${o.iss||'✓'}</td></tr>`;
  let h='<tr><th>ТП</th><th title="опор этапа на карте">опор</th><th title="котлованов забурено">котл.</th><th title="закладных установлено">закл.</th><th title="забетонировано">бет.</th><th title="опор с замечаниями">⚠</th></tr>';
  D.T.forEach(r=>h+=row(esc(tpn(r.k)),r.s));h+=row('Всего',D.S,'kt');t.innerHTML=h;
- const wl=f=>D.T.filter(r=>r.s[f]).map(r=>esc(tpn(r.k))+' — '+r.s[f]).join(', ');
- $('fdw').innerHTML=(D.S.cz?'<div><b>Можно ставить закладную: '+D.S.cz+'</b> <small>('+wl('cz')+')</small></div>':'')+(D.S.cb?'<div><b>Можно бетонировать: '+D.S.cb+'</b> <small>('+wl('cb')+')</small></div>':'');
+ const wl=(f,nm)=>{const a=D.C.filter(f).sort((x,y)=>kcRu(x.tp,y.tp)||kcRu(x.id,y.id));return a.length?`<div class="kcg"><b>${nm}: ${a.length}</b><div>${a.map(p=>`<button data-fd="${esc(p.uid)}" title="${esc(p.id)} — ${p.t=='A'?'анкерная':'стандартная'}">${esc(p.id)}</button>`).join('')}</div></div>`:''};
+ $('fdw').innerHTML=wl(p=>wdone(p,1)&&!wdone(p,2),'Можно ставить закладную')+wl(p=>wdone(p,2)&&!wdone(p,3),'Можно бетонировать');
  let l='';FDG.forEach(([g,nm])=>{const a=I.filter(x=>x.c==g).sort((x,y)=>kcRu(x.p.id,y.p.id));if(!a.length)return;
   l+=`<div class="kcg"><b>${nm} — ${a.length}</b><div>${a.map(x=>`<button data-fd="${esc(x.p.uid)}" title="${esc(x.m)}">${esc(x.p.id)}</button>`).join('')}</div></div>`});
  $('fdl').innerHTML=l||'<small class="ok">Замечаний нет</small>';
  const n=new Set(I.map(x=>x.p.uid)).size,S=D.S;$('fds').innerHTML=`котл. <b>${S.k}</b> · закл. <b>${S.z}</b> · бет. <b>${S.b}</b> · `+(n?`<b class="bad">⚠ ${n}</b>`:'<b class="ok">✓</b>');
  $('fds').title='Из '+S.n+' опор: котлованов '+S.k+', закладных '+S.z+', забетонировано '+S.b+(n?', опор с замечаниями '+n:', замечаний нет')}
-$('fdl').onclick=e=>{const b=e.target.closest('[data-fd]');if(!b)return;const p=P.find(o=>o.uid==b.dataset.fd);if(!p)return;
+$('fdw').onclick=$('fdl').onclick=e=>{const b=e.target.closest('[data-fd]');if(!b)return;const p=P.find(o=>o.uid==b.dataset.fd);if(!p)return;
  map.setView([p.lat,p.lon],Math.max(map.getZoom(),19));const m=mk.get(p);if(m&&lg.hasLayer(m))L.popup(PO()).setLatLng(m.getLatLng()).setContent(popup(p)).openOn(map);else toast('Опора скрыта фильтром')};
 function fdXl(){const D=fdData(),wb=XLSX.utils.book_new(),dt=v=>/^\d{4}-\d\d-\d\d/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),K=592,KS=402,KA=190;
  const h1=['ТП','Опор','Котлованов забурено','Котлованов осталось','Закладных под станд. всего','Закладных под станд. установлено','Закладных под анкер. всего','Закладных под анкер. установлено','Закладных установлено','Закладных осталось','Забетонировано','Бетон осталось','Можно ставить закладную (котлован есть)','Можно бетонировать (закладная есть)','Опор установлено','Опор с замечаниями'];
