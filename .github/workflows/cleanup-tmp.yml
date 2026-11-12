@@ -1,0 +1,38 @@
+# Удаление временных веток tmp-* (их создаёт Claude для передачи файлов).
+# 1) Сразу: push в ветку tmp-… с пометкой «[удалить]» в сообщении коммита (файл этого сценария должен быть в ветке).
+# 2) Подстраховка: каждый час удаляются все ветки tmp-*, последний коммит в которых старше 30 минут.
+# 3) Вручную: Actions → «Удаление временных веток» → Run workflow (удаляет все tmp-*).
+name: Удаление временных веток
+on:
+  push:
+    branches: ['tmp-**']
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[удалить]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Удалить ветки tmp-*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EV: ${{ github.event_name }}
+        run: |
+          set -e
+          R="$GITHUB_REPOSITORY"
+          if [ "$EV" = push ]; then
+            list="$GITHUB_REF_NAME"
+          else
+            now=$(date +%s); list=""
+            for b in $(gh api "repos/$R/branches" --paginate -q '.[].name' | grep '^tmp-' || true); do
+              t=$(gh api "repos/$R/commits/$b" -q '.commit.committer.date'); age=$(( now - $(date -d "$t" +%s) ))
+              if [ "$EV" = workflow_dispatch ] || [ $age -gt 1800 ]; then list="$list $b"; fi
+            done
+          fi
+          for b in $list; do
+            gh api -X DELETE "repos/$R/git/refs/heads/$b" && echo "Удалена ветка $b"
+          done
+          [ -n "$list" ] || echo "Временных веток для удаления нет"
