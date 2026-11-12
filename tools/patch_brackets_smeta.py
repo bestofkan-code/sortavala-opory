@@ -80,7 +80,7 @@ R('.kcg button{padding:2px 6px;font-size:11.5px;border-radius:9px}',
   '#kcm{margin:4px 0 6px;font-size:12px}#kcm table{width:100%;border-collapse:collapse;margin:3px 0}#kcm td,#kcm th{padding:2px 4px;text-align:right;border-bottom:1px solid rgba(127,127,127,.22);font-variant-numeric:tabular-nums}'
   '#kcm th{font-size:11px;font-weight:600;opacity:.85}#kcm td:first-child,#kcm th:first-child{text-align:left}#kcm .kcw{margin:4px 0;padding:4px 6px;border-radius:6px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.5)}'
   '#kcm .kcs{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:3px 0;border-bottom:1px dashed rgba(127,127,127,.25)}#kcm .kcs small{flex-basis:100%;opacity:.75}#kcm .kcs button{padding:1px 6px;font-size:11.5px}'
-  '#kcm i.kd{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:3px;vertical-align:-1px}', 1)
+  '#kcm i.kd{display:inline-block;width:10px;height:10px;border-radius:2px;box-shadow:0 0 0 1px #94a3b8;margin-right:3px;vertical-align:-1px}', 1)
 R("$('kcl').onclick=e=>{const b=e.target.closest('[data-kc]');",
   r"""var KCT={'1':353,'90':50,'180':189},KCP=592,KCGEO=null,KCGT=0,KCC={'1':'#0f172a','90':'#ea580c','180':'#7c3aed'};
 function kcGeo(){if(KCGEO&&Date.now()-KCGT<15000)return KCGEO;const N=netEdges(),E=N.E||N,lat0=61.71,kx=Math.cos(lat0*Math.PI/180)*111320,ky=110540,xy=p=>[(p.lon-30.7)*kx,(p.lat-lat0)*ky];
