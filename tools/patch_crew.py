@@ -18,7 +18,7 @@ R("</style></head><body>\n<script>document.body.classList.add('dk','crew')</scri
   "#crw .crt{width:100%;border-collapse:collapse;font-size:12px;margin-top:9px}#crw .crt th,#crw .crt td{padding:3px 4px;text-align:right;border-bottom:1px solid rgba(127,127,127,.22)}#crw .crt th:first-child,#crw .crt td:first-child{text-align:left}"
   ".crb{font-size:12px;margin:5px 0;padding:6px 8px;border:1px solid #c026d3;border-radius:8px;background:rgba(192,38,211,.12);line-height:1.35}"
   ".crl{font-size:12px;margin:6px 0;padding:6px 8px;border:1px solid #2c3346;border-radius:8px;line-height:1.35}.crl b{display:block;margin-bottom:3px}.crl span{display:flex;align-items:center;gap:6px;margin:2px 0}.crl svg{flex:none;background:#cbd5e1;border-radius:3px}"
-  "body.crew #skd,body.crew #ktd,body.crew #kcd,body.crew #fdd,body.crew #pld,body.crew #bar,body.crew #st,body.crew .ed:not(.crk),body.crew #lmh,body.crew #spp,body.crew .crh{display:none!important}"
+  "body.crew #skd,body.crew #ktd,body.crew #kcd,body.crew #fdd,body.crew #pld,body.crew #matd,body.crew #bar,body.crew #st,body.crew .ed:not(.crk),body.crew #lmh,body.crew #spp,body.crew .crh{display:none!important}"
   "body.crew #modes [data-m]:not([data-m=view]):not([data-m=mark]){display:none}"
   "</style></head><body>\n<script>document.body.classList.add('dk','crew')</script>")
 R('<b style="font-size:15px">Опоры освещения, Сортавала</b>',
