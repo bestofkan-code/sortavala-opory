@@ -7,7 +7,7 @@ function crHide(p){if(p.x&&!p.sx)return true;if(typeof TKONLY!='undefined'&&TKON
 function crewW(p,k,on,d){p.w=p.w||{};if(on)p.w[k]=d||LD();else delete p.w[k]}
 var KRG=[['1-рожковые',353,p=>(+p.kr||0)==1],['2-рожк. 90°',50,p=>(+p.kr||0)==2&&+p.ka==90],['2-рожк. 180°',189,p=>(+p.kr||0)==2&&+p.ka==180],['2-рожк., угол не указан',null,p=>(+p.kr||0)==2&&+p.ka!=90&&+p.ka!=180],['тип не указан',null,p=>!(+p.kr)]],KLUM=831;
 function lumN(p){return +p.sv||((+p.kr||0)==2?2:(+p.kr||0)==1?1:0)}
-function krTbl(Q,ALL){const C=ALL?Q.filter(p=>!isG(p)):Q,G=ALL?Q.filter(isG):[],dif=(a,b)=>b==null||a==b?'':` <small style="color:${a>b?'#fbbf24':'#f87171'}">${a>b?'+':''}${a-b}</small>`;
+function krTbl(Q,ALL){Q=Q.filter(p=>!p.pp);const C=ALL?Q.filter(p=>!isG(p)):Q,G=ALL?Q.filter(isG):[],dif=(a,b)=>b==null||a==b?'':` <small style="color:${a>b?'#fbbf24':'#f87171'}">${a>b?'+':''}${a-b}</small>`;
  return '<table class="crt"><tr><th>Кронштейны</th>'+(ALL?'<th>итог</th>':'')+'<th>на карте</th><th>уст.</th></tr>'+KRG.map(([n,t,f])=>{const m=C.filter(f).length,i=Q.filter(p=>f(p)&&wdone(p,12)).length;if(t==null&&!m&&!i)return '';return `<tr><td>${n}</td>${ALL?'<td>'+(t??'—')+'</td>':''}<td>${m}${ALL?dif(m,t):''}</td><td>${i}</td></tr>`}).join('')
  +(()=>{const m=C.reduce((a,p)=>a+lumN(p),0),i=Q.filter(p=>wdone(p,6)).reduce((a,p)=>a+lumN(p),0);return `<tr style="font-weight:600"><td>Светильников</td>${ALL?'<td>'+KLUM+'</td>':''}<td>${m}${ALL?dif(m,KLUM):''}</td><td>${i}</td></tr>`})()+'</table>'
  +(ALL&&G.length?`<small style="display:block;opacity:.7;margin-top:2px">«На карте» — опоры по контракту. Ещё на гравит. фундаменте на линии СИП: ${KRG.slice(0,3).map(([n,t,f])=>n+' '+G.filter(f).length).join(', ')}.</small>`:'')}
