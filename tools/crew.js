@@ -20,6 +20,7 @@ ${typeof tkOf=='function'&&tkOf(p).length?'<div class="cri" style="color:#22d3ee
 ${cz?`<div class="cri" style="color:#e879f9">Ввод КЛ: бронекабель от ${esc(tpn(p.tp))} ≈ ${Math.round(cz.d)} м — ${cabDone(p.tp)?'проложен':'ещё не проложен'} <button data-cab>${esc(tpn(p.tp))} ›</button></div>`:''}
 <div class="wh"><span data-wn></span><span>нажмите — отметить, на дату — изменить</span></div><div class="wg" data-wg></div>
 <label class="wde" data-wde hidden><span data-wdn></span><input type=date data-wdi></label><div class="phb" data-phb hidden></div>
+${p.x&&!p.sx?'':'<div class="arb" data-arb></div>'}
 <input type=text data-cwc value="${esc(p.wc||'')}" placeholder="Комментарий по работам" style="width:100%;box-sizing:border-box;margin-top:4px">
 ${p.note?'<div class="cri">Примечание: '+esc(p.note)+'</div>':''}
 <div class="brow"><button data-h>История опоры</button></div>`;
@@ -31,7 +32,7 @@ const rw=()=>{const g=d.querySelector('[data-wg]');g.innerHTML=CW.map(k=>{const 
  g.querySelectorAll('[data-wd]').forEach(b=>b.onclick=()=>ed(+b.dataset.wd));const wp=g.querySelector('[data-wph]');if(wp)wp.onclick=()=>{PHO=!PHO;phb._r()}};
 ppBlock(phb,p,14,()=>PHO);
 d.querySelector('[data-wdi]').onchange=e=>{PSEL=Date.now();if(!EK||!e.target.value)return;crewW(p,EK,true,e.target.value);rw();ch()};
-rw();
+rw();{const ab=d.querySelector('[data-arb]');if(ab)arBlock(ab,p,ch)}
 d.querySelector('[data-cwc]').onchange=e=>{PSEL=Date.now();p.wc=e.target.value.trim();ch()};
 d.querySelector('[data-h]').onclick=()=>hpole(p);
 const cb=d.querySelector('[data-cab]');if(cb)cb.onclick=()=>{const c=tpPos(p.tp);if(c){map.closePopup();tpPopup(String(p.tp),L.latLng(c))}};
@@ -45,13 +46,13 @@ const row=(n,a,b,col,k,u)=>`<div class="crr"><span>${n}</span>${k&&tdy(k)?'<smal
 e.innerHTML=(ALL?`<small style="display:block;opacity:.8;margin-bottom:2px">Итог по контракту: <b>${K} опор</b> и <b>${KS} пролётов СИП</b> (${K} опор + ${sxn} старых опор Шуно Дорожная, по которым идёт СИП, минус ${nets} линий от ТП).</small>`:'<small style="display:block;opacity:.8;margin-bottom:2px">Счёт по выбранным опорам (фильтр ТП или задания).</small>')
 +row('Опор установлено — можно работать',st,NP,'#22c55e')+row('СИП протянут (опор)',c(A,5),NA,'#f97316',5)
 +row('СИП по пролётам (длина внесена)',spN,ALL?KS:null,'#f97316',0,' пр.')+`<div class="crr" style="margin-top:2px"><span></span><small style="color:inherit;opacity:.8">${Math.round(spL).toLocaleString('ru-RU')} м внесено</small></div>`
-+row('Кронштейн установлен',c(Q,12),NP,'#60a5fa',12)+row('Светильник установлен',c(Q,6),NP,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')
++row('Кронштейн установлен',c(Q,12),NP,'#60a5fa',12)+row('Светильник установлен',c(Q,6),NP,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')+(()=>{const pa=A.reduce((t,p)=>{const x=arPlan(p);t[0]+=x.a;t[1]+=x.s;return t},[0,0]),da=A.reduce((t,p)=>{const r=p.ar||{};t[0]+=+r.a||0;t[1]+=+r.s||0;return t},[0,0]);return row('Анкерных зажимов',da[0],pa[0],'#f97316')+row('Промежуточных подвесов',da[1],pa[1],'#a3e635')})()
 +krTbl(Q,ALL)
 +'<table class="crt"><tr><th>ТП</th><th>опор стоит</th><th>СИП</th><th>кроншт.</th><th>светил.</th><th>брон.</th></tr>'+tps.map(t=>{const a=A.filter(p=>String(p.tp||'—')==t),q=a.filter(p=>!p.x);return `<tr><td>${esc(tpn(t))}</td><td>${q.filter(p=>p.done).length}/${q.length}</td><td>${c(a,5)}</td><td>${c(q,12)}</td><td>${c(q,6)}</td><td>${cabT.includes(t)?(cabDone(t)?'✓':'—'):''}</td></tr>`}).join('')+'</table>'
 +(ALL&&NETC?`<small style="display:block;opacity:.7;margin-top:4px">Сейчас на карте на линии СИП: ${CRN?CRN.size:'—'} опор, ${NETC.E.length} пролётов (вместе с опорами на гравит. фундаменте).</small>`:'')
 +'<div class="r" style="margin-top:6px"><button id="crx">Отчёт бригады (Excel)</button></div>';$('crx').onclick=crewXl}
 function crewXl(){const fd=v=>/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),A=P.filter(p=>tpOk(p)&&!crHide(p)).sort((a,b)=>String(a.tp).localeCompare(String(b.tp),'ru',{numeric:true})||(+a.n||0)-(+b.n||0)),wb=XLSX.utils.book_new(),sh=(rows,nm,w)=>{const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=w.map(x=>({wch:x}));XLSX.utils.book_append_sheet(wb,ws,nm)};
-sh([['Опора','ТП','№','Тип','Опора стоит','Кронштейн (тип)','Подрезка крон','Кронштейн установлен','СИП протянут','Светильник установлен','Комментарий'],...A.map(p=>[p.id,tpn(p.tp),p.n||'',p.t=='A'?'анкерная':'стандартная',p.x?'старая (СИП по ней)':p.done?fd(p.date||'да'):'нет',krTxt(p),fd(wd(p,14)),fd(wd(p,12)),fd(wd(p,5)),fd(wd(p,6)),p.wc||''])],'По опорам',[16,10,5,12,14,12,12,12,12,12,30]);
+sh([['Опора','ТП','№','Тип','Опора стоит','Кронштейн (тип)','Подрезка крон','Кронштейн установлен','СИП протянут','Светильник установлен','Анкерных зажимов','Промежуточных подвесов','Арматура по расчёту (анк./подв.)','Комментарий'],...A.map(p=>{const pl=arPlan(p),r=p.ar||{};return [p.id,tpn(p.tp),p.n||'',p.t=='A'?'анкерная':'стандартная',p.x?'старая (СИП по ней)':p.done?fd(p.date||'да'):'нет',krTxt(p),fd(wd(p,14)),fd(wd(p,12)),fd(wd(p,5)),fd(wd(p,6)),+r.a||'',+r.s||'',(pl.a||pl.s)?pl.a+' / '+pl.s:'',p.wc||'']})],'По опорам',[16,10,5,12,14,12,12,12,12,12,10,10,14,30]);
 const S=[...SP.values()].filter(r=>r.len!=null&&r.len!=='').sort((a,b)=>String(a.sd||'').localeCompare(String(b.sd||''))||String(a.id||'').localeCompare(String(b.id||''),'ru',{numeric:true}));
 sh([['Пролёт','Длина СИП, м','Дата протяжки','Примечание','Кто внёс'],...S.map(r=>[r.id||r.uid,+r.len,fd(r.sd||''),r.note||'',r.ed||'']),['Итого',Math.round(S.reduce((a,r)=>a+(+r.len||0),0)*10)/10]],'СИП по пролётам',[34,12,14,30,16]);
 const C=[...CABS.values()].sort((a,b)=>a.tp.localeCompare(b.tp,'ru',{numeric:true}));
