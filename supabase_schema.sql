@@ -176,3 +176,9 @@ create table if not exists public.work_zones(id text primary key, name text not 
 alter table public.work_zones enable row level security;
 create policy wz_read on public.work_zones for select to anon, authenticated using (true);
 create policy wz_write on public.work_zones for all to authenticated using (not public.is_crew()) with check (not public.is_crew());
+
+-- Сверка котлованов на месте (tools/patch_vf.py): null — не сверена.
+-- Ключи: d — дата, e — кто сверил, z — фактическая закладная ('24' ЗФ-24/8, '30' ЗФ-30/8), c — комментарий,
+-- o — [lat, lon] до переноса по GPS, mv — на сколько метров перенесена.
+alter table public.poles add column if not exists vf jsonb;
+-- pole_patch: добавлена строка  vf = case when s ? 'vf' then nullif(s->'vf','null'::jsonb) else vf end
