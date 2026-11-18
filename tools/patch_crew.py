@@ -57,10 +57,9 @@ R("SP.set(k,row);SPQ[k]=row;spSave();lines();stats();map.closePopup();spSend();"
 # бронекабель: путь не правим
 R("+(RO?'':'<button data-ce>Изменить путь</button>')+","+")
 R("if(!RO)d.querySelector('[data-ce]').onclick=()=>{map.closePopup();leEdit(k)};","")
-# ТП: только «Проложен бронекабель» и длина
-R("'<div class=\"wl\">'+TW.map(([k,n])=>'<label><input type=checkbox data-tw='","'<div class=\"wl\">'+TW.filter(([k])=>k==1).map(([k,n])=>'<label><input type=checkbox data-tw='")
+# ТП: «Проложен бронекабель», «Установлен шкаф управления» и длина
 R("+'<input type=\"text\" data-tn placeholder=\"Примечание по ТП\" value=\"'+esc(r.note||'')+'\">'","+(r.note?'<div class=\"cri\">Примечание: '+esc(r.note)+'</div>':'')")
-R("+'<small>Переместить значок ТП: режим «Правка/перенос», затем перетащите.</small>')","+'<small>Отметьте, когда бронекабель от ТП до опоры ввода проложен, и впишите фактическую длину.</small>')")
+R("+'<small>Переместить значок ТП: режим «Правка/перенос», затем перетащите.</small>')","+'<small>Отметьте прокладку бронекабеля от ТП до опоры ввода (и впишите фактическую длину) и установку шкафа управления (ШУНО).</small>')")
 R("d.querySelector('[data-tn]').onchange=e=>tpPut(t,{note:e.target.value.trim()})}","}")
 # подрезка крон бригады — своя работа 14 со своим счётчиком и фотоотчётом
 R("14:'Подрезка (бриг.)'","14:'Подрезка крон'")

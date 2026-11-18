@@ -1316,7 +1316,7 @@ async function spPull(){if(!CF)return;try{const r=await fetch(CF.u+'/rest/v1/spa
 Object.keys(SPQ).forEach(k=>{if(SPQ[k].del)m.delete(k);else m.set(k,SPQ[k])});const a=JSON.stringify([...SP.entries()].sort()),b=JSON.stringify([...m.entries()].sort());if(a!=b){SP=m;spSave();lines();stats()}}catch(e){}}
 setTimeout(()=>{spSend();spPull()},1500);setInterval(()=>{spSend();spPull()},20000);
 /* ---- substations (ТП): icon, position, works ---- */
-var TW=[[1,'Проложен бронекабель'],[2,'Установлен шкаф управления']],TPD=new Map(),TQ={},TPLY=L.layerGroup().addTo(map),TPCLK=0;
+var TW=[[1,'Проложен бронекабель'],[2,'Установлен ШУНО']],TPD=new Map(),TQ={},TPLY=L.layerGroup().addTo(map),TPCLK=0;
 try{(JSON.parse(localStorage.getItem(KEY+'_tp')||'[]')||[]).forEach(r=>TPD.set(r.id,r))}catch(e){}
 try{TQ=JSON.parse(localStorage.getItem(KEY+'_tpq')||'{}')||{}}catch(e){TQ={}}
 function tpSave(){try{localStorage.setItem(KEY+'_tp',JSON.stringify([...TPD.values()]));localStorage.setItem(KEY+'_tpq',JSON.stringify(TQ))}catch(e){}}
@@ -1335,10 +1335,10 @@ function tpPut(t,ch){const r=Object.assign({uid:'tp:'+t,id:t,w:{}},TPD.get(t)||{
 function tpPopup(t,at){const r=TPD.get(t)||{},w=r.w||{},a=P.filter(p=>p.tp==t&&!p.x),dn=a.filter(p=>p.done).length,d=document.createElement('div');d.className='pp';const today=$('md')?$('md').value:LD();
 const cz=[...CABS.values()].filter(z=>z.tp==String(t));d.innerHTML='<div><b>'+esc(tpn(t))+'</b> <small>опор '+a.length+', установлено '+dn+'</small></div><div style="color:#e879f9">Ввод КЛ: '+(cz.length?cz.map(z=>'<b>'+esc(z.p.id)+'</b> ≈ '+Math.round(z.d)+' м').join(', '):'опора ввода не выбрана')+'</div>'+(RO?
  '<div class="wl">'+TW.map(([k,n])=>'<span>'+(w[k]?'✅':'⬜')+' '+n+'</span><span>'+(w[k]||'')+'</span>').join('')+'</div>'+(r.cab!=null?'<div>Бронекабель: <b>'+(+r.cab).toLocaleString('ru-RU')+' м</b></div>':'')+(r.note?'<div>'+esc(r.note)+'</div>':''):
- '<div class="wl">'+TW.filter(([k])=>k==1).map(([k,n])=>'<label><input type=checkbox data-tw='+k+(w[k]?' checked':'')+'> '+n+'</label><input type=date data-twd='+k+' value="'+(w[k]||'')+'">').join('')+'</div>'
+ '<div class="wl">'+TW.map(([k,n])=>'<label><input type=checkbox data-tw='+k+(w[k]?' checked':'')+'> '+n+'</label><input type=date data-twd='+k+' value="'+(w[k]||'')+'">').join('')+'</div>'
 +'<div class="r">Бронекабель, м <input type="text" inputmode="decimal" data-tc placeholder="'+(cz.length?'≈'+cabLen(t):'')+'" value="'+(r.cab!=null?r.cab:'')+'" style="width:80px"></div>'
 +(r.note?'<div class="cri">Примечание: '+esc(r.note)+'</div>':'')
-+'<small>Отметьте, когда бронекабель от ТП до опоры ввода проложен, и впишите фактическую длину.</small>')
++'<small>Отметьте прокладку бронекабеля от ТП до опоры ввода (и впишите фактическую длину) и установку шкафа управления (ШУНО).</small>')
 +'<div class="r"><button data-tz>Опоры этой ТП</button><button data-th>История ТП</button></div>';
 if(!RO){d.querySelectorAll('[data-tw]').forEach(c=>c.onchange=()=>{const k=c.dataset.tw,i=d.querySelector('[data-twd="'+k+'"]'),nw=Object.assign({},(TPD.get(t)||{}).w||{});if(c.checked){nw[k]=i.value||today;i.value=nw[k]}else{delete nw[k];i.value=''}tpPut(t,{w:nw})});
 d.querySelectorAll('[data-twd]').forEach(i=>i.onchange=()=>{if(!i.value)return;const k=i.dataset.twd,nw=Object.assign({},(TPD.get(t)||{}).w||{});nw[k]=i.value;d.querySelector('[data-tw="'+k+'"]').checked=true;tpPut(t,{w:nw})});

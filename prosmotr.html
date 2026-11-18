@@ -1252,7 +1252,7 @@ async function spPull(){if(!CF)return;try{const r=await fetch(CF.u+'/rest/v1/spa
 Object.keys(SPQ).forEach(k=>{if(SPQ[k].del)m.delete(k);else m.set(k,SPQ[k])});const a=JSON.stringify([...SP.entries()].sort()),b=JSON.stringify([...m.entries()].sort());if(a!=b){SP=m;spSave();lines();stats()}}catch(e){}}
 setTimeout(()=>{spSend();spPull()},1500);setInterval(()=>{spSend();spPull()},20000);
 /* ---- substations (ТП): icon, position, works ---- */
-var TW=[[1,'Проложен бронекабель'],[2,'Установлен шкаф управления']],TPD=new Map(),TQ={},TPLY=L.layerGroup().addTo(map),TPCLK=0;
+var TW=[[1,'Проложен бронекабель'],[2,'Установлен ШУНО']],TPD=new Map(),TQ={},TPLY=L.layerGroup().addTo(map),TPCLK=0;
 try{(JSON.parse(localStorage.getItem(KEY+'_tp')||'[]')||[]).forEach(r=>TPD.set(r.id,r))}catch(e){}
 try{TQ=JSON.parse(localStorage.getItem(KEY+'_tpq')||'{}')||{}}catch(e){TQ={}}
 function tpSave(){try{localStorage.setItem(KEY+'_tp',JSON.stringify([...TPD.values()]));localStorage.setItem(KEY+'_tpq',JSON.stringify(TQ))}catch(e){}}
