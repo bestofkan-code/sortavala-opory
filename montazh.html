@@ -34,11 +34,6 @@ const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls
 function LD(d){d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 $('md').value=$('rt').value=LD();var CW=[14,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value="'+k+'"'+(k==5?' selected':'')+'>'+n+'</option>').join('');
 const map=L.map('m',{maxZoom:20,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
-/*POPSCALE*/var PSZ=null;{const sp=L.DomUtil.setPosition;L.DomUtil.setPosition=function(el,pt){sp.apply(this,arguments);if(!el||el._psZ0==null||!el.classList.contains('leaflet-popup'))return;
-const z=PSZ==null?map.getZoom():PSZ,k=Math.min(1,Math.max(.25,Math.pow(2,z-el._psZ0)));if(k>=.999){el.style.transformOrigin='';return}
-el.style.transformOrigin=(-(parseFloat(el.style.left)||0))+'px calc(100% + '+(parseFloat(el.style.bottom)||0)+'px)';el.style.transform+=' scale('+k.toFixed(4)+')'}}
-map.on('zoomanim',e=>{PSZ=e.zoom});map.on('zoom zoomend',()=>{PSZ=null});
-map.on('popupopen',e=>{const el=e.popup.getElement();if(el){el._psZ0=map.getZoom();el.style.transformOrigin=''}});
 map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank">Leaflet</a>');const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
 /* Yandex tiles are in EPSG:3395; re-cut them onto the map's EPSG:3857 grid */
