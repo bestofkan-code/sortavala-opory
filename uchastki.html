@@ -34,86 +34,23 @@ const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls
 function LD(d){d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 $('md').value=$('rt').value=LD();$('mw').innerHTML=WK.map(([k,n])=>'<option value="'+k+'"'+(k==4?' selected':'')+'>'+n+'</option>').join('');
 const map=L.map('m',{maxZoom:20,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
+/*HINLINE*/function hInline(d,p,btn){let x=d.querySelector('.hin');const t0=btn.dataset.t0||btn.textContent;btn.dataset.t0=t0;
+ const up=()=>setTimeout(()=>{const pp=map._popup;if(pp&&pp.isOpen&&pp.isOpen()&&!pp.getElement().classList.contains('side')&&!pp.getElement().classList.contains('sheet'))pp.update()},0);
+ if(x){x.remove();btn.textContent=t0;up();return}
+ x=document.createElement('div');x.className='hin';x.innerHTML='<small>Загрузка истории…</small>';const br=d.querySelector('.brow');if(br)br.before(x);else btn.after(x);btn.textContent='Скрыть историю';up();
+ const fin=html=>{x.innerHTML=html+'<button type=button class="hfull">Вся история в панели</button>';x.querySelector('.hfull').onclick=()=>{if(document.body.classList.contains('mfull')){const m=document.querySelector('.mfb');if(m)m.click()}setTimeout(()=>hpole(p),80)};up()};
+ if(!CF){fin('<small>Онлайн-база не подключена.</small>');return}
+ fetch(CF.u+'/rest/v1/history?select=*&uid=eq.'+encodeURIComponent(p.uid)+'&order=id.desc&limit=40',{headers:H()}).then(r=>r.json()).then(a=>{if(!Array.isArray(a))throw JSON.stringify(a);
+  fin(a.length?a.map(h=>{const t=new Date(h.ts).toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(',','');let ds='';try{ds=hdesc(h)}catch(e){ds=h.op}
+   return '<div class="hir"><small>'+t+(h.ed?' · '+esc(h.ed):'')+'</small><div>'+esc(ds||'изменение')+'</div></div>'}).join(''):'<small>Изменений пока нет.</small>')}).catch(e=>fin('<small>Не удалось загрузить историю: '+esc(String(e)).slice(0,120)+'</small>'))}
+{const st=document.createElement('style');st.textContent='.pp .hin{margin:5px 0 0;padding:4px 6px;border:1px solid #374151;border-radius:7px;max-height:220px;overflow-y:auto;font-size:11.5px;line-height:1.3}.pp .hin .hir{padding:3px 0;border-bottom:1px solid rgba(127,127,127,.2)}.pp .hin .hir:last-of-type{border-bottom:0}.pp .hin small{color:#9aa3b5;font-size:10.5px}.pp .hin .hfull{width:100%;height:26px;margin-top:4px;font-size:11px}';document.head.appendChild(st)}
+
 /*MFULL*/{let MF=false;try{MF=localStorage.getItem(KEY+'_mfull')==='1'}catch(e){}
  const C=L.Control.extend({options:{position:'bottomleft'},onAdd(){const b=L.DomUtil.create('div','leaflet-control mfb');L.DomEvent.disableClickPropagation(b);
   const ui=()=>{document.body.classList.toggle('mfull',MF);const ph=innerWidth<=700;b.textContent=ph?(MF?'▲ Таблицы':'▼ Скрыть таблицы'):(MF?'▶ Панель':'◀ Скрыть панель');b.title=MF?'Показать панель с таблицами':'Скрыть панель с таблицами — карта на весь экран'};
   b.onclick=()=>{MF=!MF;try{localStorage.setItem(KEY+'_mfull',MF?'1':'0')}catch(e){}ui();setTimeout(()=>{map.invalidateSize({pan:false});const el=document.querySelector('.leaflet-popup.side');if(el&&typeof sdPos=='function')sdPos(el)},60)};
   ui();addEventListener('resize',ui);setTimeout(()=>map.invalidateSize({pan:false}),60);return b}});
  map.addControl(new C())}
-
-/*CARD3*/function svFor(p){const k=krv(p);return k=='0'?0:k=='1'?1:2}
-function sdPos(el){const c=map.getContainer().getBoundingClientRect(),t=Math.max(8,Math.round(c.top+8));el.style.setProperty('--sdt',t+'px');el.style.setProperty('--sdh',Math.max(300,innerHeight-t-8)+'px')}
-function sdPan(pp,el){const ll=pp.getLatLng&&pp.getLatLng();if(!ll)return;const c=map.getContainer().getBoundingClientRect(),r=el.getBoundingClientRect(),vw=Math.max(80,r.left-c.left),vb=Math.min(c.height,innerHeight-c.top),pt=map.latLngToContainerPoint(ll);if(pt.x>vw-20||pt.x<20||pt.y<30||pt.y>vb-30)map.panBy([pt.x-vw/2,pt.y-Math.min(c.height,vb)/2],{animate:true})}
-function qkCard(d,p){const id=d.firstElementChild;if(!id)return;const q=document.createElement('div');q.className='qk';id.after(q);d.classList.add('qkm');
- if(p.lat!=null)id.insertAdjacentHTML('beforeend',` <button type=button class="qc" data-yco="${ycoS(p)}" title="Скопировать координаты для Яндекс Карт">⧉</button>`);
- const mb=d.querySelector('[data-mb]'),g=d.querySelector('.g3p'),ps=d.querySelector('.psum'),sq=d.querySelector('[data-sq]');if(ps)ps.remove();if(mb&&g){g.hidden=false;mb.prepend(g)}if(mb&&sq)mb.appendChild(sq);
- const brow=d.querySelector('.brow'),ws=document.createElement('div');ws.className='wsec';ws.hidden=true;['.wh','[data-wg]','[data-wde]','[data-phb]','[data-phb2]','[data-arb]','.g2i'].forEach(x=>{const e=d.querySelector(x);if(e)ws.appendChild(e)});brow.before(ws);
- const wb=document.createElement('button');wb.type='button';wb.className='qw';brow.prepend(wb);const wbT=()=>{wb.textContent=(ws.hidden?'Работы ':'Скрыть ')+WK.filter(([k])=>wdone(p,k)).length+'/'+WK.length};wbT();const up=()=>setTimeout(()=>{const pp=map._popup;if(pp&&pp.isOpen&&pp.isOpen()&&!pp.getElement().classList.contains('side'))pp.update()},0);wb.onclick=()=>{ws.hidden=!ws.hidden;wbT();up()};{const mo=d.querySelector('[data-more]');if(mo)mo.addEventListener('click',up)}
- const dm=v=>/^\d{4}-/.test(v||'')?v.slice(8,10)+'.'+v.slice(5,7):'';
- const seg=(lab,key,o,cur)=>`<div class="ql">${lab}</div><div class="qs" data-q="${key}">${o.map(([v,t])=>`<button type=button data-v="${v}"${cur==v?' class="on"':''}>${t}</button>`).join('')}</div>`;
- const tg=(key,lab,on,sub)=>`<button type=button class="qt${on?' on':''}" data-q="${key}"><span>${on?'✓ ':''}${lab}</span>${sub?`<small>${sub}</small>`:''}</button>`;
- const sync=()=>{const v=(x,val)=>{const e=d.querySelector(x);if(e)e.value=val},c=(x,val)=>{const e=d.querySelector(x);if(e)e.checked=val};v('[data-k=t]',p.t=='A'?'A':'S');const kr=d.querySelector('[data-kr]');if(kr&&krv(p)!='2')kr.value=krv(p);v('[data-sv]',+p.sv||0);const od=d.querySelector('[data-od]');if(od){od.value=p.od||'';od.className='od-'+(p.od||'n')}c('[data-k=g]',!!p.g);c('[data-k=js]',!!p.js);const h=d.querySelector('[data-hs]');if(h)h.textContent='лин. '+(p.line||'-')+' · '+(p.t=='A'?'анкер.':'станд.')+' · '+(+p.h||8)+' м'};
- const draw=()=>{const sv=+p.sv||0;q.innerHTML=seg('Тип опоры','t',[['S','Стандартная'],['A','Анкерная']],p.t=='A'?'A':'S')+seg('Кронштейн','kr',[['0','нет'],['1','1-р'],['2-90','90°'],['2-180','180°']],krv(p))+seg('Старая опора','od',[['','нет'],['d','демонт.'],['k','остаётся']],p.od||'')
-  +`<div class="qg">${tg('w4','Опора',wdone(p,4),dm(wd(p,4)))}${tg('w6','Светильник',wdone(p,6),wdone(p,6)?'×'+sv:'')}${tg('w5','СИП',wdone(p,5),dm(wd(p,5)))}${tg('js','Совм. подв.',!!p.js)}${tg('g','Заземл.',!!p.g)}</div>`};
- const after=()=>setTimeout(()=>{draw();sync();if(d._rw)d._rw();wbT()},0);
- q.onclick=e=>{const b=e.target.closest&&e.target.closest('button');if(!b||!q.contains(b))return;PSEL=Date.now();const qs=b.closest('[data-q]'),key=qs.dataset.q,v=b.dataset.v,dt=$('md').value||LD();
-  if(key=='t')p.t=v;
-  else if(key=='kr'){const[a,c]=v.split('-');p.kr=+a;p.ka=c?+c:null;if(wdone(p,6))p.sv=svFor(p)||1;try{kcOver(p)}catch(er){}}
-  else if(key=='od')p.od=v;
-  else if(key=='js'){p.js=!p.js;lines()}
-  else if(key=='g')p.g=!p.g;
-  else if(key[0]=='w'){const n=+key.slice(1),on=!wdone(p,n);setW(p,n,on,dt);if(n==6&&on)p.sv=svFor(p)||1}
-  upd(p);save();stats();mark(p);after()};
- d.addEventListener('change',e=>{if(!q.contains(e.target))after()});ws.addEventListener('click',()=>setTimeout(()=>{draw();wbT()},30));
- draw()}
-{const st=document.createElement('style');st.textContent=`.pp.qkm,.pp.qkm.cw,.pp.fix.qkm{width:212px!important}
-.qkm .pph b{font-size:13px}.qkm [data-hs]{display:none}.qkm .pph>div:first-child{padding-right:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.qkm .qc{height:22px;min-width:24px;padding:0 5px;font-size:12px;margin-left:4px;vertical-align:1px}
-.qk{margin:2px 0 0}.qk .ql{font-size:11px;color:#9aa3b5;margin:4px 0 1px}
-.qk .qs{display:flex;border:1px solid #475569;border-radius:6px;overflow:hidden}.qk .qs button{flex:1;min-width:0;height:26px;padding:0 1px;margin:0;font-size:11px;border:0;border-left:1px solid #334155;border-radius:0;background:transparent;color:inherit;white-space:nowrap}.qk .qs button:first-child{border-left:0}
-.qk .qs button.on{background:#1d4ed8;color:#fff;font-weight:600}
-.qk .qg{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:6px}.qk .qt{display:flex;align-items:center;justify-content:space-between;gap:2px;height:28px;margin:0;padding:0 5px;font-size:11px;border-radius:6px;text-align:left;white-space:nowrap;overflow:hidden}
-.qk .qt.on{background:rgba(22,163,74,.22);border-color:#16a34a;color:#86efac;font-weight:600}.qk .qt small{font-size:10px;opacity:.85;font-weight:400}
-.qkm .vfb{margin:6px 0 0!important}.qkm .vfn{display:none}.qkm .vfl{gap:3px}.qkm .vfl button{height:26px;padding:0 6px;font-size:11px}.qkm .vfl .vfy{flex:1}.qkm .vfl .vfs{font-size:11px}
-.qkm .wsec{margin-top:5px}.pp.qkm .wg{grid-template-columns:repeat(2,minmax(0,1fr))!important}.qkm .g2i{display:flex;flex-direction:column;gap:3px}
-.qkm .brow{display:grid;grid-template-columns:1fr auto auto;gap:3px;margin-top:6px}.qkm .brow button{height:26px;padding:0 6px;font-size:11px;margin:0}
-.qkm .more .g3p{grid-template-columns:1fr 1fr}
-.leaflet-popup.side{position:fixed!important;right:6px!important;left:auto!important;top:var(--sdt,70px)!important;bottom:auto!important;transform:none!important;margin:0!important;z-index:1500;transition:none!important}
-.leaflet-popup.side .leaflet-popup-tip-container{display:none}.leaflet-popup.side .leaflet-popup-content-wrapper{box-shadow:0 4px 18px rgba(0,0,0,.45)}
-.leaflet-popup.side .leaflet-popup-content{max-height:var(--sdh,70vh)!important;height:auto!important;overflow-y:auto!important;overscroll-behavior:contain;margin:8px!important;width:auto!important}`;document.head.appendChild(st)}
-
-/*CARD2*/function wShow(p,k){if(wdone(p,k))return true;const G=isG(p);switch(k){case 1:case 2:case 3:return !G;case 10:return G;case 11:return !!p.g;case 4:case 12:case 5:case 6:return true;case 8:return p.od=='d';default:return false}}
-function cmpCard(d,p){const g=d.querySelector('.g3p');
- if(g){const sm=document.createElement('div');sm.className='psum';g.before(sm);let op=false;try{op=localStorage.getItem(KEY+'_pexp')==='1'}catch(e){}
-  const draw=()=>{const kr=krv(p),kt=kr=='0'?'без кроншт.':kr=='2'?'2-р: угол?':((KRO.find(x=>x[0]==kr)||[0,kr])[1]),need=kr=='2';
-   const a=[p.t=='A'?'анкер.':'станд.',(+p.h||8)+' м',isG(p)?'гравит.':'закладная',need?'<b style="color:#f59e0b">'+kt+'</b>':kt,(+p.sv||0)+' св.'];
-   if(p.od)a.push(p.od=='d'?'<span style="color:#f87171">ст. опора: демонт.</span>':'<span style="color:#4ade80">ст. опора: ост.</span>');
-   if(p.g)a.push('заземл.');if(p.js)a.push('<b style="color:#f87171">совм.</b>');if(p.vk)a.push('<b style="color:#e879f9">ввод КЛ</b>');
-   sm.innerHTML=`<span class="pst">${a.join(' · ')}</span><button type=button data-pe title="${op?'Свернуть':'Изменить параметры опоры'}">${op?'▴':'✎'}</button>`;g.hidden=!op&&!need;
-   sm.onclick=()=>{op=!op;try{localStorage.setItem(KEY+'_pexp',op?'1':'0')}catch(e){}setTimeout(draw,0)}};
-  draw();g.addEventListener('change',()=>setTimeout(()=>{draw();if(d._rw)d._rw()},0))}
- const y=d.querySelector('.yco'),mb=d.querySelector('[data-mb]');if(y&&mb)mb.prepend(y);
- const h=d.querySelector('.wh span:last-child');if(h)h.remove()}
-{const st=document.createElement('style');st.textContent=`#shhost{position:fixed!important;left:0;right:0;bottom:0;height:0;overflow:visible!important;background:none!important;outline:none;z-index:1500}.pp .g3p[hidden]{display:none!important}.psum{display:flex;align-items:center;gap:6px;margin:4px 0;padding:4px 6px;border:1px solid #374151;border-radius:7px;cursor:pointer;font-size:12px;line-height:1.3}.psum .pst{flex:1;min-width:0}.psum button{flex:none;padding:2px 9px;height:26px}
-.pp .wg{grid-template-columns:repeat(3,minmax(0,1fr))!important}.pp .wg .wall{grid-column:1/-1;height:26px;font-size:11.5px;opacity:.85}
-.vfb{padding:4px 6px!important;margin:4px 0!important}.vfl{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.vfl .vfn{font-weight:700;font-size:12px;margin-right:2px}.vfl .vfs{flex:1;min-width:0;font-size:12px}.vfl button{height:28px;padding:2px 9px;font-size:12px}.vfl .vfy{background:#16a34a;color:#fff;border-color:#15803d;font-weight:600}
-.vfd{margin-top:5px;display:flex;flex-direction:column;gap:4px}.vfd label{display:flex;flex-direction:column;font-size:11px}.vfd .vfr{margin:0}
-.leaflet-popup.sheet{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;transform:none!important;margin:0!important;z-index:1500;transition:none!important;display:flex!important;flex-direction:column;padding:0!important}
-.leaflet-popup.sheet .leaflet-popup-content-wrapper{flex:1}
-.leaflet-popup.sheet .leaflet-popup-tip-container{display:none}
-.leaflet-popup.sheet .leaflet-popup-content-wrapper{border-radius:14px 14px 0 0;padding:0 0 env(safe-area-inset-bottom);box-shadow:0 -6px 24px rgba(0,0,0,.45)}
-.leaflet-popup.sheet .leaflet-popup-content{width:auto!important;margin:0 12px 10px!important;max-height:var(--shh,52vh)!important;height:auto!important;overflow-y:auto!important;overscroll-behavior:contain}
-.leaflet-popup.sheet.full .leaflet-popup-content{--shh:86vh}.leaflet-popup.sheet .pp.fix{width:auto!important;max-width:none!important}
-.leaflet-popup.sheet .shh{height:22px;display:flex;align-items:center;justify-content:center;touch-action:none;cursor:grab}.leaflet-popup.sheet .shh i{width:42px;height:5px;border-radius:3px;background:#6b7280}
-.leaflet-popup.sheet .leaflet-popup-close-button{top:2px!important;right:6px!important;width:34px!important;height:30px!important;font-size:24px!important;z-index:2}`;document.head.appendChild(st)}
-const SHEET=()=>innerWidth<700;
-function shPan(pp,el){const ll=pp.getLatLng&&pp.getLatLng();if(!ll)return;const c=map.getContainer().getBoundingClientRect(),t=el.getBoundingClientRect().top,vb=Math.min(c.bottom,t)-c.top,pt=map.latLngToContainerPoint(ll);if(vb<60)return;const ty=Math.max(40,vb*.45);if(pt.y<30||pt.y>vb-30||pt.x<20||pt.x>c.width-20)map.panBy([pt.x-c.width/2,pt.y-ty],{animate:true})}
-map.on('popupopen',e=>{if(!SHEET())return;const el=e.popup.getElement();if(!el||!el.querySelector('.pp[data-uid]'))return;const SD=!!el.querySelector('.qk');el.classList.add(SD?'side':'sheet');if(SD)sdPos(el);let hs=document.getElementById('shhost');if(!hs){hs=document.createElement('div');hs.id='shhost';hs.className='leaflet-container';document.body.appendChild(hs)}hs.appendChild(el);
- const w=el.querySelector('.leaflet-popup-content-wrapper');if(!SD&&w&&!el.querySelector('.shh')){const hd=document.createElement('div');hd.className='shh';hd.innerHTML='<i></i>';w.prepend(hd);
-  let y0=null;const tog=f=>{el.classList.toggle('full',f)};hd.onclick=()=>tog(!el.classList.contains('full'));
-  hd.addEventListener('touchstart',ev=>{y0=ev.touches[0].clientY},{passive:true});
-  hd.addEventListener('touchend',ev=>{if(y0==null)return;const dy=ev.changedTouches[0].clientY-y0;y0=null;if(dy<-25)tog(true);else if(dy>25){if(el.classList.contains('full'))tog(false);else map.closePopup()}},{passive:true})}
- setTimeout(()=>SD?sdPan(e.popup,el):shPan(e.popup,el),30)});
-addEventListener('resize',()=>{const el=document.querySelector('.leaflet-popup.sheet');if(el&&!SHEET())map.closePopup()});
 
 map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank">Leaflet</a>');const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
@@ -146,7 +83,7 @@ if(p.g)v+=`<path d="M9 5V9M5 9H13M6.5 11H11.5M8 13H10" stroke="#5f8a00" stroke-w
 if(p.x&&p.sx)v+='<circle r="10" fill="none" stroke="#2563eb" stroke-width="2.8"/>';
 if(p.vk&&!p.x)v+=`<circle r="15.2" fill="none" stroke="#c026d3" stroke-width="2.8"/><rect x="-16" y="-16" width="9" height="9" rx="1.5" fill="#c026d3" stroke="#fff" stroke-width="1.2"/><path d="M-14-11.5H-9" stroke="#fff" stroke-width="1.3"/>`;
 v+=sqIco(p);return L.divIcon({html:v+'</svg>',className:'',iconSize:[30,30],iconAnchor:[15,15]})}
-const PO=()=>({closeOnClick:false,minWidth:200,maxWidth:innerWidth>=700?440:300,maxHeight:Math.round(innerHeight-40),autoPan:innerWidth>=700,autoPanPadding:[10,10],offset:L.point(0,-12)});
+const PO=()=>({closeOnClick:false,minWidth:250,maxWidth:innerWidth>=700?440:300,maxHeight:Math.round(innerHeight-40),autoPanPadding:[10,10],offset:L.point(0,-12)});
 function odTxt(p){return p.od=='d'?'<div style="font-size:11.5px;color:#b91c1c">Старая опора: демонтируется</div>':p.od=='k'?'<div style="font-size:11.5px;color:#15803d">Старая опора: остаётся</div>':''}
 
 /* ---- арматура СИП на опоре ---- */
@@ -181,7 +118,7 @@ function ycoCopy(t,b){const ok=()=>{const o=b.textContent;b.textContent='Ско�
 document.head.insertAdjacentHTML('beforeend','<style>.yco{display:flex;align-items:center;gap:6px;margin:3px 0 4px;font-size:12px;flex-wrap:wrap}.yco span{font-family:ui-monospace,Menlo,Consolas,monospace;user-select:all}.yco button{font:600 11.5px system-ui,sans-serif;padding:2px 8px;border-radius:6px;border:1px solid #94a3b8;background:#f1f5f9;color:#0f172a;cursor:pointer}.yco button.ok{background:#16a34a;border-color:#16a34a;color:#fff}.yco a{font-size:11.5px;color:#2563eb}.yco.dk span{color:#e2e8f0}.yco.dk button{background:#334155;color:#f8fafc;border-color:#64748b}.yco.dk a{color:#93c5fd}</style>');
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-yco]');if(!b)return;e.preventDefault();e.stopPropagation();ycoCopy(b.getAttribute('data-yco'),b)},true);
 function roPopup(p){const d=document.createElement('div');d.className='pp';
-d.innerHTML=`<div><b>${esc(p.id)}</b> <small>лин. ${p.line||'-'}</small>${/^p\d+$/.test(p.uid)?'':' <small style="color:#15803d">новая</small>'}</div>${ycoH(p)}<div>${tpn(p.tp||'-')} · № ${p.n||'-'} · ${tnm(p)} ${+p.h||8} м${isG(p)?' · <b style="color:#800020">гравит. фундамент</b>':''}${p.g?' · заземление':''}${+p.kr?' · кронштейн '+(p.kr==2?'2-рожк.':'1-рожк.')+(+p.ka&&p.kr==2?' '+p.ka+'°':''):''}${+p.sv?' · светильников '+p.sv:''}${p.js?' · совм. подвеска':''}${p.x?' · <b style="color:#dc2626">исключена</b>'+(p.sx?' · <b style="color:#2563eb">СИП по ней</b>':''):''}${p.vk?' · <b style="color:#c026d3">ввод КЛ</b>':''}${p.pp?' · <b style="color:#6b7280">предлагаемая (серая)</b>':''}</div>${sqHas(p)?'<div style="margin:3px 0"><b style="color:#f87171">Совм. подвеска:</b> '+esc(sqTxt(p.sp))+'</div>':''}<div class="wl">${WK.map(([k,n])=>{const v=wd(p,k);return `<span>${v?'✅':'⬜'} ${n}</span><span>${/^\d{4}-/.test(v)?v:''}</span>`}).join('')}</div>${p.wc?'<div><b>Комментарий:</b> '+esc(p.wc)+'</div>':''}${p.note?'<div><b>Примечание:</b> '+esc(p.note)+'</div>':''}${p.ad?'<div><b>Адрес:</b> '+esc(p.ad)+'</div>':''}${odTxt(p)}${vfTxt(p)}${AR_SHOW?'<div data-arb></div>':''}<button data-h>История опоры</button>`;d.querySelector('[data-h]').onclick=()=>hpole(p);{const ab=d.querySelector('[data-arb]');if(ab)arBlock(ab,p,()=>{})}return d}
+d.innerHTML=`<div><b>${esc(p.id)}</b> <small>лин. ${p.line||'-'}</small>${/^p\d+$/.test(p.uid)?'':' <small style="color:#15803d">новая</small>'}</div>${ycoH(p)}<div>${tpn(p.tp||'-')} · № ${p.n||'-'} · ${tnm(p)} ${+p.h||8} м${isG(p)?' · <b style="color:#800020">гравит. фундамент</b>':''}${p.g?' · заземление':''}${+p.kr?' · кронштейн '+(p.kr==2?'2-рожк.':'1-рожк.')+(+p.ka&&p.kr==2?' '+p.ka+'°':''):''}${+p.sv?' · светильников '+p.sv:''}${p.js?' · совм. подвеска':''}${p.x?' · <b style="color:#dc2626">исключена</b>'+(p.sx?' · <b style="color:#2563eb">СИП по ней</b>':''):''}${p.vk?' · <b style="color:#c026d3">ввод КЛ</b>':''}${p.pp?' · <b style="color:#6b7280">предлагаемая (серая)</b>':''}</div>${sqHas(p)?'<div style="margin:3px 0"><b style="color:#f87171">Совм. подвеска:</b> '+esc(sqTxt(p.sp))+'</div>':''}<div class="wl">${WK.map(([k,n])=>{const v=wd(p,k);return `<span>${v?'✅':'⬜'} ${n}</span><span>${/^\d{4}-/.test(v)?v:''}</span>`}).join('')}</div>${p.wc?'<div><b>Комментарий:</b> '+esc(p.wc)+'</div>':''}${p.note?'<div><b>Примечание:</b> '+esc(p.note)+'</div>':''}${p.ad?'<div><b>Адрес:</b> '+esc(p.ad)+'</div>':''}${odTxt(p)}${vfTxt(p)}${AR_SHOW?'<div data-arb></div>':''}<button data-h>История опоры</button>`;d.querySelector('[data-h]').onclick=e=>hInline(d,p,e.currentTarget);{const ab=d.querySelector('[data-arb]');if(ab)arBlock(ab,p,()=>{})}return d}
 function popup(p){const d=popup0(p);d.dataset.uid=p.uid;if(RO)[9,14].forEach(k=>{if(ppL(p.uid,k).length){const b=document.createElement('div');b.className='phb';d.appendChild(b);ppBlock(b,p,k,()=>true)}});addAdr(d,p.lat,p.lon,p.ad);fixCard(d);return d}
 function fixCard(d){d.classList.add('fix');const h=document.createElement('div');h.className='pph';const f=d.firstElementChild,a=d.querySelector('.adr');if(f)h.appendChild(f);if(a)h.appendChild(a);d.prepend(h);return d}
 function ppH(){document.documentElement.style.setProperty('--pph',Math.max(220,Math.min(360,Math.round(innerHeight*.55)-20))+'px')}ppH();addEventListener('resize',ppH);
@@ -201,20 +138,20 @@ ${sqHas(p)?'<div style="font-size:11px;color:#fca5a5;margin:2px 0">Совм. п�
 const hs=()=>{d.querySelector('[data-hs]').textContent='лин. '+(p.line||'-')+' · '+(p.t=='A'?'анкер.':'станд.')+' · '+(+p.h||8)+' м'};hs();
 const ch=()=>{upd(p);save();stats();mark(p)};let EK=0;
 const krSel=()=>{const e=d.querySelector('[data-kr]'),v=krv(p);e.innerHTML=(v=='2'?'<option value="2" selected disabled>2-р: угол?</option>':'')+KRO.map(([a,t])=>`<option value="${a}" ${v==a?'selected':''}>${t}</option>`).join('');e.classList.toggle('need',v=='2')};const sync2=()=>{d.querySelector('[data-f]').value=isG(p)?'G':'';krSel();d.querySelector('[data-sv]').value=+p.sv||0};
-let WALL=false;const rw=()=>{const g=d.querySelector('[data-wg]');const WV=WK.filter(([k])=>WALL||wShow(p,k)),WH=WK.filter(([k])=>!wShow(p,k)).length;g.innerHTML=WV.map(([k,n])=>{const on=wdone(p,k),v=wd(p,k),dd=/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7):(on?'✓':'');return `<div class="wt${on?' on':''}"><button class="wn" data-w=${k} title="${esc(n)}"><i>✓</i>${WSN[k]||esc(n)}</button>${k==9||k==14?`<button class="wph" data-wph=${k} title="Фото до и после">${ppIco}${ppN(p.uid,k)||''}</button>`:''}${on?`<button class="wdt" data-wd=${k} title="Изменить дату">${dd}</button>`:''}</div>`}).join('')+(WH?`<button type=button class="wall" data-wall>${WALL?'Скрыть лишние ▴':'Ещё работы ('+WH+') ▾'}</button>`:'');{const wa=g.querySelector('[data-wall]');if(wa)wa.onclick=()=>{WALL=!WALL;setTimeout(rw,0)}}
+const rw=()=>{const g=d.querySelector('[data-wg]');g.innerHTML=WK.map(([k,n])=>{const on=wdone(p,k),v=wd(p,k),dd=/^\d{4}-/.test(v)?v.slice(8,10)+'.'+v.slice(5,7):(on?'✓':'');return `<div class="wt${on?' on':''}"><button class="wn" data-w=${k} title="${esc(n)}"><i>✓</i>${WSN[k]||esc(n)}</button>${k==9||k==14?`<button class="wph" data-wph=${k} title="Фото до и после">${ppIco}${ppN(p.uid,k)||''}</button>`:''}${on?`<button class="wdt" data-wd=${k} title="Изменить дату">${dd}</button>`:''}</div>`}).join('');
  d.querySelector('[data-wn]').textContent='РАБОТЫ · '+WK.filter(([k])=>wdone(p,k)).length+'/'+WK.length;
  g.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{const k=+b.dataset.w;setW(p,k,!wdone(p,k),$('md').value||LD());if(k==9&&wdone(p,9)){PHO=true;setTimeout(()=>phb._r(),0);if(!ppL(p.uid,9,'after').length)toast('Подрезка крон: добавьте фото «до» и «после»')}if(k==9)setTimeout(()=>phb._r(),0);if(k==14)setTimeout(()=>phb2._r(),0);sync2();if(EK==k)ed(0);setTimeout(()=>{rw();ch()},0)});
  g.querySelectorAll('[data-wd]').forEach(b=>b.onclick=()=>ed(+b.dataset.wd));g.querySelectorAll('[data-wph]').forEach(wp=>wp.onclick=()=>{if(wp.dataset.wph=='14'){PHO2=!PHO2;phb2._r()}else{PHO=!PHO;phb._r()}})};let PHO=false,PHO2=false;const phb=d.querySelector('[data-phb]'),phb2=d.querySelector('[data-phb2]');ppBlock(phb,p,9,()=>PHO);ppBlock(phb2,p,14,()=>PHO2);
 const ed=k=>{EK=k;const r=d.querySelector('[data-wde]');if(!k){r.hidden=true;return}const v=wd(p,k);d.querySelector('[data-wdn]').textContent='Дата: '+(WSN[k]||'');d.querySelector('[data-wdi]').value=/^\d{4}-/.test(v)?v:'';r.hidden=false;try{d.querySelector('[data-wdi]').focus()}catch(e){}};
 d.querySelector('[data-wdi]').onchange=e=>{PSEL=Date.now();if(!EK||!e.target.value)return;setW(p,EK,true,e.target.value);rw();ch()};
-rw();d._rw=rw;
+rw();
 d.querySelector('[data-more]').onclick=e=>{const m=d.querySelector('[data-mb]');m.hidden=!m.hidden;e.target.textContent=m.hidden?'Ещё ▾':'Ещё ▴'};
 d.querySelectorAll('[data-k]').forEach(e=>e.onchange=()=>{const k=e.dataset.k;p[k]=e.type=='checkbox'?e.checked:e.value;if(k=='tp'||k=='n')p.id=pid(p.tp,p.n);if(k=='js'||k=='x'||k=='sx'||k=='pp'||(k=='tp'&&p.vk))lines();if(k=='t')hs();ch()});{const e=d.querySelector('[data-vk]');if(e)e.onchange=()=>{PSEL=Date.now();p.vk=e.checked;ch();lines();stats();toast(p.vk?p.id+': опора ввода КЛ, бронекабель от '+tpn(p.tp)+' ≈ '+Math.round((CABS.get(spKey(p.uid,'tp:'+p.tp))||{d:0}).d)+' м':p.id+': ввод КЛ снят')}}
 d.querySelector('[data-f]').onchange=e=>{PSEL=Date.now();const v=e.target.value;if(!v&&wdone(p,10)){if(!confirm('У опоры '+p.id+' отмечен выполненный гравитационный фундамент ('+wd(p,10)+'). Снять эту отметку и вернуть закладную?')){e.target.value='G';return}delete p.w[10]}p.f=v;rw();ch()};
 d.querySelector('[data-ph]').onchange=e=>{PSEL=Date.now();p.h=+e.target.value;hs();ch()};
 d.querySelector('[data-kr]').onchange=e=>{PSEL=Date.now();const[a,b]=e.target.value.split('-');p.kr=+a;p.ka=b?+b:null;krSel();ch();try{kcOver(p)}catch(er){}};
 d.querySelector('[data-sv]').onchange=e=>{PSEL=Date.now();const v=+e.target.value;p.sv=v;p.w=p.w||{};if(v>0&&!wdone(p,6))p.w[6]=$('md').value||LD();if(v==0&&wdone(p,6))delete p.w[6];if(v>(+p.kr||0)){p.kr=v;krSel();if(v==2)toast('Укажите угол двухрожкового кронштейна: 90° или 180°')}rw();ch()};
-{const q=d.querySelector('[data-sq]');if(q)q.onclick=()=>sqGo(mode=='sp'?'view':'sp')}d.querySelector('[data-h]').onclick=()=>hpole(p);d.querySelector('[data-x]').onclick=()=>{map.closePopup();P.splice(P.indexOf(p),1);lg.removeLayer(mk.get(p));mk.delete(p);rec(p.uid,null);save();stats();del(p.uid)};const c=d.querySelector('[data-c]');if(c)c.onclick=()=>{if(!pos)return;const a=acc?acc.getRadius():99;if(a>15)return alert('Точность GPS ±'+Math.round(a)+' м слишком низкая. Подождите, пока станет не хуже ±15 м.');const dx=(pos[1]-p.lon)*K1,dy=(pos[0]-p.lat)*K2;if(confirm('Сдвинуть ВСЮ сеть опор (у всех сотрудников) на '+Math.round(Math.hypot(dx,dy))+' м так, чтобы опора '+p.id+' оказалась в вашей точке?')){map.closePopup();shift(dx,dy,0)}};cmpCard(d,p);qkCard(d,p);return d}
+{const q=d.querySelector('[data-sq]');if(q)q.onclick=()=>sqGo(mode=='sp'?'view':'sp')}d.querySelector('[data-h]').onclick=e=>hInline(d,p,e.currentTarget);d.querySelector('[data-x]').onclick=()=>{map.closePopup();P.splice(P.indexOf(p),1);lg.removeLayer(mk.get(p));mk.delete(p);rec(p.uid,null);save();stats();del(p.uid)};const c=d.querySelector('[data-c]');if(c)c.onclick=()=>{if(!pos)return;const a=acc?acc.getRadius():99;if(a>15)return alert('Точность GPS ±'+Math.round(a)+' м слишком низкая. Подождите, пока станет не хуже ±15 м.');const dx=(pos[1]-p.lon)*K1,dy=(pos[0]-p.lat)*K2;if(confirm('Сдвинуть ВСЮ сеть опор (у всех сотрудников) на '+Math.round(Math.hypot(dx,dy))+' м так, чтобы опора '+p.id+' оказалась в вашей точке?')){map.closePopup();shift(dx,dy,0)}};return d}
 var FTS=new Set();try{(JSON.parse(localStorage.getItem(KEY+'_ft')||'[]')||[]).forEach(x=>FTS.add(String(x)))}catch(e){}
 function tpOk(p){return !FTS.size||FTS.has(String(p.tp))}
 function tpLbl(){if(!FTS.size)return '';const a=[...FTS].sort((x,y)=>x.localeCompare(y,'ru',{numeric:true}));return a.length>4?a.length+' ТП: '+a.map(x=>x.replace(/^КТП\s*/,'')).join(', '):a.map(tpn).join(', ')}
@@ -242,23 +179,20 @@ function vfTxt(p){const v=p.vf;if(!v)return vfEl(p)?'<div style="font-size:11.5p
  return `<div style="font-size:11.5px;color:${b?'#ea580c':'#15803d'}">Сверено ${esc(v.d||'')}${v.e?' · '+esc(v.e):''}: закладная ${VFS[v.z||vfExp(p)]}${b?' · <b>'+b+'</b>':''}${v.c?' · '+esc(v.c):''}</div>`}
 function vfH(p){return VF_ON&&(vfEl(p)||p.vf)?'<div class="vfb" data-vfb></div>':''}
 function vfSet(p,ch){p.vf=Object.assign({},p.vf||{z:vfExp(p)},ch,{d:vfToday(),e:WHO||''})}
-function vfDraw(b,p){const v=p.vf,bad=vfBad(p),op=!!b._op,ex=vfExp(p),cz=(v&&v.z)||ex;b.className='vfb'+(v?(bad?' bad':' ok'):'');
- const dm=x=>/^\d{4}-/.test(x||'')?x.slice(8,10)+'.'+x.slice(5,7):(x||'');
- const det=`<div class="vfd"><label>Закладная факт.<select data-vz>${['24','30'].map(z=>`<option value="${z}" ${cz==z?'selected':''}>${VFZ[z]}${z==ex?' — по типу':''}</option>`).join('')}</select></label><input type=text data-vc placeholder="Комментарий к сверке" value="${esc((v&&v.c)||'')}"><div class="vfr">${v?'<button type=button data-vg>📍 Точка по GPS</button><button type=button data-vun>Снять сверку</button>':'<button type=button data-vy class="vfy">✓ Сохранить сверку</button>'}</div></div>`;
- b.innerHTML=v?`<div class="vfl"><span class="vfs">✓ Сверено ${dm(v.d)} · ${VFS[cz]}${v.e?' · '+esc(v.e):''}${v.mv?' · перенос '+v.mv+' м':''}${bad?' · <b>'+bad+'</b>':''}${v.c?' · '+esc(v.c):''}</span><button type=button data-vt>${op?'▴':'✎'}</button></div>${op?det:''}`
- :`<div class="vfl"><span class="vfn">Сверка</span><button type=button data-vy class="vfy">✓ Всё верно</button><button type=button data-vg>📍 GPS</button><button type=button data-vt title="Другая закладная или комментарий">${op?'▴':'≠'}</button></div>${op?det:''}`;
- const ch=()=>{upd(p);save();stats();mark(p);setTimeout(()=>vfDraw(b,p),0)},q=x=>b.querySelector(x),zv=()=>{const e=q('[data-vz]');return e?e.value:cz};
- q('[data-vt]').onclick=()=>{b._op=!op;setTimeout(()=>vfDraw(b,p),0)};/*CARD2B*/
- b.querySelectorAll('[data-vy]').forEach(e=>e.onclick=()=>{const c=q('[data-vc]');vfSet(p,{z:zv(),c:c?c.value.trim():((v&&v.c)||'')});b._op=false;ch();if(vfBad(p))toast(p.id+': '+vfBad(p))});
- if(v){if(q('[data-vz]'))q('[data-vz]').onchange=e=>{vfSet(p,{z:e.target.value});ch();if(vfBad(p))toast(p.id+': '+vfBad(p))};
-  if(q('[data-vc]'))q('[data-vc]').onchange=e=>{vfSet(p,{c:e.target.value.trim()});ch()};
-  if(q('[data-vun]'))q('[data-vun]').onclick=()=>{if(p.vf&&p.vf.mv&&!confirm('Снять сверку? Опора останется в новой точке (старая — в истории опоры).'))return;p.vf=null;b._op=false;ch()}}
- const gb=q('[data-vg]');if(gb)gb.onclick=e=>{if(!navigator.geolocation)return alert('Геолокация недоступна на этом устройстве');const bt=e.target,t0=bt.textContent;bt.disabled=true;bt.textContent='Определяю…';
-  navigator.geolocation.getCurrentPosition(g=>{bt.disabled=false;bt.textContent=t0;const c=L.latLng(g.coords.latitude,g.coords.longitude),a=Math.round(g.coords.accuracy||0),dd=Math.round(map.distance([p.lat,p.lon],c));
+function vfDraw(b,p){const v=p.vf,bad=vfBad(p);b.className='vfb'+(v?(bad?' bad':' ok'):'');
+ b.innerHTML=`<div class="vft">Сверка на месте</div><label class="vfc"><input type=checkbox data-vok ${v?'checked':''}> котлован на месте, точка на карте верна</label>
+<div class="vfr"><label>Закладная факт.<select data-vz>${['24','30'].map(z=>`<option value="${z}" ${((v&&v.z)||vfExp(p))==z?'selected':''}>${VFZ[z]}${z==vfExp(p)?' — по типу':''}</option>`).join('')}</select></label><button type=button data-vg>📍 Точка не там — поставить по GPS</button></div>
+<input type=text data-vc placeholder="Комментарий к сверке" value="${esc((v&&v.c)||'')}">${v?`<small>Сверено ${esc(v.d||'')}${v.e?' · '+esc(v.e):''}${v.mv?' · перенесена на '+v.mv+' м':''}${bad?' · <b>'+bad+'</b>':''}</small>`:''}`;
+ const ch=()=>{upd(p);save();stats();mark(p);vfDraw(b,p)};
+ b.querySelector('[data-vok]').onchange=e=>{if(e.target.checked)vfSet(p,{z:b.querySelector('[data-vz]').value});else{if(p.vf&&p.vf.mv&&!confirm('Снять сверку? Опора останется в новой точке (старая — в истории опоры).')){e.target.checked=true;return}p.vf=null}ch()};
+ b.querySelector('[data-vz]').onchange=e=>{vfSet(p,{z:e.target.value});ch();if(vfBad(p))toast(p.id+': '+vfBad(p))};
+ b.querySelector('[data-vc]').onchange=e=>{vfSet(p,{c:e.target.value.trim()});ch()};
+ b.querySelector('[data-vg]').onclick=e=>{if(!navigator.geolocation)return alert('Геолокация недоступна на этом устройстве');const bt=e.target;bt.disabled=true;bt.textContent='Определяю место…';
+  navigator.geolocation.getCurrentPosition(g=>{bt.disabled=false;bt.textContent='📍 Точка не там — поставить по GPS';const c=L.latLng(g.coords.latitude,g.coords.longitude),a=Math.round(g.coords.accuracy||0),dd=Math.round(map.distance([p.lat,p.lon],c));
    if(a>25&&!confirm('Точность GPS сейчас плохая: ±'+a+' м. Лучше подождать на открытом месте и нажать ещё раз. Всё равно перенести?'))return;
    if(!confirm('Перенести опору '+p.id+' на '+dd+' м в точку, где вы стоите (точность ±'+a+' м)?'))return;
-   const o=(p.vf&&p.vf.o)||[p.lat,p.lon];p.lat=c.lat;p.lon=c.lng;vfSet(p,{o,mv:Math.round(map.distance(o,c)),z:zv()});const m=mk.get(p);if(m)m.setLatLng(c);lines();ch();toast(p.id+' перенесена на '+dd+' м и отмечена как сверенная')},
-   er=>{bt.disabled=false;bt.textContent=t0;alert('Не удалось определить место: '+(er.code==1?'нет разрешения на геолокацию в браузере':er.message))},{enableHighAccuracy:true,timeout:20000,maximumAge:0})}}
+   const o=(p.vf&&p.vf.o)||[p.lat,p.lon];p.lat=c.lat;p.lon=c.lng;vfSet(p,{o,mv:Math.round(map.distance(o,c)),z:b.querySelector('[data-vz]').value});const m=mk.get(p);if(m)m.setLatLng(c);lines();ch();toast(p.id+' перенесена на '+dd+' м и отмечена как сверенная')},
+   er=>{bt.disabled=false;bt.textContent='📍 Точка не там — поставить по GPS';alert('Не удалось определить место: '+(er.code==1?'нет разрешения на геолокацию в браузере':er.message))},{enableHighAccuracy:true,timeout:20000,maximumAge:0})}}
 var VS=false;try{VS=localStorage.getItem(KEY+'_vs')==='1'}catch(e){}
 function vsOk(p){return vfEl(p)&&!p.vf}
 function vfUI(){const b=$('vfb');if(!b)return;b.style.background=VS?'#16a34a':'';b.style.color=VS?'#fff':'';b.textContent=VS?'Показаны не сверенные ✕':'Не сверены котлованы';
