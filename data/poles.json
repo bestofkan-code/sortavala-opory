@@ -34,7 +34,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791712202925513w",
@@ -71,7 +72,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917122433420qqi",
@@ -108,7 +110,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917122674164h1i",
@@ -145,7 +148,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917123001321iq7",
@@ -182,7 +186,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791712349299kg4a",
@@ -219,7 +224,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791712839854lvjd",
@@ -256,7 +262,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791713756962l8hv",
@@ -293,7 +300,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791714277232tqeh",
@@ -332,7 +340,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791716025543egb7",
@@ -370,7 +379,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791717141151u7ar",
@@ -407,7 +417,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917172606015ts5",
@@ -443,7 +454,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791717390192065j",
@@ -479,7 +491,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791717415453xth7",
@@ -515,7 +528,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917174301528ca1",
@@ -551,7 +565,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791719333234j4wq",
@@ -590,7 +605,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917194403868h8v",
@@ -631,7 +647,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917194802394lmj",
@@ -671,7 +688,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791719515162kn09",
@@ -711,7 +729,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791719550273vnv1",
@@ -751,7 +770,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791721443323nv2s",
@@ -797,7 +817,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17917214448700ika",
@@ -843,7 +864,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791881378317jysp",
@@ -879,7 +901,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791881869888ea7c",
@@ -915,7 +938,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791882178252lc6v",
@@ -951,7 +975,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791886571457chb2",
@@ -987,7 +1012,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791900313923oi7j",
@@ -1023,7 +1049,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791961915554u4fw",
@@ -1059,7 +1086,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791962361093gy8o",
@@ -1095,7 +1123,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791962827938jxl2",
@@ -1131,7 +1160,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791962891949aqmp",
@@ -1167,7 +1197,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1791964227577kwid",
@@ -1203,7 +1234,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792043809637kb6p",
@@ -1239,7 +1271,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792043813489vjqy",
@@ -1275,7 +1308,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792043841512jnyp",
@@ -1307,7 +1341,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792049195497cep9",
@@ -1343,7 +1378,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17924160365608vwm",
@@ -1380,7 +1416,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792416685940m9iz",
@@ -1416,7 +1453,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179249144448530em",
@@ -1452,7 +1490,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792580374656ho0y",
@@ -1489,7 +1528,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179267208782920ow",
@@ -1526,7 +1566,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792672088889g5fy",
@@ -1562,7 +1603,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17927456599451cnp",
@@ -1598,7 +1640,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792750383880hr7a",
@@ -1634,7 +1677,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792750385651n6l1",
@@ -1670,7 +1714,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1792756521288k7hc",
@@ -1706,7 +1751,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17930074744044ffj",
@@ -1742,7 +1788,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793084213370mre8",
@@ -1778,7 +1825,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793106305520plsc",
@@ -1810,7 +1858,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17931941342284c3s",
@@ -1846,7 +1895,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793194136826bdva",
@@ -1882,7 +1932,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793194137720qumd",
@@ -1918,7 +1969,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793194150252nnu7",
@@ -1954,7 +2006,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17931941523372k99",
@@ -1990,7 +2043,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793209453460yimh",
@@ -2026,7 +2080,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17932892344656dv5",
@@ -2062,7 +2117,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793293183802im3x",
@@ -2081,14 +2137,15 @@
   "w": {
    "1": "2026-10-17",
    "2": "2026-10-17",
-   "3": "2026-10-17"
+   "3": "2026-10-17",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": "",
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Иль",
+  "ed": "Начальник участка",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -2098,7 +2155,12 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": {
+   "a": 3,
+   "d": "2026-11-18",
+   "h": 3
+  },
+  "vf": null
  },
  {
   "uid": "n17933451563416fqd",
@@ -2139,7 +2201,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17933525067110kgi",
@@ -2175,7 +2238,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793440798689r0dm",
@@ -2211,7 +2275,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179344261542181ln",
@@ -2247,7 +2312,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793443723512pz89",
@@ -2283,7 +2349,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793445601553kk48",
@@ -2315,7 +2382,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17934558490127a95",
@@ -2355,7 +2423,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793516971199q31x",
@@ -2387,7 +2456,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793520001858hl6b",
@@ -2419,7 +2489,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793520003420wt7d",
@@ -2451,7 +2522,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793520004261o21q",
@@ -2483,7 +2555,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179352001125178u2",
@@ -2515,7 +2588,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793522107477bi8a",
@@ -2551,7 +2625,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793524928959bqxk",
@@ -2587,7 +2662,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793536389620gtur",
@@ -2619,7 +2695,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17935369474204vp6",
@@ -2651,7 +2728,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793537029483bvac",
@@ -2683,7 +2761,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179353707005998j8",
@@ -2715,7 +2794,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793537104950umcc",
@@ -2747,7 +2827,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793537120556gh89",
@@ -2779,7 +2860,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793876428445r32g",
@@ -2815,7 +2897,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793894154026opap",
@@ -2851,7 +2934,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403573lkgw",
@@ -2887,7 +2971,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179389940357463ql",
@@ -2924,7 +3009,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403575agou",
@@ -2956,7 +3042,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403576cfyx",
@@ -2988,7 +3075,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994035770a92",
@@ -3020,7 +3108,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994035781wkx",
@@ -3052,7 +3141,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994035790qun",
@@ -3088,7 +3178,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403580sch5",
@@ -3124,7 +3215,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403581zx56",
@@ -3160,7 +3252,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403582gatq",
@@ -3196,7 +3289,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403583bk55",
@@ -3232,7 +3326,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403584vkm2",
@@ -3268,7 +3363,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994035860kr0",
@@ -3304,7 +3400,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994035871c7e",
@@ -3340,7 +3437,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403588hmdr",
@@ -3376,7 +3474,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179389940359082i8",
@@ -3412,7 +3511,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403591d5c0",
@@ -3448,7 +3548,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403615ifdz",
@@ -3484,7 +3585,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403616db04",
@@ -3520,7 +3622,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403617qtr9",
@@ -3556,7 +3659,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403618w5ak",
@@ -3592,7 +3696,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403619eqdu",
@@ -3628,7 +3733,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403620s0ba",
@@ -3664,7 +3770,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179389940362150dg",
@@ -3700,7 +3807,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403622dv9t",
@@ -3736,7 +3844,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403623wmpn",
@@ -3772,7 +3881,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403624gpuz",
@@ -3808,7 +3918,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994036251mpd",
@@ -3844,7 +3955,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403626da15",
@@ -3876,7 +3988,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403629zkfg",
@@ -3912,7 +4025,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403630cnhb",
@@ -3948,7 +4062,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17938994036317l6a",
@@ -3984,7 +4099,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403632we2r",
@@ -4020,7 +4136,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403633sejc",
@@ -4056,7 +4173,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403637x3xo",
@@ -4092,7 +4210,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899403658skfs",
@@ -4128,7 +4247,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793899938947j8oz",
@@ -4164,7 +4284,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468367t6zp",
@@ -4196,7 +4317,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17939014683689xkk",
@@ -4228,7 +4350,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468369lnsc",
@@ -4260,7 +4383,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468370diqz",
@@ -4292,7 +4416,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179390146837100ee",
@@ -4324,7 +4449,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468372sr8u",
@@ -4356,7 +4482,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468373d9j9",
@@ -4388,7 +4515,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468374wqp7",
@@ -4420,7 +4548,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793901468375mm2v",
@@ -4452,7 +4581,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793977245978egyj",
@@ -4488,7 +4618,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793977332843vxg2",
@@ -4524,7 +4655,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793977492539rr5c",
@@ -4560,7 +4692,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1793977537916rylq",
@@ -4596,7 +4729,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179398592429097qs",
@@ -4632,7 +4766,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794038245880vdhd",
@@ -4668,7 +4803,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794043512401bk64",
@@ -4704,7 +4840,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794225655048fga7",
@@ -4740,7 +4877,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794230523300zvv9",
@@ -4776,7 +4914,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794399600061pzq4",
@@ -4813,7 +4952,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17943996014473g5l",
@@ -4849,7 +4989,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794399630165qh6m",
@@ -4885,7 +5026,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17943996754138ylh",
@@ -4921,7 +5063,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794404028317q7hc",
@@ -4958,7 +5101,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794408161021oht7",
@@ -4994,7 +5138,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112947rpku",
@@ -5026,7 +5171,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112950nhhr",
@@ -5062,7 +5208,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112951y6iv",
@@ -5094,7 +5241,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944111129537qjd",
@@ -5126,39 +5274,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
- },
- {
-  "uid": "n1794411112954md5x",
-  "id": "КТП 163-24",
-  "lat": 61.710392,
-  "lon": 30.7120518,
-  "t": "S",
-  "g": false,
-  "line": "",
-  "done": false,
-  "date": null,
-  "note": "Предлагаемая промежуточная (серая): пролёт КТП 163-10 — КТП 163-11 по карте ≈48 м (больше 45 м). Проверить замером на месте",
-  "tp": "КТП 163",
-  "n": 24,
-  "x": false,
-  "w": {},
-  "wc": null,
-  "f": null,
-  "js": false,
-  "yd": false,
-  "ad": "",
-  "ed": "Иль",
-  "kr": 1,
-  "sv": 0,
-  "h": 8,
-  "ka": null,
-  "vk": false,
-  "sx": false,
-  "pp": true,
-  "sp": null,
-  "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112957oir3",
@@ -5176,7 +5293,8 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-18"
   },
   "wc": null,
   "f": null,
@@ -5193,7 +5311,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112959xuvm",
@@ -5229,7 +5348,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112961b1bj",
@@ -5239,15 +5359,16 @@
   "t": "S",
   "g": false,
   "line": "",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "Предлагаемая промежуточная (серая): пролёт ТП60-5 — ТП60-22 по карте ≈47 м (больше 45 м). Проверить замером на месте",
   "tp": "60",
   "n": 76,
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-17"
   },
   "wc": null,
   "f": null,
@@ -5264,39 +5385,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
- },
- {
-  "uid": "n1794411112963c6ey",
-  "id": "ТП76-69",
-  "lat": 61.7133167,
-  "lon": 30.7065987,
-  "t": "S",
-  "g": false,
-  "line": "",
-  "done": false,
-  "date": null,
-  "note": "Предлагаемая промежуточная (серая): пролёт ТП76-26 — ТП76-27 по карте ≈46 м (больше 45 м). Проверить замером на месте",
-  "tp": "76",
-  "n": 69,
-  "x": false,
-  "w": {},
-  "wc": null,
-  "f": null,
-  "js": false,
-  "yd": false,
-  "ad": "",
-  "ed": "Иль",
-  "kr": 1,
-  "sv": 0,
-  "h": 8,
-  "ka": null,
-  "vk": false,
-  "sx": false,
-  "pp": true,
-  "sp": null,
-  "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112964b7jt",
@@ -5328,7 +5418,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112967kc4f",
@@ -5370,7 +5461,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112968cfiu",
@@ -5380,8 +5472,8 @@
   "t": "S",
   "g": false,
   "line": "",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "Предлагаемая промежуточная (серая): пролёт ТП60-44 — ТП60-43 по карте ≈46 м (больше 45 м). Проверить замером на месте",
   "tp": "60",
   "n": 78,
@@ -5396,7 +5488,7 @@
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -5406,7 +5498,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794411112969rs37",
@@ -5442,39 +5535,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
- },
- {
-  "uid": "n1794411112973yro7",
-  "id": "ТП98-54",
-  "lat": 61.7112721,
-  "lon": 30.7048818,
-  "t": "S",
-  "g": false,
-  "line": "",
-  "done": false,
-  "date": null,
-  "note": "Предлагаемая промежуточная (серая): пролёт ТП98-21 — ТП98-22 по карте ≈45,1 м (больше 45 м). Проверить замером на месте",
-  "tp": "98",
-  "n": 54,
-  "x": false,
-  "w": {},
-  "wc": null,
-  "f": null,
-  "js": false,
-  "yd": false,
-  "ad": "",
-  "ed": "Женя",
-  "kr": 2,
-  "sv": 0,
-  "h": 8,
-  "ka": 180,
-  "vk": false,
-  "sx": false,
-  "pp": false,
-  "sp": null,
-  "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794432400001gq13",
@@ -5510,7 +5572,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794432400002gq57",
@@ -5542,7 +5605,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944873308539wh6",
@@ -5574,7 +5638,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274761ljbz",
@@ -5597,10 +5662,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -5610,7 +5675,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944962747620dpu",
@@ -5633,10 +5699,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -5646,7 +5712,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274763qgbs",
@@ -5669,7 +5736,7 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
   "ed": "Иль",
@@ -5682,7 +5749,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274764l7he",
@@ -5698,10 +5766,15 @@
   "tp": "57",
   "n": 84,
   "x": false,
-  "w": {},
+  "w": {
+   "1": "2026-11-18",
+   "2": "2026-11-18",
+   "3": "2026-11-18",
+   "9": "2026-11-18"
+  },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
   "ed": "Иль",
@@ -5714,7 +5787,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274765kywk",
@@ -5737,10 +5811,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -5750,7 +5824,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274766hf8i",
@@ -5773,10 +5848,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -5786,7 +5861,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274767ozf5",
@@ -5809,7 +5885,7 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
   "ed": "Иль",
@@ -5822,7 +5898,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274768k6pq",
@@ -5858,7 +5935,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274769tgc5",
@@ -5894,7 +5972,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944962747709ll9",
@@ -5930,39 +6009,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
- },
- {
-  "uid": "n17944962747715663",
-  "id": "ТП57-91",
-  "lat": 61.7029432,
-  "lon": 30.713138,
-  "t": "S",
-  "g": null,
-  "line": null,
-  "done": true,
-  "date": "2026-11-16",
-  "note": "Опора добавлена со 2 этапа (РД ИФП-2026-0120, лист 9), делаем в 1 этапе",
-  "tp": "57",
-  "n": 91,
-  "x": false,
-  "w": {},
-  "wc": "",
-  "f": "G",
-  "js": false,
-  "yd": false,
-  "ad": null,
-  "ed": "Леонид",
-  "kr": 1,
-  "sv": 0,
-  "h": 8,
-  "ka": null,
-  "vk": false,
-  "sx": false,
-  "pp": false,
-  "sp": null,
-  "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274772itqe",
@@ -5994,7 +6042,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944962747731yx7",
@@ -6026,7 +6075,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944962747744231",
@@ -6058,7 +6108,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274775mk7y",
@@ -6090,7 +6141,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274776odnq",
@@ -6122,7 +6174,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274777atpx",
@@ -6154,7 +6207,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274778aufk",
@@ -6177,10 +6231,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6190,7 +6244,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274779asrc",
@@ -6213,10 +6268,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6226,7 +6281,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274780vhmk",
@@ -6249,10 +6305,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6262,7 +6318,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274781gk04",
@@ -6285,10 +6342,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6298,7 +6355,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794496274782nyhc",
@@ -6321,10 +6379,10 @@
   },
   "wc": "",
   "f": null,
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6334,7 +6392,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17944962747837ebu",
@@ -6366,7 +6425,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794588666464mfbl",
@@ -6389,10 +6449,10 @@
   },
   "wc": "",
   "f": "",
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": "",
-  "ed": "Леонид",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6402,7 +6462,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794772734861vayh",
@@ -6425,7 +6486,7 @@
   },
   "wc": "",
   "f": "",
-  "js": false,
+  "js": true,
   "yd": false,
   "ad": "",
   "ed": "Иль",
@@ -6438,7 +6499,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794776559766zvss",
@@ -6456,7 +6518,8 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-18"
   },
   "wc": "",
   "f": "",
@@ -6473,7 +6536,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179477656453721m7",
@@ -6491,7 +6555,8 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-18"
   },
   "wc": "",
   "f": "",
@@ -6508,7 +6573,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794776566809nevv",
@@ -6526,7 +6592,8 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-18"
   },
   "wc": "",
   "f": "",
@@ -6543,7 +6610,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794776569893j8tq",
@@ -6575,39 +6643,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
- },
- {
-  "uid": "n1794776821737huze",
-  "id": "ТП57-106",
-  "lat": 61.7038698343045,
-  "lon": 30.7129194932923,
-  "t": "S",
-  "g": false,
-  "line": "",
-  "done": false,
-  "date": null,
-  "note": "",
-  "tp": "57",
-  "n": 106,
-  "x": false,
-  "w": {},
-  "wc": "",
-  "f": "",
-  "js": false,
-  "yd": false,
-  "ad": "",
-  "ed": "Иль",
-  "kr": 1,
-  "sv": 0,
-  "h": 8,
-  "ka": null,
-  "vk": false,
-  "sx": false,
-  "pp": true,
-  "sp": null,
-  "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n17947770468533xy2",
@@ -6643,7 +6680,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n179477724251744ai",
@@ -6653,8 +6691,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 81,
@@ -6669,7 +6707,7 @@
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6679,7 +6717,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794778042473tnry",
@@ -6689,8 +6728,8 @@
   "t": "S",
   "g": false,
   "line": "4",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "98",
   "n": 60,
@@ -6705,7 +6744,7 @@
   "js": false,
   "yd": false,
   "ad": "",
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6715,13 +6754,14 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794835616291tlap",
   "id": "ТП57-107",
-  "lat": 61.702953372294,
-  "lon": 30.7131668146496,
+  "lat": 61.7029444612093,
+  "lon": 30.7131411650436,
   "t": "S",
   "g": false,
   "line": "",
@@ -6751,7 +6791,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "n1794925911034nmuh",
@@ -6769,7 +6810,8 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-18"
   },
   "wc": "",
   "f": "",
@@ -6786,7 +6828,222 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n1794992464822kwjn",
+  "id": "ТП98-61",
+  "lat": 61.7117394964131,
+  "lon": 30.7012610678868,
+  "t": "S",
+  "g": false,
+  "line": "4",
+  "done": true,
+  "date": "2026-11-18",
+  "note": "",
+  "tp": "98",
+  "n": 61,
+  "x": false,
+  "w": {
+   "1": "2026-11-18",
+   "2": "2026-11-18",
+   "3": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Леонид",
+  "kr": 2,
+  "sv": 0,
+  "h": 8,
+  "ka": 180,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n17949979489131lgc",
+  "id": "ТП60-82",
+  "lat": 61.7071879186912,
+  "lon": 30.6996477306999,
+  "t": "A",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 82,
+  "x": false,
+  "w": {
+   "1": "2026-11-18",
+   "2": "2026-11-18",
+   "3": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n1794997986028ua1y",
+  "id": "ТП60-83",
+  "lat": 61.7074610813064,
+  "lon": 30.7001678652402,
+  "t": "S",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 83,
+  "x": false,
+  "w": {
+   "1": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n1794997987414a0up",
+  "id": "ТП60-84",
+  "lat": 61.7077696090756,
+  "lon": 30.7008101953371,
+  "t": "S",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 84,
+  "x": false,
+  "w": {
+   "1": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n1794997988483vf2u",
+  "id": "ТП60-85",
+  "lat": 61.7079747693877,
+  "lon": 30.7012848265478,
+  "t": "S",
+  "g": false,
+  "line": "1",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "60",
+  "n": 85,
+  "x": false,
+  "w": {
+   "1": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 0,
+  "sv": 0,
+  "h": 8,
+  "ka": null,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
+ },
+ {
+  "uid": "n1795021801532y2ib",
+  "id": "ТП98-64",
+  "lat": 61.7108864633595,
+  "lon": 30.7045662403107,
+  "t": "S",
+  "g": false,
+  "line": "4",
+  "done": false,
+  "date": null,
+  "note": "",
+  "tp": "98",
+  "n": 64,
+  "x": false,
+  "w": {
+   "1": "2026-11-18"
+  },
+  "wc": "",
+  "f": "",
+  "js": false,
+  "yd": false,
+  "ad": "",
+  "ed": "Иль",
+  "kr": 2,
+  "sv": 0,
+  "h": 8,
+  "ka": 180,
+  "vk": false,
+  "sx": false,
+  "pp": false,
+  "sp": null,
+  "od": null,
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p0",
@@ -6796,8 +7053,8 @@
   "t": "S",
   "g": true,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 48,
@@ -6812,7 +7069,7 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6822,7 +7079,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p1",
@@ -6832,8 +7090,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 47,
@@ -6848,7 +7106,7 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -6858,7 +7116,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p10",
@@ -6894,7 +7153,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p100",
@@ -6935,7 +7195,8 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p101",
@@ -6976,7 +7237,8 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p102",
@@ -7023,7 +7285,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p103",
@@ -7055,7 +7318,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p104",
@@ -7104,7 +7368,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p105",
@@ -7141,7 +7406,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p106",
@@ -7178,7 +7444,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p107",
@@ -7225,7 +7492,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p108",
@@ -7266,7 +7534,8 @@
    "ts": true
   },
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p11",
@@ -7298,7 +7567,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p110",
@@ -7339,7 +7609,8 @@
    "n": 0
   },
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p112",
@@ -7391,7 +7662,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p113",
@@ -7439,7 +7711,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p114",
@@ -7487,7 +7760,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p115",
@@ -7538,7 +7812,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p116",
@@ -7587,7 +7862,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p117",
@@ -7638,7 +7914,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p118",
@@ -7675,7 +7952,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p119",
@@ -7719,7 +7997,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p12",
@@ -7755,7 +8034,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p120",
@@ -7797,7 +8077,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p121",
@@ -7839,7 +8120,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p122",
@@ -7875,7 +8157,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p123",
@@ -7916,7 +8199,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p124",
@@ -7957,7 +8241,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p125",
@@ -7993,7 +8278,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p126",
@@ -8025,7 +8311,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p127",
@@ -8066,7 +8353,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p128",
@@ -8102,7 +8390,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p129",
@@ -8144,7 +8433,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p13",
@@ -8180,7 +8470,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p130",
@@ -8222,7 +8513,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p131",
@@ -8263,7 +8555,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p132",
@@ -8303,7 +8596,8 @@
    "n": 2
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p133",
@@ -8339,7 +8633,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p134",
@@ -8371,7 +8666,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p135",
@@ -8412,7 +8708,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p136",
@@ -8448,7 +8745,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p137",
@@ -8480,7 +8778,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p138",
@@ -8516,7 +8815,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p139",
@@ -8552,7 +8852,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p14",
@@ -8593,7 +8894,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p140",
@@ -8625,7 +8927,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p141",
@@ -8657,7 +8960,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p142",
@@ -8693,7 +8997,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p143",
@@ -8725,7 +9030,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p144",
@@ -8757,7 +9063,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p145",
@@ -8800,7 +9107,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p146",
@@ -8832,7 +9140,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p147",
@@ -8868,7 +9177,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p148",
@@ -8909,7 +9219,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p149",
@@ -8946,7 +9257,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p15",
@@ -8978,13 +9290,14 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p150",
   "id": "ТП98-20",
-  "lat": 61.710890191044,
-  "lon": 30.7044729472566,
+  "lat": 61.7109247167884,
+  "lon": 30.7043582284698,
   "t": "A",
   "g": false,
   "line": "4",
@@ -9019,7 +9332,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p151",
@@ -9051,7 +9365,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p152",
@@ -9087,7 +9402,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p153",
@@ -9128,7 +9444,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p154",
@@ -9169,7 +9486,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p155",
@@ -9201,7 +9519,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p156",
@@ -9233,7 +9552,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p157",
@@ -9265,7 +9585,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p158",
@@ -9297,7 +9618,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p159",
@@ -9329,7 +9651,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p16",
@@ -9365,7 +9688,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p160",
@@ -9397,7 +9721,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p161",
@@ -9433,7 +9758,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p162",
@@ -9465,7 +9791,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p163",
@@ -9506,7 +9833,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p164",
@@ -9547,7 +9875,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p165",
@@ -9573,7 +9902,7 @@
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (старая опора демонтируется — перевес по смете доп. работ, 15.11)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -9589,7 +9918,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p166",
@@ -9625,7 +9955,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p167",
@@ -9669,7 +10000,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p168",
@@ -9715,7 +10047,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p169",
@@ -9751,7 +10084,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p17",
@@ -9792,7 +10126,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p171",
@@ -9824,7 +10159,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p172",
@@ -9856,7 +10192,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p173",
@@ -9888,7 +10225,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p174",
@@ -9920,7 +10258,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p175",
@@ -9952,7 +10291,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p177",
@@ -9984,7 +10324,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p178",
@@ -10016,7 +10357,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p179",
@@ -10048,7 +10390,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p18",
@@ -10084,7 +10427,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p180",
@@ -10116,7 +10460,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p181",
@@ -10148,7 +10493,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p182",
@@ -10180,7 +10526,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p183",
@@ -10221,7 +10568,8 @@
    "n": 1
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p184",
@@ -10257,7 +10605,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p185",
@@ -10289,7 +10638,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p186",
@@ -10325,7 +10675,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p187",
@@ -10357,7 +10708,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p188",
@@ -10403,7 +10755,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p189",
@@ -10435,7 +10788,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p19",
@@ -10476,7 +10830,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p190",
@@ -10486,8 +10841,8 @@
   "t": "A",
   "g": true,
   "line": "5",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "Вода/вывоз",
   "tp": "76",
   "n": 67,
@@ -10502,7 +10857,7 @@
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -10512,7 +10867,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p191",
@@ -10549,7 +10905,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p192",
@@ -10585,7 +10942,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p193",
@@ -10621,7 +10979,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p194",
@@ -10658,7 +11017,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p195",
@@ -10694,7 +11054,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p196",
@@ -10731,7 +11092,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p197",
@@ -10767,7 +11129,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p198",
@@ -10803,7 +11166,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p199",
@@ -10839,7 +11203,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p2",
@@ -10849,8 +11214,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 46,
@@ -10865,7 +11230,7 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -10875,7 +11240,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p20",
@@ -10911,7 +11277,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p200",
@@ -10943,7 +11310,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p201",
@@ -10979,7 +11347,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p202",
@@ -11015,7 +11384,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p203",
@@ -11051,7 +11421,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p204",
@@ -11087,7 +11458,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p205",
@@ -11123,7 +11495,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p206",
@@ -11159,7 +11532,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p207",
@@ -11195,7 +11569,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p208",
@@ -11231,7 +11606,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p209",
@@ -11268,7 +11644,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p21",
@@ -11304,7 +11681,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p210",
@@ -11340,7 +11718,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p211",
@@ -11358,7 +11737,9 @@
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-17",
+   "8": "2026-11-19"
   },
   "wc": "пробили канализацию",
   "f": null,
@@ -11375,7 +11756,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p212",
@@ -11411,7 +11793,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p213",
@@ -11447,7 +11830,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p214",
@@ -11494,7 +11878,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p215",
@@ -11540,7 +11925,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p216",
@@ -11557,16 +11943,17 @@
   "n": 12,
   "x": false,
   "w": {
+   "1": "2026-11-19",
    "2": "2026-11-16",
    "3": "2026-11-16",
    "11": "2026-11-16"
   },
   "wc": null,
-  "f": "G",
+  "f": "",
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Леонид",
+  "ed": "Иль",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -11576,7 +11963,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p217",
@@ -11612,7 +12000,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p218",
@@ -11644,7 +12033,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p219",
@@ -11676,7 +12066,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p22",
@@ -11713,7 +12104,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p220",
@@ -11745,7 +12137,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p221",
@@ -11777,7 +12170,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p222",
@@ -11809,7 +12203,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p223",
@@ -11841,7 +12236,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p224",
@@ -11873,7 +12269,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p225",
@@ -11905,7 +12302,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p226",
@@ -11937,7 +12335,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p227",
@@ -11969,7 +12368,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p228",
@@ -12001,7 +12401,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p229",
@@ -12033,7 +12434,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p23",
@@ -12069,7 +12471,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p230",
@@ -12101,7 +12504,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p231",
@@ -12133,7 +12537,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p232",
@@ -12165,7 +12570,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p233",
@@ -12197,7 +12603,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p234",
@@ -12229,7 +12636,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p235",
@@ -12265,7 +12673,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p236",
@@ -12311,7 +12720,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p237",
@@ -12358,7 +12768,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p238",
@@ -12405,7 +12816,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p239",
@@ -12452,7 +12864,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p24",
@@ -12488,7 +12901,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p240",
@@ -12535,7 +12949,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p241",
@@ -12581,7 +12996,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p242",
@@ -12627,7 +13043,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p243",
@@ -12673,7 +13090,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p244",
@@ -12720,7 +13138,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p245",
@@ -12752,7 +13171,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p246",
@@ -12784,7 +13204,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p247",
@@ -12816,7 +13237,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p248",
@@ -12862,7 +13284,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p249",
@@ -12902,7 +13325,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p25",
@@ -12939,7 +13363,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p250",
@@ -12971,7 +13396,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p251",
@@ -13003,7 +13429,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p252",
@@ -13035,7 +13462,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p253",
@@ -13082,7 +13510,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p254",
@@ -13123,7 +13552,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p255",
@@ -13164,7 +13594,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p256",
@@ -13204,7 +13635,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p257",
@@ -13236,7 +13668,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p258",
@@ -13283,7 +13716,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p259",
@@ -13330,7 +13764,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p26",
@@ -13362,7 +13797,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p260",
@@ -13411,7 +13847,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p261",
@@ -13451,7 +13888,8 @@
   "pp": false,
   "sp": null,
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p262",
@@ -13491,7 +13929,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p263",
@@ -13531,7 +13970,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p264",
@@ -13571,7 +14011,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p265",
@@ -13620,7 +14061,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p266",
@@ -13669,7 +14111,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p267",
@@ -13719,7 +14162,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p268",
@@ -13751,7 +14195,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p269",
@@ -13800,7 +14245,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p27",
@@ -13836,7 +14282,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p270",
@@ -13885,7 +14332,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p271",
@@ -13934,7 +14382,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p272",
@@ -13983,7 +14432,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p273",
@@ -14032,7 +14482,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p274",
@@ -14081,7 +14532,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p275",
@@ -14113,7 +14565,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p276",
@@ -14145,7 +14598,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p277",
@@ -14177,7 +14631,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p278",
@@ -14209,7 +14664,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p279",
@@ -14245,7 +14701,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p28",
@@ -14277,7 +14734,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p281",
@@ -14309,7 +14767,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p282",
@@ -14341,7 +14800,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p283",
@@ -14373,7 +14833,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p284",
@@ -14405,7 +14866,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p285",
@@ -14437,7 +14899,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p286",
@@ -14469,7 +14932,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p287",
@@ -14501,7 +14965,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p288",
@@ -14533,7 +14998,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p289",
@@ -14565,7 +15031,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p29",
@@ -14601,7 +15068,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p290",
@@ -14633,7 +15101,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p291",
@@ -14665,7 +15134,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p292",
@@ -14697,7 +15167,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p293",
@@ -14729,7 +15200,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p294",
@@ -14761,7 +15233,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p295",
@@ -14798,7 +15271,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p296",
@@ -14830,7 +15304,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p297",
@@ -14867,7 +15342,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p298",
@@ -14904,7 +15380,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p299",
@@ -14941,7 +15418,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p3",
@@ -14951,8 +15429,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 45,
@@ -14967,7 +15445,7 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -14977,7 +15455,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p30",
@@ -15014,7 +15493,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p300",
@@ -15051,7 +15531,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p301",
@@ -15083,7 +15564,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p302",
@@ -15120,7 +15602,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p303",
@@ -15152,7 +15635,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p304",
@@ -15190,7 +15674,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p305",
@@ -15227,7 +15712,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p306",
@@ -15259,7 +15745,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p307",
@@ -15291,7 +15778,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p308",
@@ -15323,7 +15811,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p309",
@@ -15361,7 +15850,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p31",
@@ -15397,7 +15887,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p310",
@@ -15434,7 +15925,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p311",
@@ -15466,7 +15958,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p312",
@@ -15503,7 +15996,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p313",
@@ -15540,7 +16034,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p314",
@@ -15577,7 +16072,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p315",
@@ -15614,7 +16110,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p316",
@@ -15646,7 +16143,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p317",
@@ -15683,7 +16181,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p318",
@@ -15720,7 +16219,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p319",
@@ -15757,7 +16257,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p32",
@@ -15793,7 +16294,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p321",
@@ -15830,7 +16332,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p322",
@@ -15867,7 +16370,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p323",
@@ -15904,7 +16408,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p324",
@@ -15941,7 +16446,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p325",
@@ -15973,7 +16479,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p326",
@@ -16005,7 +16512,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p327",
@@ -16037,7 +16545,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p328",
@@ -16069,7 +16578,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p329",
@@ -16105,7 +16615,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p33",
@@ -16115,15 +16626,16 @@
   "t": "A",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "90",
   "tp": "60",
   "n": 22,
   "x": false,
   "w": {
    "1": "2026-11-17",
-   "2": "2026-11-17"
+   "2": "2026-11-17",
+   "3": "2026-11-17"
   },
   "wc": null,
   "f": null,
@@ -16140,7 +16652,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p330",
@@ -16172,7 +16685,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p331",
@@ -16208,7 +16722,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p332",
@@ -16240,7 +16755,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p333",
@@ -16276,7 +16792,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p334",
@@ -16308,7 +16825,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p335",
@@ -16344,7 +16862,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p336",
@@ -16376,7 +16895,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p337",
@@ -16412,7 +16932,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p338",
@@ -16444,7 +16965,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p339",
@@ -16476,7 +16998,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p34",
@@ -16491,7 +17014,7 @@
   "note": "",
   "tp": "60",
   "n": 4,
-  "x": false,
+  "x": true,
   "w": {},
   "wc": null,
   "f": null,
@@ -16508,7 +17031,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p340",
@@ -16544,7 +17068,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p341",
@@ -16580,7 +17105,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p342",
@@ -16616,7 +17142,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p343",
@@ -16653,7 +17180,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p344",
@@ -16689,7 +17217,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p345",
@@ -16725,7 +17254,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p346",
@@ -16762,7 +17292,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p347",
@@ -16798,7 +17329,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p348",
@@ -16834,7 +17366,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p349",
@@ -16871,7 +17404,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p35",
@@ -16907,7 +17441,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p350",
@@ -16943,7 +17478,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p351",
@@ -16979,7 +17515,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p352",
@@ -17015,7 +17552,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p353",
@@ -17047,7 +17585,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p354",
@@ -17083,7 +17622,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p355",
@@ -17119,7 +17659,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p356",
@@ -17155,7 +17696,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p357",
@@ -17191,7 +17733,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p358",
@@ -17227,7 +17770,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p359",
@@ -17259,7 +17803,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p36",
@@ -17274,7 +17819,7 @@
   "note": "На сквер",
   "tp": "60",
   "n": 3,
-  "x": false,
+  "x": true,
   "w": {},
   "wc": null,
   "f": null,
@@ -17291,7 +17836,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p360",
@@ -17323,7 +17869,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p361",
@@ -17359,7 +17906,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p362",
@@ -17391,7 +17939,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p363",
@@ -17427,7 +17976,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p364",
@@ -17463,7 +18013,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p365",
@@ -17499,7 +18050,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p366",
@@ -17531,7 +18083,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p367",
@@ -17567,7 +18120,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p368",
@@ -17603,7 +18157,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p369",
@@ -17621,7 +18176,8 @@
   "x": false,
   "w": {
    "1": "2026-10-31",
-   "2": "2026-10-31"
+   "2": "2026-10-31",
+   "3": "2026-11-18"
   },
   "wc": null,
   "f": null,
@@ -17638,7 +18194,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p37",
@@ -17648,23 +18205,19 @@
   "t": "A",
   "g": true,
   "line": "1",
-  "done": true,
-  "date": "2026-11-11",
+  "done": false,
+  "date": null,
   "note": "180",
   "tp": "60",
   "n": 5,
-  "x": false,
-  "w": {
-   "1": "2026-11-04",
-   "2": "2026-11-04",
-   "3": "2026-11-04"
-  },
+  "x": true,
+  "w": {},
   "wc": null,
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (старая опора остаётся — совм. подвеска без работ, 15.11)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -17674,7 +18227,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p370",
@@ -17706,7 +18260,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p371",
@@ -17738,7 +18293,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p372",
@@ -17774,7 +18330,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p373",
@@ -17806,7 +18363,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p374",
@@ -17838,7 +18396,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p375",
@@ -17874,7 +18433,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p376",
@@ -17906,7 +18466,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p377",
@@ -17938,7 +18499,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p378",
@@ -17972,7 +18534,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p379",
@@ -18009,7 +18572,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p38",
@@ -18045,7 +18609,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p380",
@@ -18081,7 +18646,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p381",
@@ -18117,7 +18683,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p382",
@@ -18149,7 +18716,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p383",
@@ -18181,7 +18749,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p384",
@@ -18213,7 +18782,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p385",
@@ -18247,7 +18817,8 @@
   "pp": true,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p386",
@@ -18279,7 +18850,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p387",
@@ -18311,7 +18883,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p388",
@@ -18348,7 +18921,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p389",
@@ -18384,7 +18958,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p39",
@@ -18420,7 +18995,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p390",
@@ -18457,7 +19033,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p391",
@@ -18494,7 +19071,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p392",
@@ -18531,7 +19109,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p393",
@@ -18568,7 +19147,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p394",
@@ -18600,7 +19180,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p395",
@@ -18632,7 +19213,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p396",
@@ -18669,7 +19251,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p397",
@@ -18706,7 +19289,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p398",
@@ -18743,7 +19327,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p399",
@@ -18780,7 +19365,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p4",
@@ -18790,8 +19376,8 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": false,
-  "date": null,
+  "done": true,
+  "date": "2026-11-18",
   "note": "",
   "tp": "60",
   "n": 44,
@@ -18806,7 +19392,7 @@
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Леонид",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -18816,7 +19402,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p40",
@@ -18826,23 +19413,19 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": true,
-  "date": "2026-11-04",
+  "done": false,
+  "date": null,
   "note": "180",
   "tp": "60",
   "n": 6,
-  "x": false,
-  "w": {
-   "1": "2026-10-17",
-   "2": "2026-10-17",
-   "3": "2026-10-17"
-  },
+  "x": true,
+  "w": {},
   "wc": "",
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (старая опора остаётся — совм. подвеска без работ, 15.11)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -18852,7 +19435,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p400",
@@ -18889,7 +19473,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p401",
@@ -18926,7 +19511,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p402",
@@ -18958,7 +19544,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p403",
@@ -18995,7 +19582,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p404",
@@ -19032,7 +19620,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p405",
@@ -19069,7 +19658,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p406",
@@ -19107,7 +19697,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p407",
@@ -19144,7 +19735,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p408",
@@ -19181,7 +19773,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p409",
@@ -19221,7 +19814,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p41",
@@ -19257,7 +19851,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p410",
@@ -19295,7 +19890,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p411",
@@ -19333,7 +19929,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p412",
@@ -19370,7 +19967,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p413",
@@ -19410,7 +20008,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p414",
@@ -19447,7 +20046,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p415",
@@ -19484,7 +20084,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p416",
@@ -19522,7 +20123,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p417",
@@ -19559,7 +20161,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p418",
@@ -19599,7 +20202,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p419",
@@ -19636,7 +20240,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p42",
@@ -19646,23 +20251,19 @@
   "t": "S",
   "g": false,
   "line": "1",
-  "done": true,
-  "date": "2026-11-04",
+  "done": false,
+  "date": null,
   "note": "180",
   "tp": "60",
   "n": 7,
-  "x": false,
-  "w": {
-   "1": "2026-10-17",
-   "2": "2026-10-17",
-   "3": "2026-10-17"
-  },
+  "x": true,
+  "w": {},
   "wc": "",
   "f": null,
   "js": true,
   "yd": false,
   "ad": null,
-  "ed": "Claude (старая опора остаётся — совм. подвеска без работ, 15.11)",
+  "ed": "Иль",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -19672,7 +20273,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p420",
@@ -19704,7 +20306,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p421",
@@ -19736,7 +20339,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p422",
@@ -19773,7 +20377,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p423",
@@ -19810,7 +20415,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p424",
@@ -19850,7 +20456,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p425",
@@ -19887,7 +20494,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p426",
@@ -19924,7 +20532,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p427",
@@ -19962,7 +20571,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p428",
@@ -19999,7 +20609,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p43",
@@ -20036,7 +20647,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p430",
@@ -20068,7 +20680,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p431",
@@ -20100,7 +20713,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p432",
@@ -20132,7 +20746,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p433",
@@ -20169,7 +20784,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p434",
@@ -20208,7 +20824,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p435",
@@ -20246,7 +20863,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p436",
@@ -20288,7 +20906,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p437",
@@ -20320,7 +20939,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p438",
@@ -20361,7 +20981,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p439",
@@ -20407,7 +21028,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p44",
@@ -20443,7 +21065,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p440",
@@ -20485,7 +21108,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p441",
@@ -20523,7 +21147,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p442",
@@ -20563,7 +21188,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p443",
@@ -20600,7 +21226,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p444",
@@ -20640,7 +21267,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p445",
@@ -20682,7 +21310,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p446",
@@ -20720,7 +21349,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p447",
@@ -20761,7 +21391,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p448",
@@ -20798,7 +21429,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p449",
@@ -20840,7 +21472,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p45",
@@ -20876,7 +21509,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p450",
@@ -20917,7 +21551,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p451",
@@ -20954,7 +21589,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p452",
@@ -20991,7 +21627,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p453",
@@ -21035,7 +21672,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p454",
@@ -21072,7 +21710,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p455",
@@ -21104,7 +21743,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p457",
@@ -21142,7 +21782,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p458",
@@ -21179,7 +21820,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p459",
@@ -21215,7 +21857,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p46",
@@ -21251,7 +21894,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p460",
@@ -21287,7 +21931,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p461",
@@ -21323,7 +21968,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p462",
@@ -21361,7 +22007,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p463",
@@ -21398,7 +22045,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p464",
@@ -21435,7 +22083,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p465",
@@ -21472,7 +22121,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p466",
@@ -21506,7 +22156,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p467",
@@ -21544,7 +22195,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p468",
@@ -21582,7 +22234,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p469",
@@ -21620,7 +22273,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p47",
@@ -21656,7 +22310,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p470",
@@ -21693,7 +22348,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p471",
@@ -21729,7 +22385,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p472",
@@ -21765,7 +22422,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p473",
@@ -21802,7 +22460,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p474",
@@ -21839,7 +22498,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p475",
@@ -21875,7 +22535,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p476",
@@ -21911,7 +22572,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p477",
@@ -21943,7 +22605,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p478",
@@ -21975,7 +22638,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p479",
@@ -22012,7 +22676,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p48",
@@ -22048,7 +22713,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p480",
@@ -22085,7 +22751,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p481",
@@ -22122,7 +22789,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p482",
@@ -22163,7 +22831,8 @@
    "a": 2,
    "d": "2026-11-17",
    "h": 2
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p483",
@@ -22200,7 +22869,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p484",
@@ -22236,7 +22906,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p485",
@@ -22272,7 +22943,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p486",
@@ -22308,7 +22980,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p487",
@@ -22345,7 +23018,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p488",
@@ -22381,7 +23055,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p489",
@@ -22422,7 +23097,8 @@
    "a": 3,
    "d": "2026-11-17",
    "h": 3
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p49",
@@ -22458,7 +23134,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p490",
@@ -22494,7 +23171,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p491",
@@ -22530,7 +23208,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p492",
@@ -22567,7 +23246,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p493",
@@ -22604,7 +23284,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p494",
@@ -22641,7 +23322,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p495",
@@ -22673,7 +23355,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p496",
@@ -22692,14 +23375,15 @@
   "w": {
    "1": "2026-10-16",
    "2": "2026-10-16",
-   "3": "2026-10-16"
+   "3": "2026-10-16",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Начальник участка",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -22709,7 +23393,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p497",
@@ -22728,14 +23413,15 @@
   "w": {
    "1": "2026-10-16",
    "2": "2026-10-16",
-   "3": "2026-10-16"
+   "3": "2026-10-16",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Начальник участка",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -22745,7 +23431,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p498",
@@ -22764,14 +23451,15 @@
   "w": {
    "1": "2026-10-16",
    "2": "2026-10-16",
-   "3": "2026-10-16"
+   "3": "2026-10-16",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Claude (заземление по РД + добор до 92, 16.11)",
+  "ed": "Начальник участка",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -22781,7 +23469,12 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": {
+   "a": 1,
+   "d": "2026-11-18",
+   "h": 1
+  },
+  "vf": null
  },
  {
   "uid": "p499",
@@ -22822,7 +23515,8 @@
    "a": 3,
    "d": "2026-11-17",
    "h": 3
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p5",
@@ -22858,7 +23552,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p50",
@@ -22894,7 +23589,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p500",
@@ -22926,7 +23622,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p501",
@@ -22962,7 +23659,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p502",
@@ -22998,7 +23696,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p503",
@@ -23034,7 +23733,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p504",
@@ -23071,7 +23771,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p505",
@@ -23103,7 +23804,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p506",
@@ -23139,7 +23841,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p507",
@@ -23175,7 +23878,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p508",
@@ -23211,7 +23915,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p509",
@@ -23247,7 +23952,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p51",
@@ -23283,7 +23989,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p510",
@@ -23319,7 +24026,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p511",
@@ -23355,7 +24063,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p512",
@@ -23391,7 +24100,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p513",
@@ -23427,7 +24137,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p514",
@@ -23464,7 +24175,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p515",
@@ -23500,7 +24212,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p516",
@@ -23532,7 +24245,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p517",
@@ -23568,7 +24282,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p518",
@@ -23604,7 +24319,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p519",
@@ -23640,7 +24356,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p52",
@@ -23676,7 +24393,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p520",
@@ -23712,7 +24430,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p521",
@@ -23748,7 +24467,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p522",
@@ -23784,7 +24504,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p523",
@@ -23821,7 +24542,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p524",
@@ -23857,7 +24579,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p525",
@@ -23893,7 +24616,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p526",
@@ -23930,7 +24654,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p527",
@@ -23966,7 +24691,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p528",
@@ -24002,7 +24728,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p529",
@@ -24038,7 +24765,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p53",
@@ -24070,7 +24798,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p530",
@@ -24106,7 +24835,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p531",
@@ -24142,7 +24872,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p532",
@@ -24178,7 +24909,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p533",
@@ -24210,7 +24942,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p534",
@@ -24246,7 +24979,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p535",
@@ -24282,7 +25016,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p536",
@@ -24318,7 +25053,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p537",
@@ -24354,7 +25090,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p538",
@@ -24390,7 +25127,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p539",
@@ -24410,7 +25148,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24427,7 +25167,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p54",
@@ -24463,7 +25204,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p540",
@@ -24483,7 +25225,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24500,7 +25244,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p541",
@@ -24520,7 +25265,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24541,7 +25288,8 @@
    "a": 2,
    "d": "2026-11-16",
    "h": 2
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p542",
@@ -24561,7 +25309,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24578,7 +25328,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p543",
@@ -24598,7 +25349,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24619,7 +25372,8 @@
    "a": 3,
    "d": "2026-11-16",
    "h": 3
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p544",
@@ -24658,7 +25412,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p545",
@@ -24697,7 +25452,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p546",
@@ -24736,7 +25492,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p547",
@@ -24756,7 +25513,9 @@
    "1": "2026-10-17",
    "2": "2026-10-17",
    "3": "2026-10-17",
-   "5": "2026-11-17"
+   "5": "2026-11-17",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -24777,7 +25536,8 @@
    "a": 3,
    "d": "2026-11-17",
    "h": 3
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p548",
@@ -24814,7 +25574,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p549",
@@ -24856,7 +25617,8 @@
   "ar": {
    "d": "2026-11-17",
    "s": 1
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p55",
@@ -24892,7 +25654,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p550",
@@ -24931,7 +25694,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p551",
@@ -24974,7 +25738,8 @@
    "a": 1,
    "d": "2026-11-17",
    "h": 1
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p552",
@@ -24994,7 +25759,9 @@
    "1": "2026-10-19",
    "2": "2026-10-19",
    "3": "2026-10-19",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -25016,7 +25783,8 @@
    "d": "2026-11-17",
    "h": 2,
    "s": 1
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p553",
@@ -25052,7 +25820,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p554",
@@ -25088,7 +25857,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p555",
@@ -25124,7 +25894,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p556",
@@ -25161,7 +25932,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p557",
@@ -25181,7 +25953,9 @@
    "1": "2026-10-19",
    "2": "2026-10-19",
    "3": "2026-10-19",
-   "5": "2026-11-16"
+   "5": "2026-11-16",
+   "6": "2026-11-18",
+   "12": "2026-11-18"
   },
   "wc": "",
   "f": null,
@@ -25202,7 +25976,8 @@
    "a": 1,
    "d": "2026-11-16",
    "h": 1
-  }
+  },
+  "vf": null
  },
  {
   "uid": "p558",
@@ -25239,7 +26014,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p559",
@@ -25258,14 +26034,15 @@
   "w": {
    "1": "2026-10-17",
    "2": "2026-10-17",
-   "3": "2026-10-17"
+   "3": "2026-10-17",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Начальник участка",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -25275,7 +26052,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p56",
@@ -25311,7 +26089,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p560",
@@ -25347,7 +26126,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p561",
@@ -25383,7 +26163,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p562",
@@ -25419,7 +26200,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p563",
@@ -25438,14 +26220,15 @@
   "w": {
    "1": "2026-10-17",
    "2": "2026-10-17",
-   "3": "2026-10-18"
+   "3": "2026-10-18",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Начальник участка",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -25455,7 +26238,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p564",
@@ -25491,7 +26275,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p565",
@@ -25510,14 +26295,15 @@
   "w": {
    "1": "2026-10-17",
    "2": "2026-10-17",
-   "3": "2026-10-18"
+   "3": "2026-10-18",
+   "5": "2026-11-18"
   },
   "wc": "",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Иль",
+  "ed": "Начальник участка",
   "kr": 1,
   "sv": 0,
   "h": 8,
@@ -25527,7 +26313,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p566",
@@ -25546,14 +26333,15 @@
   "w": {
    "1": "2026-10-17",
    "2": "2026-10-17",
-   "3": "2026-10-18"
+   "3": "2026-10-18",
+   "5": "2026-11-18"
   },
   "wc": "Фсб",
   "f": null,
   "js": false,
   "yd": false,
   "ad": null,
-  "ed": "Женя",
+  "ed": "Начальник участка",
   "kr": 2,
   "sv": 0,
   "h": 8,
@@ -25563,7 +26351,12 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": {
+   "a": 1,
+   "d": "2026-11-18",
+   "h": 1
+  },
+  "vf": null
  },
  {
   "uid": "p567",
@@ -25595,7 +26388,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p568",
@@ -25627,7 +26421,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p569",
@@ -25659,7 +26454,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p57",
@@ -25695,7 +26491,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p570",
@@ -25727,7 +26524,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p571",
@@ -25759,7 +26557,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p572",
@@ -25796,7 +26595,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p573",
@@ -25832,7 +26632,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p574",
@@ -25869,7 +26670,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p575",
@@ -25905,7 +26707,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p576",
@@ -25942,7 +26745,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p577",
@@ -25978,7 +26782,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p578",
@@ -26014,7 +26819,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p579",
@@ -26050,7 +26856,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p58",
@@ -26086,7 +26893,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p580",
@@ -26122,7 +26930,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p581",
@@ -26168,7 +26977,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p582",
@@ -26204,7 +27014,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p583",
@@ -26236,7 +27047,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p584",
@@ -26280,7 +27092,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p585",
@@ -26324,7 +27137,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p586",
@@ -26360,7 +27174,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p587",
@@ -26404,7 +27219,8 @@
    "tg": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p588",
@@ -26440,7 +27256,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p589",
@@ -26477,7 +27294,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p59",
@@ -26517,7 +27335,8 @@
    "e": "Иль"
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p590",
@@ -26554,7 +27373,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p591",
@@ -26591,7 +27411,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p592",
@@ -26629,7 +27450,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p593",
@@ -26665,7 +27487,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p594",
@@ -26697,7 +27520,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p595",
@@ -26734,7 +27558,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p596",
@@ -26771,7 +27596,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p597",
@@ -26807,7 +27633,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p598",
@@ -26844,7 +27671,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p599",
@@ -26881,7 +27709,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p6",
@@ -26917,7 +27746,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p60",
@@ -26949,7 +27779,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p600",
@@ -26981,7 +27812,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p601",
@@ -27013,7 +27845,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p602",
@@ -27050,7 +27883,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p61",
@@ -27082,7 +27916,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p62",
@@ -27114,7 +27949,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p63",
@@ -27146,7 +27982,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p64",
@@ -27183,7 +28020,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p65",
@@ -27220,7 +28058,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p66",
@@ -27257,7 +28096,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p67",
@@ -27294,7 +28134,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p68",
@@ -27331,7 +28172,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p69",
@@ -27368,7 +28210,8 @@
   "pp": false,
   "sp": null,
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p7",
@@ -27404,7 +28247,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p70",
@@ -27441,7 +28285,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p71",
@@ -27478,7 +28323,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p72",
@@ -27515,7 +28361,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p73",
@@ -27552,7 +28399,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p74",
@@ -27589,7 +28437,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p75",
@@ -27627,7 +28476,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p76",
@@ -27664,7 +28514,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p77",
@@ -27696,7 +28547,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p78",
@@ -27733,7 +28585,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p79",
@@ -27770,7 +28623,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p8",
@@ -27806,7 +28660,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p80",
@@ -27843,7 +28698,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p81",
@@ -27891,7 +28747,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p82",
@@ -27938,7 +28795,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p83",
@@ -27983,7 +28841,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p84",
@@ -28028,7 +28887,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p85",
@@ -28073,7 +28933,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p86",
@@ -28114,7 +28975,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p87",
@@ -28162,7 +29024,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p88",
@@ -28207,7 +29070,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p89",
@@ -28244,7 +29108,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p9",
@@ -28280,7 +29145,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p90",
@@ -28321,7 +29187,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p91",
@@ -28364,7 +29231,8 @@
    "ts": true
   },
   "od": "k",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p92",
@@ -28401,7 +29269,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p93",
@@ -28443,7 +29312,8 @@
    "ts": true
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p94",
@@ -28480,7 +29350,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p95",
@@ -28517,7 +29388,8 @@
   "pp": false,
   "sp": null,
   "od": null,
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p96",
@@ -28558,7 +29430,8 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p97",
@@ -28598,7 +29471,8 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p98",
@@ -28639,7 +29513,8 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  },
  {
   "uid": "p99",
@@ -28680,6 +29555,7 @@
    "e": "Иль"
   },
   "od": "d",
-  "ar": null
+  "ar": null,
+  "vf": null
  }
 ]
