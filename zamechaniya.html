@@ -202,7 +202,7 @@ const VFZ={'24':'ЗФ-24/8 (СФГ-400)','30':'ЗФ-30/8 (СФГ-700)'},VFS={'24
 function vfEl(p){return !p.x&&!p.pp&&!isG(p)&&(wdone(p,1)||wdone(p,2))}
 function vfExp(p){return p.t=='A'?'30':'24'}
 function vfBad(p){const v=p.vf;if(!v)return '';const a=[];if(v.z&&v.z!=vfExp(p))a.push('закладная '+VFS[v.z]+' вместо '+VFS[vfExp(p)]);if(+v.mv>=3)a.push('точка перенесена на '+v.mv+' м');return a.join(', ')}
-function vfRing(p){if(!p.vf)return '';return `<circle r="17.5" fill="none" stroke="${vfBad(p)?'#f97316':'#16a34a'}" stroke-width="3"/>`}
+function vfRing(p){if(!p.vf)return '';const k=p.vk&&!p.x;return `<circle r="${k?20.5:17.5}" fill="none" stroke="${vfBad(p)?'#f97316':'#16a34a'}" stroke-width="${k?3.6:3}"/>`}
 function vfToday(){return new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10)}
 function vfTxt(p){const v=p.vf;if(!v)return vfEl(p)?'<div style="font-size:11.5px;color:#9ca3af">Сверка на месте: не сверена</div>':'';const b=vfBad(p);
  return `<div style="font-size:11.5px;color:${b?'#ea580c':'#15803d'}">Сверено ${esc(v.d||'')}${v.e?' · '+esc(v.e):''}: закладная ${VFS[v.z||vfExp(p)]}${b?' · <b>'+b+'</b>':''}${v.c?' · '+esc(v.c):''}</div>`}
