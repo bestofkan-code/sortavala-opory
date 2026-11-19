@@ -1317,11 +1317,19 @@ catch(e){si.textContent='Адреса не определены ('+e.message+'),
 function worked(p){return !p.x&&(p.done||Object.keys(p.w||{}).length>0)}
 function wDates(L2){const ks=wsel().length?wsel():WK.map(w=>w[0]),f=$('wdf').value,e=$('wdt').value,D2=[];L2.forEach(p=>ks.forEach(k=>{const v=wd(p,k);if(/^\d{4}-\d\d-\d\d/.test(v)&&(!f||v>=f)&&(!e||v<=e))D2.push(v.slice(0,10))}));if(!D2.length&&(f||e))return[f||e,e||f];D2.sort();return D2.length?[D2[0],D2[D2.length-1]]:null}
 function rd(v){return v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4)}
-function pdfName(L2){const r=wDates(L2),t=r?(r[0]==r[1]?rd(r[0]):rd(r[0])+'–'+rd(r[1])):rd(LD());return{dl:r?'работы '+(r[0]==r[1]?rd(r[0]):'с '+rd(r[0])+' по '+rd(r[1])):'',file:'Отчёт по опорам '+t+'.pdf'}}
-function pdfArea(){const a=pdfArea0();if(!a)return a;const L2=a.only||(a.bb?P.filter(p=>p.lat>=a.bb.s&&p.lat<=a.bb.n&&p.lon>=a.bb.w&&p.lon<=a.bb.e):P),n=pdfName(L2);a.file=n.file;if(n.dl)a.title+=' · '+n.dl;return a}
+function pdfFlt(){const a=[],v=(n)=>{try{return eval(n)}catch(e){return false}};
+ if(v('VKF'))a.push('ввод КЛ');if(v('FJ'))a.push('совместная подвеска');if(v('NB'))a.push('не забетонированные');if(v('GY'))a.push('серые (предполагаемые)');if(v('NK'))a.push('не забурены котлованы');if(v('VS'))a.push('не сверены котлованы');
+ try{const t=ftyTxt();if(t)a.push(t)}catch(e){}
+ const ks=wsel();if(ks.length){const nm=k=>{const w=WK.find(x=>x[0]==k);return w?w[1].toLowerCase():String(k)},neg=$('wm').value!='1';a.push((neg?'не выполнено: ':'')+ks.map(nm).join(ks.length>1&&$('wl').value=='all'?' + ':', '))}
+ else if($('wm').value!='1'&&($('wdf').value||$('wdt').value))a.push('работы не выполнены');
+ return a}
+function pdfName(L2){const r=wDates(L2),t=r?(r[0]==r[1]?rd(r[0]):rd(r[0])+'–'+rd(r[1])):rd(LD()),m=$('parea').value,base=m=='all'?'Общий план':m=='view'?'План участка':'Опоры в работе',F=pdfFlt(),tp=tpLbl();
+ const parts=[base].concat(F).concat(tp?[tp]:[]).concat([t]);let f=parts.join(' — ').replace(/[\\/:*?"<>|]+/g,' ').replace(/\s+/g,' ').trim();if(f.length>150)f=f.slice(0,147).trim()+'…';
+ return{dl:(r?'работы '+(r[0]==r[1]?rd(r[0]):'с '+rd(r[0])+' по '+rd(r[1])):''),flt:F.join(', '),file:f+'.pdf'}}
+function pdfArea(){const a=pdfArea0();if(!a)return a;const L2=a.only||(a.bb?P.filter(p=>p.lat>=a.bb.s&&p.lat<=a.bb.n&&p.lon>=a.bb.w&&p.lon<=a.bb.e):P),n=pdfName(L2);a.file=n.file;if(n.flt)a.title+=' · '+n.flt;if(n.dl)a.title+=' · '+n.dl;return a}
 function pdfArea0(){const m=$('parea').value,f=tpLbl(),pad=(b)=>{const dl=Math.max(0,.0012-(b.n-b.s))/2,dw=Math.max(0,.0024-(b.e-b.w))/2,ml=(b.n-b.s)*.04+.00015,mw=(b.e-b.w)*.04+.0003;return{s:b.s-dl-ml,n:b.n+dl+ml,w:b.w-dw-mw,e:b.e+dw+mw}},box=L2=>pad({s:Math.min(...L2.map(p=>p.lat)),n:Math.max(...L2.map(p=>p.lat)),w:Math.min(...L2.map(p=>p.lon)),e:Math.max(...L2.map(p=>p.lon))});
 if(m=='view'){const b=map.getBounds();return{bb:{s:b.getSouth(),n:b.getNorth(),w:b.getWest(),e:b.getEast()},title:'План участка (как на экране)'+(f?', '+f:''),file:'karta_opor_uchastok.pdf'}}
-if(m=='all'){const L2=P.filter(tpOk);if(!L2.length)return null;return{only:f?L2:null,bb:box(L2),title:(f?'План: '+f:'Общий план')+', все опоры',file:'karta_opor_obshchiy_plan.pdf'}}
+if(m=='all'){const sp=pdfFlt().length,L2=P.filter(p=>tpOk(p)&&(!sp||vis(p)));if(!L2.length)return null;return{only:(f||sp)?L2:null,bb:box(L2),title:(f?'План: '+f:'Общий план')+', все опоры',file:'karta_opor_obshchiy_plan.pdf'}}
 const L2=P.filter(p=>worked(p)&&tpOk(p)&&wmatch(p));if(!L2.length)return null;
 const fl=wsel().length||$('wdf').value||$('wdt').value;return{only:L2,bb:box(L2),title:'Опоры в работе'+(f?', '+f:'')+(fl?', по фильтру видов работ':''),file:'karta_opor_v_rabote.pdf'}}
 function paInfo(){const a=$('parea').value=='work'?pdfArea():null;$('pai').textContent=$('parea').value!='work'?'':a?'На плане только опоры, где отмечена хотя бы одна работа'+(FTS.size?(FTS.size>1?' на выбранных ТП':' на выбранной ТП'):'')+'.':'Сейчас нет опор с отмеченными работами под выбранными фильтрами.'}
