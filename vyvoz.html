@@ -81,7 +81,7 @@ const DONE=13;
 let P=[],SEL=new Set(TY.map(t=>t[0])),ADR={},SESS=null,PTS=[];
 try{ADR=JSON.parse(localStorage.getItem(KEY+'_adr')||'{}')||{}}catch(e){}
 try{SESS=JSON.parse(localStorage.getItem(KEY+'_auth')||'null')}catch(e){}
-const map=L.map('m',{zoomControl:true}).setView([61.705,30.69],14);
+const map=L.map('m',{zoomControl:true,zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:120}).setView([61.705,30.69],14);
 const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
 const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
 L.control.layers({'Карта':osm,'Спутник':sat}).addTo(map);map.attributionControl.setPrefix(false);
