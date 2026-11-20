@@ -1052,7 +1052,10 @@ if(p.t=='A'){g.strokeStyle=(done||p.x)?st:'#111';g.lineWidth=lw;const k=r*1.45;g
 if(p.g&&r>7){g.strokeStyle='#5f8a00';g.lineWidth=lw*.8;g.beginPath();g.moveTo(x+r*1.1,y+r*.4);g.lineTo(x+r*1.1,y+r*1.0);g.moveTo(x+r*.6,y+r*1.0);g.lineTo(x+r*1.6,y+r*1.0);g.stroke()}
 if(p.js){g.beginPath();g.arc(x-r*1.5,y+r*1.5,Math.max(3,r*.55),0,7);g.fillStyle='#dc2626';g.fill();g.strokeStyle='#fff';g.lineWidth=1.5;g.stroke()}
 if(p.vk&&!p.x){g.strokeStyle='#c026d3';g.lineWidth=lw*.9;g.beginPath();g.arc(x,y,r*1.85,0,7);g.stroke();g.fillStyle='#c026d3';g.fillRect(x-r*2.3,y-r*2.3,r*1.1,r*1.1)}}
-async function buildPlan(o){const A3=o.paper=='A3',u=250/25.4,CW=Math.round((A3?420:297)*u),CH=Math.round((A3?297:210)*u),cv=document.createElement('canvas');cv.width=CW;cv.height=CH;const g=cv.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,CW,CH);
+
+function SHD(t){return String(t).replace(/Шуно Дорожная/g,'ШД')}
+function shdCtx(g){const f=g.fillText.bind(g),k=g.strokeText.bind(g);g.fillText=(t,...a)=>f(SHD(t),...a);g.strokeText=(t,...a)=>k(SHD(t),...a);return g}
+async function buildPlan(o){const A3=o.paper=='A3',u=250/25.4,CW=Math.round((A3?420:297)*u),CH=Math.round((A3?297:210)*u),cv=document.createElement('canvas');cv.width=CW;cv.height=CH;const g=shdCtx(cv.getContext('2d'));g.fillStyle='#fff';g.fillRect(0,0,CW,CH);
 const GO=o.gost!==false,LG=o.legend!==false,FL=20*u,FM=5*u,SW=185*u,SHh=55*u,pad=10*u,panelW=GO?(LG?(A3?126:96)*u:0):(LG?(A3?96:72)*u:0),top=GO?FM:(A3?22:18)*u,mx=GO?FL:pad,my=top,mw=GO?CW-FL-FM-panelW:CW-2*pad-panelW-(LG?4*u:0),mh=GO?CH-2*FM:CH-top-pad-4*u,F=GO?'osifont, Arial, Helvetica, sans-serif':'Arial, Helvetica, sans-serif',SOV=GO?Math.max(0,SW-panelW):0;
 if(GO&&!window.OSIF){try{const ff=new FontFace('osifont','url(fonts/osifont-lgpl3fe.woff)');await ff.load();document.fonts.add(ff);window.OSIF=1}catch(e){}}
 const wX=lo=>(lo+180)/360*256,wY=la=>{const s=Math.sin(la*Math.PI/180);return(.5-Math.log((1+s)/(1-s))/(4*Math.PI))*256};
@@ -1322,7 +1325,7 @@ function pdfFlt(){const a=[],v=(n)=>{try{return eval(n)}catch(e){return false}};
  else if($('wm').value!='1'&&($('wdf').value||$('wdt').value))a.push('работы не выполнены');
  return a}
 function pdfName(L2){const r=wDates(L2),t=r?(r[0]==r[1]?rd(r[0]):rd(r[0])+'–'+rd(r[1])):rd(LD()),m=$('parea').value,base=m=='all'?'Общий план':m=='view'?'План участка':'Опоры в работе',F=pdfFlt(),tp=tpLbl();
- const parts=[base].concat(F).concat(tp?[tp]:[]).concat([t]);let f=parts.join(' — ').replace(/[\\/:*?"<>|]+/g,' ').replace(/\s+/g,' ').trim();if(f.length>150)f=f.slice(0,147).trim()+'…';
+ const parts=[base].concat(F).concat(tp?[tp]:[]).concat([t]);let f=SHD(parts.join(' — ')).replace(/[\\/:*?"<>|]+/g,' ').replace(/\s+/g,' ').trim();if(f.length>150)f=f.slice(0,147).trim()+'…';
  return{dl:(r?'работы '+(r[0]==r[1]?rd(r[0]):'с '+rd(r[0])+' по '+rd(r[1])):''),flt:F.join(', '),file:f+'.pdf'}}
 function pdfArea(){const a=pdfArea0();if(!a)return a;const L2=a.only||(a.bb?P.filter(p=>p.lat>=a.bb.s&&p.lat<=a.bb.n&&p.lon>=a.bb.w&&p.lon<=a.bb.e):P),n=pdfName(L2);a.file=n.file;if(n.flt)a.title+=' · '+n.flt;if(n.dl)a.title+=' · '+n.dl;return a}
 function pdfVis(p){const s0=VS;VS=false;try{return vis(p)}finally{VS=s0}}
@@ -1512,7 +1515,7 @@ async function ppReport(KS,TT){KS=Array.isArray(KS)?KS:[PRK];TT=TT||PRT;const st
  st.textContent='Загружаю фото…';if(!window.jspdf)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');const{jsPDF}=window.jspdf,doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
  const W=1754,Hh=1240,F='Arial, Helvetica, sans-serif',ds=L2.map(p=>wd(p,p._k)).filter(v=>/^\d{4}-/.test(v)).sort(),rd=v=>v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4),per=ds.length?(ds[0]==ds[ds.length-1]?rd(ds[0]):rd(ds[0])+'–'+rd(ds[ds.length-1])):rd(LD());
  const pages=[];for(let i=0;i<L2.length;i+=2)pages.push(L2.slice(i,i+2));let pn=0,miss=0;
- for(const pg of pages){pn++;st.textContent='Страница '+pn+' из '+pages.length+'…';const cv=document.createElement('canvas');cv.width=W;cv.height=Hh;const g=cv.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,W,Hh);g.fillStyle='#111';g.textBaseline='alphabetic';
+ for(const pg of pages){pn++;st.textContent='Страница '+pn+' из '+pages.length+'…';const cv=document.createElement('canvas');cv.width=W;cv.height=Hh;const g=shdCtx(cv.getContext('2d'));g.fillStyle='#fff';g.fillRect(0,0,W,Hh);g.fillStyle='#111';g.textBaseline='alphabetic';
   g.font=`bold 34px ${F}`;g.fillText(TT,50,62);g.font=`22px ${F}`;g.fillStyle='#444';g.fillText('Опоры освещения, г. Сортавала · '+(tpLbl()||'все ТП')+' · '+per+' · лист '+pn+' из '+pages.length,50,96);
   const bh=(Hh-130-30)/2;for(let j=0;j<pg.length;j++){const p=pg[j],y0=125+j*(bh+15),ad=(p.ad&&p.ad.trim())||ADRC[p.lat.toFixed(5)+','+p.lon.toFixed(5)]||'';g.fillStyle='#f3f4f6';g.fillRect(40,y0,W-80,bh);g.fillStyle='#111';g.font=`bold 26px ${F}`;g.fillText(p.id+(ad?' · '+ad:''),56,y0+36);g.font=`20px ${F}`;g.fillStyle='#444';g.fillText((p._k==14?'бригада · ':(KS.length>1?'наша · ':''))+(wdone(p,p._k)?'подрезка выполнена '+rd(wd(p,p._k)):'подрезка не отмечена')+' · '+(tnm(p))+' опора',56,y0+64);
    const cw=(W-80-48)/2,chh=bh-90;for(const [ci,kind,t] of [[0,'before','ДО'],[1,'after','ПОСЛЕ']]){const x0=56+ci*(cw+16),y1=y0+78,ph=ppL(p.uid,p._k,kind).slice(-2);g.fillStyle='#fff';g.fillRect(x0,y1,cw,chh);g.strokeStyle='#d1d5db';g.lineWidth=2;g.strokeRect(x0,y1,cw,chh);
@@ -1520,7 +1523,7 @@ async function ppReport(KS,TT){KS=Array.isArray(KS)?KS:[PRK];TT=TT||PRT;const st
     const sw=(cw-(ph.length-1)*8)/Math.max(1,ph.length);for(let q=0;q<ph.length;q++){const im=await ppImg(ppU(ph[q]));if(!im)continue;const sc=Math.min(sw/im.width,(chh-8)/im.height),iw=im.width*sc,ih=im.height*sc;g.drawImage(im,x0+q*(sw+8)+(sw-iw)/2,y1+4+(chh-8-ih)/2,iw,ih)}
     g.fillStyle=ci?'#15803d':'#b45309';g.fillRect(x0,y1,90,34);g.fillStyle='#fff';g.font=`bold 20px ${F}`;g.fillText(t,x0+10,y1+24)}}
   if(pn>1)doc.addPage('a4','landscape');doc.addImage(cv.toDataURL('image/jpeg',.88),'JPEG',0,0,297,210)}
- doc.save(TT.replace(':','')+' '+per+'.pdf');st.textContent='Готово: '+L2.length+' опор'+(miss?' · без части фото: '+miss+' мест':'')}catch(e){st.textContent='Ошибка: '+(e.message||e)}}
+ doc.save(SHD(TT.replace(':','')+' '+per+'.pdf'));st.textContent='Готово: '+L2.length+' опор'+(miss?' · без части фото: '+miss+' мест':'')}catch(e){st.textContent='Ошибка: '+(e.message||e)}}
 
 function trGo(u){const q=P.find(p=>p.uid==u);if(!q)return;const m=mk.get(q);map.setView([q.lat,q.lon],Math.max(map.getZoom(),18));if(m&&lg.hasLayer(m))L.popup(PO()).setLatLng(m.getLatLng()).setContent(popup(q)).openOn(map);else toast('Опора '+q.id+' скрыта фильтром')}
 function trUI(){if(document.body.classList.contains('crew'))return;let d=$('trd');if(!d){const sk=$('matd')||$('skd');if(!sk)return;sk.insertAdjacentHTML('afterend','<details id="trd"><summary><b>Подрезка крон — бригада</b> <span id="trs"></span></summary><div id="trw"></div></details>');d=$('trd')}
