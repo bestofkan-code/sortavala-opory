@@ -41,7 +41,7 @@ R("var USERS=[['Иль','il'],['Никита','nikita'],['Леонид','leonid'
 R("<b style=\"font-size:16px\">Вход в редактор карты опор</b>","<b style=\"font-size:16px\">Вход в монтажную карту</b>")
 # виды работ
 R("$('mw').innerHTML=WK.map(([k,n])=>'<option value=\"'+k+'\"'+(k==4?' selected':'')+'>'+n+'</option>').join('');",
-  "var CW=[14,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value=\"'+k+'\"'+(k==5?' selected':'')+'>'+n+'</option>').join('');")
+  "var CW=[14,11,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value=\"'+k+'\"'+(k==5?' selected':'')+'>'+n+'</option>').join('');")
 R("$('wf').innerHTML=WK.map(([k,n])=>","$('wf').innerHTML=WK.filter(([k])=>CWF.includes(k)).map(([k,n])=>")
 R("if(mode=='mark'){const k=+$('mw').value;setW(p,k,!wdone(p,k),$('md').value);upd(p);save();stats();mark(p)}",
   "if(mode=='mark'){const k=+$('mw').value;if(!CW.includes(k))return;crewW(p,k,!wdone(p,k),$('md').value||LD());upd(p);save();stats();mark(p);toast(p.id+': '+(WSN[k]||'')+(wdone(p,k)?' ✓':' — отметка снята'))}")

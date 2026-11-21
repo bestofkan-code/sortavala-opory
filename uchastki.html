@@ -856,7 +856,7 @@ t.innerHTML='<tr><th></th><th>Станд.<br>ФМ-0,219</th><th>Анкер.<br>�
 $('sks').innerHTML=`ст. <b>${c(St[0])}</b> · анк. <b>${c(St[1])}</b>`+(Af[0]<0||Af[1]<0?' <span class="neg" title="Закладных не хватит на все опоры на карте">⚠</span>':'')}
 /* ---- задания бригаде монтажников (таблица crew_tasks): редакторы выделяют опоры, бригада видит их на монтажной карте ---- */
 var TK=new Map(),TKS=new Set(),TKE=null,TKA=false,TKPTS=[],TKLY=L.layerGroup().addTo(map),TKONLY=false;
-const TKW=[[1,'Котлованы'],[2,'Закладные'],[3,'Бетон'],[5,'СИП'],[12,'Кронштейн'],[6,'Светильник'],[14,'Подрезка крон'],[100,'Бронекабель']];
+const TKW=[[1,'Котлованы'],[2,'Закладные'],[3,'Бетон'],[5,'СИП'],[12,'Кронштейн'],[6,'Светильник'],[14,'Подрезка крон'],[11,'Котлован под заземление'],[100,'Бронекабель']];
 try{(JSON.parse(localStorage.getItem(KEY+'_tk')||'[]')||[]).forEach(r=>TK.set(r.id,r))}catch(e){}
 function tkSave(){try{localStorage.setItem(KEY+'_tk',JSON.stringify([...TK.values()]))}catch(e){}}
 function fdm(v){return v?String(v).slice(8,10)+'.'+String(v).slice(5,7):''}

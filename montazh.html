@@ -32,7 +32,7 @@ const GF=/(^|[^а-яёa-z])гф([^а-яёa-z]|$)/i,gf=p=>{if(!p.note||!GF.test(p
 const mig=p=>{const g=gf(p),m=mig0(p);return g||m},mig0=p=>{const f=((D.fx&&D.fx[p.uid])||[]).find(f=>String(p.tp)==f[0]&&+p.n==f[1]);if(f){p.tp=f[2];p.n=f[3];p.id=f[4];return true}if(p.tp!=null)return false;const a=/^p\d+$/.test(p.uid)?D.p[+p.uid.slice(1)]:0;if(a){p.tp=a[6];p.n=a[7];if(/^Л\d+-\d+$/.test(p.id))p.id=a[5];return true}p.tp='';p.n='';return false};P.forEach(mig);
 const save=()=>{if(RO)return;try{localStorage.setItem(KEY,JSON.stringify({P,L:Ls,T}))}catch(e){}};
 function LD(d){d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-$('md').value=$('rt').value=LD();var CW=[14,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value="'+k+'"'+(k==5?' selected':'')+'>'+n+'</option>').join('');
+$('md').value=$('rt').value=LD();var CW=[14,11,12,5,6];$('mw').innerHTML=WK.filter(([k])=>CW.includes(k)).map(([k,n])=>'<option value="'+k+'"'+(k==5?' selected':'')+'>'+n+'</option>').join('');
 const map=L.map('m',{maxZoom:20,zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:120,rotate:true,touchRotate:true,rotateControl:{closeOnZeroBearing:false}}).setView([61.705,30.69],15);
 /*SELRING*/{map.createPane('selPane');const sp=map.getPane('selPane');sp.style.zIndex=650;sp.style.pointerEvents='none';
  const st=document.createElement('style');st.textContent='.selr{position:relative;width:0;height:0}.selr i{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border-radius:50%;border:4px solid #f59e0b;box-sizing:border-box;box-shadow:0 0 0 2px #fff,0 0 12px 3px rgba(245,158,11,.8)}.selr b{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border-radius:50%;border:3px solid #f59e0b;box-sizing:border-box;animation:selp 1.3s ease-out infinite}@keyframes selp{0%{transform:scale(1);opacity:.9}100%{transform:scale(2);opacity:0}}';document.head.appendChild(st);
@@ -856,7 +856,7 @@ t.innerHTML='<tr><th></th><th>Станд.<br>ФМ-0,219</th><th>Анкер.<br>�
 $('sks').innerHTML=`ст. <b>${c(St[0])}</b> · анк. <b>${c(St[1])}</b>`+(Af[0]<0||Af[1]<0?' <span class="neg" title="Закладных не хватит на все опоры на карте">⚠</span>':'')}
 /* ---- задания бригаде монтажников (таблица crew_tasks): редакторы выделяют опоры, бригада видит их на монтажной карте ---- */
 var TK=new Map(),TKS=new Set(),TKE=null,TKA=false,TKPTS=[],TKLY=L.layerGroup().addTo(map),TKONLY=false;
-const TKW=[[1,'Котлованы'],[2,'Закладные'],[3,'Бетон'],[5,'СИП'],[12,'Кронштейн'],[6,'Светильник'],[14,'Подрезка крон'],[100,'Бронекабель']];
+const TKW=[[1,'Котлованы'],[2,'Закладные'],[3,'Бетон'],[5,'СИП'],[12,'Кронштейн'],[6,'Светильник'],[14,'Подрезка крон'],[11,'Котлован под заземление'],[100,'Бронекабель']];
 try{(JSON.parse(localStorage.getItem(KEY+'_tk')||'[]')||[]).forEach(r=>TK.set(r.id,r))}catch(e){}
 function tkSave(){try{localStorage.setItem(KEY+'_tk',JSON.stringify([...TK.values()]))}catch(e){}}
 function fdm(v){return v?String(v).slice(8,10)+'.'+String(v).slice(5,7):''}
@@ -1049,7 +1049,7 @@ const row=(n,a,b,col,k,u)=>`<div class="crr"><span>${n}</span>${k&&tdy(k)?'<smal
 e.innerHTML=(ALL?`<small style="display:block;opacity:.8;margin-bottom:2px">Итог по контракту: <b>${K} опор</b> и <b>${KS} пролётов СИП</b> (${K} опор + ${sxn} старых опор Шуно Дорожная, по которым идёт СИП, минус ${nets} линий от ТП).</small>`:'<small style="display:block;opacity:.8;margin-bottom:2px">Счёт по выбранным опорам (фильтр ТП или задания).</small>')
 +row('Опор установлено — можно работать',st,NP,'#22c55e')+row('СИП протянут (опор)',c(A,5),NA,'#f97316',5)
 +row('СИП по пролётам (длина внесена)',spN,ALL?KS:null,'#f97316',0,' пр.')+`<div class="crr" style="margin-top:2px"><span></span><small style="color:inherit;opacity:.8">${Math.round(spL).toLocaleString('ru-RU')} м внесено</small></div>`
-+row('Кронштейн установлен',c(Q,12),NP,'#60a5fa',12)+row('Светильник установлен',c(Q,6),NP,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')+(()=>{const S=(f,k)=>A.reduce((t,p)=>t+(f(p)[k]||0),0);return row('Крюков',S(arV,'h'),S(arPlan,'h'),'#94a3b8')+row('Анкерных зажимов',S(arV,'a'),S(arPlan,'a'),'#f97316')+row('Подвесов промежуточных',S(arV,'s'),S(arPlan,'s'),'#a3e635')+row('Проколов СИП–СИП',S(arV,'pc'),S(arPlan,'pc'),'#38bdf8')})()
++row('Котлован под заземление',c(A,11),null,'#a16207',11)+row('Кронштейн установлен',c(Q,12),NP,'#60a5fa',12)+row('Светильник установлен',c(Q,6),NP,'#facc15',6)+row('Подрезка крон (опор)',c(A,14),null,'',14)+row('Бронекабель проложен (ТП)',cabD,cabT.length,'#c026d3')+(()=>{const S=(f,k)=>A.reduce((t,p)=>t+(f(p)[k]||0),0);return row('Крюков',S(arV,'h'),S(arPlan,'h'),'#94a3b8')+row('Анкерных зажимов',S(arV,'a'),S(arPlan,'a'),'#f97316')+row('Подвесов промежуточных',S(arV,'s'),S(arPlan,'s'),'#a3e635')+row('Проколов СИП–СИП',S(arV,'pc'),S(arPlan,'pc'),'#38bdf8')})()
 +krTbl(Q,ALL)
 +'<table class="crt"><tr><th>ТП</th><th>опор стоит</th><th>СИП</th><th>кроншт.</th><th>светил.</th><th>брон.</th></tr>'+tps.map(t=>{const a=A.filter(p=>String(p.tp||'—')==t),q=a.filter(p=>!p.x);return `<tr><td>${esc(tpn(t))}</td><td>${q.filter(p=>p.done).length}/${q.length}</td><td>${c(a,5)}</td><td>${c(q,12)}</td><td>${c(q,6)}</td><td>${cabT.includes(t)?(cabDone(t)?'✓':'—'):''}</td></tr>`}).join('')+'</table>'
 +(ALL&&NETC?`<small style="display:block;opacity:.7;margin-top:4px">Сейчас на карте на линии СИП: ${CRN?CRN.size:'—'} опор, ${NETC.E.length} пролётов (вместе с опорами на гравит. фундаменте).</small>`:'')
@@ -1062,7 +1062,7 @@ const C=[...CABS.values()].sort((a,b)=>a.tp.localeCompare(b.tp,'ru',{numeric:tru
 sh([['ТП','Опора ввода','По карте, м','Проложен','Факт, м'],...C.map(z=>{const r=TPD.get(z.tp)||{},w=r.w||{};return[tpn(z.tp),z.p.id,Math.round(z.d),fd(w[1]||''),r.cab!=null?+r.cab:'']})],'Бронекабель',[16,16,12,12,10]);
 {const Qx=A.filter(p=>!p.x),C=Qx.filter(p=>!isG(p));sh([['Кронштейн','Итог по контракту','На карте (по контракту)','На гравит. фундаменте','Установлено'],...KRG.map(([n,t,f])=>[n,t??'',C.filter(f).length,Qx.filter(p=>isG(p)&&f(p)).length,Qx.filter(p=>f(p)&&wdone(p,12)).length]),['Светильников',KLUM,C.reduce((a,p)=>a+lumN(p),0),Qx.filter(isG).reduce((a,p)=>a+lumN(p),0),Qx.filter(p=>wdone(p,6)).reduce((a,p)=>a+lumN(p),0)]],'Кронштейны',[26,16,20,20,12])}
 const days={};A.forEach(p=>CW.forEach(k=>{const v=wd(p,k);if(/^\d{4}-/.test(v)){(days[v]=days[v]||{})[k]=(days[v][k]||0)+1}}));
-sh([['Дата',...CW.map(wkN)],...Object.keys(days).sort().map(d=>[fd(d),...CW.map(k=>days[d][k]||0)])],'По дням',[12,14,14,14,14]);
+sh([['Дата',...CW.map(wkN)],...Object.keys(days).sort().map(d=>[fd(d),...CW.map(k=>days[d][k]||0)])],'По дням',[12,14,14,14,14,14]);
 XLSX.writeFile(wb,'Монтаж_бригада_'+LD()+'.xlsx')}
 
 $('fjb').onclick=()=>{FJ=!FJ;try{localStorage.setItem(KEY+'_fj',FJ?'1':'0')}catch(e){}fjUI();P.forEach(upd);numLabels();lines();if(FJ){const L2=P.filter(p=>p.js&&!p.x&&tpOk(p));if(L2.length)map.fitBounds(L.latLngBounds(L2.map(p=>[p.lat,p.lon])).pad(.08))}};setTimeout(fjUI,0);
