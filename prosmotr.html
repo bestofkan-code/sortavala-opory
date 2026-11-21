@@ -328,7 +328,7 @@ function hwMore(A){const B=A.filter(p=>!p.pp),bar=(v,T,c)=>`<div style="height:6
  return ln('Светильников установлено',sv,831,'#ca8a04')
   +'<div style="margin:3px 0 1px;color:#555">Кронштейны установлено:</div>'
   +ln('1-рожковые',kc('1'),353,'#0f172a')+ln('2-рожковые 90°',kc('90'),50,'#ea580c')+ln('2-рожковые 180°',kc('180'),189,'#7c3aed')
-  +sip+'<small style="color:#555;display:block;margin:-2px 0 4px">Светильники, кронштейны и СИП — из сметы (831 шт., 353/50/189 шт., 16 664 м). СИП — приблизительно, по длинам пролётов на карте, где на обеих опорах отмечен СИП.</small>'}
+  +sip+ln('Котлованы под заземление',B.filter(p=>wdone(p,11)).length,92,'#a16207')+'<small style="color:#555;display:block;margin:-2px 0 4px">Светильники, кронштейны и СИП — из сметы (831 шт., 353/50/189 шт., 16 664 м), котлованы под заземление — по числу комплектов повторного заземления (92). СИП — приблизительно, по длинам пролётов на карте, где на обеих опорах отмечен СИП.</small>'}
 function hwAllH(A){const K=592,c=f=>A.filter(f).length,pc=(v,T)=>T?Math.min(100,v/T*100):0;
  const sv=A.reduce((a,p)=>a+(wdone(p,6)?(+p.sv||Math.max(1,+p.kr||1)):0),0);let L=0;try{const C=sipCalc(),ok=p=>!p.x&&wdone(p,5);C.ED.forEach(x=>{if(ok(x.a)&&ok(x.b))L+=x.len})}catch(e){}
  const it=[['котл.',pc(c(p=>wdone(p,1)),K)],['закл.',pc(c(p=>wdone(p,2)),K)],['бетон',pc(c(p=>wdone(p,3)),K)],['опоры',pc(c(p=>p.done),K)],['кроншт.',pc(c(p=>wdone(p,12)),K)],['свет.',pc(sv,831)],['СИП',pc(L,16664)]];
