@@ -1835,11 +1835,11 @@ function ucDraw(){try{
 
 <script>
 var UFON=false;try{UFON=localStorage.getItem(KEY+'_ufill')==='1'}catch(e){}
-var UFLY=null,UFL=[],UFR=22,UFC={1:'#2563eb',2:'#f97316'};
+var UFLY=null,UFL=[],UFR=28,UFC={1:'#2563eb',2:'#f97316'};
 function ufW(){const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8);return Math.max(3,2*UFR/mpp)}
 function ufUI(){const a=document.getElementById('ufbtn');if(!a)return;a.style.background=UFON?'#7c3aed':'';a.style.color=UFON?'#fff':''}
 function ufDraw(){try{
- if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=350;p.style.opacity=.3;p.style.pointerEvents='none'}
+ if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=350;p.style.opacity=.45;p.style.pointerEvents='none'}
  if(!UFLY)UFLY=L.layerGroup().addTo(map);UFLY.clearLayers();UFL=[];ufUI();if(!UFON)return;
  const alive=p=>p&&p.tp&&!(p.x&&!p.sx),w=ufW(),line=(A,B,u)=>{const l=L.polyline([A,B],{pane:'ucp',color:UFC[u],weight:w,opacity:1,lineCap:'round',lineJoin:'round',interactive:false});UFL.push(l);UFLY.addLayer(l)};
  let E=[];try{E=netEdges().E||[]}catch(e){}
