@@ -508,7 +508,7 @@ $('spf').onchange=e=>{SQF=e.target.value;P.forEach(upd);numLabels();sqStats()};$
 /* ---- СИП-карта: как пойдёт СИП по опорам, длины пролётов, ответвления, отрезки и раскрой, расчёт арматуры ---- */
 var SIPL=L.layerGroup(),SIPLB=L.layerGroup(),SIPRG=L.layerGroup(),SIPC=null,SIPT=0,SIPDO=false;
 /* нормы (на что умножаем) и количества по РД (уч. 1 + уч. 2) для сверки */
-var SIPN={sipK:1.02,tail:1.5,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
+var SIPN={sipK:1.02,tail:1.5,f40:1.0,loop:1.0,inlT:1.5,res:0.01,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
 var SIPRD={};
 var SIPR={root:'ввод от ТП',end:'концевая',anchor:'анкерная',corner:'угловая (поворот ≥45°)',branch:'ответвительная',mid:'промежуточная'};
 var SIPK={t:'магистраль',b:'ответвление',n:'к опорам на гравитационном фундаменте — следующий этап',x:'между сетями разных ТП — нужен разрыв, уточнить',c:'замыкает кольцо — для радиальной сети лишний, уточнить',u:'не связан с вводом от ТП — уточнить'};
@@ -517,6 +517,8 @@ var SIPDR=1000;try{SIPDR=+localStorage.getItem(KEY+'_sipdr')||1000}catch(e){}
 function sipPath(e){return epath(e[0],e[1],e.pts)}
 function sipLen(e){const pt=sipPath(e);let d=0;for(let i=1;i<pt.length;i++)d+=map.distance(pt[i-1],pt[i]);return d}
 function sipMid(pt){if(pt.length==2)return[(pt[0][0]+pt[1][0])/2,(pt[0][1]+pt[1][1])/2];let t=0;const s=[];for(let i=1;i<pt.length;i++){const d=map.distance(pt[i-1],pt[i]);s.push(d);t+=d}let h=t/2;for(let i=0;i<s.length;i++){if(h<=s[i]){const f=s[i]?h/s[i]:0;return[pt[i][0]+(pt[i+1][0]-pt[i][0])*f,pt[i][1]+(pt[i+1][1]-pt[i][1])*f]}h-=s[i]}return pt[pt.length-1]}
+function sipSag(L){const f=SIPN.f40*Math.pow((L||0)/40,2);return{f,d:L>0?8*f*f/(3*L):0}}
+function sipNeed(pc){const s=pc.sag||0,lp=(pc.loops||0)*SIPN.loop,tl=2*SIPN.tail,ib=pc.inl?SIPN.inlT:0,rs=(pc.len+s)*SIPN.res;return{len:pc.len,sag:s,loops:lp,tails:tl,inl:ib,res:rs,all:pc.len+s+lp+tl+ib+rs}}
 function sipCalc(){
  const N=NETC||netEdges(),U=new Map(P.map(p=>[p.uid,p])),isC=p=>!p.x&&!isG(p),kk=(a,b)=>a<b?a+'|'+b:b+'|'+a;
  const adj=new Map(),ad=(a,b,e)=>{if(!adj.has(a.uid))adj.set(a.uid,[]);adj.get(a.uid).push({o:b,e})};
@@ -556,31 +558,31 @@ function sipCalc(){
  const pend=[],PCS=[];
  const run=(start,first)=>{const nodes=[start];let cur=first,len=plen(first);while(true){nodes.push(cur);const c=byDep(cur);if(!c.length)break;c.slice(1).forEach(v=>{ND.get(cur).brs++;pend.push([cur,v])});cur=c[0];len+=plen(cur)}return{nodes,len}};
  order.filter(u=>par.get(u)==null).forEach(r=>{const c=byDep(r);if(!c.length)return;const rt=roots.has(r);
-  if(rt){PCS.push(run(r,c[0]));c.slice(1).forEach(v=>{ND.get(r).brs++;pend.push([r,v])})}
+  if(rt){const p0=run(r,c[0]);p0.inl=1;PCS.push(p0);c.slice(1).forEach(v=>{ND.get(r).brs++;pend.push([r,v])})}
   else{const p1=run(r,c[0]);let pc=p1;if(c.length>=2){const p2=run(r,c[1]);pc={nodes:p2.nodes.slice().reverse().concat(p1.nodes.slice(1)),len:p1.len+p2.len}}c.slice(2).forEach(v=>{ND.get(r).brs++;pend.push([r,v])});PCS.push(pc)}
   while(pend.length){const[a,v]=pend.pop();PCS.push(run(a,v))}});
- PCS.forEach(pc=>{const n=pc.nodes;pc.a=U.get(n[0]);pc.b=U.get(n[n.length-1]);pc.spans=n.length-1;pc.nofeed=nofeed.has(n[0]);
+ PCS.forEach(pc=>{const n=pc.nodes;pc.sag=0;pc.loops=0;for(let i=1;i<n.length;i++)pc.sag+=sipSag(LEN.get(kk(n[i-1],n[i]))||0).d;pc.a=U.get(n[0]);pc.b=U.get(n[n.length-1]);pc.spans=n.length-1;pc.nofeed=nofeed.has(n[0]);
   [n[0],n[n.length-1]].forEach(u=>{const d=ND.get(u);d.ends++;d.anc++});
-  for(let i=1;i<n.length-1;i++){const d=ND.get(n[i]),t=turnAt(n[i],n[i-1],n[i+1]);d.turn=t;if(d.p.t=='A'||t>=45){d.anc+=2;d.ia=true}else{d.sus++;d.ia=false}}});
+  for(let i=1;i<n.length-1;i++){const d=ND.get(n[i]),t=turnAt(n[i],n[i-1],n[i+1]);d.turn=t;if(d.p.t=='A'||t>=45){d.anc+=2;d.ia=true;pc.loops++}else{d.sus++;d.ia=false}}});
  ND.forEach(d=>{if(d.root)d.inl=1;d.role=d.root?'root':d.deg>=3?'branch':d.deg<=1?'end':d.ia?(d.p.t=='A'?'anchor':'corner'):'mid'});
  return{ED,ND,PCS,U}}
-function sipCut(pcs,drum){const it=[];pcs.forEach(pc=>{const need=pc.len*SIPN.sipK+2*SIPN.tail;if(need<=drum)it.push({pc,need,part:1,parts:1});else{const k=Math.ceil(need/drum);for(let i=1;i<=k;i++)it.push({pc,need:need/k,part:i,parts:k})}});
+function sipCut(pcs,drum){const it=[];pcs.forEach(pc=>{let need=sipNeed(pc).all;if(need<=drum)it.push({pc,need,part:1,parts:1});else{const jx=2*SIPN.tail+SIPN.loop;let k=Math.ceil(need/drum);while((need+(k-1)*jx)/k>drum)k++;need+=(k-1)*jx;for(let i=1;i<=k;i++)it.push({pc,need:need/k,part:i,parts:k})}});
  it.sort((a,b)=>b.need-a.need);const bins=[];it.forEach(x=>{let b=bins.find(b=>b.free>=x.need-1e-6);if(!b){b={free:drum,items:[]};bins.push(b)}b.items.push(x);b.free-=x.need});
  return{bins,joints:it.filter(x=>x.part>1).length,waste:bins.reduce((a,b)=>a+b.free,0),items:it}}
 function sipSum(C){const Nn=[...C.ND.values()].filter(n=>tpOk(n.p)),s=f=>Nn.reduce((a,n)=>a+f(n),0);
  const E=C.ED.filter(x=>(x.kind=='t'||x.kind=='b'||x.kind=='u')&&(tpOk(x.a)||tpOk(x.b)));
  const o={len:E.reduce((a,x)=>a+x.len,0),spans:E.length,nodes:Nn.length,anc:s(n=>n.anc),sus:s(n=>n.sus),ends:s(n=>n.ends),brs:s(n=>n.brs),inl:s(n=>n.inl),lum:s(n=>n.lum),bond:s(n=>n.bond),r:{},tp:new Map()};
  Object.keys(SIPR).forEach(k=>o.r[k]=Nn.filter(n=>n.role==k).length);
- o.pcs=C.PCS.filter(pc=>tpOk(pc.a));o.cut=sipCut(o.pcs,SIPDR);
+ o.pcs=C.PCS.filter(pc=>tpOk(pc.a));o.cut=sipCut(o.pcs,SIPDR);o.nd={len:0,sag:0,loops:0,tails:0,inl:0,res:0,all:0};o.loopN=0;o.inlN=0;o.pcs.forEach(pc=>{const z=sipNeed(pc);Object.keys(o.nd).forEach(k=>o.nd[k]+=z[k]);o.loopN+=pc.loops||0;o.inlN+=pc.inl?1:0});o.jx=o.cut.joints*(2*SIPN.tail+SIPN.loop);o.need=o.nd.all+o.jx;
  const nx=C.ED.filter(x=>x.kind=='n'&&(tpOk(x.a)||tpOk(x.b)));o.nextN=nx.length;o.nextL=nx.reduce((a,x)=>a+x.len,0);
  o.xs=C.ED.filter(x=>(x.kind=='x'||x.kind=='c')&&(tpOk(x.a)||tpOk(x.b)));
  const nfc=new Map();Nn.filter(n=>n.nofeed).forEach(n=>{if(!nfc.has(n.net))nfc.set(n.net,[]);nfc.get(n.net).push(n.p)});o.nf=[...nfc.values()];
  const T=t=>{t=String(t||'—');if(!o.tp.has(t))o.tp.set(t,{sp:0,len:0,br:0,brs:0,anc:0,sus:0,nd:0,pcs:0});return o.tp.get(t)};
- E.forEach(x=>{const r=T(x.a.tp);r.sp++;r.len+=x.len;if(x.kind!='t')r.br+=x.len});
+ E.forEach(x=>{const r=T(x.a.tp);r.sp++;r.len+=x.len;if(x.kind!='t')r.br+=x.len});o.pcs.forEach(pc=>{const r=T(pc.a.tp);r.need=(r.need||0)+sipNeed(pc).all});
  Nn.forEach(n=>{const r=T(n.p.tp);r.nd++;r.anc+=n.anc;r.sus+=n.sus;r.brs+=n.brs});o.pcs.forEach(pc=>T(pc.a.tp).pcs++);
  return o}
 function sipRows(o){const n=SIPN,pr=o.lum*n.slL+o.bond*n.slP+o.brs*n.ss+o.inl*n.inl;return[
- ['СИП-4 4×25','м','длина пролётов по карте, м',Math.round(o.len),n.sipK,'длина × 1,02 на провис','sip'],
+ ['СИП-4 4×25','м','расчёт по отрезкам, м',Math.ceil(o.need),1,'пролёты '+Math.round(o.nd.len)+' м + провис по каждому пролёту '+o.nd.sag.toFixed(1)+' м + шлейфы на анкерных и угловых опорах '+o.loopN+' × '+n.loop+' м + хвосты на концах отрезков '+(2*o.pcs.length)+' × '+n.tail+' м + опуск к бронекабелю на вводе '+o.inlN+' × '+n.inlT+' м'+(o.cut.joints?' + стыки '+o.cut.joints+' × '+(2*n.tail+n.loop)+' м':'')+' + запас на раскатку '+Math.round(n.res*100)+'% ('+Math.round(o.nd.res)+' м)','sip'],
  ['Зажим анкерный для СИП-4 4×25','шт','анкерных креплений',o.anc,n.an,'по 1 на каждый конец отрезка СИП и по 2 на анкерную или угловую опору в линии','an'],
  ['Кронштейн анкерный SO253','шт','анкерных креплений',o.anc,n.an,'по 1 на анкерный зажим','br'],
  ['Зажим поддерживающий для СИП-4 4×25','шт','промежуточных опор',o.sus,n.sus,'по 1 на промежуточную опору','sus'],
@@ -625,7 +627,7 @@ function sipStats(){const e=$('sips');if(!e||$('sipp').hidden||!SIPC)return;cons
 function sipLabels(){SIPLB.clearLayers();if(mode!='sip'||!SIPC||map.getZoom()<17)return;const b=map.getBounds().pad(.2);
  SIPC.ED.forEach(x=>{if(!(tpOk(x.a)||tpOk(x.b)))return;const m=sipMid(sipPath(x.e));if(!b.contains(m))return;const ex=x.kind=='x'?' · разрыв?':x.kind=='c'?' · кольцо':'';
   L.marker(m,{pane:'sipLb',icon:L.divIcon({className:'',html:'<div class="sipl'+(x.kind=='n'?' n':x.kind=='x'||x.kind=='c'?' w':'')+'">'+Math.round(x.len)+' м'+ex+'</div>',iconSize:[0,0]}),interactive:false,keyboard:false}).addTo(SIPLB)})}
-function sipSpanPop(x){return `<div class="pp"><b>${esc(x.a.id)} — ${esc(x.b.id)}</b><div>Пролёт ≈ <b>${Math.round(x.len)} м</b> (СИП с запасом ≈ ${Math.ceil(x.len*SIPN.sipK)} м)</div><small>${SIPK[x.kind]}</small></div>`}
+function sipSpanPop(x){return `<div class="pp"><b>${esc(x.a.id)} — ${esc(x.b.id)}</b><div>Пролёт ≈ <b>${Math.round(x.len)} м</b> <br>стрела провеса ≈ ${sipSag(x.len).f.toFixed(2)} м · провода в пролёте ≈ ${(x.len+sipSag(x.len).d).toFixed(1)} м</div><small>${SIPK[x.kind]}</small></div>`}
 function sipPop(p){const d=document.createElement('div');d.className='pp';const n=SIPC&&SIPC.ND.get(p.uid);
  let h=`<div><b>${esc(p.id)}</b> <small>${p.t=='A'?'анкерная':'стандартная'} ${+p.h==9?9:8} м</small></div>`;
  if(!n)h+='<div style="margin:4px 0">Опора не на линии СИП'+(SIPC&&SIPC.ED.some(x=>x.kind=='n'&&(x.a===p||x.b===p))?' этого этапа (тупиковый отрезок к опорам на гравитационном фундаменте)':'')+'.</div>';
@@ -664,7 +666,7 @@ function sipXl(){const C=SIPC||sipCalc(),o=sipSum(C),R=sipRows(o),wb=XLSX.utils.
  XLSX.utils.sheet_add_aoa(ws,[[],['Нормы в столбце «Норма» можно менять — «Итого» пересчитается.'],['Без опор, которых ещё нет на карте, и без пролётов к опорам на гравитационном фундаменте, которые никуда дальше не ведут (следующий этап).']].concat(BOSS?[['Зажимы по РД рассчитаны на несущую нулевую жилу; у СИП-4 4×25 её нет, нужны зажимы на 4-жильный жгут.']]:[]),{origin:'A'+(R.length+3)});
  XLSX.utils.book_append_sheet(wb,ws,'Арматура');
  const pcs=o.pcs.slice().sort((a,b)=>ru(a.a.tp,b.a.tp)||b.len-a.len);
- const w1=XLSX.utils.aoa_to_sheet([['№','ТП','От опоры','До опоры','Пролётов','Длина, м','С запасом (×1,02 + 2×1,5 м), м','Примечание'],...pcs.map((pc,i)=>[i+1,tpn(String(pc.a.tp||'')),pc.a.id,pc.b.id,pc.spans,f1(pc.len),Math.ceil(pc.len*SIPN.sipK+2*SIPN.tail),pc.nofeed?'не связан с вводом от ТП':''])]);
+ const w1=XLSX.utils.aoa_to_sheet([['№','ТП','От опоры','До опоры','Пролётов','Длина, м','Провис, м','Шлейфов','Нужно СИП, м','Примечание'],...pcs.map((pc,i)=>[i+1,tpn(String(pc.a.tp||'')),pc.a.id,pc.b.id,pc.spans,f1(pc.len),f1(pc.sag||0),pc.loops||0,Math.ceil(sipNeed(pc).all),pc.nofeed?'не связан с вводом от ТП':''])]);
  w1['!cols']=[{wch:5},{wch:16},{wch:18},{wch:18},{wch:9},{wch:10},{wch:24},{wch:24}];XLSX.utils.book_append_sheet(wb,w1,'Отрезки СИП');
  const cr=[['Барабан','ТП','От опоры','До опоры','Часть','Отрезать, м','Остаток на барабане, м']];
  o.cut.bins.forEach((b,i)=>b.items.forEach((x,j)=>cr.push([i+1,tpn(String(x.pc.a.tp||'')),x.pc.a.id,x.pc.b.id,x.parts>1?x.part+' из '+x.parts:'',Math.ceil(x.need),j==b.items.length-1?Math.floor(b.free):''])));
@@ -675,7 +677,7 @@ function sipXl(){const C=SIPC||sipCalc(),o=sipSum(C),R=sipRows(o),wb=XLSX.utils.
  const w3=XLSX.utils.aoa_to_sheet([['Опора','ТП','Тип опоры','Роль на линии СИП','Пролётов','Поворот линии, °','Анкерных зажимов','Поддерживающих зажимов','Светильников','SLIW 50','Проколов СИП–СИП','Муфт на вводе','Колпачков','Примечание'],...nd]);
  w3['!cols']=[{wch:18},{wch:14},{wch:18},{wch:22},{wch:9},{wch:10},{wch:10},{wch:12},{wch:11},{wch:9},{wch:12},{wch:10},{wch:10},{wch:22}];XLSX.utils.book_append_sheet(wb,w3,'Опоры на линии');
  const tps=[...o.tp.entries()].sort((a,b)=>ru(a[0],b[0]));
- const w4=XLSX.utils.aoa_to_sheet([['ТП','Пролётов','Длина, м','Ответвления, м','СИП с запасом 1,02, м','Отрезков СИП','Ответвлений','Опор на линии','Анкерных креплений','Поддерживающих зажимов'],...tps.map(([t,r])=>[tpn(t),r.sp,f1(r.len),f1(r.br),Math.ceil(r.len*SIPN.sipK),r.pcs,r.brs,r.nd,r.anc,r.sus])]);
+ const w4=XLSX.utils.aoa_to_sheet([['ТП','Пролётов','Длина, м','Ответвления, м','Нужно СИП (провис, шлейфы, хвосты, запас), м','Отрезков СИП','Ответвлений','Опор на линии','Анкерных креплений','Поддерживающих зажимов'],...tps.map(([t,r])=>[tpn(t),r.sp,f1(r.len),f1(r.br),Math.ceil(r.need||0),r.pcs,r.brs,r.nd,r.anc,r.sus])]);
  w4['!cols']=[{wch:16},{wch:9},{wch:10},{wch:14},{wch:18},{wch:12},{wch:11},{wch:12},{wch:16},{wch:18}];XLSX.utils.book_append_sheet(wb,w4,'По ТП');
  const W=sipWarn(o);if(W.length){const w6=XLSX.utils.aoa_to_sheet([['Требует решения'],...W.map(x=>[x[0].replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')])]);w6['!cols']=[{wch:110}];XLSX.utils.book_append_sheet(wb,w6,'Требует решения')}
  XLSX.writeFile(wb,'СИП_арматура_'+LD()+'.xlsx')}
