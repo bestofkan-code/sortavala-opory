@@ -29,11 +29,11 @@ R("new C().addTo(map);setTimeout(()=>{nbtnUI();numLabels()},0)}",
 JS = r"""
 <script>
 var UFON=false;try{UFON=localStorage.getItem(KEY+'_ufill')==='1'}catch(e){}
-var UFLY=null,UFL=[],UFR=28,UFC={1:'#2563eb',2:'#f97316'};
-function ufW(){const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8);return Math.max(3,2*UFR/mpp)}
-function ufUI(){const a=document.getElementById('ufbtn');if(!a)return;a.style.background=UFON?'#7c3aed':'';a.style.color=UFON?'#fff':''}
+var UFLY=null,UFL=[],UFR=40,UFC={1:'#2563eb',2:'#f97316'};
+function ufW(){const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8);return Math.max(14,2*UFR/mpp)}
+function ufUI(){const a=document.getElementById('ufbtn');if(a){a.style.background=UFON?'#7c3aed':'';a.style.color=UFON?'#fff':''}let g=document.getElementById('uflg');if(!g){g=document.createElement('div');g.id='uflg';g.style.cssText='position:absolute;left:50px;bottom:28px;z-index:1000;background:rgba(17,24,39,.85);color:#fff;font:600 12px/1.5 system-ui,sans-serif;padding:5px 9px;border-radius:6px;pointer-events:none';g.innerHTML='<span style="display:inline-block;width:12px;height:12px;background:#2563eb;border-radius:3px;vertical-align:-2px"></span> участок 1 &nbsp; <span style="display:inline-block;width:12px;height:12px;background:#f97316;border-radius:3px;vertical-align:-2px"></span> участок 2 (по смете)';map.getContainer().appendChild(g)}g.style.display=UFON?'':'none'}
 function ufDraw(){try{
- if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=350;p.style.opacity=.45;p.style.pointerEvents='none'}
+ if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=450;p.style.opacity=.5;p.style.pointerEvents='none'}
  if(!UFLY)UFLY=L.layerGroup().addTo(map);UFLY.clearLayers();UFL=[];ufUI();if(!UFON)return;
  const alive=p=>p&&p.tp&&!(p.x&&!p.sx),w=ufW(),line=(A,B,u)=>{const l=L.polyline([A,B],{pane:'ucp',color:UFC[u],weight:w,opacity:1,lineCap:'round',lineJoin:'round',interactive:false});UFL.push(l);UFLY.addLayer(l)};
  let E=[];try{E=netEdges().E||[]}catch(e){}
