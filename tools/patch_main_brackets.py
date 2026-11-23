@@ -89,7 +89,7 @@ function kcUI(){const t=$('kct');if(!t)return;const D=kcData(),I=D.I;
 $('kcl').onclick=e=>{const b=e.target.closest('[data-kc]');if(!b)return;const p=P.find(o=>o.uid==b.dataset.kc);if(!p)return;
  map.setView([p.lat,p.lon],Math.max(map.getZoom(),19));const m=mk.get(p);if(m&&lg.hasLayer(m))L.popup(PO()).setLatLng(m.getLatLng()).setContent(popup(p)).openOn(map);else toast('Опора скрыта фильтром')};
 function kcXl(){const D=kcData(),wb=XLSX.utils.book_new(),dt=v=>/^\d{4}-\d\d-\d\d/.test(v)?v.slice(8,10)+'.'+v.slice(5,7)+'.'+v.slice(0,4):(v?'да':''),
- K={'1':353,'90':50,'180':189};
+ K={'1':0,'90':0,'180':0};
  const h1=['ТП','1-рожк. всего','1-рожк. установлено','2-рожк. 90° всего','2-рожк. 90° установлено','2-рожк. 180° всего','2-рожк. 180° установлено','Тип не указан','Кронштейнов установлено','Осталось установить','Можно ставить сейчас (опора стоит)','Светильников по типу кронштейна','Светильников установлено','Опор с замечаниями'];
  const r1=(nm,o)=>[nm,o.a1,o.d1,o.a90,o.d90,o.a180,o.d180,o.unk,o.dn,o.n-o.dn,o.can,o.lum,o.li,o.iss];
  const A1=[['Проверка кронштейнов по ТП — '+dt(LD())],[],h1,...D.T.map(r=>r1(tpn(r.k),r.s)),r1('Всего на карте',D.S),

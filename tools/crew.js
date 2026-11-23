@@ -5,7 +5,7 @@ var CWF=[4].concat(CW),CRN=null;
 function crNetUpd(){if(!NETC)return;const s=new Set();NETC.E.forEach(e=>{s.add(e[0].uid);s.add(e[1].uid)});const ch=!CRN||CRN.size!=s.size||[...s].some(u=>!CRN.has(u));CRN=s;if(ch&&typeof mk!='undefined'&&mk.size)setTimeout(()=>{P.forEach(upd);numLabels();stats()},0)}
 function crHide(p){if(p.x&&!p.sx)return true;if(typeof TKONLY!='undefined'&&TKONLY&&!tkOf(p).length)return true;return isG(p)&&!!CRN&&!CRN.has(p.uid)}
 function crewW(p,k,on,d){p.w=p.w||{};if(on)p.w[k]=d||LD();else delete p.w[k]}
-var KRG=[['1-рожковые',353,p=>(+p.kr||0)==1],['2-рожк. 90°',50,p=>(+p.kr||0)==2&&+p.ka==90],['2-рожк. 180°',189,p=>(+p.kr||0)==2&&+p.ka==180],['2-рожк., угол не указан',null,p=>(+p.kr||0)==2&&+p.ka!=90&&+p.ka!=180],['тип не указан',null,p=>!(+p.kr)]],KLUM=831;
+var KRG=[['1-рожковые',null,p=>(+p.kr||0)==1],['2-рожк. 90°',null,p=>(+p.kr||0)==2&&+p.ka==90],['2-рожк. 180°',null,p=>(+p.kr||0)==2&&+p.ka==180],['2-рожк., угол не указан',null,p=>(+p.kr||0)==2&&+p.ka!=90&&+p.ka!=180],['тип не указан',null,p=>!(+p.kr)]],KLUM=0;
 function lumN(p){return +p.sv||((+p.kr||0)==2?2:(+p.kr||0)==1?1:0)}
 function krTbl(Q,ALL){Q=Q.filter(p=>!p.pp);const C=ALL?Q.filter(p=>!isG(p)):Q,G=ALL?Q.filter(isG):[],dif=(a,b)=>b==null||a==b?'':` <small style="color:${a>b?'#fbbf24':'#f87171'}">${a>b?'+':''}${a-b}</small>`;
  return '<table class="crt"><tr><th>Кронштейны</th>'+(ALL?'<th>итог</th>':'')+'<th>на карте</th><th>уст.</th></tr>'+KRG.map(([n,t,f])=>{const m=C.filter(f).length,i=Q.filter(p=>f(p)&&wdone(p,12)).length;if(t==null&&!m&&!i)return '';return `<tr><td>${n}</td>${ALL?'<td>'+(t??'—')+'</td>':''}<td>${m}${ALL?dif(m,t):''}</td><td>${i}</td></tr>`}).join('')
@@ -38,7 +38,7 @@ d.querySelector('[data-h]').onclick=()=>hpole(p);
 const cb=d.querySelector('[data-cab]');if(cb)cb.onclick=()=>{const c=tpPos(p.tp);if(c){map.closePopup();tpPopup(String(p.tp),L.latLng(c))}};
 return d}
 function crewStats(){const e=$('crw');if(!e)return;const A=P.filter(p=>tpOk(p)&&!crHide(p)),Q=A.filter(p=>!p.x),td=LD(),c=(L2,k)=>L2.filter(p=>wdone(p,k)).length,tdy=k=>A.filter(p=>String(wd(p,k)).slice(0,10)==td).length,st=Q.filter(p=>p.done).length;
-const ALL=!FTS.size&&!(typeof TKONLY!='undefined'&&TKONLY),K=592,NP=ALL?K:Q.length,NA=ALL?K:A.length,nets=new Set([...CABS.values()].map(z=>z.tp)).size,sxn=P.filter(p=>p.x&&p.sx).length,KS=K+sxn-nets;
+const ALL=!FTS.size&&!(typeof TKONLY!='undefined'&&TKONLY),K=0,NP=ALL?K:Q.length,NA=ALL?K:A.length,nets=new Set([...CABS.values()].map(z=>z.tp)).size,sxn=P.filter(p=>p.x&&p.sx).length,KS=K+sxn-nets;
 const tps=[...new Set(A.map(p=>String(p.tp||'—')))].sort((a,b)=>a.localeCompare(b,'ru',{numeric:true}));let spL=0,spN=0;SP.forEach(r=>{if(r.len!=null&&r.len!==''){spL+=+r.len;spN++}});
 const cabT=[...new Set([...CABS.values()].map(z=>z.tp))].filter(t=>!FTS.size||FTS.has(t)),cabD=cabT.filter(cabDone).length;
 const bar=(a,b,col)=>`<div class="crb2"><i style="width:${b?Math.min(100,Math.round(a/b*100)):0}%;background:${col}"></i></div>`;

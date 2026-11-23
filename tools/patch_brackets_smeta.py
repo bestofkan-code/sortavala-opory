@@ -5,7 +5,7 @@
   жёлтый кружок на конце — светильник установлен. Легенда обновлена.
 - Подсчёты «Проверки кронштейнов» и «Проверки котлованов» — без серых (предлагаемых) опор,
   как «Контракт и выполнение»: только опоры карты без исключённых, серых и гравитационных.
-- В «Проверке кронштейнов» вверху — «Сверка со сметой»: опор 592, 1-рожк. 353, 2-рожк. 90° 50, 180° 189;
+- В «Проверке кронштейнов» вверху — «Сверка со сметой»: опор 0, 1-рожк. N, 2-рожк. 90° 50, 180° 189;
   и «Подсказки до сметы»: какой тип поставить опорам без типа и у каких опор сменить тип, чтобы выйти на смету
   (по схеме линии: развилка или угол — 90°, рядом другая линия — 180°, прямой участок — 1-рожк.;
   установленные кронштейны не трогаются). «Применить» — сменить тип (в редакторе).
@@ -82,7 +82,7 @@ R('.kcg button{padding:2px 6px;font-size:11.5px;border-radius:9px}',
   '#kcm .kcs{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:3px 0;border-bottom:1px dashed rgba(127,127,127,.25)}#kcm .kcs small{flex-basis:100%;opacity:.75}#kcm .kcs button{padding:1px 6px;font-size:11.5px}'
   '#kcm i.kd{display:inline-block;width:10px;height:10px;border-radius:2px;box-shadow:0 0 0 1px #94a3b8;margin-right:3px;vertical-align:-1px}', 1)
 R("$('kcl').onclick=e=>{const b=e.target.closest('[data-kc]');",
-  r"""var KCT={'1':353,'90':50,'180':189},KCP=592,KCGEO=null,KCGT=0,KCC={'1':'#0f172a','90':'#ea580c','180':'#7c3aed'};
+  r"""var KCT={'1':0,'90':0,'180':0},KCP=0,KCGEO=null,KCGT=0,KCC={'1':'#0f172a','90':'#ea580c','180':'#7c3aed'};
 function kcGeo(){if(KCGEO&&Date.now()-KCGT<15000)return KCGEO;const N=netEdges(),E=N.E||N,lat0=61.71,kx=Math.cos(lat0*Math.PI/180)*111320,ky=110540,xy=p=>[(p.lon-30.7)*kx,(p.lat-lat0)*ky];
  const adj=new Map();E.forEach(e=>{[[e[0],e[1]],[e[1],e[0]]].forEach(([a,b])=>{if(!adj.has(a.uid))adj.set(a.uid,[]);adj.get(a.uid).push(b)})});
  const S=E.map(e=>({a:e[0].uid,b:e[1].uid,A:xy(e[0]),B:xy(e[1])})),ds=(q,g)=>{const[ax,ay]=g.A,[bx,by]=g.B,[px,py]=q,dx=bx-ax,dy=by-ay,l=dx*dx+dy*dy;let t=l?((px-ax)*dx+(py-ay)*dy)/l:0;t=Math.max(0,Math.min(1,t));return Math.hypot(px-ax-t*dx,py-ay-t*dy)};
@@ -102,13 +102,13 @@ function kcSug(){const F=kcGeo(),C=P.filter(p=>!p.x&&!isG(p)&&!p.pp),cur={'1':0,
   C.forEach(p=>{const x=kcT(p);if(!ov.includes(x)||used.has(p.uid)||wdone(p,12))return;const f=F.get(p.uid);un.forEach(y=>{const d=kcFit(f,y)-kcFit(f,x);if(!best||d>best.d)best={p,x,y,d,f}})});
   if(!best)break;used.add(best.p.uid);cur[best.x]--;cur[best.y]++;S.push({p:best.p,from:best.x,to:best.y,why:kcWhy(best.f,best.y)})}
  return{S,c0,cur,n:C.length,u:U.length}}
-function kcLeft(r){const n=KCP-r.n,nm2={'1':['однорожковый','однорожковых','однорожковых'],'90':['кронштейн 90°','кронштейна 90°','кронштейнов 90°'],'180':['кронштейн 180°','кронштейна 180°','кронштейнов 180°']},pl=(k,f)=>{const a=k%10,b=k%100;return f[a==1&&b!=11?0:a>=2&&a<=4&&(b<12||b>14)?1:2]},T=Object.keys(KCT),need=T.map(t=>[t,KCT[t]-r.cur[t]]),pos=need.filter(x=>x[1]>0),full=need.filter(x=>x[1]==0),over=need.filter(x=>x[1]<0);let h=`На карте на <b>${n}</b> ${pl(n,['опору','опоры','опор'])} меньше контракта (592). `;if(pos.length)h+=`Чтобы выйти ровно на смету, ${n==1?'опоре, которой':pl(n,['опоре, которой','опорам, которых','опорам, которых'])} не хватает до 592, нужно дать: <b>${pos.map(([t,k])=>k+' '+pl(k,nm2[t])).join(' и ')}</b>.`;if(full.length)h+=` ${full.map(([t])=>({'1':'Однорожковые','90':'Двухрожковые 90°','180':'Двухрожковые 180°'})[t]+' больше никуда ставить нельзя — их ровно '+KCT[t]).join('. ')}.`;if(over.length)h+=` Сверх сметы: ${over.map(([t,k])=>(-k)+' '+pl(-k,nm2[t])).join(', ')} — сначала смените тип у лишних.`;return h}
+function kcLeft(r){const n=KCP-r.n,nm2={'1':['однорожковый','однорожковых','однорожковых'],'90':['кронштейн 90°','кронштейна 90°','кронштейнов 90°'],'180':['кронштейн 180°','кронштейна 180°','кронштейнов 180°']},pl=(k,f)=>{const a=k%10,b=k%100;return f[a==1&&b!=11?0:a>=2&&a<=4&&(b<12||b>14)?1:2]},T=Object.keys(KCT),need=T.map(t=>[t,KCT[t]-r.cur[t]]),pos=need.filter(x=>x[1]>0),full=need.filter(x=>x[1]==0),over=need.filter(x=>x[1]<0);let h=`На карте на <b>${n}</b> ${pl(n,['опору','опоры','опор'])} меньше контракта (0). `;if(pos.length)h+=`Чтобы выйти ровно на смету, ${n==1?'опоре, которой':pl(n,['опоре, которой','опорам, которых','опорам, которых'])} не хватает до 0, нужно дать: <b>${pos.map(([t,k])=>k+' '+pl(k,nm2[t])).join(' и ')}</b>.`;if(full.length)h+=` ${full.map(([t])=>({'1':'Однорожковые','90':'Двухрожковые 90°','180':'Двухрожковые 180°'})[t]+' больше никуда ставить нельзя — их ровно '+KCT[t]).join('. ')}.`;if(over.length)h+=` Сверх сметы: ${over.map(([t,k])=>(-k)+' '+pl(-k,nm2[t])).join(', ')} — сначала смените тип у лишних.`;return h}
 function kcSm(){const e=$('kcm');if(!e)return;const r=kcSug(),dl=v=>v==0?'<td class="ok">✓</td>':`<td class="bad">${v>0?'+':''}${v}</td>`,nm={'1':'1-рожк.','90':'2-рожк. 90°','180':'2-рожк. 180°','?':'без типа','2?':'2-рожк. без угла'};
  let h='<b>Сверка со сметой</b><table><tr><th></th><th>На карте</th><th>Смета</th><th>±</th>'+(r.S.length?'<th title="если применить подсказки">после</th>':'')+'</tr>'+
   `<tr><td>Опоры</td><td>${r.n}</td><td>${KCP}</td>${dl(r.n-KCP)}${r.S.length?'<td>'+r.n+'</td>':''}</tr>`+
   Object.keys(KCT).map(t=>`<tr><td><i class="kd" style="background:${KCC[t]}"></i>${nm[t]}</td><td>${r.c0[t]}</td><td>${KCT[t]}</td>${dl(r.c0[t]-KCT[t])}${r.S.length?`<td class="${r.cur[t]==KCT[t]?'ok':'bad'}">${r.cur[t]}</td>`:''}</tr>`).join('')+
   (r.u?`<tr><td>Тип не указан</td><td class="bad">${r.u}</td><td>0</td>${dl(r.u)}${r.S.length?'<td class="ok">0</td>':''}</tr>`:'')+'</table>';
- if(r.n!=KCP)h+=`<div class="kcw">${r.n<KCP?kcLeft(r):`На карте на <b>${r.n-KCP}</b> опор больше контракта (592) — лишние опоры надо исключить или сделать серыми.`}</div>`;
+ if(r.n!=KCP)h+=`<div class="kcw">${r.n<KCP?kcLeft(r):`На карте на <b>${r.n-KCP}</b> опор больше контракта (0) — лишние опоры надо исключить или сделать серыми.`}</div>`;
  if(r.S.length){h+=`<b style="display:block;margin-top:6px">Подсказки до сметы — ${r.S.length}</b><small style="display:block;opacity:.75">По схеме линии: развилка или угол — 90°, рядом другая линия — 180°, прямой участок — 1-рожк. Установленные кронштейны не трогаются. Проверьте на месте или по спутнику.</small>`+
   r.S.map(x=>`<div class="kcs"><button data-kc="${esc(x.p.uid)}">${esc(x.p.id)}</button><span>${nm[x.from]||x.from} → <b style="color:${KCC[x.to]}">${nm[x.to]}</b></span>${RO?'':`<button data-kca="${esc(x.p.uid)}" data-to="${x.to}" title="Сменить тип кронштейна на опоре">Применить</button>`}<small>${esc(x.why)}</small></div>`).join('')}
  else if(r.n==KCP)h+='<div class="ok" style="margin:4px 0"><b>Типы кронштейнов совпадают со сметой ✓</b></div>';

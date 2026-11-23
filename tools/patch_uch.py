@@ -30,9 +30,9 @@ s = s.replace(OLD, OLD + "${(typeof UCOV!='undefined'&&UCOV.has(p.uid))?' <small
 
 JS = r"""
 <script>
-var UCOV=new Set(['n17927456599451cnp','p503','p504','p501','p125','n1794778042473tnry','p122']);
+var UCOV=new Set();
 var UCCUT=[['p12','n17927456599451cnp'],['p128','p125']];
-var UC2TP=new Set(['22','29','89','90','97']);
+var UC2TP=new Set();
 var UCF=false;try{UCF=localStorage.getItem(KEY+'_ucf')==='1'}catch(e){}
 function ucOf(p){return UCOV.has(p.uid)?2:(UC2TP.has(String(p.tp))?2:1)}
 function ucK(p){return !p.x&&!p.pp&&!isG(p)}

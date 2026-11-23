@@ -2,7 +2,7 @@
 var SIPL=L.layerGroup(),SIPLB=L.layerGroup(),SIPRG=L.layerGroup(),SIPC=null,SIPT=0,SIPDO=false;
 /* нормы (на что умножаем) и количества по РД (уч. 1 + уч. 2) для сверки */
 var SIPN={sipK:1.02,tail:1.5,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
-var SIPRD={sip:16998,an:197,br:197,sus:577,sliw:2314,tape:1244,skr:1244,vvg:1224};
+var SIPRD={};
 var SIPR={root:'ввод от ТП',end:'концевая',anchor:'анкерная',corner:'угловая (поворот ≥45°)',branch:'ответвительная',mid:'промежуточная'};
 var SIPK={t:'магистраль',b:'ответвление',n:'к опорам на гравитационном фундаменте — следующий этап',x:'между сетями разных ТП — нужен разрыв, уточнить',c:'замыкает кольцо — для радиальной сети лишний, уточнить',u:'не связан с вводом от ТП — уточнить'};
 var SIPCOL={t:'#1d4ed8',b:'#ea580c',n:'#9ca3af',x:'#dc2626',c:'#dc2626',u:'#c026d3'};
@@ -97,7 +97,7 @@ function sipWarn(o){const w=[],f=x=>Math.round(x);
   w.push([`${g.length} опор не связаны с вводом от ТП: ${esc(ids.slice(0,6).join(', '))}${ids.length>6?' и ещё '+(ids.length-6):''}. Не нарисован пролёт или нужен второй ввод?`,[Math.min(...la),Math.min(...lo),Math.max(...la),Math.max(...lo)].map(v=>v.toFixed(6)).join(',')])});
  return w}
 function sipStats(){const e=$('sips');if(!e||$('sipp').hidden||!SIPC)return;const o=sipSum(SIPC),f=x=>Math.round(x).toLocaleString('ru'),ALL=!FTS.size,
- miss=ALL?Math.max(0,592-P.filter(p=>!p.x&&!isG(p)).length):0,avg=o.spans?o.len/o.spans:0,R=sipRows(o),c=o.cut,lp=o.pcs.reduce((a,p)=>Math.max(a,p.len),0);
+ miss=ALL?Math.max(0,0-P.filter(p=>!p.x&&!isG(p)).length):0,avg=o.spans?o.len/o.spans:0,R=sipRows(o),c=o.cut,lp=o.pcs.reduce((a,p)=>Math.max(a,p.len),0);
  let h=`<div>Пролётов <b>${o.spans}</b> · <b>${f(o.len)}</b> м по карте · средний пролёт ${f(avg)} м</div>`;
  if(miss)h+=`<div>Ещё ${miss} опор контракта нет на карте: ≈ ${f(miss*avg)} м СИП</div>`;
  h+=`<div>Отрезков СИП без соединений: <b>${o.pcs.length}</b>, самый длинный ${f(lp)} м. На барабанах по ${SIPDR} м: барабанов <b>${c.bins.length}</b>, стыков <b>${c.joints}</b>, в остатках ${f(c.waste)} м.</div>`;
@@ -109,7 +109,7 @@ function sipStats(){const e=$('sips');if(!e||$('sipp').hidden||!SIPC)return;cons
  R.forEach((r,i)=>{if(i==5)return;if(i==9&&!c.joints)return;const q=i==4?sl:sipQ(r),rd=!ALL?'':r[6]?f(SIPRD[r[6]]):'—';
   h+=`<tr><td>${esc(i==4?'Зажим прокалывающий SLIW 50':r[0])}<small>${esc(i==4?'3 на светильник (фаза, N и PE на PEN) + 1 на опору к PEN':r[5])}</small></td><td>${f(q)}${r[1]=='м'?' м':''}</td><td>${rd}</td></tr>`});
  h+='</table>';
- h+=`<small style="display:block;opacity:.75">${miss?'Без '+miss+' опор, которых нет на карте. ':''}По РД — спецификации участков 1 и 2 на 592 опоры; «—» — в РД нет. Анкерные SO250.01 и подвески SO260 в РД рассчитаны на несущую нулевую жилу, а у СИП-4 4×25 её нет: зажимы нужны на 4-жильный жгут — уточнить у проектировщика или поставщика.</small>`;
+ h+=`<small style="display:block;opacity:.75">${miss?'Без '+miss+' опор, которых нет на карте. ':''}По РД — спецификации участков 1 и 2 на 0 опоры; «—» — в РД нет. Анкерные SO250.01 и подвески SO260 в РД рассчитаны на несущую нулевую жилу, а у СИП-4 4×25 её нет: зажимы нужны на 4-жильный жгут — уточнить у проектировщика или поставщика.</small>`;
  const tps=[...o.tp.entries()].sort((a,b)=>a[0].localeCompare(b[0],'ru',{numeric:true}));
  h+='<details id="sipd"'+(SIPDO?' open':'')+'><summary>По ТП</summary><table id="siptp"><tr><th>ТП</th><th>пролётов</th><th>м</th><th>из них ответвл., м</th><th>отрезков</th><th>ответвл.</th><th>анкер. крепл.</th><th>подвесок</th></tr>'+tps.map(([t,r])=>`<tr><td>${esc(tpn(t))}</td><td>${r.sp}</td><td>${f(r.len)}</td><td>${f(r.br)}</td><td>${r.pcs}</td><td>${r.brs}</td><td>${r.anc}</td><td>${r.sus}</td></tr>`).join('')+'</table></details>';
  e.innerHTML=h;const d=$('sipd');if(d)d.ontoggle=()=>{SIPDO=d.open};
@@ -150,7 +150,7 @@ map.on('zoomend',()=>{if(mode=='sip')sipRings()});map.on('zoomend moveend',()=>{
 $('sipb').onclick=()=>{const t=document.querySelector('#modes [data-m="'+(mode=='sip'?'view':'sip')+'"]');if(t)t.click()};
 $('sipdr').onchange=e=>{SIPDR=+e.target.value||1000;try{localStorage.setItem(KEY+'_sipdr',String(SIPDR))}catch(er){}sipStats()};
 function sipXl(){const C=SIPC||sipCalc(),o=sipSum(C),R=sipRows(o),wb=XLSX.utils.book_new(),ALL=!FTS.size,f1=x=>Math.round(x*10)/10,ru=(a,b)=>String(a).localeCompare(String(b),'ru',{numeric:true});
- const H=['Позиция','Ед.','Основание','Кол-во основания','Норма','Итого','По РД (592 опоры)','Как считали'];
+ const H=['Позиция','Ед.','Основание','Кол-во основания','Норма','Итого','По РД (0 опоры)','Как считали'];
  const ws=XLSX.utils.aoa_to_sheet([H,...R.map(r=>[r[0],r[1],r[2],r[3],r[4],sipQ(r),ALL?(r[6]?SIPRD[r[6]]:'нет в РД'):'',r[5]])]);
  R.forEach((r,i)=>{ws['F'+(i+2)]={t:'n',v:sipQ(r),f:`ROUNDUP(D${i+2}*E${i+2},0)`}});
  ws['!cols']=[{wch:50},{wch:5},{wch:34},{wch:16},{wch:8},{wch:10},{wch:16},{wch:60}];
