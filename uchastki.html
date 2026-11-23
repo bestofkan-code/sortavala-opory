@@ -1934,18 +1934,34 @@ var UFON=false;try{UFON=localStorage.getItem(KEY+'_ufill')==='1'}catch(e){}
 var UFLY=null,UFL=[],UFR=40,UFC={1:'#2563eb',2:'#f97316'};
 function ufW(){const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8);return Math.max(14,2*UFR/mpp)}
 function ufUI(){const a=document.getElementById('ufbtn');if(a){a.style.background=UFON?'#7c3aed':'';a.style.color=UFON?'#fff':''}let g=document.getElementById('uflg');if(!g){g=document.createElement('div');g.id='uflg';g.style.cssText='position:absolute;left:50px;bottom:28px;z-index:1000;background:rgba(17,24,39,.85);color:#fff;font:600 12px/1.5 system-ui,sans-serif;padding:5px 9px;border-radius:6px;pointer-events:none';g.innerHTML='<span style="display:inline-block;width:12px;height:12px;background:#2563eb;border-radius:3px;vertical-align:-2px"></span> участок 1 &nbsp; <span style="display:inline-block;width:12px;height:12px;background:#f97316;border-radius:3px;vertical-align:-2px"></span> участок 2 (по смете)';map.getContainer().appendChild(g)}g.style.display=UFON?'':'none'}
-function ufDraw(){try{
- if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=450;p.style.opacity=.5;p.style.pointerEvents='none'}
- if(!UFLY)UFLY=L.layerGroup().addTo(map);UFLY.clearLayers();UFL=[];ufUI();if(!UFON)return;
- const alive=p=>p&&p.tp&&!(p.x&&!p.sx),w=ufW(),line=(A,B,u)=>{const l=L.polyline([A,B],{pane:'ucp',color:UFC[u],weight:w,opacity:1,lineCap:'round',lineJoin:'round',interactive:false});UFL.push(l);UFLY.addLayer(l)};
- let E=[];try{E=netEdges().E||[]}catch(e){}
- E.forEach(([a,b])=>{if(!alive(a)||!alive(b))return;const ua=ucOf(a),ub=ucOf(b),A=[a.lat,a.lon],B=[b.lat,b.lon];
-  if(ua==ub)line(A,B,ua);else{const M=[(a.lat+b.lat)/2,(a.lon+b.lon)/2];line(A,M,ua);line(M,B,ub)}});
- P.forEach(p=>{if(!alive(p))return;UFLY.addLayer(L.circle([p.lat,p.lon],{pane:'ucp',radius:UFR,stroke:false,fillColor:UFC[ucOf(p)],fillOpacity:1,interactive:false}))});
-}catch(e){console.log('ufDraw',e)}}
+function ufDraw(){ufUI();ufArea()}
+var UFCV=null,UFRM=60;
+function ufArea(){try{
+ if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=450;p.style.pointerEvents='none'}
+ const pane=map.getPane('ucp');pane.style.opacity=1;
+ if(!UFCV){UFCV=document.createElement('canvas');UFCV.style.position='absolute';UFCV.style.pointerEvents='none';pane.appendChild(UFCV)}
+ const cv=UFCV,sz=map.getSize();if(!UFON){cv.style.display='none';return}cv.style.display='';
+ const dpr=1,W=sz.x,H=sz.y;cv.width=W;cv.height=H;cv.style.width=W+'px';cv.style.height=H+'px';
+ L.DomUtil.setPosition(cv,map.containerPointToLayerPoint([0,0]));
+ const ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
+ const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8),R=Math.max(12,UFRM/mpp),R2=R*R;
+ const pts=[];P.forEach(p=>{if(!p||!p.tp||(p.x&&!p.sx))return;const c=map.latLngToContainerPoint([p.lat,p.lon]);if(c.x<-R||c.y<-R||c.x>W+R||c.y>H+R)return;pts.push([c.x,c.y,ucOf(p)])});
+ const G=new Map(),key=(i,j)=>i+','+j;pts.forEach(q=>{const k=key(Math.floor(q[0]/R),Math.floor(q[1]/R));if(!G.has(k))G.set(k,[]);G.get(k).push(q)});
+ const st=Math.max(3,Math.round(Math.min(W,H)/260)),nx=Math.ceil(W/st),ny=Math.ceil(H/st),A=new Uint8Array(nx*ny);
+ for(let j=0;j<ny;j++){const y=j*st+st/2,gj=Math.floor(y/R);for(let i=0;i<nx;i++){const x=i*st+st/2,gi=Math.floor(x/R);let bd=R2,bu=0;
+  for(let a=-1;a<=1;a++)for(let b=-1;b<=1;b++){const L2=G.get(key(gi+a,gj+b));if(!L2)continue;for(const q of L2){const dx=q[0]-x,dy=q[1]-y,d=dx*dx+dy*dy;if(d<bd){bd=d;bu=q[2]}}}
+  A[j*nx+i]=bu}}
+ const C={1:'rgba(37,99,235,.33)',2:'rgba(249,115,22,.38)'},E={1:'rgba(29,78,216,.9)',2:'rgba(194,65,12,.9)'};
+ for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){const u=A[j*nx+i];if(!u)continue;ctx.fillStyle=C[u];ctx.fillRect(i*st,j*st,st,st)}
+ ctx.fillStyle='rgba(124,58,237,.95)';
+ for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){const u=A[j*nx+i];if(!u)continue;const r=i+1<nx?A[j*nx+i+1]:0,d=j+1<ny?A[(j+1)*nx+i]:0;
+  if(r&&r!==u)ctx.fillRect(i*st+st-1.5,j*st-1,3,st+2);if(d&&d!==u)ctx.fillRect(i*st-1,j*st+st-1.5,st+2,3)}
+ for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){const u=A[j*nx+i];if(!u)continue;const r=i+1<nx?A[j*nx+i+1]:0,l=i>0?A[j*nx+i-1]:0,d=j+1<ny?A[(j+1)*nx+i]:0,t=j>0?A[(j-1)*nx+i]:0;
+  if(!r||!l||!d||!t){ctx.fillStyle=E[u];ctx.fillRect(i*st,j*st,st,st)}}
+}catch(e){console.log('ufArea',e)}}
 function ufToggle(){UFON=!UFON;try{localStorage.setItem(KEY+'_ufill',UFON?'1':'0')}catch(e){}ufDraw();
  if(typeof toast=='function')toast(UFON?'Участки по смете: синий — участок 1, оранжевый — участок 2':'Заливка участков скрыта')}
-(function(){map.on('zoomend',()=>{if(UFON){const w=ufW();UFL.forEach(l=>l.setStyle({weight:w}))}});
+(function(){map.on('moveend zoomend resize',()=>{if(UFON)ufArea()});map.on('zoomstart',()=>{if(UFCV)UFCV.style.display='none'});
  let t=0;const sch=()=>{clearTimeout(t);t=setTimeout(()=>{if(UFON)ufDraw()},300)};
  try{const _s=stats;stats=function(){const r=_s.apply(this,arguments);try{sch()}catch(e){}return r}}catch(e){}
  setTimeout(ufDraw,800);setTimeout(ufDraw,3500)})();
