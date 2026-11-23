@@ -11,7 +11,7 @@
 import sys
 
 R = [
- ("var SIPN={sipK:1.02,tail:1.5,", "var SIPN={sipK:1.02,tail:1.5,f40:1.0,loop:1.5,inlT:1.5,res:0.01,"),
+ ("var SIPN={sipK:1.02,tail:1.5,", "var SIPN={sipK:1.02,tail:1.5,f40:1.0,loop:1.5,inlT:7,res:0.01,"),
  ("function sipCalc(){", "function sipSag(L){const f=SIPN.f40*Math.pow((L||0)/40,2);return{f,d:L>0?8*f*f/(3*L):0}}\n"
   "function sipNeed(pc){const s=pc.sag||0,lp=(pc.loops||0)*SIPN.loop,tl=2*SIPN.tail,ib=pc.inl?SIPN.inlT:0,rs=(pc.len+s)*SIPN.res;return{len:pc.len,sag:s,loops:lp,tails:tl,inl:ib,res:rs,all:pc.len+s+lp+tl+ib+rs}}\n"
   "function sipCalc(){"),

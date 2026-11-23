@@ -491,7 +491,7 @@ $('spf').onchange=e=>{SQF=e.target.value;P.forEach(upd);numLabels();sqStats()};$
 /* ---- СИП-карта: как пойдёт СИП по опорам, длины пролётов, ответвления, отрезки и раскрой, расчёт арматуры ---- */
 var SIPL=L.layerGroup(),SIPLB=L.layerGroup(),SIPRG=L.layerGroup(),SIPC=null,SIPT=0,SIPDO=false;
 /* нормы (на что умножаем) и количества по РД (уч. 1 + уч. 2) для сверки */
-var SIPN={sipK:1.02,tail:1.5,f40:1.0,loop:1.5,inlT:1.5,res:0.01,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
+var SIPN={sipK:1.02,tail:1.5,f40:1.0,loop:1.5,inlT:7,res:0.01,an:1,sus:1,slL:3,slP:1,ss:4,inl:1,cap:4,tape:1.5,skr:1.5,vvg:2.04,pen:1.5};
 var SIPRD={};
 var SIPR={root:'ввод от ТП',end:'концевая',anchor:'анкерная',corner:'угловая (поворот ≥45°)',branch:'ответвительная',mid:'промежуточная'};
 var SIPK={t:'магистраль',b:'ответвление',n:'к опорам на гравитационном фундаменте — следующий этап',x:'между сетями разных ТП — нужен разрыв, уточнить',c:'замыкает кольцо — для радиальной сети лишний, уточнить',u:'не связан с вводом от ТП — уточнить'};
