@@ -565,7 +565,7 @@ function sipSum(C){const Nn=[...C.ND.values()].filter(n=>tpOk(n.p)),s=f=>Nn.redu
  Nn.forEach(n=>{const r=T(n.p.tp);r.nd++;r.anc+=n.anc;r.sus+=n.sus;r.brs+=n.brs});o.pcs.forEach(pc=>T(pc.a.tp).pcs++);
  return o}
 function sipRows(o){const n=SIPN,pr=o.lum*n.slL+o.bond*n.slP+o.brs*n.ss+o.inl*n.inl;return[
- ['СИП-4 4×25','м','расчёт по отрезкам, м',Math.ceil(o.need),1,'пролёты '+Math.round(o.nd.len)+' м + провис по каждому пролёту '+o.nd.sag.toFixed(1)+' м + шлейфы на анкерных и угловых опорах '+o.loopN+' × '+n.loop+' м + хвосты на концах отрезков '+(2*o.pcs.length)+' × '+n.tail+' м + опуск к бронекабелю на вводе '+o.inlN+' × '+n.inlT+' м'+(o.cut.joints?' + стыки '+o.cut.joints+' × '+(2*n.tail+n.loop)+' м':'')+' + запас на раскатку '+Math.round(n.res*100)+'% ('+Math.round(o.nd.res)+' м)','sip'],
+ ['СИП-4 4×25','м','расчёт по отрезкам, м',Math.ceil(o.need),1,'пролёты '+Math.round(o.nd.len)+' м + провис по каждому пролёту '+o.nd.sag.toFixed(1).replace('.',',')+' м + шлейфы на анкерных и угловых опорах '+o.loopN+' × '+String(n.loop).replace('.',',')+' м + хвосты на концах отрезков '+(2*o.pcs.length)+' × '+String(n.tail).replace('.',',')+' м + опуск к бронекабелю на вводе '+o.inlN+' × '+String(n.inlT).replace('.',',')+' м'+(o.cut.joints?' + стыки '+o.cut.joints+' × '+String(2*n.tail+n.loop).replace('.',',')+' м':'')+' + запас на раскатку '+Math.round(n.res*100)+'% ('+Math.round(o.nd.res)+' м)','sip'],
  ['Зажим анкерный для СИП-4 4×25','шт','анкерных креплений',o.anc,n.an,'по 1 на каждый конец отрезка СИП и по 2 на анкерную или угловую опору в линии','an'],
  ['Кронштейн анкерный SO253','шт','анкерных креплений',o.anc,n.an,'по 1 на анкерный зажим','br'],
  ['Зажим поддерживающий для СИП-4 4×25','шт','промежуточных опор',o.sus,n.sus,'по 1 на промежуточную опору','sus'],
@@ -610,7 +610,7 @@ function sipStats(){const e=$('sips');if(!e||$('sipp').hidden||!SIPC)return;cons
 function sipLabels(){SIPLB.clearLayers();if(mode!='sip'||!SIPC||map.getZoom()<17)return;const b=map.getBounds().pad(.2);
  SIPC.ED.forEach(x=>{if(!(tpOk(x.a)||tpOk(x.b)))return;const m=sipMid(sipPath(x.e));if(!b.contains(m))return;const ex=x.kind=='x'?' · разрыв?':x.kind=='c'?' · кольцо':'';
   L.marker(m,{pane:'sipLb',icon:L.divIcon({className:'',html:'<div class="sipl'+(x.kind=='n'?' n':x.kind=='x'||x.kind=='c'?' w':'')+'">'+Math.round(x.len)+' м'+ex+'</div>',iconSize:[0,0]}),interactive:false,keyboard:false}).addTo(SIPLB)})}
-function sipSpanPop(x){return `<div class="pp"><b>${esc(x.a.id)} — ${esc(x.b.id)}</b><div>Пролёт ≈ <b>${Math.round(x.len)} м</b> <br>стрела провеса ≈ ${sipSag(x.len).f.toFixed(2)} м · провода в пролёте ≈ ${(x.len+sipSag(x.len).d).toFixed(1)} м</div><small>${SIPK[x.kind]}</small></div>`}
+function sipSpanPop(x){return `<div class="pp"><b>${esc(x.a.id)} — ${esc(x.b.id)}</b><div>Пролёт ≈ <b>${Math.round(x.len)} м</b> <br>стрела провеса ≈ ${sipSag(x.len).f.toFixed(2).replace('.',',')} м · провода в пролёте ≈ ${(x.len+sipSag(x.len).d).toFixed(1).replace('.',',')} м</div><small>${SIPK[x.kind]}</small></div>`}
 function sipPop(p){const d=document.createElement('div');d.className='pp';const n=SIPC&&SIPC.ND.get(p.uid);
  let h=`<div><b>${esc(p.id)}</b> <small>${p.t=='A'?'анкерная':'стандартная'} ${+p.h==9?9:8} м</small></div>`;
  if(!n)h+='<div style="margin:4px 0">Опора не на линии СИП'+(SIPC&&SIPC.ED.some(x=>x.kind=='n'&&(x.a===p||x.b===p))?' этого этапа (тупиковый отрезок к опорам на гравитационном фундаменте)':'')+'.</div>';
