@@ -311,6 +311,7 @@ var RLON=false;try{RLON=localStorage.getItem(KEY+'_rl')==='1'}catch(e){}
   inp.oninput=run;inp.onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();go(R0[sel])}else if(e.key=='Escape')close();else if(e.key=='ArrowDown'||e.key=='ArrowUp'){e.preventDefault();if(!R0.length)return;sel=(sel+(e.key=='ArrowDown'?1:-1)+R0.length)%R0.length;ls.querySelectorAll('.sri').forEach((x,i)=>x.classList.toggle('on',i==sel));const o=ls.querySelector('.sri.on');if(o)o.scrollIntoView({block:'nearest'})}};
   return d}});new C().addTo(map)}
 {const C=L.Control.extend({options:{position:'topleft'},onAdd(){const d=L.DomUtil.create('div','leaflet-bar');d.innerHTML='<a href="#" id="nbtn" style="display:flex;align-items:center;justify-content:center;font:800 15px/30px system-ui,sans-serif">№</a>';L.DomEvent.disableClickPropagation(d);d.querySelector('a').onclick=e=>{e.preventDefault();$('pn').checked=!$('pn').checked;$('pn').onchange();toast($('pn').checked?'Номера опор показаны':'Номера опор скрыты')};return d}});new C().addTo(map);setTimeout(()=>{nbtnUI();numLabels()},0)}
+{const C=L.Control.extend({options:{position:'topleft'},onAdd(){const d=L.DomUtil.create('div','leaflet-bar');d.innerHTML='<a href="#" id="ufbtn" title="Заливка участков 1 и 2 по смете" style="display:flex;align-items:center;justify-content:center;font:800 12px/30px system-ui,sans-serif">1|2</a>';L.DomEvent.disableClickPropagation(d);d.querySelector('a').onclick=e=>{e.preventDefault();if(typeof ufToggle=='function')ufToggle()};return d}});new C().addTo(map)}
 
 function rlBtn(){const a=document.getElementById('rlb');if(!a)return;a.style.background=RLON?'#dc2626':'';a.style.color=RLON?'#fff':'';a.querySelector('i').style.borderTopColor=RLON?'#fff':'#dc2626'}
 setTimeout(rlBtn,0);
@@ -1768,7 +1769,7 @@ setTimeout(matPull,3000);setInterval(matPull,120000);
 
 <script>
 var UCOV=new Set(['n17927456599451cnp','p503','p504','p501','p125','n1794778042473tnry','p122']);
-var UCCUT=[['p12','n17927456599451cnp'],['p128','p125']];
+var UCCUT=[];
 var UC2TP=new Set(['22','29','89','90','97']);
 var UCF=false;try{UCF=localStorage.getItem(KEY+'_ucf')==='1'}catch(e){}
 function ucOf(p){return UCOV.has(p.uid)?2:(UC2TP.has(String(p.tp))?2:1)}
@@ -1789,5 +1790,27 @@ function ucDraw(){try{
  try{const _s=stats;stats=function(){const r=_s.apply(this,arguments);try{ucSched()}catch(e){}return r}}catch(e){}
  try{const _n=numLabels;numLabels=function(){const r=_n.apply(this,arguments);try{ucSched()}catch(e){}return r}}catch(e){}
  setTimeout(ucDraw,500);setTimeout(ucDraw,3000)})();
+</script>
+
+<script>
+var UFON=false;try{UFON=localStorage.getItem(KEY+'_ufill')==='1'}catch(e){}
+var UFLY=null,UFL=[],UFR=22,UFC={1:'#2563eb',2:'#f97316'};
+function ufW(){const z=map.getZoom(),mpp=40075016.686*Math.cos(61.71*Math.PI/180)/Math.pow(2,z+8);return Math.max(3,2*UFR/mpp)}
+function ufUI(){const a=document.getElementById('ufbtn');if(!a)return;a.style.background=UFON?'#7c3aed':'';a.style.color=UFON?'#fff':''}
+function ufDraw(){try{
+ if(!map.getPane('ucp')){const p=map.createPane('ucp');p.style.zIndex=350;p.style.opacity=.3;p.style.pointerEvents='none'}
+ if(!UFLY)UFLY=L.layerGroup().addTo(map);UFLY.clearLayers();UFL=[];ufUI();if(!UFON)return;
+ const alive=p=>p&&p.tp&&!(p.x&&!p.sx),w=ufW(),line=(A,B,u)=>{const l=L.polyline([A,B],{pane:'ucp',color:UFC[u],weight:w,opacity:1,lineCap:'round',lineJoin:'round',interactive:false});UFL.push(l);UFLY.addLayer(l)};
+ let E=[];try{E=netEdges().E||[]}catch(e){}
+ E.forEach(([a,b])=>{if(!alive(a)||!alive(b))return;const ua=ucOf(a),ub=ucOf(b),A=[a.lat,a.lon],B=[b.lat,b.lon];
+  if(ua==ub)line(A,B,ua);else{const M=[(a.lat+b.lat)/2,(a.lon+b.lon)/2];line(A,M,ua);line(M,B,ub)}});
+ P.forEach(p=>{if(!alive(p))return;UFLY.addLayer(L.circle([p.lat,p.lon],{pane:'ucp',radius:UFR,stroke:false,fillColor:UFC[ucOf(p)],fillOpacity:1,interactive:false}))});
+}catch(e){console.log('ufDraw',e)}}
+function ufToggle(){UFON=!UFON;try{localStorage.setItem(KEY+'_ufill',UFON?'1':'0')}catch(e){}ufDraw();
+ if(typeof toast=='function')toast(UFON?'Участки по смете: синий — участок 1, оранжевый — участок 2':'Заливка участков скрыта')}
+(function(){map.on('zoomend',()=>{if(UFON){const w=ufW();UFL.forEach(l=>l.setStyle({weight:w}))}});
+ let t=0;const sch=()=>{clearTimeout(t);t=setTimeout(()=>{if(UFON)ufDraw()},300)};
+ try{const _s=stats;stats=function(){const r=_s.apply(this,arguments);try{sch()}catch(e){}return r}}catch(e){}
+ setTimeout(ufDraw,800);setTimeout(ufDraw,3500)})();
 </script>
 </body></html>
