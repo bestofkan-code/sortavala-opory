@@ -26,7 +26,7 @@ if(!P||!P.length)init();P.forEach((p,i)=>{if(!p.uid)p.uid='p'+i});
 const pid=(t,n)=>(/^\d+$/.test(t)?'ТП'+t:t)+'-'+n,tpn=x=>/^\d+$/.test(x)?'ТП №'+x:x;
 const WK=[[1, "Забурен котлован"], [11, "Котлован заземления"], [2, "Установлена закладная"], [3, "Забетонирована"], [10, "Гравитационный фундамент"], [4, "Установлена опора"], [16, "Установлен цоколь"], [12, "Установлен кронштейн"], [5, "Протянут СИП"], [6, "Установлен светильник"], [7, "Демонтаж забора"], [8, "Демонтаж старой опоры"], [9, "Подрезка крон деревьев"], [14, "Подрезка крон (бригада)"], [13, "Вывоз отходов"]];
 const wd=(p,k)=>k==4?(p.done?(p.date||'да'):''):((p.w&&p.w[k])||''),wdone=(p,k)=>!!wd(p,k),tt=p=>p.id+' · работ: '+WK.filter(([k])=>wdone(p,k)).length+'/'+WK.length;
-const isG=p=>p.f=='G'||wdone(p,10);function setW(p,k,on,d){if(k==10&&on)p.f='G';if(k==12&&on&&!(+p.kr))p.kr=1;if(k==6){if(on)p.sv=Math.max(1,+p.kr||1);if(!on)p.sv=0}if(k==4){p.done=on;p.date=on?d:''}else{p.w=p.w||{};if(on)p.w[k]=d;else delete p.w[k]}}
+const isG=p=>p.f=='G'||wdone(p,10);function setW(p,k,on,d){if(k==10&&on)p.f='G';if(k==11&&on)p.g=true;if(k==12&&on&&!(+p.kr))p.kr=1;if(k==6){if(on)p.sv=Math.max(1,+p.kr||1);if(!on)p.sv=0}if(k==4){p.done=on;p.date=on?d:''}else{p.w=p.w||{};if(on)p.w[k]=d;else delete p.w[k]}}
 const wsel=()=>[...document.querySelectorAll('#wf input:checked')].map(x=>+x.dataset.f);
 function wmatch(p){const s=wsel(),f=$('wdf').value,e=$('wdt').value;if(!s.length&&!f&&!e)return true;const ks=s.length?s:WK.map(w=>w[0]),want=$('wm').value=='1',inr=v=>/^\d{4}-/.test(v)&&(!f||v>=f)&&(!e||v<=e),r=ks.map(k=>{const v=wd(p,k);return(f||e)?(want?inr(v):!inr(v)):(!!v)==want});if($('wl').value=='all'&&s.length){if((f||e)&&want)return ks.every(k=>!!wd(p,k))&&r.some(Boolean);return r.every(Boolean)}return r.some(Boolean)}
 const YC=new Set(),YA=new Map();
@@ -227,7 +227,7 @@ function gzEl(p){return !!p.g&&!p.x&&!p.pp&&!isG(p)}
 function gzDn(p){return wdone(p,11)||wdone(p,15)}function gzOk(p){return gzEl(p)&&!gzDn(p)}function gzDone(p){return gzEl(p)&&gzDn(p)}function gzPass(p){return GZF==1?gzOk(p):GZF==2?gzDone(p):gzEl(p)}
 function gzUI(){const b=$('gzb');if(!b)return;b.querySelectorAll('button[data-gz]').forEach(x=>{const on=+x.dataset.gz==GZF;x.style.background=on?'#65a30d':'';x.style.color=on?'#fff':''});const E=P.filter(p=>gzEl(p)&&tpOk(p)),d=E.filter(gzDn).length;$('gzs').innerHTML='выполнено <b>'+d+'</b> из '+E.length+' · осталось <b>'+(E.length-d)+'</b>'+(GZF?' · <a href="#" data-gz="0">показать все опоры</a>':'')}
 function vis(p){return (!GZF||gzPass(p))&&ftyOk(p)&&visB(p)&&(!VKF||vkOk(p))&&(!RZF||rzOk(p))&&(!NB||nbOk(p))&&(!GY||gyOk(p))&&(!NK||nkOk(p))&&(!VS||vsOk(p))}function visB(p){return tpOk(p)&&sqVis(p)&&!(HG&&isG(p))&&(!FJ||!!p.js)&&wmatch(p)&&(p.x?$('fx').checked:(p.done?$('fd').checked:$('fr').checked))}
-function upd(p){const m=mk.get(p);m.setIcon(icon(p));m.setOpacity(sqOp(p));vis(p)?lg.addLayer(m):lg.removeLayer(m);m.setTooltipContent(tt(p))}
+function upd(p){if(!p.g&&p.w&&p.w[11])p.g=true;const m=mk.get(p);m.setIcon(icon(p));m.setOpacity(sqOp(p));vis(p)?lg.addLayer(m):lg.removeLayer(m);m.setTooltipContent(tt(p))}
 
 /* ---- режим «Смена ТП» ---- */
 var RTPU=[],RTPPICK=false;
