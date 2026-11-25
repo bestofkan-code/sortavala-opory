@@ -81,6 +81,7 @@ const lg=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map),mk=new Map();
 const KRN={0:'нет',1:'однорожковый',2:'двухрожковый'};
 const KRO=[['0','нет'],['1','1-рожк.'],['2-90','2-р 90°'],['2-180','2-р 180°']];function krv(p){const k=+p.kr||0,a=+p.ka||0;const v=k+(a&&k?'-'+a:'');return KRO.some(o=>o[0]==v)?v:String(k)}function krn(p){return KRN[+p.kr||0]+(+p.ka&&+p.kr==2?' '+p.ka+'°':'')}
 function armN(p){return Math.min(2,Math.max(+p.kr||0,+p.sv||0))}
+function lumN(p){return +p.kr==2?2:+p.kr==1?1:Math.max(1,+p.sv||1)}
 function lumI(p){return wdone(p,6)?(+p.kr==2?2:+p.kr==1?1:Math.max(1,+p.sv||1)):0}
 function ready(p){const n=Math.max(1,+p.kr||0);return !!p.done&&!p.x&&lumI(p)>=n}
 function armAng(n,ka){if(n!=2)ka=0;return n==1?[-90]:n==2?(ka==180?[-180,0]:ka==90?[-135,-45]:[-145,-35]):[]}
@@ -1030,9 +1031,9 @@ $('ga').onclick=()=>{if(!pos)return alert('Сначала нажмите «Гд�
 $('wf').innerHTML=WK.map(([k,n])=>`<label class="wfc"><input type=checkbox data-f=${k}> ${n}</label>`).join('');
 function wfCount(){const e=$('wfn');if(!e)return;const s=wsel(),f=$('wdf').value,t=$('wdt').value,want=$('wm').value=='1',inr=v=>/^\d{4}-/.test(v)&&(!f||v>=f)&&(!t||v<=t);
  const base=p=>ftyOk(p)&&tpOk(p)&&sqVis(p)&&!(HG&&isG(p))&&(!FJ||!!p.js)&&(p.x?$('fx').checked:(p.done?$('fd').checked:$('fr').checked)),B=P.filter(base);
- document.querySelectorAll('#wf input').forEach(c=>{const k=+c.dataset.f,n=B.filter(p=>{const v=wd(p,k);return(f||t)?(want?inr(v):!inr(v)):(!!v)==want}).length;let i=c.parentNode.querySelector('i');if(!i){i=document.createElement('i');c.parentNode.appendChild(i)}i.textContent=n});
+ document.querySelectorAll('#wf input').forEach(c=>{const k=+c.dataset.f,M=B.filter(p=>{const v=wd(p,k);return(f||t)?(want?inr(v):!inr(v)):(!!v)==want}),n=M.length;let i=c.parentNode.querySelector('i');if(!i){i=document.createElement('i');c.parentNode.appendChild(i)}if(k==6){const L=M.reduce((a,p)=>a+lumN(p),0);i.textContent=L==n?n:L+' шт · '+n+' оп.';i.title='Светильников '+L+' шт. на '+n+' опорах (2-рожковый кронштейн = 2 светильника)'}else{i.textContent=n;i.title=''}});
  if(!s.length&&!f&&!t){e.hidden=true;return}const V=B.filter(wmatch),x=V.filter(p=>p.x).length,g=V.filter(p=>!p.x&&isG(p)).length,gr=V.filter(p=>!p.x&&!isG(p)&&p.pp).length,a=V.filter(p=>p.t=='A').length;
- e.hidden=false;const kc=V.length-x-g-gr;e.innerHTML='Подходит опор: <b>'+V.length+'</b><small>'+((x||g)?'опор контракта <b style="font-size:13px">'+kc+'</b>'+(gr?' · серых предлагаемых '+gr+' (не в счёт)':'')+(x?' · исключённых '+x:'')+(g?' · на гравит. фундаменте '+g:''):(gr?'из них серых предлагаемых '+gr:''))+'</small><small>стандартных '+(V.length-a)+' · анкерных '+a+'</small>'}
+ e.hidden=false;const kc=V.length-x-g-gr;e.innerHTML='Подходит опор: <b>'+V.length+'</b><small>'+((x||g)?'опор контракта <b style="font-size:13px">'+kc+'</b>'+(gr?' · серых предлагаемых '+gr+' (не в счёт)':'')+(x?' · исключённых '+x:'')+(g?' · на гравит. фундаменте '+g:''):(gr?'из них серых предлагаемых '+gr:''))+'</small><small>стандартных '+(V.length-a)+' · анкерных '+a+'</small>'+(s.map(Number).includes(6)?'<small>светильников '+V.filter(p=>!p.x&&!isG(p)&&!p.pp).reduce((q,p)=>q+lumN(p),0)+' шт (по кронштейнам)</small>':'')}
 const wch=()=>{P.forEach(upd);stats();numLabels();wfCount()};{const _st=stats;stats=function(){const r=_st.apply(this,arguments);try{wfCount()}catch(e){}return r}}$('wf').onchange=$('wm').onchange=$('wl').onchange=$('wdf').onchange=$('wdt').onchange=wch;$('wdy').onclick=()=>{$('wdf').value=$('wdt').value=LD();wch()};$('wx').onclick=()=>{document.querySelectorAll('#wf input').forEach(x=>x.checked=false);$('wdf').value=$('wdt').value='';wch()};
 
 if(map.setBearing){$('rb').oninput=()=>map.setBearing(+$('rb').value);$('rn').onclick=()=>map.setBearing(0);map.on('rotate',()=>{$('rb').value=(Math.round(map.getBearing())%360+360)%360})}else $('rot').parentNode&&($('rot').style.display='none');
