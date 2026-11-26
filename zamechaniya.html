@@ -1316,7 +1316,7 @@ function s2Draw(){S2LY.clearLayers();const zm=map.getZoom();
   g.pts.forEach((q,i)=>{if(!q.hook)return;const m=L.marker([q.lat,q.lon],{draggable:!RO,icon:L.divIcon({className:'',iconSize:[0,0],html:'<div style="position:absolute;left:0;top:0;transform:translate(-50%,-50%)">'+s2Hook()+'</div>'+(zm>=17?'<div style="position:absolute;left:0;top:20px;transform:translate(-50%,0);white-space:nowrap;font:600 11px Commissioner,Arial;padding:1px 5px;border-radius:5px;background:#111827;color:#fff">крюк в своде арки</div>':'')})}).addTo(S2LY);
    m.on('click',e=>{L.DomEvent.stop(e);s2Popup(z,e.latlng)});
    if(!RO)m.on('dragend',async()=>{const ll=m.getLatLng();q.q.lat=+ll.lat.toFixed(7);q.q.lon=+ll.lng.toFixed(7);s2Draw();try{const r=await fetch(CF.u+'/rest/v1/sip2?uid=eq.'+encodeURIComponent(z.uid),{method:'PATCH',headers:{...H(),Prefer:'return=minimal'},body:JSON.stringify({path:z.path,ed:WHO||null})});if(!r.ok)throw new Error(await r.text());S2J=JSON.stringify(S2);toast('Крюк в арке перенесён')}catch(e){toast('Не сохранилось: '+(e.message||e))}})})})}
-async function s2Load(){try{if(!CF)return;const r=await fetch(CF.u+'/rest/v1/sip2?select=*&order=uid',{headers:H()});const j=await r.json();if(!Array.isArray(j))return;const js=JSON.stringify(j);if(js===S2J)return;S2J=js;S2=j;s2Draw()}catch(e){}}
+async function s2Load(){try{if(!CF)return;const r=await fetch(CF.u+'/rest/v1/sip2?select=*&order=uid',{headers:H()});const j=await r.json();if(!Array.isArray(j))return;const js=JSON.stringify(j);if(js===S2J)return;S2J=js;S2=j;s2Draw();try{stats()}catch(e){}}catch(e){}}
 map.on('zoomend',()=>{if(S2.length)s2Draw()});
 setTimeout(s2Load,1500);setInterval(()=>{if(!document.hidden)s2Load()},30000);
 
