@@ -332,14 +332,14 @@ function redraw(){tps();lg.clearLayers();mk.clear();P.forEach(add);lines();numLa
 function hwMore(A){const B=A.filter(p=>!p.pp),bar=(v,T,c)=>`<div style="height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden;margin:2px 0 5px"><i style="display:block;height:100%;width:${T?Math.min(100,v/T*100):0}%;background:${c}"></i></div>`,
  ln=(nm,v,T,c,u)=>!T?`<div style="display:flex;justify-content:space-between;gap:6px"><span>${nm}</span><b style="color:${c}">${u?'≈ ':''}${v.toLocaleString('ru-RU')}${u||''}</b></div>`:`<div style="display:flex;justify-content:space-between;gap:6px"><span>${nm}</span><b style="color:${c}">${u?'≈ ':''}${v.toLocaleString('ru-RU')}${u||''} из ${T.toLocaleString('ru-RU')}${u||''} <small style="color:#555;font-weight:400">(${T?Math.round(v/T*1000)/10:0}%) · осталось ${u?'≈ ':''}${Math.max(0,T-v).toLocaleString('ru-RU')}${u||''}</small></b></div>`+bar(v,T,c),
  sv=B.reduce((a,p)=>a+lumI(p),0),kc=t=>B.filter(p=>wdone(p,12)&&kcT(p)==t).length;
- let sip='';try{const C=sipCalc(),ok=p=>!p.x&&wdone(p,5);let L=0,n=0;C.ED.forEach(x=>{if(ok(x.a)&&ok(x.b)){L+=x.len;n++}});L=Math.round(L/10)*10;
+ let sip='';try{const C=sipCalc(),ok=p=>!p.x&&wdone(p,5);let L=0,n=0;C.ED.forEach(x=>{if(ok(x.a)&&ok(x.b)){L+=x.len;n++}});(C.S2X||[]).forEach(z=>{if(z.done){L+=z.len;n+=z.pc.spans}});L=Math.round(L/10)*10;
   sip=ln('СИП протянут',L,CFG.SIPM,'#b45309',' м').replace('</span>',` <small style="color:#555">(${n} ${n%10==1&&n%100!=11?'пролёт':n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?'пролёта':'пролётов'})</small></span>`)}catch(e){}
  return ln('Светильников установлено',sv,CFG.LUM,'#ca8a04')
   +'<div style="margin:3px 0 1px;color:#555">Кронштейны установлено:</div>'
   +ln('1-рожковые',kc('1'),KCT['1'],'#0f172a')+ln('2-рожковые 90°',kc('90'),KCT['90'],'#ea580c')+ln('2-рожковые 180°',kc('180'),KCT['180'],'#7c3aed')
   +sip+ln('Котлованы под заземление',B.filter(p=>wdone(p,11)).length,CFG.GZ,'#a16207')+(BOSS?'<small style="color:#555;display:block;margin:-2px 0 4px">Светильники, кронштейны и СИП — из сметы ('+CFG.LUM+' шт., '+KCT['1']+'/'+KCT['90']+'/'+KCT['180']+' шт., '+CFG.SIPM.toLocaleString('ru-RU')+' м), котлованы под заземление — по числу комплектов повторного заземления ('+CFG.GZ+'). СИП — приблизительно, по длинам пролётов на карте, где на обеих опорах отмечен СИП.</small>':'<small style="color:#555;display:block;margin:-2px 0 4px">СИП — приблизительно, по длинам пролётов на карте, где на обеих опорах отмечен СИП.</small>')}
 function hwAllH(A){if(!BOSS)return '';const K=CFG.KCP,c=f=>A.filter(f).length,pc=(v,T)=>T?Math.min(100,v/T*100):0;
- const sv=A.reduce((a,p)=>a+lumI(p),0);let L=0;try{const C=sipCalc(),ok=p=>!p.x&&wdone(p,5);C.ED.forEach(x=>{if(ok(x.a)&&ok(x.b))L+=x.len})}catch(e){}
+ const sv=A.reduce((a,p)=>a+lumI(p),0);let L=0;try{const C=sipCalc(),ok=p=>!p.x&&wdone(p,5);C.ED.forEach(x=>{if(ok(x.a)&&ok(x.b))L+=x.len});(C.S2X||[]).forEach(z=>{if(z.done)L+=z.len})}catch(e){}
  const it=[['котл.',pc(c(p=>wdone(p,1)),K)],['закл.',pc(c(p=>wdone(p,2)),K)],['бетон',pc(c(p=>wdone(p,3)),K)],['опоры',pc(c(p=>p.done),K)],['кроншт.',pc(c(p=>wdone(p,12)),K)],['свет.',pc(sv,CFG.LUM)],['СИП',pc(L,CFG.SIPM)]];
  const t=it.reduce((a,x)=>a+x[1],0)/it.length,f=v=>(Math.round(v*10)/10).toLocaleString('ru-RU');
  return `<div style="padding:7px 9px;margin-bottom:8px;border:1px solid #1d4ed8;border-radius:6px;background:rgba(29,78,216,.12)"><div style="display:flex;justify-content:space-between;align-items:baseline"><b>Общий прогресс работ</b><b style="font-size:17px;color:#60a5fa">${f(t)}%</b></div>`
@@ -550,7 +550,8 @@ function sipCalc(){
   [n[0],n[n.length-1]].forEach(u=>{const d=ND.get(u);d.ends++;d.anc++});
   for(let i=1;i<n.length-1;i++){const d=ND.get(n[i]),t=turnAt(n[i],n[i-1],n[i+1]);d.turn=t;if(d.p.t=='A'||t>=45){d.anc+=2;d.ia=true;pc.loops++}else{d.sus++;d.ia=false}}});
  ND.forEach(d=>{if(d.root)d.inl=1;d.role=d.root?'root':d.deg>=3?'branch':d.deg<=1?'end':d.ia?(d.p.t=='A'?'anchor':'corner'):'mid'});
- return{ED,ND,PCS,U}}
+ const S2X=[];try{(typeof S2!='undefined'?S2:[]).forEach(z=>{const gg=s2Geo(z),ps=(z.path||[]).filter(q=>q.p).map(q=>U.get(q.p)).filter(Boolean);if(ps.length<2)return;let sag=0;gg.seg.forEach(x=>{sag+=sipSag(x[2]).d});const pc={nodes:ps.map(p=>p.uid),len:gg.len,sag,loops:0,inl:0,a:ps[0],b:ps[ps.length-1],spans:gg.seg.length,nofeed:false,s2:true};PCS.push(pc);S2X.push({len:gg.len,done:ps.every(p=>wdone(p,5)),pc})})}catch(e){}
+ return{ED,ND,PCS,U,S2X}}
 function sipCut(pcs,drum){const it=[];pcs.forEach(pc=>{let need=sipNeed(pc).all;if(need<=drum)it.push({pc,need,part:1,parts:1});else{const jx=2*SIPN.tail+SIPN.loop;let k=Math.ceil(need/drum);while((need+(k-1)*jx)/k>drum)k++;need+=(k-1)*jx;for(let i=1;i<=k;i++)it.push({pc,need:need/k,part:i,parts:k})}});
  it.sort((a,b)=>b.need-a.need);const bins=[];it.forEach(x=>{let b=bins.find(b=>b.free>=x.need-1e-6);if(!b){b={free:drum,items:[]};bins.push(b)}b.items.push(x);b.free-=x.need});
  return{bins,joints:it.filter(x=>x.part>1).length,waste:bins.reduce((a,b)=>a+b.free,0),items:it}}
@@ -1896,7 +1897,7 @@ function matUse(all){const C=sipCalc(),E=all?C.ED:C.ED.filter(e=>wdone(e.a,5)&&w
   if(b){o.anc+=b;if(m>=1)o.ct70+=4*b;else o.cap+=4*b}
   o.bond++;if(all||wdone(p,6))o.zoi+=3*(+p.kr==2?2:+p.kr==1?1:Math.max(1,+p.sv||1))});
  E.forEach(e=>o.len+=e.len);
- o.strap=o.sus*2+o.anc+o.zoi+o.bond+o.ct70;o.nki=o.grover=o.washer=o.bolt=o.bond;o.pugv=Math.round(o.bond*SIPN.pen*10)/10;o.pierce=o.zoi+o.bond;o.hook=o.sus+o.anc;o.tape=Math.round(o.hook*1.5*10)/10;o.clip=Math.ceil(o.tape);o.term=o.zoi;o.vvg=Math.round(o.zoi/3*SIPN.vvg*10)/10;const gn=P.filter(p=>gzEl(p)&&(all||wdone(p,15))).length;o.gz=gn;o.gzr=gn*10*0.888/1000;o.gza=gn*5*3.77/1000;if(all)o.len=(C.PCS||[]).reduce((a,pc)=>a+sipNeed(pc).all,0);return o}
+ o.strap=o.sus*2+o.anc+o.zoi+o.bond+o.ct70;o.nki=o.grover=o.washer=o.bolt=o.bond;o.pugv=Math.round(o.bond*SIPN.pen*10)/10;o.pierce=o.zoi+o.bond;o.hook=o.sus+o.anc;o.tape=Math.round(o.hook*1.5*10)/10;o.clip=Math.ceil(o.tape);o.term=o.zoi;o.vvg=Math.round(o.zoi/3*SIPN.vvg*10)/10;const gn=P.filter(p=>gzEl(p)&&(all||wdone(p,11))).length;o.gz=gn;o.gzr=gn*10*0.888/1000;o.gza=gn*5*3.77/1000;if(all)o.len=(C.PCS||[]).reduce((a,pc)=>a+sipNeed(pc).all,0);return o}
 function matUI(){let d=$('matd');if(!d){const sk=$('skd');if(!sk||RO)return;sk.insertAdjacentHTML('afterend','<details id="matd"><summary><b>Материалы на складе</b> <span id="mats"></span></summary><div id="matw"></div></details>');d=$('matd')}
  if(!MATI.length){d.style.display='none';return}d.style.display='';
  let U={},N={};try{U=matUse()}catch(e){}try{N=matUse(1)}catch(e){}
