@@ -35,7 +35,7 @@ table.tp tr.on td{background:#22305a}
 .it small{display:block;color:var(--mu)}
 .tg{display:inline-block;font-size:11px;padding:0 7px;border-radius:8px;margin:2px 3px 0 0;color:#111;font-weight:700}
 .nv a{color:#9db4ff;font-size:12px;margin-right:10px;text-decoration:none}
-.lbl{transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 5px;border-radius:11px;font:700 11px Commissioner,system-ui,sans-serif;color:#111;border:2px dashed #111;box-shadow:0 1px 4px rgba(0,0,0,.45);white-space:nowrap}
+.lbl{transform:translate(-50%,-50%);width:max-content;display:flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 5px;border-radius:11px;font:700 11px Commissioner,system-ui,sans-serif;color:#111;border:2px dashed #111;box-shadow:0 1px 4px rgba(0,0,0,.45);white-space:nowrap}
 .lbl.br{border-style:solid}
 .lbl.np{opacity:.75;background-image:repeating-linear-gradient(45deg,transparent 0 4px,rgba(0,0,0,.18) 4px 6px)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#161a24;color:var(--tx)}
@@ -126,7 +126,7 @@ function render(){const tp=$('tp').value;
  $('tt').innerHTML='<tr><th>ТП</th><th>опор</th><th>1р</th><th>90°</th><th>180°</th><th>светильн.</th></tr>'+ks.map(k=>{const r=by[k];return '<tr data-tp="'+esc(k)+'"'+(k==tp?' class="on"':'')+'><td>'+esc(tpn(k))+'</td><td>'+r.o+'</td><td>'+r['1']+'</td><td>'+r['90']+'</td><td>'+r['180']+'</td><td>'+r.l+'</td></tr>'}).join('')+'<tr data-tp=""><td><b>Итого</b></td><td><b>'+S.o+'</b></td><td><b>'+S['1']+'</b></td><td><b>'+S['90']+'</b></td><td><b>'+S['180']+'</b></td><td><b>'+S.l+'</b></td></tr>';
  $('tt').querySelectorAll('tr[data-tp]').forEach(tr=>tr.onclick=()=>{$('tp').value=tr.dataset.tp;render.fit=0;render()});
  const B=[],lb=$('lb').checked;L2.forEach((p,i)=>{B.push([p.lat,p.lon]);const t=kc(p);
-  L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="lbl'+(wdone(p,12)?' br':'')+(p.done?'':' np')+'" style="background:'+TYC[t]+'">'+(lb?esc(String(p.id).replace(/^Шуно Дорожная/,'ШД').replace(/^КТП\s+/,'КТП')):TYS[t])+'</div>'})}).bindPopup(()=>pop(p)).addTo(lay)});
+  L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="lbl'+(wdone(p,12)?' br':'')+(p.done?'':' np')+'" style="background:'+TYC[t]+'">'+(lb?esc(String(p.id).replace(/^Шуно Дорожная/,'ШД').replace(/^КТП\s+/,'К').replace(/^ТП/,'')):TYS[t])+'</div>'})}).bindPopup(()=>pop(p)).addTo(lay)});
  $('li').innerHTML=L2.map((p,i)=>'<div class="it" data-i="'+i+'"><div class="h"><b>'+(i+1)+'. '+esc(p.id)+'</b>'+tag(p)+(p.ad?'<span class="mu">'+esc(p.ad)+'</span>':'')+'</div><small>'+what(p)+'</small>'+nav(p)+'</div>').join('')||'<div class="mu">Нет опор по выбранным условиям.</div>';
  $('li').querySelectorAll('.it').forEach(el=>el.onclick=e=>{if(e.target.closest('a'))return;const p=PTS[+el.dataset.i];map.setView([p.lat,p.lon],18);lay.eachLayer(m=>{const ll=m.getLatLng();if(ll.lat==p.lat&&ll.lng==p.lon)m.openPopup()})});
  if(B.length&&!render.fit){map.fitBounds(B,{padding:[30,30],maxZoom:17});render.fit=1}
