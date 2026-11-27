@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex"><meta name="googlebot" content="noindex,nofollow"><meta name="yandex" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><style>/*NOZOOM*/html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}.leaflet-popup,.leaflet-popup-content-wrapper,.leaflet-popup-content,.pp{touch-action:pan-x pan-y}</style><script>/*NOZOOM*/["gesturestart","gesturechange","gestureend"].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()},{passive:false})});document.addEventListener("dblclick",function(e){if(!e.target.closest||!e.target.closest(".leaflet-container"))e.preventDefault()},{passive:false});</script>
+<title>Светильники и кронштейны — развозка и монтаж</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#11141c;--pn:#161a24;--ln:#2c3346;--tx:#eef1f7;--mu:#9aa3b5;--ac:#4f7cff;--k1:#e5e7eb;--k90:#f59e0b;--k180:#a78bfa}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--tx);font:14px 'Commissioner',system-ui,sans-serif;display:flex}
+#s{width:390px;flex:none;height:100vh;overflow:auto;padding:14px 14px 30px;border-right:1px solid #232838}
+#m{flex:1;height:100vh}
+h1{font-size:17px;margin:0 0 2px}
+.mu{color:var(--mu);font-size:12px}
+h3{font-size:11px;letter-spacing:.06em;color:var(--mu);margin:14px 0 6px;text-transform:uppercase}
+.r{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0}
+select,input,button{font:inherit;color:var(--tx);background:#0f121a;border:1px solid var(--ln);border-radius:8px;padding:6px 8px}
+button{background:#1d2230;cursor:pointer}
+button.pr{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.chips label{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--ln);border-radius:16px;font-size:12.5px;cursor:pointer}
+.sw{display:inline-block;width:22px;height:12px;border-radius:6px;border:2px dashed #111}
+.sum{background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:8px 10px;margin:8px 0;font-size:13px;line-height:1.55}
+.sum b{font-size:15px}
+table.tp{width:100%;border-collapse:collapse;font-size:12.5px;margin:4px 0}
+table.tp th,table.tp td{border-bottom:1px solid var(--ln);padding:4px 5px;text-align:right}
+table.tp th:first-child,table.tp td:first-child{text-align:left}
+table.tp tr[data-tp]{cursor:pointer}table.tp tr[data-tp]:hover td{background:#1b2030}
+table.tp tr.on td{background:#22305a}
+.it{border:1px solid var(--ln);border-radius:10px;padding:7px 9px;margin:6px 0;background:var(--pn);cursor:pointer}
+.it:hover{border-color:var(--ac)}
+.it .h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.it small{display:block;color:var(--mu)}
+.tg{display:inline-block;font-size:11px;padding:0 7px;border-radius:8px;margin:2px 3px 0 0;color:#111;font-weight:700}
+.nv a{color:#9db4ff;font-size:12px;margin-right:10px;text-decoration:none}
+.lbl{transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 5px;border-radius:11px;font:700 11px Commissioner,system-ui,sans-serif;color:#111;border:2px dashed #111;box-shadow:0 1px 4px rgba(0,0,0,.45);white-space:nowrap}
+.lbl.br{border-style:solid}
+.lbl.np{opacity:.75;background-image:repeating-linear-gradient(45deg,transparent 0 4px,rgba(0,0,0,.18) 4px 6px)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#161a24;color:var(--tx)}
+.leaflet-popup-content{margin:9px 11px;font:13px Commissioner,system-ui,sans-serif}
+.leaflet-popup-content a{color:#9db4ff}
+a{color:#9db4ff}
+#ph{display:none}
+@media (max-width:760px){body{flex-direction:column}#m{height:58vh;order:1}#s{width:100%;height:auto;order:2;border:0}}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ body{display:block;background:#fff;color:#111}
+ #s .np,.leaflet-control-zoom,.leaflet-control-layers{display:none!important}
+ #ph{display:block;font:12px Arial,sans-serif;margin-bottom:4px}
+ #m{width:100%;height:135mm;page-break-after:always}
+ #s{width:100%;height:auto;overflow:visible;border:0;padding:0}
+ .it{break-inside:avoid;border:0;border-bottom:1px solid #ccc;border-radius:0;background:#fff;color:#111;padding:3px 0;margin:0}
+ .it small{color:#333}.nv{display:none}
+ .sum,table.tp td,table.tp th{background:#fff;color:#111;border-color:#999}
+}
+</style>
+</head>
+<body>
+<div id="m"></div>
+<div id="s">
+ <div id="ph"></div>
+ <h1>Светильники и кронштейны — развозка и монтаж</h1>
+ <div class="mu">Опоры, где ещё нет светильников. Цвет метки — какой кронштейн нужен. Данные берутся с карты опор и обновляются автоматически: когда бригада отметит светильник, опора пропадёт отсюда.</div>
+ <div class="np">
+ <h3>Фильтр</h3>
+ <div class="r">ТП: <select id="tp" style="flex:1;min-width:0"><option value="">все ТП</option></select></div>
+ <div class="r chips" id="ty">
+  <label><input type="checkbox" value="1" checked><span class="sw" style="background:var(--k1)"></span>1-рожковый</label>
+  <label><input type="checkbox" value="90" checked><span class="sw" style="background:var(--k90)"></span>2-рожк. 90°</label>
+  <label><input type="checkbox" value="180" checked><span class="sw" style="background:var(--k180)"></span>2-рожк. 180°</label>
+ </div>
+ <div class="r chips">
+  <label><input type="checkbox" id="nb" checked>кронштейна нет — привезти и поставить</label>
+  <label><input type="checkbox" id="hb" checked>кронштейн стоит — нужен светильник</label>
+ </div>
+ <div class="r"><label><input type="checkbox" id="lb" checked> номера опор на метках</label></div>
+ </div>
+ <div class="sum" id="sum">Загрузка…</div>
+ <h3>Развозка по ТП</h3>
+ <table class="tp" id="tt"></table>
+ <div class="mu np">Нажмите на строку — карта покажет только эту ТП.</div>
+ <div class="r np" style="margin-top:8px"><button class="pr" id="pr">Печать / PDF</button><button id="xl">Excel</button><button id="me">Где я</button></div>
+ <div class="r np" id="rt"></div>
+ <h3>Список опор</h3>
+ <div id="li"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+const CF={u:'https://rznsydqapcffgnvynfdg.supabase.co',k:'sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc'},$=i=>document.getElementById(i);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TYN={'1':'1-рожковый','90':'2-рожковый 90°','180':'2-рожковый 180°'},TYC={'1':'#e5e7eb','90':'#f59e0b','180':'#a78bfa'},TYS={'1':'1р','90':'90°','180':'180°'};
+let P=[],PTS=[],ME=null;
+const map=L.map('m',{zoomControl:true,zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:120}).setView([61.705,30.69],14);
+const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
+L.control.layers({'Карта':osm,'Спутник':sat}).addTo(map);map.attributionControl.setPrefix(false);
+const lay=L.layerGroup().addTo(map);
+const wd=(p,k)=>((p.w||{})[k]||''),wdone=(p,k)=>!!wd(p,k);
+const isG=p=>p.f=='G'||wdone(p,10);
+const tpn=t=>/^\d+$/.test(String(t))?'ТП №'+t:String(t||'');
+const need=p=>(+p.kr==2?2:1);
+const lumI=p=>wdone(p,6)?(+p.kr==2?2:+p.kr==1?1:Math.max(1,+p.sv||1)):0;
+const kc=p=>+p.kr==1?'1':(+p.kr==2?(+p.ka==90?'90':'180'):'1');
+const left=p=>need(p)-lumI(p);
+async function load(){try{const r=await fetch(CF.u+'/rest/v1/poles?select=uid,id,lat,lon,tp,n,t,w,x,f,pp,kr,ka,sv,done,ad&limit=5000',{headers:{apikey:CF.k}}),j=await r.json();if(!Array.isArray(j))throw new Error(JSON.stringify(j));
+ P=j.filter(p=>!p.x&&!p.pp&&!isG(p)&&left(p)>0);
+ const tps=[...new Set(P.map(p=>String(p.tp||'')).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru',{numeric:true})),cur=$('tp').value;
+ $('tp').innerHTML='<option value="">все ТП</option>'+tps.map(t=>'<option value="'+esc(t)+'">'+esc(tpn(t))+'</option>').join('');$('tp').value=tps.includes(cur)?cur:'';render()}catch(e){$('sum').textContent='Не удалось загрузить данные: '+(e.message||e)}}
+function types(){return new Set([...$('ty').querySelectorAll('input:checked')].map(i=>i.value))}
+function pass(p,tpOnly){const T=types(),br=wdone(p,12);if(!T.has(kc(p)))return false;if(br&&!$('hb').checked)return false;if(!br&&!$('nb').checked)return false;if(!tpOnly&&$('tp').value&&String(p.tp)!=$('tp').value)return false;return true}
+function order(L2){if(L2.length<3)return L2;const lf=L2.slice(),out=[];let c=ME?lf.reduce((a,p)=>((p.lat-ME[0])**2+((p.lon-ME[1])*.47)**2<(a.lat-ME[0])**2+((a.lon-ME[1])*.47)**2?p:a),lf[0]):lf.reduce((a,p)=>p.lat<a.lat?p:a,lf[0]);while(lf.length){lf.splice(lf.indexOf(c),1);out.push(c);let b=null,bd=1e18;for(const q of lf){const d=(q.lat-c.lat)**2+((q.lon-c.lon)*.47)**2;if(d<bd){bd=d;b=q}}c=b}return out}
+const nav=p=>`<span class="nv"><a href="https://yandex.ru/maps/?rtext=~${p.lat},${p.lon}&rtt=auto" target="_blank" rel="noopener">Яндекс маршрут</a><a href="yandexnavi://build_route_on_map?lat_to=${p.lat}&lon_to=${p.lon}">Навигатор</a></span>`;
+const tag=p=>'<span class="tg" style="background:'+TYC[kc(p)]+'">'+TYN[kc(p)]+'</span>';
+function what(p){const br=wdone(p,12),n=left(p);return (br?'кронштейн стоит':'привезти и поставить кронштейн')+' · светильников: '+n+(p.done?'':' · <b style="color:#fca5a5">опора ещё не установлена</b>')}
+function render(){const tp=$('tp').value;
+ let L2=order(P.filter(p=>pass(p)));PTS=L2;lay.clearLayers();
+ const c={'1':0,'90':0,'180':0};let lu=0,brOk=0;L2.forEach(p=>{if(!wdone(p,12))c[kc(p)]++;else brOk++;lu+=left(p)});
+ $('sum').innerHTML='Опор: <b>'+L2.length+'</b>'+(tp?' · '+esc(tpn(tp)):'')+'<br>Кронштейны привезти и поставить: <b>'+(c['1']+c['90']+c['180'])+'</b> — 1-рожк. <b>'+c['1']+'</b> · 90° <b>'+c['90']+'</b> · 180° <b>'+c['180']+'</b>'+(brOk?'<br>Кронштейн уже стоит, нужен только светильник: <b>'+brOk+'</b>':'')+'<br>Светильников к установке: <b>'+lu+'</b>';
+ $('ph').innerHTML='<b>Светильники и кронштейны — развозка и монтаж, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+' · '+L2.length+' опор · на '+new Date().toLocaleDateString('ru-RU');
+ // таблица по ТП (без фильтра ТП)
+ const by={};P.filter(p=>pass(p,true)).forEach(p=>{const k=String(p.tp||'');by[k]=by[k]||{o:0,'1':0,'90':0,'180':0,l:0};const r=by[k];r.o++;if(!wdone(p,12))r[kc(p)]++;r.l+=left(p)});
+ const ks=Object.keys(by).sort((a,b)=>a.localeCompare(b,'ru',{numeric:true}));const S={o:0,'1':0,'90':0,'180':0,l:0};ks.forEach(k=>['o','1','90','180','l'].forEach(f=>S[f]+=by[k][f]));
+ $('tt').innerHTML='<tr><th>ТП</th><th>опор</th><th>1р</th><th>90°</th><th>180°</th><th>светильн.</th></tr>'+ks.map(k=>{const r=by[k];return '<tr data-tp="'+esc(k)+'"'+(k==tp?' class="on"':'')+'><td>'+esc(tpn(k))+'</td><td>'+r.o+'</td><td>'+r['1']+'</td><td>'+r['90']+'</td><td>'+r['180']+'</td><td>'+r.l+'</td></tr>'}).join('')+'<tr data-tp=""><td><b>Итого</b></td><td><b>'+S.o+'</b></td><td><b>'+S['1']+'</b></td><td><b>'+S['90']+'</b></td><td><b>'+S['180']+'</b></td><td><b>'+S.l+'</b></td></tr>';
+ $('tt').querySelectorAll('tr[data-tp]').forEach(tr=>tr.onclick=()=>{$('tp').value=tr.dataset.tp;render.fit=0;render()});
+ const B=[],lb=$('lb').checked;L2.forEach((p,i)=>{B.push([p.lat,p.lon]);const t=kc(p);
+  L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="lbl'+(wdone(p,12)?' br':'')+(p.done?'':' np')+'" style="background:'+TYC[t]+'">'+(lb?esc(String(p.id).replace(/^Шуно Дорожная/,'ШД').replace(/^КТП\s+/,'КТП')):TYS[t])+'</div>'})}).bindPopup(()=>pop(p)).addTo(lay)});
+ $('li').innerHTML=L2.map((p,i)=>'<div class="it" data-i="'+i+'"><div class="h"><b>'+(i+1)+'. '+esc(p.id)+'</b>'+tag(p)+(p.ad?'<span class="mu">'+esc(p.ad)+'</span>':'')+'</div><small>'+what(p)+'</small>'+nav(p)+'</div>').join('')||'<div class="mu">Нет опор по выбранным условиям.</div>';
+ $('li').querySelectorAll('.it').forEach(el=>el.onclick=e=>{if(e.target.closest('a'))return;const p=PTS[+el.dataset.i];map.setView([p.lat,p.lon],18);lay.eachLayer(m=>{const ll=m.getLatLng();if(ll.lat==p.lat&&ll.lng==p.lon)m.openPopup()})});
+ if(B.length&&!render.fit){map.fitBounds(B,{padding:[30,30],maxZoom:17});render.fit=1}
+ const ch=[];for(let i=0;i<L2.length;i+=8)ch.push(L2.slice(i,i+8));
+ $('rt').innerHTML=ch.length?'<span class="mu" style="width:100%">Маршрут в Яндекс Картах по порядку опор:</span>'+ch.slice(0,12).map((c,j)=>'<a href="https://yandex.ru/maps/?rtext='+c.map(p=>p.lat+','+p.lon).join('~')+'&rtt=auto" target="_blank" rel="noopener">'+(j*8+1)+'–'+(j*8+c.length)+'</a>').join(' · ')+(ch.length>12?' <span class="mu">… выберите ТП, чтобы увидеть все</span>':''):''}
+function pop(p){const d=document.createElement('div');d.innerHTML='<b>'+esc(p.id)+'</b> · '+esc(tpn(p.tp))+'<br>'+tag(p)+'<br>'+what(p)+(p.ad?'<br>'+esc(p.ad):'')+'<br><small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small><br>'+nav(p);return d}
+['tp','nb','hb','lb'].forEach(i=>$(i).onchange=()=>{if(i=='tp')render.fit=0;render()});$('ty').querySelectorAll('input').forEach(i=>i.onchange=render);
+$('pr').onclick=()=>{map.invalidateSize();setTimeout(()=>window.print(),400)};
+$('me').onclick=()=>{if(!navigator.geolocation)return alert('Геолокация недоступна');navigator.geolocation.getCurrentPosition(g=>{ME=[g.coords.latitude,g.coords.longitude];L.circleMarker(ME,{radius:8,color:'#fff',weight:3,fillColor:'#2563eb',fillOpacity:1}).addTo(map);map.setView(ME,17);render()},()=>alert('Не удалось определить место'),{enableHighAccuracy:true,timeout:10000})};
+$('xl').onclick=()=>{const tp=$('tp').value,rows=[['№','Опора','ТП','Кронштейн','Кронштейн стоит','Светильников поставить','Опора установлена','Адрес','Широта','Долгота','Яндекс Карты']];PTS.forEach((p,i)=>rows.push([i+1,p.id,tpn(p.tp),TYN[kc(p)],wdone(p,12)?'да':'нет',left(p),p.done?'да':'нет',p.ad||'',+p.lat.toFixed(6),+p.lon.toFixed(6),'https://yandex.ru/maps/?pt='+p.lon+','+p.lat+'&z=18']));
+ const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:4},{wch:18},{wch:12},{wch:18},{wch:9},{wch:10},{wch:10},{wch:26},{wch:11},{wch:11},{wch:48}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Опоры');
+ const by={};PTS.forEach(p=>{const k=tpn(p.tp);by[k]=by[k]||[0,0,0,0,0];const r=by[k];r[0]++;if(!wdone(p,12))r[{'1':1,'90':2,'180':3}[kc(p)]]++;r[4]+=left(p)});
+ const ws2=XLSX.utils.aoa_to_sheet([['ТП','Опор','Кронштейн 1-рожк.','Кронштейн 2-рожк. 90°','Кронштейн 2-рожк. 180°','Светильников'],...Object.keys(by).sort((a,b)=>a.localeCompare(b,'ru',{numeric:true})).map(k=>[k,...by[k]])]);XLSX.utils.book_append_sheet(wb,ws2,'Развозка по ТП');
+ XLSX.writeFile(wb,'Развозка кронштейнов и светильников'+(tp?' '+tpn(tp):'')+' '+new Date().toLocaleDateString('ru-RU')+'.xlsx')};
+load();setInterval(()=>{if(!document.querySelector('.leaflet-popup'))load()},60000);
+</script>
+</body>
+</html>
