@@ -1,0 +1,107 @@
+name: Копия данных для просмотра без VPN
+
+# Каждые ~5 минут выгружает таблицы из Supabase в data/mirror/ на сайте.
+# Страницы «только смотреть» берут данные отсюда, если Supabase недоступен (lib/mirror.js).
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/mirror.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Выгрузить таблицы и новые фото
+        env:
+          SB_URL: https://rznsydqapcffgnvynfdg.supabase.co
+          SB_KEY: sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.request, urllib.parse, datetime
+          url, key = os.environ['SB_URL'], os.environ['SB_KEY']
+          D = 'data/mirror'
+          os.makedirs(D, exist_ok=True)
+          def get(path):
+              req = urllib.request.Request(url + path, headers={'apikey': key})
+              return urllib.request.urlopen(req, timeout=60).read()
+          tables = ['poles', 'sip2', 'hooks', 'tps', 'spans', 'line_edits', 'draws',
+                    'pole_photos', 'tn_photos', 'tn_remarks', 'work_zones', 'crew_tasks']
+          changed, counts = False, {}
+          data = {}
+          for t in tables:
+              rows, off = [], 0
+              while True:
+                  page = json.loads(get(f'/rest/v1/{t}?select=*&limit=1000&offset={off}'))
+                  if not isinstance(page, list):
+                      raise SystemExit(f'{t}: {page}')
+                  rows += page
+                  if len(page) < 1000:
+                      break
+                  off += 1000
+              if t == 'poles' and not rows:
+                  raise SystemExit('poles пустая — копию не трогаю')
+              key_ = 'uid' if rows and 'uid' in rows[0] and t not in ('pole_photos',) else 'id'
+              rows.sort(key=lambda r: str(r.get(key_, '')))
+              data[t] = rows
+              counts[t] = len(rows)
+              txt = json.dumps(rows, ensure_ascii=False, separators=(',', ':'))
+              fn = f'{D}/{t}.json'
+              old = open(fn, encoding='utf-8').read() if os.path.exists(fn) else None
+              if old != txt:
+                  open(fn, 'w', encoding='utf-8').write(txt)
+                  changed = True
+          # фото: скачиваем только новые
+          got = 0
+          for bucket, t in (('pole-photos', 'pole_photos'), ('tn-photos', 'tn_photos')):
+              for r in data.get(t, []):
+                  p = r.get('path')
+                  if not p:
+                      continue
+                  fn = f'{D}/photos/{bucket}/{p}'
+                  if os.path.exists(fn):
+                      continue
+                  try:
+                      b = get('/storage/v1/object/public/' + bucket + '/' + '/'.join(urllib.parse.quote(s) for s in p.split('/')))
+                  except Exception as e:
+                      print('фото не скачано', p, e)
+                      continue
+                  os.makedirs(os.path.dirname(fn), exist_ok=True)
+                  open(fn, 'wb').write(b)
+                  got += 1
+                  changed = True
+          if changed or not os.path.exists(f'{D}/meta.json'):
+              ts = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
+              json.dump({'ts': ts, 'counts': counts}, open(f'{D}/meta.json', 'w'), ensure_ascii=False)
+          print(counts, 'новых фото:', got, 'изменения:', changed)
+          EOF
+
+      - name: Сохранить на сайт
+        run: |
+          git config user.name "mirror-bot"
+          git config user.email "mirror-bot@users.noreply.github.com"
+          git add data/mirror
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+            exit 0
+          fi
+          git commit -q -m "Копия данных $(date -u -d '+3 hours' '+%d.%m %H:%M') МСК"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin main && exit 0
+            sleep 5
+          done
+          exit 1
