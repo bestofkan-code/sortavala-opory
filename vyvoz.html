@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex"><meta name="googlebot" content="noindex,nofollow"><meta name="yandex" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><style>/*NOZOOM*/html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}.leaflet-popup,.leaflet-popup-content-wrapper,.leaflet-popup-content,.pp{touch-action:pan-x pan-y}</style><script>/*NOZOOM*/["gesturestart","gesturechange","gestureend"].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()},{passive:false})});document.addEventListener("dblclick",function(e){if(!e.target.closest||!e.target.closest(".leaflet-container"))e.preventDefault()},{passive:false});</script>
 <title>Вывоз грунта — опоры Сортавала</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="lib/fonts/commissioner.css">
 <style>
 :root{--bg:#11141c;--pn:#161a24;--ln:#2c3346;--tx:#eef1f7;--mu:#9aa3b5;--ac:#4f7cff}
 *{box-sizing:border-box}
@@ -71,8 +71,8 @@ a{color:#9db4ff}
  <div class="r np" id="au"></div>
  <div id="li"></div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="lib/leaflet/leaflet.min.js"></script>
+<script src="lib/xlsx.full.min.js"></script>
 <script>
 const CF={u:'https://rznsydqapcffgnvynfdg.supabase.co',k:'sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc'},KEY='sortavala_opory_v1',$=i=>document.getElementById(i);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
