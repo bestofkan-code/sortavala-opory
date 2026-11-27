@@ -4,6 +4,57 @@
 <meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex"><meta name="googlebot" content="noindex,nofollow"><meta name="yandex" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><style>/*NOZOOM*/html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}.leaflet-popup,.leaflet-popup-content-wrapper,.leaflet-popup-content,.pp{touch-action:pan-x pan-y}</style><script>/*NOZOOM*/["gesturestart","gesturechange","gestureend"].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()},{passive:false})});document.addEventListener("dblclick",function(e){if(!e.target.closest||!e.target.closest(".leaflet-container"))e.preventDefault()},{passive:false});</script>
 <title>Вывоз веток после кронирования — Сортавала</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#11141c;--pn:#161a24;--ln:#2c3346;--tx:#eef1f7;--mu:#9aa3b5;--ac:#4f7cff;--n:#f59e0b;--o:#ef4444;--d:#6b7280}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--tx);font:14px 'Commissioner',system-ui,sans-serif;display:flex}
+#s{width:390px;flex:none;height:100vh;overflow:auto;padding:14px 14px 30px;border-right:1px solid #232838}
+#m{flex:1;height:100vh}
+h1{font-size:17px;margin:0 0 2px}
+.mu{color:var(--mu);font-size:12px}
+h3{font-size:11px;letter-spacing:.06em;color:var(--mu);margin:14px 0 6px;text-transform:uppercase}
+.r{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0}
+select,input,button{font:inherit;color:var(--tx);background:#0f121a;border:1px solid var(--ln);border-radius:8px;padding:6px 8px}
+button{background:#1d2230;cursor:pointer}
+button.pr{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.chips label{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--ln);border-radius:16px;font-size:12.5px;cursor:pointer}
+.sw{display:inline-block;width:18px;height:12px;border-radius:6px;border:2px solid #111}
+.sum{background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:8px 10px;margin:8px 0;font-size:13px;line-height:1.55}
+.sum b{font-size:15px}
+table.tp{width:100%;border-collapse:collapse;font-size:12.5px;margin:4px 0}
+table.tp th,table.tp td{border-bottom:1px solid var(--ln);padding:4px 5px;text-align:right}
+table.tp th:first-child,table.tp td:first-child{text-align:left}
+table.tp tr[data-tp]{cursor:pointer}table.tp tr[data-tp]:hover td{background:#1b2030}
+table.tp tr.on td{background:#22305a}
+.it{border:1px solid var(--ln);border-radius:10px;padding:7px 9px;margin:6px 0;background:var(--pn);cursor:pointer}
+.it:hover{border-color:var(--ac)}
+.it .h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.it small{display:block;color:var(--mu)}
+.tg{display:inline-block;font-size:11px;padding:0 7px;border-radius:8px;margin:2px 3px 0 0;color:#111;font-weight:700}
+.nv a{color:#9db4ff;font-size:12px;margin-right:10px;text-decoration:none}
+.lbl{transform:translate(-50%,-50%);width:max-content;display:flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 5px;border-radius:11px;font:700 11px Commissioner,system-ui,sans-serif;color:#111;border:2px dashed #111;box-shadow:0 1px 4px rgba(0,0,0,.45);white-space:nowrap}
+.lbl.br{border-style:solid}
+.lbl.np{opacity:.75;background-image:repeating-linear-gradient(45deg,transparent 0 4px,rgba(0,0,0,.18) 4px 6px)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#161a24;color:var(--tx)}
+.leaflet-popup-content{margin:9px 11px;font:13px Commissioner,system-ui,sans-serif}
+.leaflet-popup-content a{color:#9db4ff}
+a{color:#9db4ff}
+#ph{display:none}
+@media (max-width:760px){body{flex-direction:column}#m{height:58vh;flex:none;order:1}#s{width:100%;height:auto;order:2;border:0}}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ body{display:block;background:#fff;color:#111}
+ #s .np,.leaflet-control-zoom,.leaflet-control-layers{display:none!important}
+ #ph{display:block;font:12px Arial,sans-serif;margin-bottom:4px}
+ #m{width:100%;height:135mm;page-break-after:always}
+ #s{width:100%;height:auto;overflow:visible;border:0;padding:0}
+ .it{break-inside:avoid;border:0;border-bottom:1px solid #ccc;border-radius:0;background:#fff;color:#111;padding:3px 0;margin:0}
+ .it small{color:#333}.nv{display:none}
+ .sum,table.tp td,table.tp th{background:#fff;color:#111;border-color:#999}
+}
 
 .lbl.dn{border-style:solid;opacity:.6}
 .ph{display:flex;gap:6px;margin-top:6px}.ph a{display:block}.ph img{width:110px;height:146px;object-fit:cover;border-radius:6px;border:1px solid var(--ln)}
@@ -51,6 +102,7 @@ const wd=(p,k)=>((p.w||{})[k]||'');
 const tpn=t=>/^\d+$/.test(String(t))?'ТП №'+t:String(t||'');
 const kd=p=>[wd(p,9),wd(p,14)].filter(Boolean).sort().pop()||'';   // последняя дата подрезки
 const VY=17,out_=p=>!!wd(p,VY);                                     // 17 — ветки вывезены
+const pl=(n,a,b,c)=>n%10==1&&n%100!=11?a:(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?b:c);
 const fd=d=>d?d.slice(8,10)+'.'+d.slice(5,7)+'.'+d.slice(0,4):'';
 const LD=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 const age=p=>Math.round((new Date(LD())-new Date(kd(p)))/864e5);
@@ -71,8 +123,8 @@ function photos(p){const a=(PH[p.uid]||[]);const af=a.filter(x=>x.kind=='after')
 function render(){const tp=$('tp').value;
  let L2=order(P.filter(p=>pass(p)));PTS=L2;lay.clearLayers();
  const nw=L2.filter(p=>!out_(p)),old=nw.filter(p=>age(p)>14).length,dn=L2.length-nw.length;
- $('sum').innerHTML='К вывозу: <b>'+nw.length+'</b> мест'+(tp?' · '+esc(tpn(tp)):'')+'<br>Из них лежат больше 14 дней: <b>'+old+'</b>'+(dn?'<br>Уже вывезено: <b>'+dn+'</b>':'');
- $('ph').innerHTML='<b>Вывоз веток после кронирования, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+' · к вывозу '+nw.length+' мест · на '+new Date().toLocaleDateString('ru-RU');
+ $('sum').innerHTML='К вывозу: <b>'+nw.length+'</b> '+pl(nw.length,'место','места','мест')+(tp?' · '+esc(tpn(tp)):'')+'<br>Из них лежат больше 14 дней: <b>'+old+'</b>'+(dn?'<br>Уже вывезено: <b>'+dn+'</b>':'');
+ $('ph').innerHTML='<b>Вывоз веток после кронирования, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+' · к вывозу '+nw.length+' '+pl(nw.length,'место','места','мест')+' · на '+new Date().toLocaleDateString('ru-RU');
  const by={};P.filter(p=>pass(p,true)).forEach(p=>{const k=String(p.tp||'');by[k]=by[k]||{n:0,o:0,v:0,d:''};const r=by[k];if(out_(p))r.v++;else{r.n++;if(age(p)>14)r.o++;if(!r.d||kd(p)<r.d)r.d=kd(p)}});
  const ks=Object.keys(by).sort((a,b)=>a.localeCompare(b,'ru',{numeric:true}));const S={n:0,o:0,v:0};ks.forEach(k=>['n','o','v'].forEach(f=>S[f]+=by[k][f]));const sv=$('sd').checked;
  $('tt').innerHTML='<tr><th>ТП</th><th>к вывозу</th><th>&gt;14 дн.</th>'+(sv?'<th>вывезено</th>':'')+'<th>самое раннее</th></tr>'+ks.map(k=>{const r=by[k];return '<tr data-tp="'+esc(k)+'"'+(k==tp?' class="on"':'')+'><td>'+esc(tpn(k))+'</td><td>'+r.n+'</td><td>'+r.o+'</td>'+(sv?'<td>'+r.v+'</td>':'')+'<td>'+fd(r.d)+'</td></tr>'}).join('')+'<tr data-tp=""><td><b>Итого</b></td><td><b>'+S.n+'</b></td><td><b>'+S.o+'</b></td>'+(sv?'<td><b>'+S.v+'</b></td>':'')+'<td></td></tr>';
