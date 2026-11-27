@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex"><meta name="googlebot" content="noindex,nofollow"><meta name="yandex" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><style>/*NOZOOM*/html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}.leaflet-popup,.leaflet-popup-content-wrapper,.leaflet-popup-content,.pp{touch-action:pan-x pan-y}</style><script>/*NOZOOM*/["gesturestart","gesturechange","gestureend"].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()},{passive:false})});document.addEventListener("dblclick",function(e){if(!e.target.closest||!e.target.closest(".leaflet-container"))e.preventDefault()},{passive:false});</script>
+<title>Вывоз веток после кронирования — Сортавала</title>
+
+.lbl.dn{border-style:solid;opacity:.6}
+.ph{display:flex;gap:6px;margin-top:6px}.ph a{display:block}.ph img{width:110px;height:146px;object-fit:cover;border-radius:6px;border:1px solid var(--ln)}
+.ph span{display:block;font-size:11px;color:var(--mu);text-align:center}
+</style>
+</head>
+<body>
+<div id="m"></div>
+<div id="s">
+ <div id="ph"></div>
+ <h1>Вывоз веток после кронирования</h1>
+ <div class="mu">Места, где подрезаны кроны деревьев у опор наружного освещения. Ветки лежат у опоры — их нужно забрать. Нажмите на метку: адрес, маршрут и фото после подрезки. Данные обновляются автоматически.</div>
+ <div class="np">
+ <h3>Фильтр</h3>
+ <div class="r">ТП: <select id="tp" style="flex:1;min-width:0"><option value="">все ТП</option></select></div>
+ <div class="r">Подрезано с <input type="date" id="d1"> по <input type="date" id="d2"></div>
+ <div class="r chips">
+  <label><span class="sw" style="background:var(--o)"></span>лежит больше 14 дней</label>
+  <label><span class="sw" style="background:var(--n)"></span>до 14 дней</label>
+  <label><input type="checkbox" id="sd">показать вывезенные <span class="sw" style="background:var(--d)"></span></label>
+ </div>
+ <div class="r"><label><input type="checkbox" id="lb" checked> номера опор на метках</label></div>
+ </div>
+ <div class="sum" id="sum">Загрузка…</div>
+ <h3>По ТП</h3>
+ <table class="tp" id="tt"></table>
+ <div class="mu np">Нажмите на строку — карта покажет только эту ТП.</div>
+ <div class="r np" style="margin-top:8px"><button class="pr" id="pr">Печать / PDF</button><button id="xl">Excel</button><button id="me">Где я</button></div>
+ <div class="r np" id="rt"></div>
+ <h3>Список мест</h3>
+ <div id="li"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+const CF={u:'https://rznsydqapcffgnvynfdg.supabase.co',k:'sb_publishable_l1gpH_GOZEqT3oAjYp2_pQ_BTZniJwc'},$=i=>document.getElementById(i);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let P=[],PTS=[],PH={},ME=null;
+const map=L.map('m',{zoomControl:true,zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:120}).setView([61.705,30.69],14);
+const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'});
+L.control.layers({'Карта':osm,'Спутник':sat}).addTo(map);map.attributionControl.setPrefix(false);
+const lay=L.layerGroup().addTo(map);
+const wd=(p,k)=>((p.w||{})[k]||'');
+const tpn=t=>/^\d+$/.test(String(t))?'ТП №'+t:String(t||'');
+const kd=p=>[wd(p,9),wd(p,14)].filter(Boolean).sort().pop()||'';   // последняя дата подрезки
+const VY=17,out_=p=>!!wd(p,VY);                                     // 17 — ветки вывезены
+const fd=d=>d?d.slice(8,10)+'.'+d.slice(5,7)+'.'+d.slice(0,4):'';
+const LD=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const age=p=>Math.round((new Date(LD())-new Date(kd(p)))/864e5);
+const col=p=>out_(p)?'#6b7280':(age(p)>14?'#ef4444':'#f59e0b');
+const pu=x=>CF.u+'/storage/v1/object/public/pole-photos/'+x.split('/').map(encodeURIComponent).join('/');
+async function load(){try{const H={headers:{apikey:CF.k}};
+ const [r,r2]=await Promise.all([fetch(CF.u+'/rest/v1/poles?select=uid,id,lat,lon,tp,n,w,x,ad&limit=5000',H),fetch(CF.u+'/rest/v1/pole_photos?select=uid,k,kind,path,created_at&k=in.(9,14)&order=created_at&limit=5000',H)]);
+ const j=await r.json();if(!Array.isArray(j))throw new Error(JSON.stringify(j));
+ P=j.filter(p=>!p.x&&kd(p)&&p.lat);PH={};(await r2.json()||[]).forEach(x=>{(PH[x.uid]=PH[x.uid]||[]).push(x)});
+ const tps=[...new Set(P.map(p=>String(p.tp||'')).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru',{numeric:true})),cur=$('tp').value;
+ $('tp').innerHTML='<option value="">все ТП</option>'+tps.map(t=>'<option value="'+esc(t)+'">'+esc(tpn(t))+'</option>').join('');$('tp').value=tps.includes(cur)?cur:'';render()}catch(e){$('sum').textContent='Не удалось загрузить данные: '+(e.message||e)}}
+function pass(p,tpOnly){const d=kd(p);if(out_(p)&&!$('sd').checked)return false;if($('d1').value&&d<$('d1').value)return false;if($('d2').value&&d>$('d2').value)return false;if(!tpOnly&&$('tp').value&&String(p.tp)!=$('tp').value)return false;return true}
+function order(L2){if(L2.length<3)return L2;const lf=L2.slice(),out=[];let c=ME?lf.reduce((a,p)=>((p.lat-ME[0])**2+((p.lon-ME[1])*.47)**2<(a.lat-ME[0])**2+((a.lon-ME[1])*.47)**2?p:a),lf[0]):lf.reduce((a,p)=>p.lat<a.lat?p:a,lf[0]);while(lf.length){lf.splice(lf.indexOf(c),1);out.push(c);let b=null,bd=1e18;for(const q of lf){const d=(q.lat-c.lat)**2+((q.lon-c.lon)*.47)**2;if(d<bd){bd=d;b=q}}c=b}return out}
+const nav=p=>`<span class="nv"><a href="https://yandex.ru/maps/?rtext=~${p.lat},${p.lon}&rtt=auto" target="_blank" rel="noopener">Яндекс маршрут</a><a href="yandexnavi://build_route_on_map?lat_to=${p.lat}&lon_to=${p.lon}">Навигатор</a></span>`;
+function what(p){return 'подрезано '+fd(kd(p))+(out_(p)?' · <b style="color:#9ca3af">вывезено '+fd(wd(p,VY))+'</b>':' · лежит '+age(p)+' дн.')}
+function photos(p){const a=(PH[p.uid]||[]);const af=a.filter(x=>x.kind=='after').slice(-2),bf=a.filter(x=>x.kind=='before').slice(-1);const s=[...bf.map(x=>[x,'до']),...af.map(x=>[x,'после'])];
+ return s.length?'<div class="ph">'+s.map(([x,t])=>'<a href="'+pu(x.path)+'" target="_blank" rel="noopener"><img loading="lazy" src="'+pu(x.path)+'"><span>'+t+'</span></a>').join('')+'</div>':''}
+function render(){const tp=$('tp').value;
+ let L2=order(P.filter(p=>pass(p)));PTS=L2;lay.clearLayers();
+ const nw=L2.filter(p=>!out_(p)),old=nw.filter(p=>age(p)>14).length,dn=L2.length-nw.length;
+ $('sum').innerHTML='К вывозу: <b>'+nw.length+'</b> мест'+(tp?' · '+esc(tpn(tp)):'')+'<br>Из них лежат больше 14 дней: <b>'+old+'</b>'+(dn?'<br>Уже вывезено: <b>'+dn+'</b>':'');
+ $('ph').innerHTML='<b>Вывоз веток после кронирования, г. Сортавала</b> · '+(tp?tpn(tp):'все ТП')+' · к вывозу '+nw.length+' мест · на '+new Date().toLocaleDateString('ru-RU');
+ const by={};P.filter(p=>pass(p,true)).forEach(p=>{const k=String(p.tp||'');by[k]=by[k]||{n:0,o:0,v:0,d:''};const r=by[k];if(out_(p))r.v++;else{r.n++;if(age(p)>14)r.o++;if(!r.d||kd(p)<r.d)r.d=kd(p)}});
+ const ks=Object.keys(by).sort((a,b)=>a.localeCompare(b,'ru',{numeric:true}));const S={n:0,o:0,v:0};ks.forEach(k=>['n','o','v'].forEach(f=>S[f]+=by[k][f]));const sv=$('sd').checked;
+ $('tt').innerHTML='<tr><th>ТП</th><th>к вывозу</th><th>&gt;14 дн.</th>'+(sv?'<th>вывезено</th>':'')+'<th>самое раннее</th></tr>'+ks.map(k=>{const r=by[k];return '<tr data-tp="'+esc(k)+'"'+(k==tp?' class="on"':'')+'><td>'+esc(tpn(k))+'</td><td>'+r.n+'</td><td>'+r.o+'</td>'+(sv?'<td>'+r.v+'</td>':'')+'<td>'+fd(r.d)+'</td></tr>'}).join('')+'<tr data-tp=""><td><b>Итого</b></td><td><b>'+S.n+'</b></td><td><b>'+S.o+'</b></td>'+(sv?'<td><b>'+S.v+'</b></td>':'')+'<td></td></tr>';
+ $('tt').querySelectorAll('tr[data-tp]').forEach(tr=>tr.onclick=()=>{$('tp').value=tr.dataset.tp;render.fit=0;render()});
+ const B=[],lb=$('lb').checked;L2.forEach(p=>{B.push([p.lat,p.lon]);
+  L.marker([p.lat,p.lon],{icon:L.divIcon({className:'',iconSize:[0,0],html:'<div class="lbl br'+(out_(p)?' dn':'')+'" style="background:'+col(p)+'">'+(lb?esc(String(p.id).replace(/^Шуно Дорожная/,'ШД').replace(/^КТП\s+/,'К').replace(/^ТП/,'')):'●')+'</div>'})}).bindPopup(()=>pop(p),{maxWidth:280}).addTo(lay)});
+ $('li').innerHTML=L2.map((p,i)=>'<div class="it" data-i="'+i+'"><div class="h"><b>'+(i+1)+'. '+esc(p.id)+'</b><span class="tg" style="background:'+col(p)+'">'+(out_(p)?'вывезено':age(p)+' дн.')+'</span>'+(p.ad?'<span class="mu">'+esc(p.ad)+'</span>':'')+'</div><small>'+esc(tpn(p.tp))+' · '+what(p)+'</small>'+nav(p)+'</div>').join('')||'<div class="mu">Нет мест по выбранным условиям.</div>';
+ $('li').querySelectorAll('.it').forEach(el=>el.onclick=e=>{if(e.target.closest('a'))return;const p=PTS[+el.dataset.i];map.setView([p.lat,p.lon],18);lay.eachLayer(m=>{const ll=m.getLatLng();if(ll.lat==p.lat&&ll.lng==p.lon)m.openPopup()})});
+ if(B.length&&!render.fit){map.invalidateSize();map.fitBounds(B,{padding:[30,30],maxZoom:17});render.fit=1}
+ const R=L2.filter(p=>!out_(p)),ch=[];for(let i=0;i<R.length;i+=8)ch.push(R.slice(i,i+8));
+ $('rt').innerHTML=ch.length?'<span class="mu" style="width:100%">Маршрут в Яндекс Картах по порядку мест:</span>'+ch.slice(0,12).map((c,j)=>'<a href="https://yandex.ru/maps/?rtext='+c.map(p=>p.lat+','+p.lon).join('~')+'&rtt=auto" target="_blank" rel="noopener">'+(j*8+1)+'–'+(j*8+c.length)+'</a>').join(' · ')+(ch.length>12?' <span class="mu">… выберите ТП, чтобы увидеть все</span>':''):''}
+function pop(p){const d=document.createElement('div');d.innerHTML='<b>'+esc(p.id)+'</b> · '+esc(tpn(p.tp))+'<br>'+what(p)+(p.ad?'<br>'+esc(p.ad):'')+'<br><small>'+p.lat.toFixed(6)+', '+p.lon.toFixed(6)+'</small><br>'+nav(p)+photos(p);return d}
+['tp','d1','d2','sd','lb'].forEach(i=>$(i).onchange=()=>{if(i!='lb')render.fit=0;render()});
+$('pr').onclick=()=>{map.invalidateSize();setTimeout(()=>window.print(),400)};
+$('me').onclick=()=>{if(!navigator.geolocation)return alert('Геолокация недоступна');navigator.geolocation.getCurrentPosition(g=>{ME=[g.coords.latitude,g.coords.longitude];L.circleMarker(ME,{radius:8,color:'#fff',weight:3,fillColor:'#2563eb',fillOpacity:1}).addTo(map);map.setView(ME,17);render()},()=>alert('Не удалось определить место'),{enableHighAccuracy:true,timeout:10000})};
+$('xl').onclick=()=>{const tp=$('tp').value,rows=[['№','Опора','ТП','Дата подрезки','Лежит, дней','Вывезено','Адрес','Широта','Долгота','Яндекс Карты','Фото после']];PTS.forEach((p,i)=>{const f=(PH[p.uid]||[]).filter(x=>x.kind=='after').slice(-1)[0];rows.push([i+1,p.id,tpn(p.tp),fd(kd(p)),out_(p)?'':age(p),out_(p)?fd(wd(p,VY)):'',p.ad||'',+p.lat.toFixed(6),+p.lon.toFixed(6),'https://yandex.ru/maps/?pt='+p.lon+','+p.lat+'&z=18',f?pu(f.path):''])});
+ const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:4},{wch:18},{wch:14},{wch:12},{wch:8},{wch:11},{wch:26},{wch:11},{wch:11},{wch:46},{wch:60}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Места');
+ XLSX.writeFile(wb,'Вывоз веток после кронирования'+(tp?' '+tpn(tp):'')+' '+new Date().toLocaleDateString('ru-RU')+'.xlsx')};
+load();setInterval(()=>{if(!document.querySelector('.leaflet-popup'))load()},60000);
+</script>
+</body>
+</html>
